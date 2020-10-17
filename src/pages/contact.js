@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -6,32 +6,32 @@ import Input from "../components/input"
 import Label from "../components/label"
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [msg, setMsg] = useState('');
+  // const [name, setName] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [msg, setMsg] = useState('');
 
-  const handleNameChange = (evt) => {
-    setName(evt.target.value)
-    //console.log(name)
-  }
-
-  const handleEmailChange = (evt) => {
-    setEmail(evt.target.value)
-    //console.log(email)
-  }
-
-  const handleMsgChange = (evt) => {
-    setMsg(evt.target.value)
-    //console.log(msg)
-  }
-
-  // const handleSubmit = (evt) => {
-  //   evt.preventDefault()
-  //   console.log('what next?')
-  //   setName('')
-  //   setEmail('')
-  //   setMsg('')
+  // const handleNameChange = (evt) => {
+  //   setName(evt.target.value)
+  //   //console.log(name)
   // }
+
+  // const handleEmailChange = (evt) => {
+  //   setEmail(evt.target.value)
+  //   //console.log(email)
+  // }
+
+  // const handleMsgChange = (evt) => {
+  //   setMsg(evt.target.value)
+  //   //console.log(msg)
+  // }
+
+  // // const handleSubmit = (evt) => {
+  // //   evt.preventDefault()
+  // //   console.log('what next?')
+  // //   setName('')
+  // //   setEmail('')
+  // //   setMsg('')
+  // // }
 
   return (
     <Layout>
@@ -49,17 +49,17 @@ const Contact = () => {
       >
         <div>
           <Label name='name'/>
-          <Input name='name' handleChange={handleNameChange} />
+          <Input name='name' />
         </div>
         <div>
           <Label name='email'/>
-          <Input name='_replyto' handleChange={handleEmailChange} />
+          <Input name='_replyto'  />
         </div>
         <div>
           <textarea
             type='text'
             name='message'
-            onChange={handleMsgChange} >
+           >
           </textarea>
         </div>
         <Input name="_gotcha" display='none' />

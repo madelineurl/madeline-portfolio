@@ -14,6 +14,7 @@ const Navbar = () => {
       <NavbarLink name='about' />
       <NavbarLink name='projects' />
       <NavbarLink name='music' />
+      <NavbarLink name='articles' />
       <NavbarLink name='contact' />
     </div>
   )

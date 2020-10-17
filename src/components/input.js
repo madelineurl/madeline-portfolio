@@ -4,7 +4,7 @@ const Input = (props) => (
   <input
     type='text'
     name={props.name}
-    onChange={props.handleChange}
+    // onChange={props.handleChange}
       style={{
         width: `10%`,
         display: props.display
