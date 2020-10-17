@@ -1,37 +1,20 @@
 import React from "react"
-import { Link } from "gatsby"
+import NavbarLink from "./navbar-link"
 //import PropTypes from "prop-types"
 
 const Navbar = () => {
   return (
-    <div>
-      <Link
-        to='/about/'
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-          margin: `.5rem`
-        }}>
-        about
-      </Link>
-      <Link
-        to='/projects/'
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-          margin: `.5rem`
-        }}>
-        projects
-      </Link>
-      <Link
-        to='/music/'
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-          margin: `.5rem`
-        }}>
-        music
-      </Link>
+    <div style={{
+      margin: `0 auto`,
+      maxWidth: 1020,
+      // padding: `1.45rem 1.0875rem`,
+      display: `flex`,
+      justifyContent: `center`
+    }}>
+      <NavbarLink name='about' />
+      <NavbarLink name='projects' />
+      <NavbarLink name='music' />
+      <NavbarLink name='contact' />
     </div>
   )
 }
