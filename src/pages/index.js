@@ -8,12 +8,9 @@ import SEO from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    {/* <div style={{
-      maxWidth: `300px`,
-      marginBottom: `1.45rem`
-    }}> */}
-      <div>I'm a fullstack developer, radio host, and DJ/producer based in Chicago</div>
-      <Image imageUrl='' />
+    <Image style={{
+      marginBottom: `10rem`
+    }}/>
   </Layout>
 )
 

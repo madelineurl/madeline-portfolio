@@ -56,19 +56,19 @@ const Icons = () => {
           }}
         />
       </a>
-      <a href='https://www.linkedin.com/in/madeline-url/'>
+      <a href='https://medium.com/@url.madeline/'>
         <Img
-          fixed={data.linkedIn.childImageSharp.fixed}
-          alt="linkedin-icon"
+          fixed={data.medium.childImageSharp.fixed}
+          alt="medium-icon"
           style={{
             marginRight: `10px`
           }}
         />
       </a>
-      <a href='https://medium.com/@url.madeline/'>
+      <a href='https://www.linkedin.com/in/madeline-url/'>
         <Img
-          fixed={data.medium.childImageSharp.fixed}
-          alt="medium-icon"
+          fixed={data.linkedIn.childImageSharp.fixed}
+          alt="linkedin-icon"
         />
       </a>
     </>

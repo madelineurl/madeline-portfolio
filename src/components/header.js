@@ -23,7 +23,7 @@ const Header = () => (
       <div>
         <h1 style={{ margin: 0, color: `grey` }}>
           <Link
-            to="/"
+            to="/about/"
             style={{
               color: `black`,
               textDecoration: `none`,

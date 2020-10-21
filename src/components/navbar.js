@@ -13,9 +13,7 @@ const Navbar = () => {
       flexDirection: `column`,
       justifyContent: `center`
     }}>
-      <NavbarLink name='about' />
       <NavbarLink name='projects' />
-      <NavbarLink name='music' />
     </div>
   )
 }
