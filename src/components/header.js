@@ -2,12 +2,12 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-//import Navbar from "./navbar"
+import Icons from "./icons"
 
 const Header = () => (
   <header
     style={{
-      background: `black`,
+      background: `white`,
       marginBottom: `.25rem`,
     }}
   >
@@ -25,7 +25,7 @@ const Header = () => (
           <Link
             to="/"
             style={{
-              color: `white`,
+              color: `black`,
               textDecoration: `none`,
               textAlign: `center`
             }}
@@ -34,6 +34,14 @@ const Header = () => (
           </Link>
           url
         </h1>
+      </div>
+      <div style={{
+        position: `absolute`,
+        right: `1rem`,
+        display: `flex`,
+        justifyContent: `space-around`
+      }}>
+        <Icons />
       </div>
     </div>
   </header>

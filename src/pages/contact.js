@@ -3,62 +3,39 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Input from "../components/input"
-import Label from "../components/label"
 
 const Contact = () => {
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [msg, setMsg] = useState('');
-
-  // const handleNameChange = (evt) => {
-  //   setName(evt.target.value)
-  //   //console.log(name)
-  // }
-
-  // const handleEmailChange = (evt) => {
-  //   setEmail(evt.target.value)
-  //   //console.log(email)
-  // }
-
-  // const handleMsgChange = (evt) => {
-  //   setMsg(evt.target.value)
-  //   //console.log(msg)
-  // }
-
-  // // const handleSubmit = (evt) => {
-  // //   evt.preventDefault()
-  // //   console.log('what next?')
-  // //   setName('')
-  // //   setEmail('')
-  // //   setMsg('')
-  // // }
-
   return (
     <Layout>
       <SEO title="contact" />
-      <p>
+      {/* <p>
         Thanks for taking the time to get to know a bit about me! Write me a message below if you'd like to learn more.
-      </p>
+      </p> */}
       <form
         action="https://formspree.io/url.madeline@gmail.com"
         method="post"
         style={{
           display: `flex`,
           flexDirection: `column`,
+          margin: `1rem`
         }}
       >
         <div>
-          <Label name='name'/>
-          <Input name='name' />
+          <Input name='name' placeholder='name'/>
         </div>
         <div>
-          <Label name='email'/>
-          <Input name='_replyto'  />
+          <Input name='_replyto' placeholder='email' />
         </div>
         <div>
           <textarea
             type='text'
             name='message'
+            placeholder='message'
+            style={{
+              margin: `.5rem`,
+              width: `35%`,
+              height: `20vh`
+            }}
            >
           </textarea>
         </div>
@@ -66,7 +43,7 @@ const Contact = () => {
         <div>
           <button
             type='submit'>
-            send
+              send
           </button>
         </div>
       </form>

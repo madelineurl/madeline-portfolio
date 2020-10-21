@@ -4,9 +4,11 @@ const Input = (props) => (
   <input
     type='text'
     name={props.name}
+    placeholder={props.placeholder}
     // onChange={props.handleChange}
       style={{
-        width: `10%`,
+        width: `30%`,
+        margin: `.5rem`,
         display: props.display
       }}
     >

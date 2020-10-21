@@ -8,7 +8,7 @@ const NavbarLink = (props) => {
         style={{
           color: `grey`,
           textDecoration: `none`,
-          margin: `.5rem 1rem 0px 1rem`
+          //margin: `.5rem 1rem 2rem 1rem`
         }}>
         {props.name}
     </Link>

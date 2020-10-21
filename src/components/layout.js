@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
           flexDirection: `column`,
           textAlign: `center`,
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: 720,
           // padding: `0 1.0875rem 1.45rem`,
         }}
       >
@@ -43,9 +43,10 @@ const Layout = ({ children }) => {
           color: `grey`,
           position: `absolute`,
           bottom: `10px`,
-          left: `48vw`,
+          left: `42vw`,
+          fontSize: `.85rem`
         }}>
-          © {new Date().getFullYear()}
+          copyright © madeline higgins {new Date().getFullYear()}
         </footer>
       </div>
     </>
