@@ -1,12 +1,25 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import SEO from "../components/seo"
-//import downloadFile from '../downloads/file.pdf'
 
-  const Resume = () => (
-  <>
-    <SEO title='resume' />
-    {/* <a href={`download.pdf`}>Download the file from the static folder</a> */}
-  </>
-)
+  const Resume = () => {
+    const resume = useStaticQuery(graphql`
+    {
+      pdf: file(name: { eq: "Madeline-Higgins-Software-Engineer-Resume-2020.pdf" }) {
+        name
+        extension
+        publicURL
+      }
+    }
+  `)
+
+  console.log(resume)
+  return (
+    <>
+      <SEO title='resume' />
+      {/* <a href={resume.pdf}>{resume.pdf.name}</a> */}
+    </>
+  )
+}
 
 export default Resume
