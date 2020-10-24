@@ -5,7 +5,7 @@ import SEO from "../components/seo"
   const Resume = () => {
     const resume = useStaticQuery(graphql`
     {
-      pdf: file(name: { eq: "Madeline-Higgins-Software-Engineer-Resume-2020" }) {
+      pdf: file(name: { eq: "Madeline-Higgins-Software-Engineer-Resume-Oct-2020" }) {
         name
         extension
         publicURL
@@ -21,7 +21,7 @@ import SEO from "../components/seo"
   return (
     <>
       <SEO title='resume' />
-      <a ref={simulateClick} href={resume.pdf.publicURL} />
+      <a ref={simulateClick} href={resume.pdf.publicURL}>Link to resume</a>
     </>
   )
 }
