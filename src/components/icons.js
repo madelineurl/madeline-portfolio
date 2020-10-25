@@ -5,9 +5,9 @@ import Img from "gatsby-image"
 const Icons = () => {
   const data =  useStaticQuery(graphql`
     query {
-      mail: file(relativePath: { eq: "Mail-Circle-Icon.png" }) {
+      mail: file(relativePath: { eq: "mail-circle.png" }) {
         childImageSharp {
-          fixed(width: 33, height: 33) {
+          fixed(width: 32, height: 32) {
             ...GatsbyImageSharpFixed
           }
         }
