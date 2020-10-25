@@ -17,11 +17,12 @@ import SEO from "../components/seo"
     evt.click(resume.pdf.publicURL)
   }
 
-  console.log(resume)
+  resume.name = 'MADELINE HIGGINS'
+
   return (
     <>
       <SEO title='resume' />
-      <a ref={simulateClick} href={resume.pdf.publicURL}>Link to resume</a>
+      <a ref={simulateClick} href={resume.pdf.publicURL}>Loading...</a>
     </>
   )
 }

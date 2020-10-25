@@ -10,8 +10,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import Navbar from "./navbar"
+//import Navbar from "./navbar"
 import "./layout.css"
+import Icons from './icons'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,7 +28,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <Navbar />
+      {/* <Navbar /> */}
       <div
         style={{
           display: `flex`,
@@ -39,6 +40,15 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
+        <div style={{
+        position: `absolute`,
+        bottom: `.5rem`,
+        left: `45vw`
+        // display: `flex`,
+        // justifyContent: `space-around`
+      }}>
+        <Icons />
+      </div>
         <footer style={{
           color: `grey`,
           position: `absolute`,
@@ -46,7 +56,7 @@ const Layout = ({ children }) => {
           left: `42vw`,
           fontSize: `.85rem`
         }}>
-          copyright © madeline higgins {new Date().getFullYear()}
+          {/* copyright © madeline higgins {new Date().getFullYear()} */}
         </footer>
       </div>
     </>

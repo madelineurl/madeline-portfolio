@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
-import Icons from "./icons"
+//import Icons from "./icons"
 
 const Header = () => (
   <header
@@ -35,14 +35,14 @@ const Header = () => (
           url
         </h1>
       </div>
-      <div style={{
+      {/* <div style={{
         position: `absolute`,
         right: `1rem`,
         display: `flex`,
         justifyContent: `space-around`
       }}>
         <Icons />
-      </div>
+      </div> */}
     </div>
   </header>
 )

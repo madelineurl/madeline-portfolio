@@ -5,30 +5,30 @@ import Img from "gatsby-image"
 const Icons = () => {
   const data =  useStaticQuery(graphql`
     query {
-      mail: file(relativePath: { eq: "mail-icon-black.png" }) {
+      mail: file(relativePath: { eq: "Mail-Circle-Icon.png" }) {
         childImageSharp {
-          fixed(width: 35, height: 35) {
+          fixed(width: 33, height: 33) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       github: file(relativePath: { eq: "GitHub-Mark-64px.png" }) {
         childImageSharp {
-          fixed(width: 35, height: 35) {
+          fixed(width: 32, height: 32) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      linkedIn: file(relativePath: { eq: "LI-In-Bug.png" }) {
+      linkedIn: file(relativePath: { eq: "circle.png" }) {
         childImageSharp {
-          fixed(width: 35, height: 35) {
+          fixed(width: 33, height: 33) {
             ...GatsbyImageSharpFixed
           }
         }
       }
-      medium: file(relativePath: { eq: "medium.png" }) {
+      medium: file(relativePath: { eq: "medium-circle.webp" }) {
         childImageSharp {
-          fixed(width: 35, height: 35) {
+          fixed(width: 33, height: 33) {
             ...GatsbyImageSharpFixed
           }
         }
