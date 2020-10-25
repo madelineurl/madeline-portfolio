@@ -8,7 +8,7 @@ const Soundcloud = () => {
     query {
       file(relativePath: { eq: "soundcloud-icon.png" }) {
         childImageSharp {
-          fixed(width: 80, height: 80) {
+          fixed(width: 150, height: 150) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -17,13 +17,13 @@ const Soundcloud = () => {
   `)
 
   return (
-        <Img
-          fixed={data.file.childImageSharp.fixed}
-          alt="soundcloud-icon"
-          style={{
-            //marginRight: `10px`
-          }}
-        />
+    <Img
+      fixed={data.file.childImageSharp.fixed}
+      alt="soundcloud-icon"
+      style={{
+        //marginRight: `10px`
+      }}
+    />
   )
 }
 

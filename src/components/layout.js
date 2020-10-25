@@ -28,7 +28,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      {/* <Navbar /> */}
       <div
         style={{
           display: `flex`,
@@ -41,14 +40,14 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <div style={{
-        position: `absolute`,
-        bottom: `.5rem`,
-        left: `45vw`
+          position: `absolute`,
+          bottom: `.5rem`,
+          left: `45vw`
         // display: `flex`,
         // justifyContent: `space-around`
-      }}>
-        <Icons />
-      </div>
+        }}>
+          <Icons />
+        </div>
         <footer style={{
           color: `grey`,
           position: `absolute`,

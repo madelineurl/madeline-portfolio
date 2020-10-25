@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const Landing = () => (
   <>
-    <SEO title="Home" />
+    <SEO title="landing" />
      <Link to="/home/"><h1>madelineurl</h1></Link>
   </>
 )

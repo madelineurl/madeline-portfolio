@@ -3,12 +3,12 @@ import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Xibis = () => {
+const Planet = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "Planet-Aguilera.png" }) {
         childImageSharp {
-          fixed(width: 230, height: 230) {
+          fixed(width: 210, height: 210) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -27,4 +27,4 @@ const Xibis = () => {
   )
 }
 
-export default Xibis
+export default Planet

@@ -5,13 +5,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Soundcloud from "../components/soundcloud-icon"
 import Shiftpitch from "../components/shiftpitch"
-import Xibis from "../components/xibis"
+import Xibis from "../components/planet"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="home" />
-      <Xibis />
       <Shiftpitch />
+      <Xibis />
       <Link to="/music/">
         <Soundcloud/>
       </Link>
