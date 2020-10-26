@@ -47,7 +47,11 @@ const Icons = () => {
           }}
         />
       </Link>
-      <a href='https://github.com/madelineurl' target="_blank" rel="noreferrer">
+      <a
+        href='https://github.com/madelineurl'
+        target="_blank"
+        rel="noreferrer"
+      >
         <Img
           fixed={data.github.childImageSharp.fixed}
           alt="github-icon"
@@ -56,7 +60,11 @@ const Icons = () => {
           }}
         />
       </a>
-      <a href='https://medium.com/@url.madeline/' target="_blank" rel="noreferrer">
+      <a
+        href='https://medium.com/@url.madeline/'
+        target="_blank"
+        rel="noreferrer"
+      >
         <Img
           fixed={data.medium.childImageSharp.fixed}
           alt="medium-icon"
@@ -65,7 +73,11 @@ const Icons = () => {
           }}
         />
       </a>
-      <a href='https://www.linkedin.com/in/madeline-url/' target="_blank" rel="noreferrer">
+      <a
+        href='https://www.linkedin.com/in/madeline-url/'
+        target="_blank"
+        rel="noreferrer"
+      >
         <Img
           fixed={data.linkedIn.childImageSharp.fixed}
           alt="linkedin-icon"
