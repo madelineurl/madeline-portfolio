@@ -1,55 +1,35 @@
 //import { Link } from "gatsby"
 import React, { useState } from "react"
 import PropTypes from "prop-types"
+import headerStyles from "./styling/header.module.css"
 
 import Modal from "./modal"
-import Image from "./image"
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
 
-  const openAbout = () => {
+  const openAboutWindow = () => {
     setShowModal(true);
   }
 
-  const closeAbout = () => {
+  const closeAboutWindow = () => {
     setShowModal(false);
   }
 
   return (
-    <header
-      style={{
-        background: `whitesmoke`,
-        marginBottom: `.25rem`,
-      }}
-    >
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 1020,
-          padding: `1.45rem 1.0875rem`,
-          display: `flex`,
-          justifyContent: `center`
-        }}
-      >
+    <header className={headerStyles.headerBackground} >
+      <div className={headerStyles.headerContainer}>
         <div>
           <Modal
             show={showModal}
-            handleClose={closeAbout}
-          >
-            <Image />
-            <div>I'm a self-directed learner. I taught myself to DJ after getting involved with the radio station in college, and ended up working part-time as a freelance DJ and at <a href='http://gramaphonerecords.com/'>Gramaphone Records</a> on the weekends. I spent a few months obsessively teaching myself music theory just before I picked up Javascript.</div>
-          </Modal>
+            handleClose={closeAboutWindow}
+          />
+
           <button
-            onClick={openAbout}
-            style={{
-              fontSize: `2rem`,
-              fontFamily: `Roboto-mono`,
-              border: `none`,
-              margin: 0,
-              color: `grey` }}>
-              madeline
-            url
+            onClick={openAboutWindow}
+            className={headerStyles.modalButton}
+            >
+              madelineurl
           </button>
         </div>
       </div>

@@ -1,0 +1,20 @@
+.header-background {
+  background: whitesmoke;
+  margin-bottom: .25rem;
+}
+
+.header-container {
+  margin: 0 auto;
+  max-width: 1020;
+  padding: 1.45rem 1.0875rem;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-button {
+  font-size: 2rem;
+  font-family: Roboto;
+  border: none;
+  margin: 0;
+  color: grey;
+}

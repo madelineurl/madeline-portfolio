@@ -1,16 +1,8 @@
 import React from "react"
+import shadowStyles from "./styling/shadow.module.css"
 
 const Shadow = () => (
-  <div style={{
-    zIndex: `-1`,
-    top: `500px`,
-    positive: `relative`,
-    borderRadius: `50%`,
-    backgroundColor: `grey`,
-    width: `160px`,
-    height: `30px`,
-  }} />
-
+  <div className={shadowStyles.shadow} />
 )
 
 export default Shadow

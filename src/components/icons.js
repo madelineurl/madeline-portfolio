@@ -2,6 +2,9 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
+import Icon from "./icon"
+import iconStyles from "./styling/icons.module.css"
+
 const Icons = () => {
   const data =  useStaticQuery(graphql`
     query {
@@ -42,47 +45,24 @@ const Icons = () => {
         <Img
           fixed={data.mail.childImageSharp.fixed}
           alt="medium-icon"
-          style={{
-            marginRight: `10px`
-          }}
+          className={iconStyles.icon}
         />
       </Link>
-      <a
-        href='https://github.com/madelineurl'
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Img
-          fixed={data.github.childImageSharp.fixed}
-          alt="github-icon"
-          style={{
-            marginRight: `10px`
-          }}
-        />
-      </a>
-      <a
-        href='https://medium.com/@url.madeline/'
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Img
-          fixed={data.medium.childImageSharp.fixed}
-          alt="medium-icon"
-          style={{
-            marginRight: `10px`
-          }}
-        />
-      </a>
-      <a
-        href='https://www.linkedin.com/in/madeline-url/'
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Img
-          fixed={data.linkedIn.childImageSharp.fixed}
-          alt="linkedin-icon"
-        />
-      </a>
+      <Icon
+        name='github'
+        url='https://github.com/madelineurl'
+        image={data.github.childImageSharp.fixed}
+      />
+      <Icon
+        name='medium'
+        url='https://medium.com/@url.madeline/'
+        image={data.medium.childImageSharp.fixed}
+      />
+      <Icon
+        name='linked-in'
+        url='https://www.linkedin.com/in/madeline-url/'
+        image={data.linkedIn.childImageSharp.fixed}
+      />
     </>
   )
 }

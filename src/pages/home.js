@@ -8,6 +8,8 @@ import Shiftpitch from "../components/shiftpitch"
 import Xibis from "../components/planet"
 import Shadow from "../components/shadow"
 
+import shadowStyles from "../components/styling/shadow.module.css"
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
@@ -15,15 +17,15 @@ const IndexPage = () => (
       display: `flex`,
       justifyContent: `center`
     }}>
-      <div className="shadow-box">
+      <div className={shadowStyles.shadowBox}>
         <Shiftpitch />
         <Shadow />
       </div>
-      <div className="shadow-box">
+      <div className={shadowStyles.shadowBox}>
         <Xibis />
         <Shadow />
       </div>
-      <div className="shadow-box">
+      <div className={shadowStyles.shadowBox}>
         <Link to="/music/">
           <Soundcloud/>
         </Link>
