@@ -6,7 +6,7 @@ import Video from "../components/video"
 
 const Shiftpitch = () => (
   <Layout>
-    <SEO title="shiftpitch" />
+    <SEO title="Shiftpitch" />
     <div style={{
       display: `flex`,
       justifyContent: `center`
@@ -20,8 +20,20 @@ const Shiftpitch = () => (
           flexDirection: `column`,
           alignItems: `flex-start`
         }}>
-          <a href="https://shiftpitch.herokuapp.com/">Play</a>
-          <a href="https://github.com/zelda-capstone/xibis">Github</a>
+          <a
+            href="https://shiftpitch.herokuapp.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Play
+          </a>
+          <a
+            href="https://github.com/zelda-capstone/xibis"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Github
+          </a>
         </div>
       </div>
     </div>

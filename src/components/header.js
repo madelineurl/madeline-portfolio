@@ -42,28 +42,16 @@ const Header = () => {
           </Modal>
           <button
             onClick={openAbout}
-            style={{ margin: 0, color: `grey` }}>
-            {/* <Link
-              to="/about/"
-              style={{
-                color: `black`,
-                textDecoration: `none`,
-                textAlign: `center`
-              }}
-            > */}
+            style={{
+              fontSize: `2rem`,
+              fontFamily: `Roboto-mono`,
+              border: `none`,
+              margin: 0,
+              color: `grey` }}>
               madeline
-            {/* </Link> */}
             url
           </button>
         </div>
-        {/* <div style={{
-          position: `absolute`,
-          right: `1rem`,
-          display: `flex`,
-          justifyContent: `space-around`
-        }}>
-          <Icons />
-        </div> */}
       </div>
     </header>
   )

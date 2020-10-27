@@ -7,10 +7,7 @@ import Input from "../components/input"
 const Contact = () => {
   return (
     <Layout>
-      <SEO title="contact" />
-      {/* <p>
-        Thanks for taking the time to get to know a bit about me! Write me a message below if you'd like to learn more.
-      </p> */}
+      <SEO title="Contact" />
       <form
         action="https://formspree.io/url.madeline@gmail.com"
         method="post"
@@ -33,7 +30,7 @@ const Contact = () => {
             placeholder='message'
             style={{
               margin: `.5rem`,
-              width: `35%`,
+              width: `40%`,
               height: `20vh`
             }}
            >
@@ -43,7 +40,7 @@ const Contact = () => {
         <div>
           <button
             type='submit'>
-              send
+              send to url.madeline@gmail.com
           </button>
         </div>
       </form>

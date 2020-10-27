@@ -6,7 +6,7 @@ import Video from "../components/video"
 
 const Xibis = () => (
   <Layout>
-    <SEO title="xibis" />
+    <SEO title="Xibis" />
     <div style={{
       display: `flex`,
       justifyContent: `center`
@@ -20,8 +20,20 @@ const Xibis = () => (
           flexDirection: `column`,
           alignItems: `flex-start`
         }}>
-          <a href="xibi.space">Play</a>
-          <a href="https://github.com/zelda-capstone/xibis">Github</a>
+          <a
+            className='project-button'
+            href="xibi.space"
+            target="_blank"
+            rel="noreferrer"
+              >Play
+            </a>
+          <a
+            href="https://github.com/zelda-capstone/xibis"
+            target="_blank"
+            rel="noreferrer"
+            >
+              Github
+            </a>
         </div>
       </div>
     </div>

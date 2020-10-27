@@ -22,7 +22,10 @@ const Planet = () => {
 
   return (
     <Link to="/xibis/" >
-      <Img fixed={data.placeholderImage.childImageSharp.fixed} />
+      <Img fixed={data.placeholderImage.childImageSharp.fixed}
+       style={{
+        top: `4rem`
+      }} />
     </Link>
   )
 }

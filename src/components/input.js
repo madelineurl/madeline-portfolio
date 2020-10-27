@@ -7,7 +7,7 @@ const Input = (props) => (
     placeholder={props.placeholder}
     // onChange={props.handleChange}
       style={{
-        width: `30%`,
+        width: `40%`,
         margin: `.5rem`,
         display: props.display
       }}

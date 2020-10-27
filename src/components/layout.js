@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
         <div style={{
           position: `absolute`,
           bottom: `.5rem`,
-          left: `45vw`
+          left: `44%`
         // display: `flex`,
         // justifyContent: `space-around`
         }}>

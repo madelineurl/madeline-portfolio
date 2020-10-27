@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const Music = () => (
   <Layout>
-    <SEO title="music" />
+    <SEO title="Music" />
     <h4>Featured mix: Rinse FM</h4>
     <h4>Music for Xibis: A Galactic Voyage</h4>
     <h4>The Unbearable Charm</h4>

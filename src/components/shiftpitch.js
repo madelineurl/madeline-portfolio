@@ -22,7 +22,11 @@ const Shiftpitch = () => {
 
   return (
     <Link to="/shiftpitch/" >
-      <Img fixed={data.placeholderImage.childImageSharp.fixed} />
+      <Img
+        fixed={data.placeholderImage.childImageSharp.fixed}
+        style={{
+          top: `2rem`
+        }}/>
     </Link>
   )
 }
