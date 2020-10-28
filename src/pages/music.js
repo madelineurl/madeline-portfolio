@@ -1,8 +1,6 @@
 import React from "react"
 
-import Soundcloud from '../components/soundcloud-icon'
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { Soundcloud, Layout, SEO, HomeButton } from '../components'
 
 const Music = () => (
   <Layout>
@@ -17,6 +15,7 @@ const Music = () => (
       rel="noreferrer">
         <Soundcloud />
     </a>
+    <HomeButton />
   </Layout>
 )
 

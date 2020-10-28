@@ -1,28 +1,28 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Soundcloud from "../components/soundcloud-icon"
-import Shiftpitch from "../components/shiftpitch"
-import Xibis from "../components/planet"
-import Shadow from "../components/shadow"
-
 import shadowStyles from "../components/styling/shadow.module.css"
+import iconStyles from "../components/styling/icons.module.css"
+
+import {
+  Layout,
+  SEO,
+  Shiftpitch,
+  Soundcloud,
+  Planet,
+  Shadow
+} from "../components"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div style={{
-      display: `flex`,
-      justifyContent: `center`
-    }}>
+    <div className={iconStyles.navIconContainer}>
       <div className={shadowStyles.shadowBox}>
         <Shiftpitch />
         <Shadow />
       </div>
       <div className={shadowStyles.shadowBox}>
-        <Xibis />
+        <Planet />
         <Shadow />
       </div>
       <div className={shadowStyles.shadowBox}>

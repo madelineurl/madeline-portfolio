@@ -6,9 +6,10 @@
 
 .shadow {
   z-index: -1;
-  top: 500px;
   border-radius: 50%;
   background-color: grey;
+  position: relative;
+  top: 1rem;
   width: 160px;
   height: 30px;
 }

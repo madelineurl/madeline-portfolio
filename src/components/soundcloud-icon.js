@@ -21,7 +21,6 @@ const Soundcloud = () => {
       fixed={data.file.childImageSharp.fixed}
       alt="soundcloud-icon"
       style={{
-        position: `relative`,
         top: `2rem`
       }}
     />

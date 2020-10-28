@@ -40,7 +40,7 @@ const Icons = () => {
   `)
 
   return (
-    <>
+    <div className={iconStyles.iconContainer}>
       <Link to='/contact/' >
         <Img
           fixed={data.mail.childImageSharp.fixed}
@@ -63,7 +63,7 @@ const Icons = () => {
         url='https://www.linkedin.com/in/madeline-url/'
         image={data.linkedIn.childImageSharp.fixed}
       />
-    </>
+    </div>
   )
 }
 

@@ -1,4 +1,3 @@
-//import { Link } from "gatsby"
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import headerStyles from "./styling/header.module.css"
@@ -29,8 +28,10 @@ const Header = () => {
             onClick={openAboutWindow}
             className={headerStyles.modalButton}
             >
-              madelineurl
+              madeline
           </button>
+          <button
+          className={headerStyles.modalButton} style={{color: `grey`}}>url</button>
         </div>
       </div>
     </header>

@@ -1,8 +1,6 @@
 import React from "react"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Input from "../components/input"
+import { Layout, SEO, Input, HomeButton } from "../components"
 
 const Contact = () => {
   return (
@@ -11,6 +9,8 @@ const Contact = () => {
       <form
         action="https://formspree.io/url.madeline@gmail.com"
         method="post"
+        target="_blank"
+        rel="noreferrer"
         style={{
           display: `flex`,
           flexDirection: `column`,
@@ -44,6 +44,7 @@ const Contact = () => {
           </button>
         </div>
       </form>
+      <HomeButton />
     </Layout>
   )
 }

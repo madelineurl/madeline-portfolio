@@ -1,8 +1,11 @@
 import React from "react"
 
-const Video = ({ videoURL, videoTitle, ...props }) => (
-  <div className="video">
+import videoStyles from "./styling/video.module.css"
+
+const Video = ({ videoURL, videoTitle }) => (
+  <>
     <iframe
+      className={videoStyles.video}
       src={videoURL}
       title={videoTitle}
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -11,6 +14,6 @@ const Video = ({ videoURL, videoTitle, ...props }) => (
       mozallowfullscreen="true"
       allowFullScreen
     />
-  </div>
+  </>
 )
 export default Video

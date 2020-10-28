@@ -9,10 +9,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-//import Navbar from "./navbar"
-import "./layout.css"
 import Icons from './icons'
+import Header from "./header"
+import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -39,22 +38,8 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <div style={{
-          position: `absolute`,
-          bottom: `.5rem`,
-          left: `44%`
-        // display: `flex`,
-        // justifyContent: `space-around`
-        }}>
-          <Icons />
-        </div>
-        <footer style={{
-          color: `grey`,
-          position: `absolute`,
-          bottom: `10px`,
-          left: `42vw`,
-          fontSize: `.85rem`
-        }}>
+        <Icons />
+        <footer className='footer'>
           {/* copyright © madeline higgins {new Date().getFullYear()} */}
         </footer>
       </div>

@@ -3,6 +3,14 @@
   src: url("/fonts/DMMono-Regular.ttf") format("woff2")
 }
 
+.footer {
+  color: grey;
+  position: absolute;
+  bottom: 10px;
+  left: 42vw;
+  font-size: .85rem;
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
