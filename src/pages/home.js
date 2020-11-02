@@ -1,9 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-//import anime from "animejs"
-
-import shadowStyles from "../components/styling/shadow.module.css"
-import iconStyles from "../components/styling/icons/icons.module.scss"
+import styles from "../components/icons/icons.module.scss"
 
 import {
   Layout,
@@ -18,16 +15,16 @@ const IndexPage = () => {
   return (
   <Layout>
     <SEO title="Home" />
-    <div className={iconStyles.navIconContainer}>
-      <div className={shadowStyles.shadowBox}>
+    <div className={styles.navIconContainer}>
+      <div className={styles.shadowBox}>
         <Shiftpitch/>
         <Shadow />
       </div>
-      <div className={shadowStyles.shadowBox}>
+      <div className={styles.shadowBox}>
         <Planet />
         <Shadow />
       </div>
-      <div className={shadowStyles.shadowBox}>
+      <div className={styles.shadowBox}>
         <Link to="/music/">
           <Soundcloud/>
         </Link>

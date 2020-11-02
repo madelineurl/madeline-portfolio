@@ -1,9 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
-
 import Icon from "./icon"
-import styles from "../styling/icons/icons.module.scss"
+import styles from "./icons.module.scss"
 
 const Icons = () => {
   const data =  useStaticQuery(graphql`

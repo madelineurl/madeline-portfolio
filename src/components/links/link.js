@@ -1,11 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-
-import buttonStyles from "../styling/buttons.module.css"
+import styles from "./link.module.css"
 
 const TemplateLink = ({ link, children }) => (
   <Link
-    className={buttonStyles.link}
+    className={styles.link}
     to={`/${link}/`}>
       {children}
   </Link>

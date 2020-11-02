@@ -1,8 +1,6 @@
 import React from "react"
-
 import { Soundcloud, Layout, SEO, HomeLink } from '../components'
-
-import audioStyles from "../components/styling/audio.module.css"
+import styles from "../components/projects/project.module.css"
 
 const Music = () => (
   <Layout>
@@ -24,7 +22,7 @@ const Music = () => (
       allow="autoplay"
       src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1138010866&color=%238cbc84&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
     </iframe>
-      <div className={audioStyles.soundcloudPlayer}>
+      <div className={styles.soundcloudPlayer}>
         <a
           href="https://soundcloud.com/madeline-url" title="madeline"
           target="_blank"

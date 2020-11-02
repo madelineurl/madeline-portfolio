@@ -1,8 +1,8 @@
 import React from "react"
-import shadowStyles from "../styling/shadow.module.css"
+import styles from "./icons.module.css"
 
 const Shadow = () => (
-  <div className={shadowStyles.shadow} />
+  <div className={styles.shadow} />
 )
 
 export default Shadow

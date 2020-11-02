@@ -1,6 +1,5 @@
 import React from "react"
-
-import styles from "../styling/buttons.module.css"
+import styles from "./link.module.css"
 
 const ProjectLink = ({ projectUrl, text}) => (
   <a

@@ -1,17 +1,16 @@
 import React from "react"
 import About from "./about"
-
-import modalStyles from "./modal.module.css"
+import styles from "./modal.module.css"
 
 const Modal = ({ handleClose, show }) => {
-  const showHideModal = show ? modalStyles.displayBlock : modalStyles.displayNone;
+  const showHideModal = show ? styles.displayBlock : styles.displayNone;
 
   return (
-    <div className={`${modalStyles.modal} ${showHideModal}`}>
-      <section className={modalStyles.modalMain}>
+    <div className={`${styles.modal} ${showHideModal}`}>
+      <section className={styles.modalMain}>
         <button
           onClick={handleClose}
-          className={modalStyles.modalButton}>
+          className={styles.modalButton}>
             x
         </button>
         <About />

@@ -2,8 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-
-import iconStyles from "../styling/icons/icons.module.scss"
+import styles from "./icons.module.scss"
 
 const Shiftpitch = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +25,7 @@ const Shiftpitch = () => {
     <Link to="/shiftpitch/" >
       <Img
         fixed={data.placeholderImage.childImageSharp.fixed}
-        className={iconStyles.shiftpitch}/>
+        className={styles.shiftpitch}/>
     </Link>
   )
 }

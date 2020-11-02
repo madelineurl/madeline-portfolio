@@ -46,6 +46,22 @@
   transform: scale(1.1);
 }
 
+.shadow-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shadow {
+  z-index: -1;
+  border-radius: 50%;
+  background-color: grey;
+  position: relative;
+  top: 1rem;
+  width: 160px;
+  height: 30px;
+}
+
 @keyframes fadeIn {
   0%   { opacity: 0%; }
   100% { opacity: 100%; }
@@ -55,3 +71,4 @@
   from   { rotate: 0deg; }
   to { rotate: 360deg; }
 }
+

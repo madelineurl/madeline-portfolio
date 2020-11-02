@@ -1,17 +1,16 @@
 import React from "react"
-
 import { Layout, SEO, Video, HomeLink, ProjectLink } from ".."
-import videoStyles from "../styling/video.module.css"
+import styles from "./project.module.css"
 
 const Project = (props) => (
   <Layout>
     <SEO title={props.seoTitle} />
-    <div className={videoStyles.videoContainer}>
+    <div className={styles.videoContainer}>
       <div>
         <Video
           title={props.videoTitle}
           videoURL={props.videoURL}/>
-        <div className={videoStyles.videoLinkContainer}>
+        <div className={styles.videoLinkContainer}>
           <ProjectLink
             projectUrl={props.siteURL}
             text='Play'

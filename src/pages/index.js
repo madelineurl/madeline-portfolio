@@ -2,17 +2,17 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { SEO } from "../components"
-import headerStyles from "../components/styling/header.module.css"
+import styles from "../components/madeline/modal.module.css"
 
 const Landing = () => (
   <>
     <SEO title="landing" />
-    <div className={headerStyles.landingContainer}>
+    <div className={styles.landingContainer}>
       <Link
         to="/home/"
-        className={headerStyles.headerLink}
+        className={styles.headerLink}
       >
-          <h1 className={headerStyles.landingHeader}>
+          <h1 className={styles.landingHeader}>
             madeline
           </h1>
         </Link>

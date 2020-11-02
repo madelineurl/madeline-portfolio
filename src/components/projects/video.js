@@ -1,11 +1,10 @@
 import React from "react"
-
-import videoStyles from "../styling/video.module.css"
+import styles from "./project.module.css"
 
 const Video = ({ videoURL, videoTitle }) => (
   <>
     <iframe
-      className={videoStyles.video}
+      className={styles.video}
       src={videoURL}
       title={videoTitle}
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

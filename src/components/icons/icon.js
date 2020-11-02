@@ -1,7 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-
-import iconStyles from "../styling/icons/icons.module.scss"
+import styles from "./icons.module.scss"
 
 const Icon = ({ url, name, image}) => (
   <a
@@ -12,7 +11,7 @@ const Icon = ({ url, name, image}) => (
         <Img
           fixed={image}
           alt={`${name}-icon`}
-          className={iconStyles.icon}
+          className={styles.icon}
         />
   </a>
 )

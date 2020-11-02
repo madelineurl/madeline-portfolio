@@ -2,8 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-
-import iconStyles from "../styling/icons/icons.module.scss"
+import styles from "./icons.module.scss"
 
 const Planet = () => {
   const data = useStaticQuery(graphql`
@@ -25,7 +24,7 @@ const Planet = () => {
   return (
     <Link to="/xibis/" >
       <Img fixed={data.placeholderImage.childImageSharp.fixed}
-       className={iconStyles.xibis}/>
+       className={styles.xibis}/>
     </Link>
   )
 }

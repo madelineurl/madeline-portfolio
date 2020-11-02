@@ -1,11 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import SEO from "../components/seo"
+import styles from "../components/madeline/modal.module.css"
 
-import styles from "../components/styling/header.module.css"
-
-  const Resume = () => {
-    const resume = useStaticQuery(graphql`
+const Resume = () => {
+  const resume = useStaticQuery(graphql`
     {
       pdf: file(name: { eq: "Madeline-Higgins-Software-Engineer-Resume-Nov-2020" }) {
         name

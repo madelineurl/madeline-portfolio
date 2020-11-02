@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import headerStyles from "../styling/header.module.css"
+import styles from "./modal.module.css"
 
 import Modal from "./modal"
 
@@ -16,8 +16,8 @@ const Header = () => {
   }
 
   return (
-    <header className={headerStyles.headerBackground} >
-      <div className={headerStyles.headerContainer}>
+    <header className={styles.headerBackground} >
+      <div className={styles.headerContainer}>
         <div>
           <Modal
             show={showModal}
@@ -26,12 +26,12 @@ const Header = () => {
 
           <button
             onClick={openAboutWindow}
-            className={headerStyles.modalButton}
+            className={styles.modalButton}
             >
               madeline
           </button>
           <button
-          className={headerStyles.modalButton} style={{color: `grey`}}>url</button>
+          className={styles.modalButton} style={{color: `grey`}}>url</button>
         </div>
       </div>
     </header>
