@@ -19,8 +19,6 @@ import styles from "../components/styling/header.module.css"
     evt.click(resume.pdf.publicURL)
   }
 
-  resume.name = 'MADELINE HIGGINS'
-
   return (
     <>
       <SEO title='resume' />

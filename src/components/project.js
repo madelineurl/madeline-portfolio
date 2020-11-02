@@ -1,7 +1,6 @@
 import React from "react"
 
-import { Layout, SEO, Video, HomeButton } from "../components"
-import buttonStyles from "../components/styling/buttons.module.css"
+import { Layout, SEO, Video, HomeLink, ProjectLink } from "../components"
 import videoStyles from "../components/styling/video.module.css"
 
 const Project = (props) => (
@@ -13,25 +12,18 @@ const Project = (props) => (
           title={props.videoTitle}
           videoURL={props.videoURL}/>
         <div className={videoStyles.videoLinkContainer}>
-          <a
-            className={buttonStyles.link}
-            href={props.siteURL}
-            target="_blank"
-            rel="noreferrer"
-              >Play
-            </a>
-          <a
-            className={buttonStyles.link}
-            href={props.gitHub}
-            target="_blank"
-            rel="noreferrer"
-            >
-              Github
-            </a>
+          <ProjectLink
+            projectUrl={props.siteURL}
+            text='Play'
+          />
+          <ProjectLink
+             projectUrl={props.siteURL}
+             text='Github'
+          />
         </div>
       </div>
     </div>
-    <HomeButton />
+    <HomeLink />
   </Layout>
 )
 

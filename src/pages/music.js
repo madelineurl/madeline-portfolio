@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Soundcloud, Layout, SEO, HomeButton } from '../components'
+import { Soundcloud, Layout, SEO, Button } from '../components'
 
 import audioStyles from "../components/styling/audio.module.css"
 
@@ -43,7 +43,7 @@ const Music = () => (
       rel="noreferrer">
         <Soundcloud />
     </a>
-    <HomeButton />
+    <Button text='Home' link='home'/>
   </Layout>
 )
 
