@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import iconStyles from "./styling/icons.module.css"
+import iconStyles from "./styling/icons/icons.module.scss"
 
 const Planet = () => {
   const data = useStaticQuery(graphql`

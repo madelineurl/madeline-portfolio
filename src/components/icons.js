@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Icon from "./icon"
-import iconStyles from "./styling/icons.module.css"
+import styles from "./styling/icons/icons.module.scss"
 
 const Icons = () => {
   const data =  useStaticQuery(graphql`
@@ -40,12 +40,12 @@ const Icons = () => {
   `)
 
   return (
-    <div className={iconStyles.iconContainer}>
+    <div className={styles.iconContainer}>
       <Link to='/contact/' >
         <Img
           fixed={data.mail.childImageSharp.fixed}
           alt="medium-icon"
-          className={iconStyles.icon}
+          className={styles.icon}
         />
       </Link>
       <Icon

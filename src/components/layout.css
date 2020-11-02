@@ -3,6 +3,17 @@
   src: url("/fonts/DMMono-Regular.ttf") format("woff2")
 }
 
+.zoom {
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+}
+
 .footer {
   color: grey;
   position: absolute;

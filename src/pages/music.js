@@ -7,6 +7,12 @@ import audioStyles from "../components/styling/audio.module.css"
 const Music = () => (
   <Layout>
     <SEO title="Music" />
+    <p>I taught myself to DJ after getting involved with the radio station in college, and ended up working part-time as a freelance DJ and at  <a
+        href='http://gramaphonerecords.com/'
+        target="_blank"
+        rel="noreferrer">
+          Gramaphone Records
+      </a> on the weekends. </p>
     <h4>Featured mix: Rinse FM</h4>
     <h4>Music for Xibis: A Galactic Voyage</h4>
     <iframe

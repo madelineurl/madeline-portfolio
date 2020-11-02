@@ -1,8 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
+//import anime from "animejs"
 
 import shadowStyles from "../components/styling/shadow.module.css"
-import iconStyles from "../components/styling/icons.module.css"
+import iconStyles from "../components/styling/icons/icons.module.scss"
 
 import {
   Layout,
@@ -13,12 +14,13 @@ import {
   Shadow
 } from "../components"
 
-const IndexPage = () => (
+const IndexPage = () => {
+  return (
   <Layout>
     <SEO title="Home" />
     <div className={iconStyles.navIconContainer}>
       <div className={shadowStyles.shadowBox}>
-        <Shiftpitch />
+        <Shiftpitch/>
         <Shadow />
       </div>
       <div className={shadowStyles.shadowBox}>
@@ -34,6 +36,7 @@ const IndexPage = () => (
     </div>
   </Layout>
 )
+}
 
 
 export default IndexPage

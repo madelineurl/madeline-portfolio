@@ -18,17 +18,15 @@
 
 .modal-main {
   position: fixed;
-  top: 40%;
   left: 50%;
+  top: 45%;
   background: white;
-  width: 60vw;
-  height: auto;
+  width: 40vw;
+  height: 80%;
   transform: translate(-50%,-50%);
   border-radius: 10px;
 }
 
 .modal-button {
   position: relative;
-  left: 38.5rem;
-  bottom: 6.5rem;
 }

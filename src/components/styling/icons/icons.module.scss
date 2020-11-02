@@ -1,0 +1,57 @@
+.icon-container {
+  position: absolute;
+  bottom: .5rem;
+  left: 42vw;
+  right: 42vw;
+  // animation: fadeIn 3s ease;
+  transition: transform .5s ease;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.soundcloud {
+  top: 2rem;
+}
+
+.soundcloud:hover {
+  transform: scale(1.1);
+}
+
+.nav-icon-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.shiftpitch {
+  top: .5rem;
+}
+
+.shiftpitch:hover {
+  transform: scale(1.1);
+  animation: spin linear infinite;
+}
+
+.xibis {
+  top: 2rem;
+}
+
+.xibis:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0%; }
+  100% { opacity: 100%; }
+}
+
+@keyframes spin {
+  from   { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
