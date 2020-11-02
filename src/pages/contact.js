@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Layout, SEO, Input, HomeButton } from "../components"
+import { Layout, SEO, Input, HomeLink } from "../components"
 
 const Contact = () => {
   return (
@@ -44,7 +44,7 @@ const Contact = () => {
           </button>
         </div>
       </form>
-      <HomeButton />
+      <HomeLink />
     </Layout>
   )
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import About from "./about"
 
-import modalStyles from "./styling/modal.module.css"
+import modalStyles from "./modal.module.css"
 
 const Modal = ({ handleClose, show }) => {
   const showHideModal = show ? modalStyles.displayBlock : modalStyles.displayNone;

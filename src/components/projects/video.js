@@ -1,6 +1,6 @@
 import React from "react"
 
-import videoStyles from "./styling/video.module.css"
+import videoStyles from "../styling/video.module.css"
 
 const Video = ({ videoURL, videoTitle }) => (
   <>

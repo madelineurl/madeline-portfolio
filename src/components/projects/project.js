@@ -1,7 +1,7 @@
 import React from "react"
 
-import { Layout, SEO, Video, HomeLink, ProjectLink } from "../components"
-import videoStyles from "../components/styling/video.module.css"
+import { Layout, SEO, Video, HomeLink, ProjectLink } from ".."
+import videoStyles from "../styling/video.module.css"
 
 const Project = (props) => (
   <Layout>

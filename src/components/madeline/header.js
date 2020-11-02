@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
-import headerStyles from "./styling/header.module.css"
+import headerStyles from "../styling/header.module.css"
 
 import Modal from "./modal"
 

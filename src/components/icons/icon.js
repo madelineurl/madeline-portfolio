@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 
-import iconStyles from "./styling/icons/icons.module.scss"
+import iconStyles from "../styling/icons/icons.module.scss"
 
 const Icon = ({ url, name, image}) => (
   <a

@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import iconStyles from "./styling/icons/icons.module.scss"
+import iconStyles from "../styling/icons/icons.module.scss"
 
 const Shiftpitch = () => {
   const data = useStaticQuery(graphql`
