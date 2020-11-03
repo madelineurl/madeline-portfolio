@@ -11,8 +11,7 @@ import {
   Shadow
 } from "../components"
 
-const IndexPage = () => {
-  return (
+const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div className={styles.navIconContainer}>
@@ -33,7 +32,6 @@ const IndexPage = () => {
     </div>
   </Layout>
 )
-}
 
 
 export default IndexPage

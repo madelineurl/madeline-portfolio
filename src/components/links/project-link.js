@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./link.module.css"
 
-const ProjectLink = ({ projectUrl, text}) => (
+const ProjectLink = ({ projectUrl, text }) => (
   <a
     className={styles.link}
     target="_blank"

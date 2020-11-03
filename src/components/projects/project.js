@@ -19,10 +19,10 @@ const Project = (props) => (
              projectUrl={props.siteURL}
              text='Github'
           />
+          <HomeLink />
         </div>
       </div>
     </div>
-    <HomeLink />
   </Layout>
 )
 

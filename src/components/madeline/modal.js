@@ -10,7 +10,7 @@ const Modal = ({ handleClose, show }) => {
       <section className={styles.modalMain}>
         <button
           onClick={handleClose}
-          className={styles.modalButton}>
+          className={styles.closeModal}>
             x
         </button>
         <About />

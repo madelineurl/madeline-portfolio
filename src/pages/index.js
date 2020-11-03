@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import { SEO } from "../components"
 import styles from "../components/madeline/modal.module.css"
 

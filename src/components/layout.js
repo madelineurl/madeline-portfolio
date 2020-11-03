@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
           flexDirection: `column`,
           textAlign: `center`,
           margin: `0 auto`,
-          maxWidth: 720,
+          maxWidth: 900,
           // padding: `0 1.0875rem 1.45rem`,
         }}
       >

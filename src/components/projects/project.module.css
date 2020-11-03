@@ -1,20 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono&display=swap');
+
 .video-container {
   display: flex;
   justify-content: center;
 }
 
 .video {
-  width: 500px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
 }
 
 .video-link-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  font-family: 'B612 Mono';
+}
+
+.music-blurb {
+  padding: .5rem;
+  border-radius: 8px;
+  color: rgb(65, 73, 94);
+  font-size: .75rem;
+}
+
+.music-container {
+  display: flex;
 }
 
 .soundcloud-player {
+  display: flex;
+  flex-direction: column;
   font-size: 10px;
   color: #cccccc;
   line-break: anywhere;

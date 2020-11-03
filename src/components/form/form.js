@@ -1,5 +1,5 @@
 import React from "react"
-import Input from ".."
+import Input from "./input"
 
 const Form = () => (
   <form
