@@ -26,11 +26,12 @@
 
 .music-container {
   display: flex;
+  justify-content: center;
 }
 
 .soundcloud-player {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   font-size: 10px;
   color: #cccccc;
   line-break: anywhere;

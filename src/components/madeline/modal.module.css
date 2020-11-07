@@ -20,8 +20,8 @@
   position: fixed;
   left: 50%;
   top: 45%;
-  background: white;
-  width: 30vw;
+  background: white repeat scroll;
+  /* width: 30vw; */
   height: 80%;
   transform: translate(-50%,-50%);
   border-radius: 10px;
@@ -84,6 +84,20 @@
   color: rgb(70, 66, 66);
   background: none;
   cursor: pointer;
+}
+
+.modal-button:hover {
+  text-decoration: underline;
+}
+
+.modal-header {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: bold;
+  font-size: 2.75rem;
+  display: inline-block;
+  color: grey;
+  cursor: auto;
 }
 
 .close-modal {

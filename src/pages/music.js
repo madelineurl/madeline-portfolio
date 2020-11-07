@@ -1,5 +1,5 @@
 import React from "react"
-import { SoundcloudPlayer, Layout, SEO, HomeLink, ProjectLink } from '../components'
+import { SoundcloudPlayer, Layout, SEO, HomeLink } from '../components'
 import styles from "../components/projects/project.module.css"
 
 const Music = () => (

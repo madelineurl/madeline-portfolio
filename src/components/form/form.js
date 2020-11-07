@@ -1,42 +1,44 @@
 import React from "react"
 import Input from "./input"
 
+import styles from './form.module.css'
+
 const Form = () => (
   <form
-      action="https://formspree.io/url.madeline@gmail.com"
+      action="https://formspree.io/contact@madelineurl.online"
       method="post"
       target="_blank"
       rel="noreferrer"
-      style={{
-        display: `flex`,
-        flexDirection: `column`,
-        margin: `1rem`
-      }}
+      className={styles.form}
     >
       <div>
-        <Input name='name' placeholder='name'/>
+        <Input
+          name='name'
+          placeholder='name'
+          className={styles.input}
+        />
       </div>
       <div>
-        <Input name='_replyto' placeholder='email' />
+        <Input
+          name='_replyto'
+          placeholder='email'
+          className={styles.input}
+        />
       </div>
       <div>
         <textarea
           type='text'
           name='message'
           placeholder='message'
-          style={{
-            margin: `.5rem`,
-            width: `40%`,
-            height: `20vh`
-          }}
+          className={styles.textArea}
           >
         </textarea>
       </div>
-      <Input name="_gotcha" display='none' />
+      <Input name="_gotcha" className={styles.gotcha} />
       <div>
         <button
           type='submit'>
-            send to url.madeline@gmail.com
+            send
         </button>
       </div>
   </form>

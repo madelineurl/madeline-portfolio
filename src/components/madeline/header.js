@@ -23,15 +23,13 @@ const Header = () => {
             show={showModal}
             handleClose={closeAboutWindow}
           />
-
           <button
             onClick={openAboutWindow}
             className={styles.modalButton}
             >
               madeline
           </button>
-          <button
-          className={styles.modalButton} style={{color: `grey`}}>url</button>
+          <h1 className={styles.modalHeader}>url</h1>
         </div>
       </div>
     </header>

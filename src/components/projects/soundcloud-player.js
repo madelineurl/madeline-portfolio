@@ -4,7 +4,7 @@ import styles from "./project.module.css"
 const SoundcloudPlayer = ({ url, title }) => (
   <div className={styles.soundcloudPlayer}>
     <iframe
-      width="90%"
+      width="93%"
       height="300"
       scrolling="no"
       frameborder="no"

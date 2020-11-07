@@ -1,18 +1,14 @@
 import React from "react"
 
-const Input = (props) => (
+// import styles from "./form.module.css"
+
+const Input = ({ name, placeholder, className }) => (
   <input
     type='text'
-    name={props.name}
-    placeholder={props.placeholder}
-    // onChange={props.handleChange}
-      style={{
-        width: `40%`,
-        margin: `.5rem`,
-        display: props.display
-      }}
-    >
-  </input>
+    name={name}
+    placeholder={placeholder}
+    className={className}
+  />
 )
 
 export default Input
