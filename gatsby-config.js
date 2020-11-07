@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `madeline higgins`,
-    description: `Portfolio site for Chicago-based developer, DJ, and producer Madeline Higgins.`,
-    author: `@gatsbyjs`,
+    description: `Portfolio site for Chicago-based software engineer, DJ, and producer Madeline Higgins.`,
+    author: `madeline higgins`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `madeline higgins portfolio`,
+        short_name: `madelineurl`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/polaroid_headshot.png`,
       },
     },
     `gatsby-plugin-sass`

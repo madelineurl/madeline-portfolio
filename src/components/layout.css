@@ -13,11 +13,12 @@
 }
 
 .footer {
-  position: fixed;
-  bottom: 10px;
-  left: 43%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: .5rem;
+  width: 100%;
 }
 
 html {

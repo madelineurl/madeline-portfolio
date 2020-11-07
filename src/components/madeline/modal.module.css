@@ -21,10 +21,11 @@
   left: 50%;
   top: 45%;
   background: white repeat scroll;
-  /* width: 30vw; */
+  width: 100%;
   height: 80%;
   transform: translate(-50%,-50%);
   border-radius: 10px;
+  border-style: outset;
 }
 
 .about {
@@ -33,9 +34,13 @@
   align-items: center;
 }
 
+.headshot {
+  margin-top: 1rem;
+}
+
 .about div {
   margin: .5rem;
-  font-size: .8rem;
+  font-size: 1rem;
 }
 
 .modal-button {
