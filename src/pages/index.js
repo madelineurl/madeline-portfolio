@@ -17,8 +17,9 @@ const Landing = () => (
         </Link>
       <h1 style={{
           display: `inline-block`,
-          fontSize: `3rem`,
-          color: `grey`
+          fontSize: `4rem`,
+          color: `grey`,
+          backgroundColor: `linen`
         }}>url</h1>
     </div>
   </>

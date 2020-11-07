@@ -27,20 +27,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          display: `flex`,
-          flexDirection: `column`,
-          textAlign: `center`,
-          margin: `0 auto`,
-          maxWidth: 900,
-          // padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div className='main'>
         <main>{children}</main>
         <footer className='footer'>
-        <Icons />
-          {/* copyright © madeline higgins {new Date().getFullYear()} */}
+          <Icons />
         </footer>
       </div>
     </>

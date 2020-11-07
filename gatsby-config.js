@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `madeline url`,
+    title: `madeline higgins`,
     description: `Portfolio site for Chicago-based developer, DJ, and producer Madeline Higgins.`,
     author: `@gatsbyjs`,
   },

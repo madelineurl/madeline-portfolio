@@ -1,14 +1,15 @@
 .icon-container {
-  // position: absolute;
   bottom: .5rem;
-  // align-self: center;
-  left: 10vw;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  // width: 100%;
   // animation: fadeIn 3s ease;
   transition: transform .5s ease;
 }
 
 .icon {
-  margin-right: 10px;
+  margin: .5em;
 }
 
 .icon:hover {
@@ -25,9 +26,13 @@
 
 .nav-icon-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 1.5rem;
   width: 100%;
+}
+
+.nav-icon-container div {
+  margin: 1.25rem;
 }
 
 .shiftpitch {
@@ -74,15 +79,16 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 730px) {
   .nav-icon-container {
     flex-direction: column;
   }
 
   .icon-container {
     position: fixed;
-    left: 25%;
-    display: block;
+    flex-direction: column;
+    left: 3%;
+    top: 25vh;
   }
 
   .icon {

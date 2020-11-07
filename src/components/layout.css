@@ -3,31 +3,21 @@
   src: url("/fonts/DMMono-Regular.ttf") format("woff2")
 }
 
-/* @media screen and (max-width: 500px) {
-
-} */
-.footer {
+.main {
   display: flex;
-  align-items: center;
-}
-
-.zoom {
-  transition: transform .2s;
-  width: 200px;
-  height: 200px;
+  flex-direction: column;
+  text-align: center;
   margin: 0 auto;
-}
-
-.zoom:hover {
-  transform: scale(1.5);
+  /* max-width: 900; */
+  /* padding: `0 1.0875rem 1.45rem` */
 }
 
 .footer {
-  color: grey;
-  position: absolute;
+  position: fixed;
   bottom: 10px;
-  left: 42vw;
-  font-size: .85rem;
+  left: 43%;
+  display: flex;
+  justify-content: center;
 }
 
 html {

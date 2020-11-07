@@ -1,6 +1,13 @@
 .icon-container {
   bottom: .5rem;
-  left: 10vw;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: -webkit-transform .5s ease;
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
@@ -8,7 +15,7 @@
 }
 
 .icon {
-  margin-right: 10px;
+  margin: .5em;
 }
 
 .icon:hover {
@@ -29,10 +36,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 1.5rem;
   width: 100%;
+}
+
+.nav-icon-container div {
+  margin: 1.25rem;
 }
 
 .shiftpitch {
@@ -102,7 +114,7 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 730px) {
   .nav-icon-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -111,8 +123,12 @@
   }
   .icon-container {
     position: fixed;
-    left: 25%;
-    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: 3%;
+    top: 25vh;
   }
   .icon {
     margin: .5em;
