@@ -6,6 +6,10 @@
 /* @media screen and (max-width: 500px) {
 
 } */
+.footer {
+  display: flex;
+  align-items: center;
+}
 
 .zoom {
   transition: transform .2s;

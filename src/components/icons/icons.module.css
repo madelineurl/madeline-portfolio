@@ -1,8 +1,6 @@
 .icon-container {
-  position: absolute;
   bottom: .5rem;
-  left: 42vw;
-  right: 42vw;
+  left: 10vw;
   -webkit-transition: -webkit-transform .5s ease;
   transition: -webkit-transform .5s ease;
   transition: transform .5s ease;
@@ -98,6 +96,12 @@
   }
 }
 
+@media screen and (min-width: 580) and (max-width: 780px) {
+  .icon-container {
+    left: 0vw;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .nav-icon-container {
     -webkit-box-orient: vertical;
@@ -106,9 +110,12 @@
             flex-direction: column;
   }
   .icon-container {
-    position: absolute;
-    top: 40%;
-    left: 90%;
+    position: fixed;
+    left: 25%;
+    display: block;
+  }
+  .icon {
+    margin: .5em;
   }
 }
 /*# sourceMappingURL=icons.module.css.map */

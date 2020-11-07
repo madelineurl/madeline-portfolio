@@ -1,8 +1,8 @@
 .icon-container {
-  position: absolute;
+  // position: absolute;
   bottom: .5rem;
-  left: 42vw;
-  right: 42vw;
+  // align-self: center;
+  left: 10vw;
   // animation: fadeIn 3s ease;
   transition: transform .5s ease;
 }
@@ -68,18 +68,25 @@
   to { rotate: 360deg; }
 }
 
+@media screen and (min-width: 580) and (max-width: 780px) {
+  .icon-container {
+    left: 0vw;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .nav-icon-container {
     flex-direction: column;
   }
 
   .icon-container {
-    // transform: translate(-250px);
-    // left: 40%;
-    position: absolute;
-    top: 40%;
-    left: 90%;
-    // left: 5px;
+    position: fixed;
+    left: 25%;
+    display: block;
+  }
+
+  .icon {
+    margin: .5em;
   }
 }
 

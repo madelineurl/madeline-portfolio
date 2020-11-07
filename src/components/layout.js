@@ -38,8 +38,8 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <Icons />
         <footer className='footer'>
+        <Icons />
           {/* copyright © madeline higgins {new Date().getFullYear()} */}
         </footer>
       </div>

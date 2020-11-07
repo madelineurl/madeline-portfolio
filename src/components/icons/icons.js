@@ -9,28 +9,28 @@ const Icons = () => {
     query {
       mail: file(relativePath: { eq: "mail-circle.png" }) {
         childImageSharp {
-          fixed(width: 32, height: 32) {
+          fixed(width: 48, height: 48) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       github: file(relativePath: { eq: "GitHub-Mark-64px.png" }) {
         childImageSharp {
-          fixed(width: 32, height: 32) {
+          fixed(width: 48, height: 48) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       linkedIn: file(relativePath: { eq: "circle.png" }) {
         childImageSharp {
-          fixed(width: 33, height: 33) {
+          fixed(width: 49, height: 49) {
             ...GatsbyImageSharpFixed
           }
         }
       }
       medium: file(relativePath: { eq: "medium-circle.webp" }) {
         childImageSharp {
-          fixed(width: 33, height: 33) {
+          fixed(width: 49, height: 49) {
             ...GatsbyImageSharpFixed
           }
         }
