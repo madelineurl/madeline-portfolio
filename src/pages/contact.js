@@ -4,7 +4,7 @@ import { Layout, SEO, HomeLink, Form } from "../components"
 const Contact = () => {
   return (
     <Layout>
-      <SEO title="Contact" />
+      <SEO title="contact" />
       <Form />
       <HomeLink />
     </Layout>

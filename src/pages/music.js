@@ -4,7 +4,7 @@ import styles from "../components/projects/project.module.css"
 
 const Music = () => (
   <Layout>
-    <SEO title="Music" />
+    <SEO title="music" />
     <div className={styles.musicContainer}>
       <SoundcloudPlayer
         url="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1138010866&color=%238cbc84&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"

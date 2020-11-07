@@ -13,7 +13,7 @@ import {
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="home" />
     <div className={styles.navIconContainer}>
       <div className={styles.shadowBox}>
         <Shiftpitch/>

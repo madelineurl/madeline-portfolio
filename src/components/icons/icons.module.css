@@ -36,9 +36,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-top: 1.5rem;
   width: 100%;
 }
@@ -108,13 +107,7 @@
   }
 }
 
-@media screen and (min-width: 580) and (max-width: 780px) {
-  .icon-container {
-    left: 0vw;
-  }
-}
-
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 740px) {
   .nav-icon-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -132,6 +125,19 @@
   }
   .icon {
     margin: .5em;
+  }
+}
+
+@media screen and (min-width: 580) and (max-width: 780px) {
+  .icon-container {
+    left: 0vw;
+  }
+}
+
+@media screen and (min-width: 1100) {
+  .nav-icon-container {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /*# sourceMappingURL=icons.module.css.map */

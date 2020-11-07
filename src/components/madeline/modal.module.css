@@ -60,6 +60,13 @@
   font-size: 4rem;
 }
 
+.landing-header-grey {
+  display: inline-block;
+  font-size: 4rem;
+  color: grey;
+  background-color: linen;
+}
+
 .header-background {
   margin-bottom: .25rem;
 }

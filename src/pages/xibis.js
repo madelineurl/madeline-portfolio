@@ -3,7 +3,7 @@ import { Project } from "../components"
 
 const Xibis = () => (
   <Project
-    seoTitle='Xibis'
+    seoTitle='xibis'
     videoTitle="Xibis: A Galactic Voyage"
     videoURL="https://www.youtube.com/embed/8HAfJqLG-sg"
     gitHub="https://github.com/zelda-capstone/xibis"

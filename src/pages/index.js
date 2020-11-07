@@ -15,12 +15,7 @@ const Landing = () => (
             madeline
           </h1>
         </Link>
-      <h1 style={{
-          display: `inline-block`,
-          fontSize: `4rem`,
-          color: `grey`,
-          backgroundColor: `linen`
-        }}>url</h1>
+      <h1 className={styles.landingHeaderGrey}>url</h1>
     </div>
   </>
 )

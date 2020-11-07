@@ -3,7 +3,7 @@ import { Project } from "../components"
 
 const Shiftpitch = () => (
   <Project
-    seoTitle="Shiftpitch"
+    seoTitle="shiftpitch"
     videoTitle="Shiftpitch"
     videoURL="https://www.youtube.com/embed/AAS2sIXPpY4"
     gitHub="https://github.com/zelda-capstone/xibis"
