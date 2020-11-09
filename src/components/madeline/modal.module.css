@@ -43,10 +43,6 @@
   font-size: 1rem;
 }
 
-.modal-button {
-  position: relative;
-}
-
 .landing-container {
   display: flex;
   flex-direction: row;
@@ -89,12 +85,14 @@
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   font-size: 3.5rem;
+  line-height: 1.5;
   border: none;
   margin: 0;
   padding: 0;
   color: rgb(70, 66, 66);
   background: none;
   cursor: pointer;
+  /* position: relative; */
 }
 
 .modal-button:hover {

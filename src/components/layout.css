@@ -16,9 +16,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: .5rem;
+  position: fixed;
+  bottom: .1rem;
   width: 100%;
+  background: white;
 }
 
 html {
