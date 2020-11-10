@@ -53,7 +53,7 @@
 
 .header-link {
   text-decoration: none;
-  color: black;
+  color: rgb(23, 22, 36);
 }
 
 .landing-header {
@@ -64,8 +64,8 @@
 .landing-header-grey {
   display: inline-block;
   font-size: 4rem;
-  color: grey;
-  background-color: linen;
+  color: rgb(151, 160, 165);
+  /* background-color: linen; */
 }
 
 .header-background {

@@ -7,6 +7,13 @@ import styles from "./icons.module.scss"
 const Icons = () => {
   const data =  useStaticQuery(graphql`
     query {
+      instagram: file(relativePath: { eq: "ig-icon.png" }) {
+        childImageSharp {
+          fixed(width: 52, height: 52) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
       mail: file(relativePath: { eq: "mail-circle.png" }) {
         childImageSharp {
           fixed(width: 48, height: 48) {
@@ -47,6 +54,11 @@ const Icons = () => {
           className={styles.icon}
         />
       </Link>
+      {/* <Icon
+        name='instagram'
+        url='https://instagram.com/soft.content'
+        image={data.instagram.childImageSharp.fixed}
+      /> */}
       <Icon
         name='github'
         url='https://github.com/madelineurl'

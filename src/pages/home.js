@@ -16,15 +16,15 @@ const IndexPage = () => (
     <SEO title="home" />
     <div className={styles.navIconContainer}>
       <div className={styles.shadowBox}>
-        <Shiftpitch/>
+        <Shiftpitch link='/music/'/>
         <Shadow />
       </div>
       <div className={styles.shadowBox}>
-        <Planet />
+        <Planet link='/projects/'/>
         <Shadow />
       </div>
       <div className={styles.shadowBox}>
-        <Link to="/music/">
+        <Link to="/skills/">
           <Soundcloud/>
         </Link>
         <Shadow />

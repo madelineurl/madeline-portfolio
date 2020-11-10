@@ -5,7 +5,7 @@ import styles from "./link.module.css"
 const TemplateLink = ({ link, children }) => (
   <Link
     className={styles.link}
-    to={`/${link}/`}>
+    to={link}>
       {children}
   </Link>
 )

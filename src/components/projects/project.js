@@ -1,25 +1,27 @@
 import React from "react"
-import { Layout, SEO, Video, HomeLink, ProjectLink } from ".."
+import { Layout, SEO, Video, ProjectLink, TemplateLink } from ".."
 import styles from "./project.module.css"
 
-const Project = (props) => (
+const Project = ({ seoTitle, videoTitle, videoURL, siteURL }) => (
   <Layout>
-    <SEO title={props.seoTitle} />
+    <SEO title={seoTitle} />
     <div className={styles.videoContainer}>
       <div>
         <Video
-          title={props.videoTitle}
-          videoURL={props.videoURL}/>
+          title={videoTitle}
+          videoURL={videoURL}/>
         <div className={styles.videoLinkContainer}>
           <ProjectLink
-            projectUrl={props.siteURL}
-            text='Play'
+            projectUrl={siteURL}
+            text='play'
           />
           <ProjectLink
-             projectUrl={props.siteURL}
-             text='Github'
+             projectUrl={siteURL}
+             text='github'
           />
-          <HomeLink />
+          <TemplateLink link='/projects/' >
+            back to projects
+          </TemplateLink>
         </div>
       </div>
     </div>
