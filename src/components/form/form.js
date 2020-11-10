@@ -5,12 +5,18 @@ import styles from './form.module.css'
 
 const Form = () => (
   <form
-      action="https://formspree.io/contact@madelineurl.online"
+      name="contact"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
       method="post"
-      target="_blank"
-      rel="noreferrer"
+      // action="/pages/success"
       className={styles.form}
     >
+      <input
+        type="hidden"
+        name="form-name"
+        value="contact"
+      />
       <div>
         <Input
           name='name'
@@ -30,11 +36,11 @@ const Form = () => (
           type='text'
           name='message'
           placeholder='message'
-          className={styles.textArea}
+          className={styles.message}
           >
         </textarea>
       </div>
-      <Input name="_gotcha" className={styles.gotcha} />
+      <Input name="bot-field" className={styles.gotcha} />
       <div>
         <button
           type='submit'>
