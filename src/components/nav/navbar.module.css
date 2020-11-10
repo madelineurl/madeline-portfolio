@@ -1,0 +1,15 @@
+.navbar {
+  margin: 0 auto;
+  padding: 1.45rem 1.0875rem;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  color: grey;
+  text-decoration: none;
+  margin: .5rem 1rem 2rem 1rem;
+}

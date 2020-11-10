@@ -23,7 +23,7 @@ const Icons = () => {
       }
       linkedIn: file(relativePath: { eq: "circle.png" }) {
         childImageSharp {
-          fixed(width: 49, height: 49) {
+          fixed(width: 50, height: 50) {
             ...GatsbyImageSharpFixed
           }
         }

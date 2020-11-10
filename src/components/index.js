@@ -19,5 +19,7 @@ export { default as TemplateLink } from "./links/link"
 export { default as HomeLink } from "./links/home-link"
 export { default as ProjectLink } from "./links/project-link"
 
+export { default as Header } from "./madeline/header"
+export { default as Navbar } from "./nav/navbar.js"
 export { default as Layout } from "./layout"
 export { default as SEO } from "./seo"
