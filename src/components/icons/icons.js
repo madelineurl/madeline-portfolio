@@ -66,7 +66,7 @@ const Icons = () => {
       />
       <Icon
         name='medium'
-        url='https://medium.com/@url.madeline/'
+        url='https://madeline-url.medium.com/'
         image={data.medium.childImageSharp.fixed}
       />
       <Icon

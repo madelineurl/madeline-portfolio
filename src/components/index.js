@@ -11,7 +11,7 @@ export { default as Icons } from "./icons/icons"
 export { default as Image } from "./madeline/image"
 export { default as Modal } from "./madeline/modal"
 
-export { default as Form } from "./form/form"
+export { default as ContactForm } from "./form/form"
 export { default as Input } from "./form/input"
 export { default as Label } from "./form/label"
 
