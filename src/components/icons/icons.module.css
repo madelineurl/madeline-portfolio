@@ -37,6 +37,10 @@
   margin: 1.25rem;
 }
 
+.label {
+  color: white;
+}
+
 .shiftpitch {
   top: .5rem;
 }
@@ -78,6 +82,14 @@
   top: 1rem;
   width: 160px;
   height: 30px;
+}
+
+.shadow span {
+  color: white;
+}
+
+.none {
+  display: none;
 }
 
 @-webkit-keyframes spin {

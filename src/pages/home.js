@@ -11,27 +11,29 @@ import {
   Shadow
 } from "../components"
 
-const IndexPage = () => (
+const IndexPage = () => {
+  return (
   <Layout>
     <SEO title="home" />
     <div className={styles.navIconContainer}>
       <div className={styles.shadowBox}>
         <Shiftpitch link='/music/'/>
-        <Shadow />
+        <Shadow label='MUSIC' />
       </div>
       <div className={styles.shadowBox}>
         <Planet link='/projects/'/>
-        <Shadow />
+        <Shadow label='PROJECTS'/>
       </div>
       <div className={styles.shadowBox}>
         <Link to="/skills/">
           <Soundcloud/>
         </Link>
-        <Shadow />
+        <Shadow label='SKILLS' />
       </div>
     </div>
   </Layout>
 )
+}
 
 
 export default IndexPage

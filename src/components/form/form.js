@@ -28,7 +28,7 @@ const ContactForm = () => {
     evt.preventDefault();
     const form = evt.target;
     try {
-      const response = await fetch("/", {
+      await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
