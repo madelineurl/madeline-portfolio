@@ -25,13 +25,13 @@ const Background = () => {
               },
               onHover: {
                 enable: true,
-                mode: "repulse",
+                mode: "push",
               },
               resize: true,
             },
             modes: {
               bubble: {
-                distance: 200,
+                distance: 100,
                 duration: 10,
                 opacity: 0.8,
                 size: 40,
@@ -50,7 +50,7 @@ const Background = () => {
               value: "#0241a1",
             },
             links: {
-              color: "#fffff7",
+              color: "#E4E5E5",
               distance: 150,
               enable: true,
               opacity: 0.5,

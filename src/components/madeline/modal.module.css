@@ -47,9 +47,9 @@
 
 .landing-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  /* text-align: center; */
+  position: relative;
+  top: 35vh;
 }
 
 .landing-container div {
@@ -70,8 +70,7 @@
 .landing-header-grey {
   display: inline-block;
   font-size: 4rem;
-  color: rgb(151, 160, 165);
-  /* background-color: linen; */
+  color: rgb(124, 124, 124);
 }
 
 .header-background {
