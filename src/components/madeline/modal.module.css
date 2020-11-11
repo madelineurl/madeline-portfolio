@@ -26,6 +26,8 @@
   transform: translate(-50%,-50%);
   border-radius: 10px;
   border-style: outset;
+  overflow: scroll;
+  padding: 1em;
 }
 
 .about {
@@ -34,9 +36,9 @@
   align-items: center;
 }
 
-.headshot {
+/* .headshot {
   margin-top: 1rem;
-}
+} */
 
 .about div {
   margin: .5rem;
@@ -129,4 +131,13 @@
   align-items: center;
   text-decoration: none;
   color: black;
+}
+
+@media screen and (min-width: 550px) {
+  .modal-main {
+    width: 550px;
+    height: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }

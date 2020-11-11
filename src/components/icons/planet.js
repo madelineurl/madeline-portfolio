@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -17,14 +17,21 @@ const Planet = ({ link }) => {
     }
   `)
 
+  const showLabel = () => {
+    console.log('hello!')
+  }
+
   if (!data?.placeholderImage?.childImageSharp?.fixed) {
     return <div>Picture not found</div>
   }
 
   return (
     <Link to={link} >
-      <Img fixed={data.placeholderImage.childImageSharp.fixed}
-       className={styles.xibis}/>
+      <Img
+        fixed={data.placeholderImage.childImageSharp.fixed}
+        className={styles.xibis}
+        onMouseOver={showLabel}
+      />
     </Link>
   )
 }
