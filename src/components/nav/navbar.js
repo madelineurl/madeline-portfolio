@@ -5,9 +5,9 @@ import styles from "./navbar.module.css"
 const Navbar = () => {
   return (
     <div className={styles.navbar} >
+      <NavbarLink name='home' />
       <NavbarLink name='projects' />
       <NavbarLink name='skills' />
-      <NavbarLink name='about' />
       <NavbarLink name='references' />
     </div>
   )

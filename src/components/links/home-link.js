@@ -3,7 +3,7 @@ import { TemplateLink } from ".."
 
 const HomeLink = () => (
   <TemplateLink link='/home/' >
-    Home
+    home
   </TemplateLink>
 )
 

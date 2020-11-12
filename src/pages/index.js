@@ -6,7 +6,7 @@ import styles from "../components/madeline/modal.module.css"
 const Landing = () => (
   <>
     <Particles />
-    <SEO title="landing" />
+    <SEO title="welcome" />
     <div className={styles.landingContainer}>
       <div>
         <Link
