@@ -3,7 +3,7 @@ import { SEO, Layout, ListProjects } from "../components"
 
 const Projects = () => (
   <Layout>
-    <SEO title='/projects/' />
+    <SEO title='projects' />
     <ListProjects />
   </Layout>
 )

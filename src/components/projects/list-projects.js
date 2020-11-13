@@ -12,19 +12,13 @@ import {
 const ListProjects = () => {
   return (
     <div className={styles.navIconContainer}>
-      <div className={styles.shadowBox}>
+      <div className={styles.container}>
         <Shiftpitch link='/shiftpitch/'/>
-        <Shadow />
+        {/* <div>SHIFTPITCH</div> */}
       </div>
-      <div className={styles.shadowBox}>
+      <div className={styles.container}>
         <Planet link='/xibis/'/>
-        <Shadow />
-      </div>
-      <div className={styles.shadowBox}>
-        <Link to="/music/">
-          <Soundcloud/>
-        </Link>
-        <Shadow />
+        {/* <div>XIBIS</div> */}
       </div>
     </div>
   )
