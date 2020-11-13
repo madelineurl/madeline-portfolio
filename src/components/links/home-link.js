@@ -2,8 +2,8 @@ import React from "react"
 import { TemplateLink } from ".."
 
 const HomeLink = () => (
-  <TemplateLink link='home' >
-    Home
+  <TemplateLink link='/home/' >
+    home
   </TemplateLink>
 )
 

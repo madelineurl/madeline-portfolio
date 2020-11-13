@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styles from "./icons.module.scss"
 
-const Shiftpitch = () => {
+const Shiftpitch = ({ link }) => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "shiftpitch.png" }) {
@@ -22,7 +22,7 @@ const Shiftpitch = () => {
   }
 
   return (
-    <Link to="/shiftpitch/" >
+    <Link to={link} >
       <Img
         fixed={data.placeholderImage.childImageSharp.fixed}
         className={styles.shiftpitch}/>

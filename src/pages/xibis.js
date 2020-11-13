@@ -8,6 +8,7 @@ const Xibis = () => (
     videoURL="https://www.youtube.com/embed/8HAfJqLG-sg"
     gitHub="https://github.com/zelda-capstone/xibis"
     siteURL="https://zapstone-bc2fe.web.app/"
+    link="/xibis/"
   />
 )
 

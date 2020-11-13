@@ -1,15 +1,14 @@
-@font-face {
-  font-family: "DM Mono";
-  src: url("/fonts/DMMono-Regular.ttf") format("woff2")
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 .main {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
+  font-family: 'Roboto' sans-serif;
   /* max-width: 900; */
   /* padding: `0 1.0875rem 1.45rem` */
+  overscroll-behavior: none;
 }
 
 .footer {
@@ -17,7 +16,7 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: .1rem;
+  bottom: 0px;
   width: 100%;
   background: white;
 }
@@ -25,7 +24,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
+  font: 112.5%/1.45em 'Roboto', serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
