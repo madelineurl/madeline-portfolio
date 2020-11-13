@@ -1,12 +1,12 @@
 import React from "react"
-import { Layout, SEO, HomeLink, ContactForm } from "../components"
+import { Layout, SEO, ContactForm } from "../components"
 
 const Contact = () => {
   return (
     <Layout>
       <SEO title="contact" />
+      {/* <h3>contact</h3> */}
       <ContactForm />
-      <HomeLink />
     </Layout>
   )
 }

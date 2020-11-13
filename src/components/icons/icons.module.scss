@@ -30,6 +30,10 @@ img {
   margin: .25rem;
 }
 
+.label {
+  color: white;
+}
+
 .shiftpitch {
   top: 1.2rem;
 }
@@ -71,7 +75,7 @@ img {
   to { rotate: 360deg; }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 600px) {
   .nav-icon-container {
     flex-direction: column;
   }

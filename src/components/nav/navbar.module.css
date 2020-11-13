@@ -3,32 +3,59 @@
 .burger {
   position: absolute;
   right: 2rem;
-  top: 3.5rem;
+  top: 2rem;
 }
 
 .navbar {
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem 0px 1.45rem 0px;
   position: fixed;
-  right: 0px;
-  top: 5rem;
+  right: 5rem;
+  top: 0px;
   /* background: rgb(138, 150, 184); */
   opacity: 0.5;
-  height: 100%;
+  /* height: 100%; */
   z-index: 6;
 }
 
 .nav-link {
   font-family: 'Roboto', sans-serif;
-  color: rgb(63, 64, 65);
+  font-weight: bold;
+  font-size: 1.1rem;
+  height: 5%;
+  color: rgb(38, 40, 43);
   text-decoration: none;
-  /* margin: .5rem 1rem; */
+  margin: .5rem .5rem;
+  padding: .2rem;
+}
+
+.nav-link:hover {
+  background: rgb(42, 42, 46);
+  color: white;
+  border-radius: 5px;
 }
 
 .show {
   display: flex;
-  flex-direction: column;
 }
 
 .hide {
   display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .show {
+    flex-direction: column;
+    right: 0px;
+    top: 5rem;
+    background: rgb(237, 237, 237);
+    border-radius: 5px;
+    z-index: 9;
+    opacity: 0.8;
+    padding: 0px;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 0px;
+  }
 }

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -17,8 +17,12 @@ const Planet = ({ link }) => {
     }
   `)
 
+  const [labelVisible, setLabelVisible] = useState(false);
+  const labelClass = labelVisible ? styles.label : styles.none;
+
   const showLabel = () => {
-    console.log('hello!')
+    setLabelVisible(true);
+    console.log('hovering!')
   }
 
   if (!data?.placeholderImage?.childImageSharp?.fixed) {
@@ -31,6 +35,7 @@ const Planet = ({ link }) => {
         fixed={data.placeholderImage.childImageSharp.fixed}
         className={styles.xibis}
         onMouseOver={showLabel}
+        labelClass={labelClass}
       />
     </Link>
   )
