@@ -1,12 +1,10 @@
 import React from 'react'
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import styles from "../icons/icons.module.scss"
 
 import {
   Shiftpitch,
-  Soundcloud,
   Planet,
-  Shadow
 } from ".."
 
 const ListProjects = () => {

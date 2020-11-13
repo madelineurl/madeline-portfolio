@@ -54,11 +54,11 @@ const Icons = () => {
           className={styles.icon}
         />
       </Link>
-      <Icon
+      {/* <Icon
         name='soundcloud'
         url='https://soundcloud.com/madeline-url'
         image={data.soundcloud.childImageSharp.fixed}
-      />
+      /> */}
       <Icon
         name='github'
         url='https://github.com/madelineurl'

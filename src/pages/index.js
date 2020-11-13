@@ -1,15 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
-import { SEO, Particles } from "../components"
+import { SEO, LandingLayout } from "../components"
 import styles from "../components/madeline/modal.module.css"
 
-const Landing = () => (
-  <>
-    <Particles />
-    <SEO title="welcome" />
+const IndexPage = () => (
+  <LandingLayout>
+    <SEO title="home" />
     <div className={styles.landingContainer}>
       <div>
-        <Link
+         <Link
           to="/home/"
           className={styles.headerLink}
         >
@@ -18,9 +17,10 @@ const Landing = () => (
           </h1>
         </Link>
         <h1 className={styles.landingHeaderGrey}>url</h1>
+      <div>Software engineer based in Chicago.</div><div> I design accessible applications that help people connect to their creativity and to each other.</div>
       </div>
     </div>
-  </>
+  </LandingLayout>
 )
 
-export default Landing
+export default IndexPage;

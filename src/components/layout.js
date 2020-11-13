@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Icons, Header, Navbar, HomeIcon } from '../components'
+import { Icons, Header, Navbar } from '../components'
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -16,10 +16,14 @@ const Layout = ({ children }) => {
     }
   `)
 
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <HomeIcon />
       <Navbar />
       <div className='main'>
         <main>{children}</main>
