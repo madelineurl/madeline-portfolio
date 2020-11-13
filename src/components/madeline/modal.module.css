@@ -25,7 +25,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 25vh;
+  top: 20vh;
 }
 
 .header-container {
@@ -48,12 +48,6 @@
   color: rgb(54, 53, 60);
 }
 
-/* .header-grey {
-  display: inline-block;
-  font-size: 3rem;
-  color: grey;
-} */
-
 .header-link:hover {
   text-decoration: underline;
 }
@@ -72,6 +66,11 @@
   cursor: pointer;
   display: inline-block;
   /* position: relative; */
+}
+
+.headshot-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .modal-button:hover {
@@ -121,8 +120,10 @@
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   font-size: 1.5rem;
+  right: 5%;
+  top: 5%;
   /* left: 90%; */
 }
 
@@ -130,6 +131,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: left;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -138,8 +140,8 @@
   font-size: 1rem;
 }
 
-
 .loading {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   text-align: center;
