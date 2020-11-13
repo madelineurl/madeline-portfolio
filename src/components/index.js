@@ -13,6 +13,7 @@ export { default as Shadow } from "./icons/shadow"
 export { default as Icons } from "./icons/icons"
 export { default as HomeIcon } from "./icons/home"
 
+export { default as AboutMe} from "./madeline/about"
 export { default as Image } from "./madeline/image"
 export { default as Modal } from "./madeline/modal"
 
@@ -25,6 +26,7 @@ export { default as HomeLink } from "./links/home-link"
 export { default as ProjectLink } from "./links/project-link"
 
 export { default as Header } from "./madeline/header"
+export { default as LandingHeader } from "./madeline/landing-header"
 export { default as Particles } from "./particles"
 export { default as Navbar } from "./nav/navbar.js"
 export { default as Layout } from "./layout"

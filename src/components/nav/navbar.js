@@ -1,5 +1,5 @@
 import React, { useState} from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import NavbarLink from "./navbar-link"
 import styles from "./navbar.module.css"
 import HamburgerMenu from "react-hamburger-menu"
@@ -28,11 +28,12 @@ const Navbar = () => {
         />
       </div>
       <div className={`${styles.navbar} ${showNav}`}>
+        {/* <NavbarLink name='ABOUT' /> */}
         <NavbarLink name='PROJECTS' />
         <NavbarLink name='SKILLS' />
         <NavbarLink name='MUSIC' />
         <NavbarLink name='REFERENCES' />
-        <Link to='/' className={styles.navLink} >HOME</Link>
+        {/* <Link to='/' className={styles.navLink} >HOME</Link> */}
       </div>
     </>
   )

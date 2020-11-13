@@ -1,36 +1,16 @@
-import React, { useState } from "react"
+import React from "react"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import styles from "./modal.module.css"
 
-import Modal from "./modal"
-
 const Header = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const openAboutWindow = () => {
-    setShowModal(true);
-  }
-
-  const closeAboutWindow = () => {
-    setShowModal(false);
-  }
-
   return (
-    <header className={styles.headerBackground} >
-      <div className={styles.headerContainer}>
-        <div>
-          <Modal
-            show={showModal}
-            handleClose={closeAboutWindow}
-          />
-          <button
-            onClick={openAboutWindow}
-            className={styles.modalButton}
-            >
-              madeline
-          </button>
-          <h1 className={styles.modalHeader}>url</h1>
-        </div>
+    <header>
+        <div className={styles.container}>
+          <Link to='/' className={styles.headerLink} >
+            <h1>madeline</h1>
+          </Link>
+          <h1 className={styles.headerGrey}>url</h1>
       </div>
     </header>
   )
