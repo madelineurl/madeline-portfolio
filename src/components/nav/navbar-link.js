@@ -6,14 +6,10 @@ import styles from "./navbar.module.css"
 const NavbarLink = ({ name }) => {
   return (
     <Link
-        to={`/${name}/`}
-        className={styles.navLink}
-        style={{
-          color: `grey`,
-          textDecoration: `none`,
-          //margin: `.5rem 1rem 2rem 1rem`
-        }}>
-        {name}
+      to={`/${name.toLowerCase()}/`}
+      className={styles.navLink}
+    >
+      {name}
     </Link>
   )
 }

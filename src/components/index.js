@@ -4,6 +4,8 @@ export { default as Video } from "./projects/video"
 export { default as SoundcloudPlayer } from "./projects/soundcloud-player"
 export { default as Skills } from "./projects/skills"
 
+export { default as Testimonials } from "./references/testimonials"
+
 export { default as Shiftpitch } from "./icons/shiftpitch"
 export { default as Planet } from "./icons/planet"
 export { default as Soundcloud } from "./icons/soundcloud-icon"
