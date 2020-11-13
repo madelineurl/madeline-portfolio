@@ -2,6 +2,7 @@ export { default as ListProjects } from "./projects/list-projects"
 export { default as Project } from "./projects/project"
 export { default as Video } from "./projects/video"
 export { default as SoundcloudPlayer } from "./projects/soundcloud-player"
+export { default as Skills } from "./projects/skills"
 
 export { default as Shiftpitch } from "./icons/shiftpitch"
 export { default as Planet } from "./icons/planet"

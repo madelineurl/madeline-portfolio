@@ -5,6 +5,7 @@ import styles from "./navbar.module.css"
 const Navbar = () => {
   return (
     <div className={styles.navbar} >
+      <i class="fas fa-bars"></i>
       <NavbarLink name='home' />
       <NavbarLink name='projects' />
       <NavbarLink name='skills' />

@@ -5,8 +5,9 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title="404"/>
     <div style={{
-      position: `absolute`,
-      top: `3rem`
+      display: `flex`,
+      flexDirection: 'column',
+      justifyContent: `center`
     }}>
       <h1>Oops!</h1>
       <p>My portfolio hasn't reached this corner of the Internet (yet).</p>

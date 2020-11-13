@@ -15,36 +15,28 @@
   top: 2rem;
 }
 
-.soundcloud:hover {
-  transform: scale(1.1);
-}
-
 .nav-icon-container {
   display: flex;
   justify-content: space-around;
-  margin-top: 1.5rem;
   width: 100%;
+  margin-top: .5rem;
 }
 
 .nav-icon-container div {
-  margin: 1.25rem;
+  margin: .25rem;
 }
 
 .shiftpitch {
   top: .5rem;
 }
 
-.shiftpitch:hover {
-  transform: scale(1.1);
-  animation: spin linear infinite;
-}
+// .shiftpitch:hover {
+//   transform: scale(1.1);
+//   animation: spin linear infinite;
+// }
 
 .xibis {
   top: 2rem;
-}
-
-.xibis:hover {
-  transform: scale(1.1);
 }
 
 .shadow-box {
@@ -58,7 +50,7 @@
   border-radius: 50%;
   background-color: grey;
   position: relative;
-  top: 1rem;
+  top: .5rem;
   width: 160px;
   height: 30px;
 }
@@ -90,9 +82,9 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .nav-icon-container {
-    width: 1200px;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }

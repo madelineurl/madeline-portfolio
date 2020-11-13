@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 import { Link } from "gatsby"
 import styles from "../icons/icons.module.scss"
 
@@ -14,15 +13,15 @@ const ListProjects = () => {
   return (
     <div className={styles.navIconContainer}>
       <div className={styles.shadowBox}>
-        <Shiftpitch link='/music/'/>
+        <Shiftpitch link='/shiftpitch/'/>
         <Shadow />
       </div>
       <div className={styles.shadowBox}>
-        <Planet link='/projects/'/>
+        <Planet link='/xibis/'/>
         <Shadow />
       </div>
       <div className={styles.shadowBox}>
-        <Link to="/skills/">
+        <Link to="/music/">
           <Soundcloud/>
         </Link>
         <Shadow />
