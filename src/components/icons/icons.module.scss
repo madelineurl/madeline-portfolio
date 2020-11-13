@@ -1,3 +1,7 @@
+img {
+  margin: 0px;
+}
+
 .icon-container {
   // animation: fadeIn 3s ease;
   transition: transform .5s ease;
@@ -11,23 +15,19 @@
   transform: scale(1.1);
 }
 
-.soundcloud {
-  top: 2rem;
-}
-
-.soundcloud:hover {
-  transform: scale(1.1);
-}
+// .soundcloud {
+//   top: 2rem;
+// }
 
 .nav-icon-container {
   display: flex;
-  justify-content: space-around;
-  margin-top: 1.5rem;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
 }
 
 .nav-icon-container div {
-  margin: 1.25rem;
+  margin: .25rem;
 }
 
 .label {
@@ -35,44 +35,40 @@
 }
 
 .shiftpitch {
-  top: .5rem;
+  top: 1.2rem;
 }
 
-.shiftpitch:hover {
-  transform: scale(1.1);
-  animation: spin linear infinite;
+// .shiftpitch:hover {
+//   transform: scale(1.1);
+//   animation: spin linear infinite;
+// }
+
+.home-icon {
+  position: absolute;
+  right: 5rem;
+  top: 2.5rem;
+  margin-right: 1rem;
 }
 
-.xibis {
-  top: 2rem;
-}
+// .xibis {
+//   top: 2rem;
+// }
 
-.xibis:hover {
-  transform: scale(1.1);
-}
-
-.shadow-box {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.shadow {
-  z-index: -1;
-  border-radius: 50%;
-  background-color: grey;
-  position: relative;
-  top: 1rem;
-  width: 160px;
-  height: 30px;
-  span {
-    color: white;
-  }
-}
-
-.none {
-  display: none;
-}
+// .shadow {
+//   z-index: -1;
+//   border-radius: 50%;
+//   background-color: grey;
+//   position: relative;
+//   top: .5rem;
+//   width: 160px;
+//   height: 30px;
+// }
 
 @keyframes spin {
   from   { rotate: 0deg; }
@@ -101,9 +97,9 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
   .nav-icon-container {
-    width: 1200px;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }

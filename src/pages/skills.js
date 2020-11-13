@@ -1,17 +1,11 @@
 import React from "react"
-import { Layout, SEO, HomeLink } from "../components"
+import { Layout, SEO, Skills } from "../components"
 
-const Skills = () => (
+const SkillsPage = () => (
   <Layout>
     <SEO title='skills' />
-      <h3>Skills</h3>
-      <div>Javascript / ES2020</div>
-      <div>React</div>
-      <div>Redux</div>
-      <div>PostgreSQL</div>
-      <div>Firestore</div>
-    <HomeLink />
+     <Skills />
   </Layout>
 )
 
-export default Skills;
+export default SkillsPage;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
 .display-block {
   display: block;
 }
@@ -28,12 +30,14 @@
   border-style: outset;
   overflow: scroll;
   padding: 1em;
+  overscroll-behavior: none;
 }
 
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* .headshot {
@@ -47,10 +51,9 @@
 
 .landing-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  text-align: center;
-  margin-top: 35vh;
+  position: relative;
+  top: 37vh;
 }
 
 .header-link {
@@ -63,11 +66,14 @@
   font-size: 4rem;
 }
 
+.landing-header:hover {
+  text-decoration: underline;
+}
+
 .landing-header-grey {
   display: inline-block;
   font-size: 4rem;
-  color: rgb(151, 160, 165);
-  /* background-color: linen; */
+  color: grey;
 }
 
 .header-background {
@@ -75,7 +81,7 @@
 }
 
 .header-container {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   max-width: 1020;
   padding: 1.45rem 1.0875rem;
   display: flex;

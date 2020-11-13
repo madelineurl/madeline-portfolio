@@ -2,9 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Icons, Header } from '../components'
-// import Header from "./madeline/header"
-// import Navbar from ".."
+import { Icons, Header, Navbar, HomeIcon } from '../components'
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -21,7 +19,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      {/* <Navbar /> */}
+      <HomeIcon />
+      <Navbar />
       <div className='main'>
         <main>{children}</main>
         <footer className='footer'>
