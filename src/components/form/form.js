@@ -20,6 +20,8 @@ const ContactForm = () => {
     }
   )
 
+  const disabled = userInput ? false : true;
+
   const handleChange = evt => {
     setUserInput({ [evt.target.name]: evt.target.value })
   }
@@ -88,6 +90,8 @@ const ContactForm = () => {
         <button
           type='submit'
           name='submit-button'
+          className={styles.send}
+          disabled={disabled}
         >
           send
         </button>

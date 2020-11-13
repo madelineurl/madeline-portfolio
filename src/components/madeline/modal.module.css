@@ -14,6 +14,12 @@
   justify-content: flex-start;
 }
 
+.landing-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  margin: .5rem;
+}
+
 .landing-container {
   display: flex;
   flex-direction: column;
@@ -148,5 +154,13 @@
     height: 80%;
     margin-top: auto;
     margin-bottom: auto;
+  }
+}
+
+@media screen and (min-width: 670px) {
+  .landing-text {
+    width: 670px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

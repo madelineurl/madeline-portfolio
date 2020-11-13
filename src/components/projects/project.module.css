@@ -24,6 +24,7 @@
 }
 
 .music-blurb {
+  font-family: 'Roboto', sans-serif;
   padding: .5rem;
   border-radius: 8px;
   color: rgb(65, 73, 94);
