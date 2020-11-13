@@ -6,11 +6,10 @@ import styles from "./modal.module.css"
 const Header = () => {
   return (
     <header>
-        <div className={styles.container}>
-          <Link to='/' className={styles.headerLink} >
-            <h1>madeline</h1>
-          </Link>
-          <h1 className={styles.headerGrey}>url</h1>
+      <div className={`${styles.container} ${styles.mainHeader}`}>
+        <Link to='/' className={styles.headerLink} >
+          <h1>madeline</h1>
+        </Link>
       </div>
     </header>
   )

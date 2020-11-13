@@ -11,7 +11,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .landing-container {
@@ -23,18 +23,14 @@
 }
 
 .header-container {
-  /* margin: 0 auto; */
   max-width: 1020;
-  /* padding: 1.45rem 1.0875rem; */
   display: inline-block;
 }
 
-.header-grey {
-  display: inline-block;
-  font-size: 4rem;
-  color: grey;
+.main-header {
+   margin: 0 auto;
+   padding: .8rem 1.0875rem;
 }
-
 
 .header-link {
   text-decoration: none;
@@ -42,9 +38,15 @@
 }
 
 .header-link h1 {
-  font-size: 4rem;
-  color: rgb(23, 22, 36);
+  font-size: 3rem;
+  color: rgb(54, 53, 60);
 }
+
+/* .header-grey {
+  display: inline-block;
+  font-size: 3rem;
+  color: grey;
+} */
 
 .header-link:hover {
   text-decoration: underline;
