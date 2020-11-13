@@ -11,6 +11,7 @@ export { default as Planet } from "./icons/planet"
 export { default as Soundcloud } from "./icons/soundcloud-icon"
 export { default as Shadow } from "./icons/shadow"
 export { default as Icons } from "./icons/icons"
+export { default as HomeIcon } from "./icons/home"
 
 export { default as Image } from "./madeline/image"
 export { default as Modal } from "./madeline/modal"

@@ -25,7 +25,6 @@ const Music = () => (
         text='Gramaphone Records'
       /> on the weekends.
     </p> */}
-    <HomeLink />
   </Layout>
 )
 
