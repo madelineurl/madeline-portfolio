@@ -50,6 +50,18 @@
   font-weight: 100;
 }
 
+.skills {
+  display: flex;
+  justify-content: center;
+}
+
+.skills > div {
+  border: 2px solid grey;
+  border-radius: 5px;
+  margin: 2rem;
+  padding: 1rem;
+}
+
 .skills div {
   font-family: 'Roboto', sans-serif;
 }
