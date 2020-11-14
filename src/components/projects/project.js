@@ -1,5 +1,5 @@
 import React from "react"
-import { ProjectLink, Video } from ".."
+import { ProjectLink } from ".."
 import styles from "./project.module.css"
 
 const Project = ({ siteURL, videoURL, github, videoTitle }) => (

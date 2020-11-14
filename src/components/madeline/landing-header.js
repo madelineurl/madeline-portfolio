@@ -30,8 +30,8 @@ const LandingHeader = () => {
         </button>
         <h1 className={styles.modalHeader}>url</h1>
       </div>
-      <div className={styles.landingText}>software engineer</div>
-        {/* <div className={styles.landingText}> I design accessible applications that help people connect to their creativity and to each other.</div> */}
+      <div className={styles.landingText}>software engineer (chicago)</div>
+        {/* <div className={styles.landingText}> i design accessible applications that help people connect to their creativity and to each other</div> */}
         {/* <Link to="/resume/">resume</Link> */}
     </div>
   )
