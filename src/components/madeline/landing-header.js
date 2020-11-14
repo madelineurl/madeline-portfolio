@@ -16,18 +16,23 @@ const LandingHeader = () => {
   }
 
   return (
-    <div className={styles.headerContainer}>
-      <Modal
-        show={showModal}
-        handleClose={closeAboutWindow}
-      />
-      <button
-        onClick={openAboutWindow}
-        className={styles.modalButton}
-        >
-          madeline
-      </button>
-      <h1 className={styles.modalHeader}>url</h1>
+    <div className={styles.landingContainer}>
+      <div className={styles.headerContainer}>
+        <Modal
+          show={showModal}
+          handleClose={closeAboutWindow}
+        />
+        <button
+          onClick={openAboutWindow}
+          className={styles.modalButton}
+          >
+            madeline
+        </button>
+        <h1 className={styles.modalHeader}>url</h1>
+      </div>
+      <div className={styles.landingText}>software engineer</div>
+        {/* <div className={styles.landingText}> I design accessible applications that help people connect to their creativity and to each other.</div> */}
+        {/* <Link to="/resume/">resume</Link> */}
     </div>
   )
 }

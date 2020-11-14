@@ -6,20 +6,15 @@ export { default as Skills } from "./projects/skills"
 
 export { default as Testimonials } from "./references/testimonials"
 
-export { default as Shiftpitch } from "./icons/shiftpitch"
-export { default as Planet } from "./icons/planet"
-export { default as Soundcloud } from "./icons/soundcloud-icon"
-export { default as Shadow } from "./icons/shadow"
-export { default as Icons } from "./icons/icons"
-export { default as HomeIcon } from "./icons/home"
+export { default as ProjectIcons } from "./icons/project/project-icons"
+export { default as Soundcloud } from "./icons/social/soundcloud-icon"
+export { default as Icons } from "./icons/social/icons"
 
 export { default as AboutMe} from "./madeline/about"
 export { default as Image } from "./madeline/image"
 export { default as Modal } from "./madeline/modal"
 
 export { default as ContactForm } from "./form/form"
-export { default as Input } from "./form/input"
-export { default as Label } from "./form/label"
 
 export { default as TemplateLink } from "./links/link"
 export { default as HomeLink } from "./links/home-link"

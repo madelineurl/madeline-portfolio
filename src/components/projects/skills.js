@@ -21,6 +21,13 @@ const Skills = () => (
       <div>PostgreSQL</div>
       <div>Firestore</div>
     </div>
+    <div>
+      <h3>other</h3>
+      <div>Git</div>
+      <div>RESTful API</div>
+      <div>Mocha + Chai</div>
+      <div>Jest / React Testing Library</div>
+    </div>
   </div>
 )
 

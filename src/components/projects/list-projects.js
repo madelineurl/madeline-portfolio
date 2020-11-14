@@ -1,25 +1,32 @@
 import React from 'react'
 // import { Link } from "gatsby"
-import styles from "../icons/icons.module.scss"
+// import styles from "../icons/icons.module.scss"
 
-import {
-  Shiftpitch,
-  Planet,
-} from ".."
+import { ProjectIcons } from ".."
 
 const ListProjects = () => {
+  // const [showLabel, setShowLabel] = useState(false);
+
+  // const handleHover = () => {
+  //   setShowLabel(true);
+  // }
+
   return (
-    <div className={styles.navIconContainer}>
-      <div className={styles.container}>
-        <Shiftpitch link='/shiftpitch/'/>
-        {/* <div>SHIFTPITCH</div> */}
-      </div>
-      <div className={styles.container}>
-        <Planet link='/xibis/'/>
-        {/* <div>XIBIS</div> */}
-      </div>
-    </div>
+    <ProjectIcons />
   )
 }
 
 export default ListProjects;
+
+// {/* <div className={styles.container}>
+//         <Shiftpitch link='/shiftpitch/'/>
+//         {/* <div>SHIFTPITCH</div> */}
+//       </div>
+//       <div className={styles.container}>
+//         <Planet link='/xibis/'/>
+//         {/* <div>XIBIS</div> */}
+//       </div>
+//       <div className={styles.container}>
+//         <Northwestern />
+//         {/* <div>XIBIS</div> */}
+//       </div> */}
