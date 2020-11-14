@@ -1,6 +1,8 @@
 import React from "react"
+// import { Link } from "gatsby"
 import { Layout, SEO, Project } from "../components"
 import styles from "../components/projects/project.module.css"
+// import linkStyles from "../components/links/link.module.css"
 
 const Shiftpitch = () => (
   <Layout>
@@ -19,6 +21,7 @@ const Shiftpitch = () => (
             github="https://github.com/zelda-capstone/xibis"
             siteURL="https://shiftpitch.herokuapp.com/"
           />
+          {/* <Link className={linkStyles.link} to='/projects'>back</Link> */}
       </div>
       <div>
       <h3>technology</h3>

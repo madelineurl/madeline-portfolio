@@ -3,6 +3,8 @@
 .container {
   display: flex;
   box-sizing: border-box;
+  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 .container > div {

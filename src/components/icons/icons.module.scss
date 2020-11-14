@@ -99,6 +99,22 @@ h4 {
   .icon {
     margin: .5em;
   }
+
+  .label {
+    display: none;
+  }
+
+  .northwestern {
+    top: 0px;
+  }
+
+  .shiftpitch {
+    top: .5rem;
+  }
+
+  .xibis {
+    top: 1.25rem;
+  }
 }
 
 @media screen and (min-width: 580px) and (max-width: 780px) {
