@@ -9,6 +9,8 @@
 .music-container {
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 7vh;
 }
 
 .soundcloud-player {
@@ -28,5 +30,6 @@
 @media screen and (max-width: 700px) {
   .music-container {
     flex-direction: column;
+    top: 2vh;
   }
 }
