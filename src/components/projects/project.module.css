@@ -18,23 +18,6 @@
   text-align: left;
 }
 
-
-/* .project-listing {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project-listing > div {
-  width: 50%;
-} */
-
-.project-header {
-  position: absolute;
-  top: 1rem;
-  left: 43vw;
-}
-
 .project-blurb {
   /* width: 50%; */
   text-align: left;
