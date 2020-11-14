@@ -10,7 +10,7 @@ const NotFoundPage = () => (
       justifyContent: `center`
     }}>
       <h1>Oops!</h1>
-      <p>My portfolio hasn't reached this corner of the Internet (yet).</p>
+      <p style={{ fontFamily: `Roboto` }}>My portfolio hasn't reached this corner of the Internet yet</p>
       <HomeLink />
     </div>
   </Layout>

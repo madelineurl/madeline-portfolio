@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Icons, Header, Navbar } from '../components'
+import { Icons, Header, Navbar } from '.'
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -25,8 +25,8 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <Navbar />
-      <div className='main'>
-        <main>{children}</main>
+      <div>
+        <main className='main'>{children}</main>
         <footer className='footer'>
           <Icons />
         </footer>

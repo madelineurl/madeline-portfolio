@@ -1,6 +1,5 @@
 import React from "react"
-
-// import styles from "./form.module.css"
+import PropTypes from "prop-types"
 
 const Input = ({ name, placeholder, value, className, handleChange }) => (
   <input
@@ -12,5 +11,13 @@ const Input = ({ name, placeholder, value, className, handleChange }) => (
     value={value}
   />
 )
+
+Input.propTypes = {
+  name: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  handleChange: PropTypes.func.isRequired
+}
 
 export default Input

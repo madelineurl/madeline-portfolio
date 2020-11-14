@@ -1,4 +1,4 @@
-import React, { useReducer } from "react"
+import React, { useReducer, useState } from "react"
 import Input from "./input"
 import styles from './form.module.css'
 import { navigate } from "gatsby-link";
@@ -11,6 +11,7 @@ function encode(data) {
 }
 
 const ContactForm = () => {
+  const [warning, setWarning] = useState(false);
   const [userInput, setUserInput] = useReducer(
   (state, newState) => ({ ...state, ...newState}),
     {
@@ -21,26 +22,33 @@ const ContactForm = () => {
   )
 
   const disabled = userInput ? false : true;
+  const warningClass = warning ? styles.warning : styles.none;
 
   const handleChange = evt => {
+    setWarning(false);
     setUserInput({ [evt.target.name]: evt.target.value })
   }
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
-    const form = evt.target;
-    try {
-        await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({
-          "form-name": form.getAttribute("name"),
-          ...userInput
+    const { name, email, message } = userInput;
+    if (!name || !email || !message) {
+      setWarning(true);
+    } else {
+      const form = evt.target;
+      try {
+          await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({
+            "form-name": form.getAttribute("name"),
+            ...userInput
+          })
         })
-      })
-      navigate(form.getAttribute("action"))
-    } catch (err) {
-      console.error(err);
+        navigate(form.getAttribute("action"))
+      } catch (err) {
+        console.error(err);
+      }
     }
   }
 
@@ -96,6 +104,7 @@ const ContactForm = () => {
           send
         </button>
       </div>
+      <div className={warningClass}>please fill out all the fields</div>
   </form>
 )
 }

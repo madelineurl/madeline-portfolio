@@ -1,10 +1,15 @@
 import React from "react"
+import PropTypes from "prop-types"
 
-const Label = (props) => (
+const Label = ({ name }) => (
   <label
-    htmlFor={props.name} >
-      {props.name}
+    htmlFor={name} >
+      {name}
   </label>
 )
+
+Label.propTypes = {
+  name: PropTypes.string.isRequired
+}
 
 export default Label

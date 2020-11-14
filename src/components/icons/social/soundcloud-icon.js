@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import styles from "./icons.module.scss"
+import styles from "../icons.module.scss"
 
 const Soundcloud = () => {
   const data = useStaticQuery(graphql`

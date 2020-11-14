@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import styles from "./icons.module.scss"
+import styles from "../icons.module.scss"
 
 const Planet = ({ link }) => {
   const data = useStaticQuery(graphql`

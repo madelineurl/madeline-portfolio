@@ -22,7 +22,7 @@ const Navbar = () => {
           height={20}
           strokeWidth={5}
           rotate={0}
-          color='black'
+          color='grey'
           borderRadius={8}
           animationDuration={0.5}
         />

@@ -4,6 +4,7 @@
   position: absolute;
   right: 2rem;
   top: 2rem;
+  cursor: pointer;
 }
 
 .navbar {
@@ -15,11 +16,20 @@
   opacity: 0.5;
   /* height: 100%; */
   z-index: 6;
+  animation: fade-in .5s linear;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 
 .nav-link {
   font-family: 'Roboto', sans-serif;
-  font-weight: bold;
   font-size: 1.1rem;
   height: 5%;
   color: rgb(38, 40, 43);
