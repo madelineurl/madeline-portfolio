@@ -1,11 +1,10 @@
 import React from "react"
-import { ProjectLink } from ".."
+import { ProjectLink, Video } from ".."
 import styles from "./project.module.css"
 
-const Project = ({ siteURL, videoURL, github }) => (
+const Project = ({ siteURL, videoURL, github, videoTitle }) => (
   <>
     <div className={styles.videoContainer}>
-      <div>
         {/* <Video
           title={videoTitle}
           videoURL={videoURL}/> */}
@@ -26,7 +25,6 @@ const Project = ({ siteURL, videoURL, github }) => (
             back to projects
           </TemplateLink> */}
         </div>
-      </div>
     </div>
   </>
 )

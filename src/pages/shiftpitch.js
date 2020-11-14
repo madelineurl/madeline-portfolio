@@ -4,19 +4,21 @@ import styles from "../components/projects/project.module.css"
 
 const Shiftpitch = () => (
   <Layout>
-    <SEO title='Shiftpitch' />
+    <SEO title='shiftpitch' />
     {/* <h3>shiftpitch</h3> */}
     <div className={styles.container}>
       <div>
-        <h3>project: SHIFTPITCH</h3>
-        <Project
-          videoTitle="Shiftpitch"
-          videoURL="https://www.youtube.com/embed/AAS2sIXPpY4"
-          github="https://github.com/zelda-capstone/xibis"
-          siteURL="https://shiftpitch.herokuapp.com/"
-        />
-        <h3>concept</h3>
+        {/* <div className={styles.projectMain}>
+          <h3 className={styles.projectHeader}>project: SHIFTPITCH</h3>
+        </div> */}
+        <h3>shiftpitch</h3>
         <div className={styles.projectBlurb}>Shiftpitch is a tool for improving rhythm by learning beatmatching. In the early days of DJing, matching tempos with your ears was the only way to blend tracks together seamlessly. Today, there are online tools, computer programs, and digital DJ equipment that teach people how to DJ, but most of them teach DJs to rely on visual cues like waveforms or BPM (beats per minute) counters instead of their ears. Learning to beatmatch <em>the old fashioned way</em> is an invaluable skill as a DJ, and a great way to improve your rhythm more generally, but learning is difficult without turntables. I built Shiftpitch in an effort to make beatmatching more accessible to everyone. </div>
+        <Project
+            videoTitle="Shiftpitch"
+            videoURL="https://www.youtube.com/embed/AAS2sIXPpY4"
+            github="https://github.com/zelda-capstone/xibis"
+            siteURL="https://shiftpitch.herokuapp.com/"
+          />
       </div>
       <div>
       <h3>technology</h3>

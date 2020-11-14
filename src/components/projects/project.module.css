@@ -1,25 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
-h3 {
-  /* margin: 0px; */
-  text-align: left;
-}
-
 .container {
   display: flex;
+  box-sizing: border-box;
 }
 
 .container > div {
   width: 50%;
   box-sizing: border-box;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 .container h3 {
-  margin-top: .75rem;
-  margin-bottom: .75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
 }
+
 
 /* .project-listing {
   display: flex;
@@ -30,6 +28,12 @@ h3 {
 .project-listing > div {
   width: 50%;
 } */
+
+.project-header {
+  position: absolute;
+  top: 1rem;
+  left: 43vw;
+}
 
 .project-blurb {
   /* width: 50%; */
@@ -79,5 +83,15 @@ h3 {
 
   .container > div {
     width: 100%;
+  }
+
+  .project-main {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .skills {
+    flex-direction: column;
   }
 }
