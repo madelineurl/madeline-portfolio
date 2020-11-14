@@ -1,5 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+.none {
+  display: none;
+}
+
+.label {
+  position: absolute;
+  top: 12rem;
+  color: grey;
+  font-family: 'Roboto', sans-serif;
+}
+
 img {
   margin: 0px;
+}
+
+h4 {
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .icon-container {
@@ -15,50 +38,37 @@ img {
   transform: scale(1.1);
 }
 
-// .soundcloud {
-//   top: 2rem;
-// }
-
 .nav-icon-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  position: relative;
+  top: 2rem;
 }
 
 .nav-icon-container div {
   margin: .25rem;
 }
 
-.label {
-  color: white;
-}
-
 .shiftpitch {
   top: 1.2rem;
 }
 
-// .shiftpitch:hover {
-//   transform: scale(1.1);
-//   animation: spin linear infinite;
-// }
-
-.home-icon {
-  position: absolute;
-  right: 5rem;
-  top: 2.5rem;
-  margin-right: 1rem;
+.northwestern {
+  top: .75rem;
 }
+
+// .home-icon {
+//   position: absolute;
+//   right: 5rem;
+//   top: 2.5rem;
+//   margin-right: 1rem;
+// }
 
 // .xibis {
 //   top: 2rem;
 // }
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 // .shadow {
 //   z-index: -1;
@@ -88,6 +98,22 @@ img {
 
   .icon {
     margin: .5em;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .northwestern {
+    top: 0px;
+  }
+
+  .shiftpitch {
+    top: .5rem;
+  }
+
+  .xibis {
+    top: 1.25rem;
   }
 }
 

@@ -1,14 +1,14 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import styles from "./icons.module.scss"
+// import styles from "./icons.module.scss"
 
-const HomeIcon = () => {
+const ResumeIcon = () => {
   const data = useStaticQuery(graphql`
   query {
-    placeholderImage: file(relativePath: { eq: "home.png" }) {
+    placeholderImage: file(relativePath: { eq: "resume.png" }) {
       childImageSharp {
-        fixed(width: 52, height: 46) {
+        fixed(width: 150, height: 170) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -21,8 +21,8 @@ if (!data?.placeholderImage?.childImageSharp?.fixed) {
 }
 
   return (
-    <div className={styles.homeIcon}>
-      <Link to='/home/'>
+    <div>
+      <Link to='/resume/'>
         <Img
           fixed={data.placeholderImage.childImageSharp.fixed}
         />
@@ -32,4 +32,4 @@ if (!data?.placeholderImage?.childImageSharp?.fixed) {
 }
 
 
-export default HomeIcon
+export default ResumeIcon;

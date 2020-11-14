@@ -1,31 +1,31 @@
-import React, { useState } from "react"
+import React from "react"
 import styles from "./testimonials.module.css"
 
 const Testimonials = () => {
-  const [annOpen, setAnnOpen] = useState(false);
-  const [mattOpen, setMattOpen] = useState(false);
-  const showAnn = annOpen ? styles.show : styles.hide;
-  const showMatt = mattOpen ? styles.show : styles.hide;
+  // const [annOpen, setAnnOpen] = useState(false);
+  // const [mattOpen, setMattOpen] = useState(false);
+  // const showAnn = annOpen ? styles.show : styles.hide;
+  // const showMatt = mattOpen ? styles.show : styles.hide;
 
-  const handleAnn = () => {
-    setAnnOpen(true);
-  }
+  // const handleAnn = () => {
+  //   setAnnOpen(true);
+  // }
 
-  const hideAnn = () => {
-    setAnnOpen(false);
-  }
+  // const hideAnn = () => {
+  //   setAnnOpen(false);
+  // }
 
-  const handleMatt = () => {
-    setMattOpen(true);
-  }
+  // const handleMatt = () => {
+  //   setMattOpen(true);
+  // }
 
-  const hideMatt = () => {
-    setMattOpen(false);
-  }
+  // const hideMatt = () => {
+  //   setMattOpen(false);
+  // }
 
   return (
   <div className={styles.container}>
-    <div className={styles.testimonial} onClick={handleAnn}>
+    {/* <div className={styles.testimonial} onClick={handleAnn}>
       <h3>Ann Knauth</h3>
       <h4><strong>Web Administrator</strong></h4><h4><em>Northwestern University</em></h4>
       <div className={showAnn}>Maddie worked for me as a web assistant at Northwestern University. They did a tremendous job! They were extremely dedicated and focused on their work and determined to produce a great final product. Their attention to detail was off the charts. Maddie also asked the right the questions and kept wanting to learn more. I truly enjoyed working with them. I highly recommend Maddie.
@@ -48,7 +48,7 @@ const Testimonials = () => {
           <div>I was sad the day Maddie put in their notice to leave JCD, but happy to see the new career they have chosen - software development. I've been doing software development for over 20 years and have worked with some amazing developers. Maddie will definitely be one of those amazing developers some day.</div>
           <button onClick={hideMatt}>collapse</button>
       </div>
-    </div>
+    </div> */}
   </div>
 )
 }

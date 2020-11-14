@@ -1,10 +1,10 @@
 import React from "react"
-import { SEO, Layout, ListProjects } from "../components"
+import { SEO, Layout, ProjectIcons } from "../components"
 
 const Projects = () => (
   <Layout>
     <SEO title='projects' />
-    <ListProjects />
+    <ProjectIcons />
   </Layout>
 )
 

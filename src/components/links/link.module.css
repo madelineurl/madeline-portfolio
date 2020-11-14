@@ -3,15 +3,31 @@
 .link {
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
-  color: rgb(25, 25, 36);
-  margin: 3px;
+  color: rgb(62, 62, 62);
+  margin: .5rem;
   border-radius: 5px;
-  background: rgb(189, 189, 195);
-  padding: 2px 6px;
+  background: rgb(209, 209, 210);
+  padding: 4px;
+  border: none;
+  width: 5rem;
+  height: 2rem;
 }
 
 .link:hover {
   background: rgb(130, 130, 143);
+}
+
+.video-link {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: rgb(62, 62, 62);
+  margin-right: .75rem;
+  border-radius: 5px;
+  background: rgb(209, 209, 210);
+  padding: 4px;
+  border: none;
+  width: 5rem;
+  height: 2rem;
 }
 
 /* @media screen and (max-width: 500px) {

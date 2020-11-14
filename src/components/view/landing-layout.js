@@ -1,6 +1,6 @@
 import React from "react"
-import { Icons, Navbar, Particles } from '../components'
-import "./layout.css"
+import { Icons, Navbar, Particles } from '..'
+import "../layout.css"
 
 const LandingLayout = ({ children }) => {
   return (
