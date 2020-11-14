@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import SEO from "../components/seo"
+import { SEO } from "../components"
 import styles from "../components/madeline/modal.module.css"
 
 const Resume = () => {

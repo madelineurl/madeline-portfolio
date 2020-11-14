@@ -17,6 +17,7 @@ const Skills = () => (
       <div>Node.js</div>
       <div>Express</div>
       <div>SQL / Sequelize</div>
+      <div>RESTful API</div>
       <div>GraphQL</div>
       <div>PostgreSQL</div>
       <div>Firestore</div>
@@ -24,9 +25,10 @@ const Skills = () => (
     <div>
       <h3>other</h3>
       <div>Git</div>
-      <div>RESTful API</div>
-      <div>Mocha + Chai</div>
-      <div>Jest / React Testing Library</div>
+      <div>Mocha</div>
+      <div>Chai</div>
+      <div>Jest</div>
+      <div>React Testing Library</div>
     </div>
   </div>
 )

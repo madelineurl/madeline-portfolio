@@ -29,9 +29,9 @@ const Navbar = () => {
       </div>
       <div className={`${styles.navbar} ${showNav}`}>
         {/* <NavbarLink name='ABOUT' /> */}
-        <NavbarLink name='PROJECTS' />
-        <NavbarLink name='SKILLS' />
-        <NavbarLink name='MUSIC' />
+        <NavbarLink name='projects' />
+        <NavbarLink name='skills' />
+        <NavbarLink name='music' />
         {/* <NavbarLink name='REFERENCES' /> */}
         {/* <Link to='/' className={styles.navLink} >HOME</Link> */}
       </div>

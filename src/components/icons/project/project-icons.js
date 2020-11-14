@@ -37,7 +37,7 @@ const ProjectIcons = () => {
         name='shiftpitch'
         iconStyle={styles.shiftpitch}
         labelTitle='Shiftpitch'
-        labelSubtitle='Beatmatching training tool'
+        labelSubtitle='beatmatching ear-training tool'
       />
        <ProjectIcon
         image={data.xibis.childImageSharp.fixed}

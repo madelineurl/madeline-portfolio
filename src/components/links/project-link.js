@@ -3,7 +3,7 @@ import styles from "./link.module.css"
 
 const ProjectLink = ({ projectUrl, text }) => (
   <a
-    className={styles.link}
+    className={styles.videoLink}
     target="_blank"
     rel="noreferrer"
     href={projectUrl}
