@@ -2,6 +2,17 @@
 
 .warning {
   color: rgb(27, 23, 52);
+  animation: fade-in .5s linear;
+  margin-top: 2vh;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .none {
@@ -19,6 +30,8 @@
   width: 100%;
   margin-bottom: .5rem;
   padding: 0.3rem;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
 
 .message {
@@ -26,6 +39,7 @@
   width: 100%;
   height: 25vh;
   padding: 0.3rem;
+  border-radius: 5px;
 }
 
 .gotcha {
@@ -36,6 +50,7 @@
   font-family: 'Roboto', sans-serif;
   border: none;
   margin: .5rem;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 320px) {
