@@ -20,7 +20,7 @@ const ProjectIcons = () => {
           }
         }
       }
-      northwestern: file(relativePath: { eq: "northwestern-grey.png" }) {
+      northwestern: file(relativePath: { eq: "northwestern-black.png" }) {
         childImageSharp {
           fixed(width: 165, height: 165) {
             ...GatsbyImageSharpFixed
