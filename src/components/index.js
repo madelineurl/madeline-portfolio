@@ -10,6 +10,7 @@ export { default as Navbar } from "./nav/navbar.js"
 export { default as Project } from "./projects/project"
 export { default as Video } from "./projects/video"
 export { default as SoundcloudPlayer } from "./music/soundcloud-player"
+export { default as MusicPage } from "./music/music"
 export { default as MusicBlurb } from "./music/music-blurb"
 export { default as Skills } from "./projects/skills"
 
@@ -21,7 +22,6 @@ export { default as AboutMe} from "./madeline/about"
 export { default as Image } from "./madeline/image"
 export { default as Modal } from "./madeline/modal"
 
-export { default as Testimonials } from "./references/testimonials"
 export { default as ContactForm } from "./form/form"
 
 export { default as TemplateLink } from "./links/link"

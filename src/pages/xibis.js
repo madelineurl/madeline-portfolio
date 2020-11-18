@@ -5,7 +5,6 @@ import styles from "../components/projects/project.module.css"
 const Xibis = () => (
   <Layout>
     <SEO title='xibis' />
-    {/* <h3>shiftpitch</h3> */}
     <div className={styles.container}>
       <div>
         <h3>xibis: a galactic voyage</h3>

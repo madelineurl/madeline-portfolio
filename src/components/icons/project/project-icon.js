@@ -7,7 +7,7 @@ import ProjectLabel from "./project-label"
 
 const ProjectIcon = ({ image, name, iconStyle, labelTitle, labelSubtitle }) => {
   const [showLabel, setShowLabel] = useState(false);
-  const labelClass = showLabel ? styles.label : styles.none;
+  const labelClass = showLabel ? styles.label : styles.noneIcon;
 
   const revealLabel = () => {
     setShowLabel(true);

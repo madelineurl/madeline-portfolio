@@ -1,5 +1,6 @@
 import React from "react"
-import About from "./about"
+import PropTypes from "prop-types"
+import MusicBlurb from "../music/music-blurb"
 import styles from "./modal.module.css"
 
 const Modal = ({ handleClose, show }) => {
@@ -13,10 +14,15 @@ const Modal = ({ handleClose, show }) => {
           className={styles.closeModal}>
             x
         </button>
-        <About />
+        <MusicBlurb />
       </section>
     </div>
   )
+}
+
+Modal.propTypes = {
+  handleClose: PropTypes.func.isRequired,
+  show: PropTypes.bool.isRequired
 }
 
 export default Modal
