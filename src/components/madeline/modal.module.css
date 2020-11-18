@@ -63,7 +63,7 @@
 .modal-button {
   font-family: nowAlt, sans-serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 4rem;
   line-height: 1.5;
   border: none;
   margin-top: 2.5rem;
@@ -87,7 +87,7 @@
 .modal-header {
   font-family: nowAlt, sans-serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 4rem;
   display: inline-block;
   color: grey;
   cursor: auto;
