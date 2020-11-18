@@ -1,20 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 .burger {
-  position: absolute;
-  right: 2rem;
-  top: 2rem;
+  position: fixed;
+  right: 1rem;
+  top: 2.5vh;
+  padding: 1rem;
   cursor: pointer;
+  z-index: 9;
 }
 
 .navbar {
-  padding: 1.45rem 0px 1.45rem 0px;
+  /* padding: 1.45rem 0px 1.45rem 0px; */
   position: fixed;
   right: 5rem;
-  top: 0px;
+  top: 2.5vh;
   /* background: rgb(138, 150, 184); */
   opacity: 0.5;
-  /* height: 100%; */
+  /* height: 100vh; */
   z-index: 6;
   animation: fade-in .5s linear;
 }
@@ -30,16 +32,17 @@
 
 .nav-link {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   height: 5%;
-  color: rgb(38, 40, 43);
+  /* width: 50%; */
+  color: rgb(52, 52, 52);
   text-decoration: none;
-  margin: .5rem .5rem;
-  padding: .2rem;
+  /* margin: 1.75rem 1rem; */
+  padding: 1rem;
 }
 
 .nav-link:hover {
-  background: rgb(42, 42, 46);
+  background: rgb(131, 131, 131);
   color: white;
   border-radius: 5px;
 }
@@ -57,15 +60,15 @@
     flex-direction: column;
     right: 0px;
     top: 5rem;
-    background: rgb(237, 237, 237);
+    background: rgb(230, 230, 230);
     border-radius: 5px;
     z-index: 9;
-    opacity: 0.8;
+    opacity: 1.0;
     padding: 0px;
   }
 
   .nav-link {
-    font-size: 1rem;
-    padding: 0px;
+    font-size: 1.5rem;
+    padding: 1.1rem;
   }
 }

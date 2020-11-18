@@ -20,7 +20,7 @@ const ProjectIcons = () => {
           }
         }
       }
-      northwestern: file(relativePath: { eq: "northwestern-grey.png" }) {
+      northwestern: file(relativePath: { eq: "northwestern-black.png" }) {
         childImageSharp {
           fixed(width: 165, height: 165) {
             ...GatsbyImageSharpFixed
@@ -37,7 +37,7 @@ const ProjectIcons = () => {
         name='shiftpitch'
         iconStyle={styles.shiftpitch}
         labelTitle='Shiftpitch'
-        labelSubtitle='beatmatching ear-training tool'
+        labelSubtitle='Beatmatching ear-training tool'
       />
        <ProjectIcon
         image={data.xibis.childImageSharp.fixed}

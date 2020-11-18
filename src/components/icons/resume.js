@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
+import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-// import styles from "./icons.module.scss"
+import styles from "./icons.module.scss"
 
 const ResumeIcon = () => {
   const data = useStaticQuery(graphql`
@@ -16,17 +16,30 @@ const ResumeIcon = () => {
   }
 `)
 
-if (!data?.placeholderImage?.childImageSharp?.fixed) {
-  return <div>Picture not found</div>
-}
+  const [label, setLabel] = useState(false)
+  const labelClass = label ? styles.resumeLabel : styles.none;
+
+  const showLabel = () => {
+    setLabel(true);
+  }
+
+  const hideLabel = () => {
+    setLabel(false);
+  }
+
+  if (!data?.placeholderImage?.childImageSharp?.fixed) {
+    return <div>Picture not found</div>
+  }
 
   return (
-    <div>
-      <Link to='/resume/'>
+    <div className={styles.resume}>
+      <a onMouseEnter={showLabel}
+          onMouseLeave={hideLabel} target="_blank" rel="noreferrer" href='/resume/'>
         <Img
           fixed={data.placeholderImage.childImageSharp.fixed}
         />
-      </Link>
+      </a>
+      <div className={labelClass}>RESUME</div>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React from "react"
-import { ProjectLink, Video } from ".."
+import PropTypes from "prop-types"
+import { ProjectLink } from ".."
 import styles from "./project.module.css"
 
 const Project = ({ siteURL, videoURL, github, videoTitle }) => (
@@ -28,5 +29,11 @@ const Project = ({ siteURL, videoURL, github, videoTitle }) => (
     </div>
   </>
 )
+
+Project.propTypes = {
+  siteURL: PropTypes.string.isRequired,
+  videoURL: PropTypes.string.isRequired,
+  github: PropTypes.string.isRequired,
+}
 
 export default Project

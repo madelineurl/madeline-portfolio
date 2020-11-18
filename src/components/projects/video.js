@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import styles from "./project.module.css"
 
 const Video = ({ videoURL, videoTitle }) => (
@@ -15,4 +16,10 @@ const Video = ({ videoURL, videoTitle }) => (
     />
   </>
 )
+
+Video.propTypes = {
+  videoURL: PropTypes.string.isRequired,
+  videoTitle: PropTypes.string.isRequired
+}
+
 export default Video

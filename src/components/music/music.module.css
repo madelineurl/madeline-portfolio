@@ -1,14 +1,26 @@
+
 .music-blurb {
+  position: relative;
+  /* margin-right: 1vw;
+  margin-left: .5vw; */
   font-family: 'Roboto', sans-serif;
-  padding: .5rem;
+  /* padding: .5rem; */
+  width: 100%;
   border-radius: 8px;
   color: rgb(65, 73, 94);
-  font-size: .75rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.music-blurb div {
+  margin: .5rem;
 }
 
 .music-container {
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 7vh;
 }
 
 .soundcloud-player {
@@ -28,5 +40,6 @@
 @media screen and (max-width: 700px) {
   .music-container {
     flex-direction: column;
+    top: 2vh;
   }
 }
