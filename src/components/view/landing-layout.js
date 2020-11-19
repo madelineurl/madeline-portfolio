@@ -9,7 +9,7 @@ const LandingLayout = ({ children }) => {
       <Navbar />
       <div className='main'>
         <main>{children}</main>
-        <footer className='footer'>
+        <footer style={{ backgroundColor: `transparent` }} className='footer'>
           <Icons />
         </footer>
       </div>
