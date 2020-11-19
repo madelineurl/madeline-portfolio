@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Trispace&display=swap'); */
+
 @font-face {
-  font-family: nowAlt;
-  src: url(/Users/maddiehiggins/downloads/now/NowAlt-Regular.otf)
+  font-family: 'Questrial';
+  src: url('/fonts/Questrial-Regular.ttf')
 }
 
 .display-block {
@@ -22,7 +23,7 @@
 }
 
 .landing-text {
-  font-family: nowAlt, sans-serif;
+  font-family: 'Questrial', sans-serif;
   font-size: 1.5em;
   margin: .5rem;
   align-self: left;
@@ -52,7 +53,8 @@
 }
 
 .header-link h1 {
-  font-size: 3rem;
+  font-family: 'Questrial';
+  font-size: 3.5rem;
   color: rgb(65, 65, 65);
 }
 
@@ -61,9 +63,9 @@
 }
 
 .modal-button {
-  font-family: nowAlt, sans-serif;
-  font-weight: bold;
-  font-size: 4rem;
+  font-family: 'Questrial', sans-serif;
+  font-weight: black;
+  font-size: 4.25rem;
   line-height: 1.5;
   border: none;
   margin-top: 2.5rem;
@@ -77,7 +79,7 @@
 
 .headshot-container {
   display: flex;
-  height: 12rem;
+  height: 11rem;
 }
 
 .modal-button:hover {
@@ -85,9 +87,9 @@
 }
 
 .modal-header {
-  font-family: nowAlt, sans-serif;
+  font-family: 'Questrial', sans-serif;
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 4.25rem;
   display: inline-block;
   color: grey;
   cursor: auto;
@@ -139,8 +141,10 @@
   flex-direction: column;
   align-items: center;
   text-align: left;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Questrial', sans-serif;
   width: 100%;
+  background-color: rgb(248, 248, 250);
+  border-radius: 5px;
 }
 
 .about div {
@@ -149,7 +153,7 @@
 }
 
 .loading {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Questrial', sans-serif;
   display: flex;
   flex-direction: column;
   text-align: center;

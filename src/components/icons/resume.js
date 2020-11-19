@@ -17,7 +17,7 @@ const ResumeIcon = () => {
 `)
 
   const [label, setLabel] = useState(false)
-  const labelClass = label ? styles.resumeLabel : styles.none;
+  const labelClass = label ? `${styles.show} ${styles.resumeLabel}` : styles.resumeLabel;
 
   const showLabel = () => {
     setLabel(true);

@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@font-face {
+  font-family: 'Questrial';
+  src: url('/fonts/Questrial-Regular.ttf')
+}
 
 .burger {
   position: fixed;
@@ -31,7 +36,7 @@
 }
 
 .nav-link {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Questrial', sans-serif;
   font-size: 1.25rem;
   height: 5%;
   /* width: 50%; */
@@ -60,7 +65,8 @@
     flex-direction: column;
     right: 0px;
     top: 5rem;
-    background: rgb(230, 230, 230);
+    color: rgb(177, 177, 177);
+    background: rgb(165, 164, 164);
     border-radius: 5px;
     z-index: 9;
     opacity: 1.0;
