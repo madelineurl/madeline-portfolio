@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 /* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 @font-face {
   font-family: 'Questrial';
@@ -64,13 +63,12 @@
 
 .modal-button {
   font-family: 'Questrial', sans-serif;
-  font-weight: black;
   font-size: 4.25rem;
   line-height: 1.5;
   border: none;
   margin-top: 2.5rem;
   padding: 0;
-  color: rgb(26, 26, 26);
+  color: rgb(65, 65, 65);
   background: none;
   cursor: pointer;
   display: inline-block;
@@ -143,7 +141,8 @@
   text-align: left;
   font-family: 'Questrial', sans-serif;
   width: 100%;
-  background-color: rgb(248, 248, 250);
+  /* background-color: (29, 35, 5c, 0.5); */
+  /* opacity: 0.2; */
   border-radius: 5px;
 }
 
@@ -160,6 +159,12 @@
   align-items: center;
   text-decoration: none;
   color: black;
+}
+
+@media screen and (max-width: 550px) {
+  .about div {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (min-width: 550px) {

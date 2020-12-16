@@ -37,6 +37,10 @@
   border-radius: 5px;
 }
 
+.input:focus {
+  outline: 0;
+}
+
 .message {
   margin-top: .5rem;
   width: 100%;
@@ -44,6 +48,10 @@
   padding: 0.3rem;
   border-radius: 5px;
   border: 1px solid rgb(143, 143, 143);
+}
+
+.message:focus {
+  outline: 0;
 }
 
 .gotcha {
@@ -60,6 +68,10 @@
 @media screen and (max-width: 320px) {
   .input {
     width: 300px;
+  }
+
+  .form {
+    font-size: 1.5rem;
   }
 
   .message {

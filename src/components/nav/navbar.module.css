@@ -6,7 +6,7 @@
 }
 
 .burger {
-  position: fixed;
+  position: absolute;
   right: 1rem;
   top: 2.5vh;
   padding: 1rem;
@@ -15,13 +15,10 @@
 }
 
 .navbar {
-  /* padding: 1.45rem 0px 1.45rem 0px; */
-  position: fixed;
+  position: absolute;
   right: 5rem;
   top: 2.5vh;
-  /* background: rgb(138, 150, 184); */
-  opacity: 0.5;
-  /* height: 100vh; */
+  /* opacity: 0.5; */
   z-index: 6;
   animation: fade-in .5s linear;
 }
@@ -35,20 +32,32 @@
   }
 }
 
+
+@keyframes fade-out {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .nav-link {
   font-family: 'Questrial', sans-serif;
   font-size: 1.25rem;
   height: 5%;
   /* width: 50%; */
-  color: rgb(52, 52, 52);
+  color: rgb(65, 65, 65);
   text-decoration: none;
   /* margin: 1.75rem 1rem; */
   padding: 1rem;
 }
 
 .nav-link:hover {
-  background: rgb(131, 131, 131);
-  color: white;
+  /* background: rgb(131, 131, 131); */
+  background-color: #29335c;
+  opacity: 0.5;
+  color: #e1e5f2;
   border-radius: 5px;
 }
 
@@ -62,19 +71,28 @@
 
 @media screen and (max-width: 800px) {
   .show {
+    position: fixed;
     flex-direction: column;
+    width: 100%;
+    height: 78%;
     right: 0px;
     top: 5rem;
-    color: rgb(177, 177, 177);
-    background: rgb(165, 164, 164);
+    text-align: center;
+    background: #29335c;
     border-radius: 5px;
     z-index: 9;
     opacity: 1.0;
-    padding: 0px;
+  }
+
+  .burger {
+    right: .1rem;
+    top: 3vh;
   }
 
   .nav-link {
-    font-size: 1.5rem;
-    padding: 1.1rem;
+    font-size: 2.5rem;
+    padding: 2.5rem;
+    color:#e1e5f2;
+    margin-top: 1.75rem;
   }
 }

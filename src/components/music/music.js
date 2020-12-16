@@ -37,7 +37,7 @@ const MusicPage = () => {
       />
       <button
         onClick={openMusicWindow}
-        className={modalStyles.modalButton}
+        className={modalStyles.modalButton} style={{ fontSize: `2rem`, color: `grey` }}
         >
           about my music
       </button>

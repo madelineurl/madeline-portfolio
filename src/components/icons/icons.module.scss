@@ -60,6 +60,7 @@ h4 {
 
 .icon {
   margin: .5em;
+  color: rgb(65, 65, 65);
 }
 
 .icon:hover {
@@ -78,6 +79,9 @@ h4 {
 
 .nav-icon-container div {
   margin: .25rem;
+  // background-color: rgb(235, 235, 235);
+  // width: 80%;
+  // border-radius: 8px;
 }
 
 .shiftpitch {
@@ -102,6 +106,7 @@ h4 {
 @media screen and (max-width: 600px) {
   .nav-icon-container {
     flex-direction: column;
+    top: 0.5rem;
   }
 
   .icon-container {
