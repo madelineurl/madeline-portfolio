@@ -22,19 +22,16 @@ const Navbar = () => {
           height={20}
           strokeWidth={5}
           rotate={0}
-          color='grey'
+          color='rgb(65, 65, 65)'
           borderRadius={8}
           animationDuration={0.5}
         />
       </div>
       <div className={`${styles.navbar} ${showNav}`}>
-        {/* <NavbarLink name='ABOUT' /> */}
         <NavbarLink name='ABOUT' />
         <NavbarLink name='PROJECTS' />
         <NavbarLink name='SKILLS' />
         <NavbarLink name='MUSIC' />
-        {/* <NavbarLink name='REFERENCES' /> */}
-        {/* <Link to='/' className={styles.navLink} >HOME</Link> */}
       </div>
     </>
   )
