@@ -20,7 +20,8 @@
   top: 2.5vh;
   /* opacity: 0.5; */
   z-index: 6;
-  animation: fade-in .5s linear;
+  animation: fade-in .5s ease-in;
+  transition: opacity .5s ease-in;
 }
 
 @keyframes fade-in {

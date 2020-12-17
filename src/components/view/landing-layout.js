@@ -1,6 +1,6 @@
-import React from "react"
-import { Icons, Navbar, Particles } from '..'
-import "../layout.css"
+import React from "react";
+import { Icons, Navbar, Particles } from '..';
+import "../layout.css";
 
 const LandingLayout = ({ children }) => {
   return (
@@ -14,7 +14,7 @@ const LandingLayout = ({ children }) => {
         </footer>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default LandingLayout;

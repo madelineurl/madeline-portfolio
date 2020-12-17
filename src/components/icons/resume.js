@@ -1,7 +1,7 @@
-import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import styles from "./icons.module.scss"
+import React, { useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import styles from "./icons.module.scss";
 
 const ResumeIcon = () => {
   const data = useStaticQuery(graphql`
@@ -14,21 +14,21 @@ const ResumeIcon = () => {
       }
     }
   }
-`)
+`);
 
-  const [label, setLabel] = useState(false)
+  const [label, setLabel] = useState(false);
   const labelClass = label ? `${styles.show} ${styles.resumeLabel}` : styles.resumeLabel;
 
   const showLabel = () => {
     setLabel(true);
-  }
+  };
 
   const hideLabel = () => {
     setLabel(false);
-  }
+  };
 
   if (!data?.placeholderImage?.childImageSharp?.fixed) {
-    return <div>Picture not found</div>
+    return <div>Picture not found</div>;
   }
 
   return (
@@ -41,8 +41,8 @@ const ResumeIcon = () => {
       </a>
       <div className={labelClass}>RESUME</div>
     </div>
-  )
-}
+  );
+};
 
 
 export default ResumeIcon;

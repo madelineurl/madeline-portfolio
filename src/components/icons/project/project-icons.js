@@ -28,7 +28,7 @@ const ProjectIcons = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className={styles.navIconContainer}>

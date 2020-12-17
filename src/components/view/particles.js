@@ -6,13 +6,13 @@ const Background = () => {
     <Particles
         style={{
           position: `absolute`,
-          zIndex: -1
+          zIndex: 0
         }}
         id="tsparticles"
         options={{
           background: {
             color: {
-              value: "#ffffff",
+              value: "whitesmoke",
             },
           },
           fpsLimit: 60,
@@ -21,20 +21,20 @@ const Background = () => {
             events: {
               onClick: {
                 enable: true,
-                mode: "push",
+                mode: "repulse",
               },
               onHover: {
                 enable: true,
-                mode: "push",
+                mode: "bubble",
               },
-              resize: true,
+              resize: false,
             },
             modes: {
               bubble: {
                 distance: 100,
-                duration: 10,
+                duration: 20,
                 opacity: 0.8,
-                size: 40,
+                size: 20,
               },
               push: {
                 quantity: 4,

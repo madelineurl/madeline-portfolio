@@ -6,17 +6,17 @@ import styles from "../components/madeline/modal.module.css"
 const Resume = () => {
   const resume = useStaticQuery(graphql`
     {
-      pdf: file(name: { eq: "Madeline-Higgins-Software-Engineer-Resume-Nov-2020" }) {
+      pdf: file(name: { eq: "Madeline-Higgins-Software-Engineer-Resume-2020" }) {
         name
         extension
         publicURL
       }
     }
-  `)
+  `);
 
   const simulateClick = (evt) => {
-    evt.click(resume.pdf.publicURL)
-  }
+    evt.click(resume.pdf.publicURL);
+  };
 
   return (
     <>
@@ -29,7 +29,7 @@ const Resume = () => {
           Loading...
       </a>
     </>
-  )
-}
+  );
+};
 
-export default Resume
+export default Resume;

@@ -11,11 +11,11 @@ const ProjectIcon = ({ image, name, iconStyle, labelTitle, labelSubtitle }) => {
 
   const revealLabel = () => {
     setShowLabel(true);
-  }
+  };
 
   const hideLabel = () => {
     setShowLabel(false);
-  }
+  };
 
   return (
     <div className={styles.container}>
@@ -37,8 +37,8 @@ const ProjectIcon = ({ image, name, iconStyle, labelTitle, labelSubtitle }) => {
       />
       </div>
     </div>
-  )
-}
+  );
+};
 
 ProjectIcon.propTypes = {
   image: PropTypes.object.isRequired,
@@ -46,6 +46,6 @@ ProjectIcon.propTypes = {
   iconStyle: PropTypes.string.isRequired,
   labelTitle: PropTypes.string.isRequired,
   labelSubtitle: PropTypes.string.isRequired
-}
+};
 
 export default ProjectIcon;
