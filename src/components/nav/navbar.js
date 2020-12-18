@@ -1,8 +1,7 @@
-import React, { useState} from "react"
-// import { Link } from "gatsby"
-import NavbarLink from "./navbar-link"
-import styles from "./navbar.module.css"
-import HamburgerMenu from "react-hamburger-menu"
+import React, { useState} from "react";
+import NavbarLink from "./navbar-link";
+import styles from "./navbar.module.css";
+import HamburgerMenu from "react-hamburger-menu";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -10,7 +9,7 @@ const Navbar = () => {
 
   const handleClick = () => {
     setOpen(!open);
-  }
+  };
 
   return (
     <>
@@ -34,7 +33,7 @@ const Navbar = () => {
         <NavbarLink name='MUSIC' />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

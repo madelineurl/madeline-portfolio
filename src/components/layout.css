@@ -12,8 +12,8 @@
   /* max-width: 900; */
   /* padding: `0 1.0875rem 1.45rem` */
   overscroll-behavior: none;
-  margin-bottom: 7rem;
-  animation: fade-in 1s ease;
+  margin-bottom: 7.5rem;
+  /* animation: fade-in .75s ease-in; */
 }
 
 @keyframes fade-in {

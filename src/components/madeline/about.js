@@ -1,10 +1,10 @@
-import React from 'react'
-import Image from './image'
-import ResumeIcon from '../icons/resume'
-import styles from './modal.module.css'
+import React from 'react';
+import Image from './image';
+import ResumeIcon from '../icons/resume';
+import styles from './modal.module.css';
 
 const About = () => (
-  <div className={styles.about}>
+  <div className={styles.about}  id='about' >
     <div className={styles.headshotContainer}>
       <Image />
       <ResumeIcon />

@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import ProjectIcon from "./project-icon"
-import styles from "../icons.module.scss"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import ProjectIcon from "./project-icon";
+import styles from "../icons.module.scss";
 
 const ProjectIcons = () => {
   const data =  useStaticQuery(graphql`
