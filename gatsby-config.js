@@ -27,6 +27,7 @@ module.exports = {
         icon: `src/images/polaroid_headshot.png`,
       },
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-smoothscroll`
   ],
-}
+};

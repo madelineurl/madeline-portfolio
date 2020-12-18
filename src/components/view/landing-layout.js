@@ -1,12 +1,12 @@
 import React from "react";
-import { Icons, Navbar, Particles } from '..';
+import { Icons, Particles } from '..';
 import "../layout.css";
 
 const LandingLayout = ({ children }) => {
   return (
     <>
       <Particles />
-      <Navbar />
+      {/* <Navbar /> */}
       <div className='main'>
         <main>{children}</main>
         <footer style={{ backgroundColor: `transparent` }} className='footer'>

@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import styles from "./modal.module.css"
+import React from "react";
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
+import styles from "./modal.module.css";
 
 const Header = () => {
   return (
@@ -12,12 +12,12 @@ const Header = () => {
         </Link>
       </div>
     </header>
-  )
-}
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
   siteTitle: ``,

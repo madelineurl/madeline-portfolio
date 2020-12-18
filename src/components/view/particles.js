@@ -12,10 +12,10 @@ const Background = () => {
         options={{
           background: {
             color: {
-              value: "whitesmoke",
+              value: "#ffffff",
             },
           },
-          fpsLimit: 60,
+          fpsLimit: 70,
           interactivity: {
             detectsOn: "canvas",
             events: {
@@ -27,13 +27,13 @@ const Background = () => {
                 enable: true,
                 mode: "bubble",
               },
-              resize: false,
+              resize: true,
             },
             modes: {
               bubble: {
-                distance: 100,
-                duration: 20,
-                opacity: 0.8,
+                distance: 120,
+                duration: 50,
+                opacity: 0.7,
                 size: 20,
               },
               push: {
@@ -41,7 +41,7 @@ const Background = () => {
               },
               repulse: {
                 distance: 200,
-                duration: 0.4,
+                duration: 0.5,
               },
             },
           },
