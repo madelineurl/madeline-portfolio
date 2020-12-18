@@ -34,7 +34,7 @@ const Background = () => {
                 distance: 120,
                 duration: 50,
                 opacity: 0.7,
-                size: 20,
+                size: 15,
               },
               push: {
                 quantity: 4,
