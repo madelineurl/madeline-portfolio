@@ -1,13 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
 @font-face {
   font-family: 'Raleway';
   src: url('/fonts/Raleway-Regular.ttf')
-}
-
-
-.none {
-  color: white;
 }
 
 .none-icon {
@@ -19,6 +14,10 @@
   top: 30vh;
   color: rgb(111, 118, 126);
   font-family: 'Questrial', sans-serif;
+}
+
+.label .none {
+  color: white;
 }
 
 .resume {
@@ -68,7 +67,8 @@ h4 {
 }
 
 .nav-icon-container {
-  animation: fadein 3s ease;
+  transform: rotate(360deg);
+  transition: transform infinite ease;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -86,7 +86,7 @@ h4 {
 
 .shiftpitch {
   top: 1.2rem;
-  animation: spin 2s infinite linear;
+  // animation: spin 2s infinite linear;
 }
 
 .northwestern {

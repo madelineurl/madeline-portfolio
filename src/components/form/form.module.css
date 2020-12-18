@@ -27,6 +27,7 @@
   font-family: 'Questrial', sans-serif;
   position: relative;
   top: 5vh;
+  animation: fade-in 1s linear;
 }
 
 .input {

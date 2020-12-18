@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap'); */
-
-@font-face {
-  font-family: 'Questrial';
-  src: url('/fonts/Questrial-Regular.ttf')
-}
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 .display-block {
   display: block;
@@ -34,6 +27,17 @@
   align-items: center;
   position: relative;
   top: 31vh;
+  width: 28rem;
+  margin: 0 auto;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .header-container {
@@ -164,6 +168,10 @@
 @media screen and (max-width: 550px) {
   .about div {
     font-size: 1.5rem;
+  }
+
+  .landing-container {
+    width: 100%;
   }
 }
 

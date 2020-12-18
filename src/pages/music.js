@@ -7,7 +7,7 @@ const Music = () => {
       <SEO title="music" />
       <MusicPage />
     </Layout>
-  )
-}
+  );
+};
 
 export default Music;

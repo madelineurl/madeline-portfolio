@@ -6,7 +6,7 @@ const Background = () => {
     <Particles
         style={{
           position: `absolute`,
-          zIndex: -1
+          zIndex: 0
         }}
         id="tsparticles"
         options={{
@@ -15,33 +15,33 @@ const Background = () => {
               value: "#ffffff",
             },
           },
-          fpsLimit: 60,
+          fpsLimit: 70,
           interactivity: {
             detectsOn: "canvas",
             events: {
               onClick: {
                 enable: true,
-                mode: "push",
+                mode: "repulse",
               },
               onHover: {
                 enable: true,
-                mode: "push",
+                mode: "bubble",
               },
               resize: true,
             },
             modes: {
               bubble: {
-                distance: 100,
-                duration: 10,
-                opacity: 0.8,
-                size: 40,
+                distance: 120,
+                duration: 50,
+                opacity: 0.7,
+                size: 15,
               },
               push: {
                 quantity: 4,
               },
               repulse: {
                 distance: 200,
-                duration: 0.4,
+                duration: 0.5,
               },
             },
           },
