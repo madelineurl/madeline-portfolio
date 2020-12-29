@@ -31,6 +31,7 @@ const Navbar = () => {
         <NavbarLink name='projects' />
         <NavbarLink name='skills' />
         <NavbarLink name='music' />
+        <NavbarLink name='contact' />
       </div>
     </>
   );

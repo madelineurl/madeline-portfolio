@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Img from "gatsby-image"
-import styles from "../icons.module.scss"
+import React from "react";
+import PropTypes from "prop-types";
+import Img from "gatsby-image";
+import styles from "../icons.module.scss";
 
 const SocialIcon = ({ url, name, image}) => (
   <a
@@ -10,17 +10,17 @@ const SocialIcon = ({ url, name, image}) => (
     rel="noreferrer"
   >
     <Img
-      fixed={image}
+      fluid={image}
       alt={`${name}-icon`}
       className={styles.icon}
     />
   </a>
-)
+);
 
 SocialIcon.propTypes = {
   url: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   image: PropTypes.object.isRequired
-}
+};
 
 export default SocialIcon;

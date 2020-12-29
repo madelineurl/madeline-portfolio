@@ -6,6 +6,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,12 +16,17 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `madeline higgins portfolio`,
+        name: `madeline higgins' portfolio`,
         short_name: `madelineurl`,
         start_url: `/`,
         background_color: `#663399`,
@@ -27,7 +35,5 @@ module.exports = {
         icon: `src/images/polaroid_headshot.png`,
       },
     },
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-smoothscroll`
   ],
 };
