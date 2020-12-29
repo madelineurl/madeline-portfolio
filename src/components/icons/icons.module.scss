@@ -24,6 +24,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 150px;
+  height: 200px;
 }
 
 .resume-label {
@@ -52,6 +54,11 @@ h4 {
   align-items: center;
 }
 
+.project-icon {
+  height: 200px;
+  width: 200px;
+}
+
 .icon-container {
   display: flex;
   transition: transform .5s ease;
@@ -62,6 +69,7 @@ h4 {
   color: rgb(65, 65, 65);
   width: 50px;
   height: 50px;
+  transition: transform 0.3s ease;
 }
 
 .icon:hover {

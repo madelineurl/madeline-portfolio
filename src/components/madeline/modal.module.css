@@ -84,6 +84,11 @@
   height: 11rem;
 }
 
+.headshot {
+  width: 200px;
+  height: 250px;
+}
+
 .modal-button:hover {
   text-decoration: underline;
 }

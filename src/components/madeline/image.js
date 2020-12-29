@@ -5,23 +5,21 @@ import Img from "gatsby-image";
 const Image = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "polaroid_headshot.png" }) {
+      headshot: file(relativePath: { eq: "headshot.png" }) {
         childImageSharp {
-          fixed(width: 150, height: 176) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `);
 
-  if (!data?.placeholderImage?.childImageSharp?.fixed) {
+  if (!data?.headshot?.childImageSharp?.fluid) {
     return <div>Picture not found</div>;
   }
 
-  return <Img
-          fixed={data.placeholderImage.childImageSharp.fixed}
-          />;
+  return <Img fluid={data.headshot.childImageSharp.fluid} />;
 };
 
 export default Image;

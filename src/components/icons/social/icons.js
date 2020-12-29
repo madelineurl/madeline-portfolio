@@ -28,22 +28,34 @@ const Icons = () => {
     <div className={styles.iconContainer}>
       {
         data.icons.edges.map(icon => {
-          if (icon.node.name === "mail-circle.png") {
+          let { name } = icon.node;
+
+          if (name === "contact-circle") {
             return (
               <Link to='/contact/' >
                 <Img
-                  fluid={data.contact.childImageSharp.fluid}
+                  key={icon.node.childImageSharp.id}
+                  fluid={icon.node.childImageSharp.fluid}
                   alt="contact"
                   className={styles.icon}
                 />
               </Link>
             );
           } else {
+            let url;
+            if (name === 'github-circle') {
+              url = 'https://github.com/madelineurl';
+            } else if (name === 'LI-circle') {
+              url = 'https://www.linkedin.com/in/madeline-url/';
+            } else if (name === 'medium-circle') {
+              url = 'https://madeline-url.medium.com/';
+            }
+
             return (
               <Icon
                 key={icon.node.childImageSharp.id}
                 name={icon}
-                url='https://github.com/madelineurl'
+                url={url}
                 image={icon.node.childImageSharp.fluid}
               />
             );

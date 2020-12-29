@@ -1,11 +1,11 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import Img from "gatsby-image"
-import { Link } from "gatsby"
-import styles from "../icons.module.scss"
-import ProjectLabel from "./project-label"
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import Img from "gatsby-image";
+import { Link } from "gatsby";
+import styles from "../icons.module.scss";
+import ProjectLabel from "./project-label";
 
-const ProjectIcon = ({ image, name, iconStyle, labelTitle, labelSubtitle }) => {
+const ProjectIcon = ({ image, name, labelTitle, labelSubtitle }) => {
   const [showLabel, setShowLabel] = useState(false);
   const labelClass = showLabel ? styles.label : styles.noneIcon;
 
@@ -25,8 +25,8 @@ const ProjectIcon = ({ image, name, iconStyle, labelTitle, labelSubtitle }) => {
         to={`/${name}/`}
       >
         <Img
-          fixed={image}
-          className={iconStyle}
+          fluid={image}
+          className={styles.projectIcon}
           alt={`${name}-icon`}
         />
       </Link>

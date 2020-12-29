@@ -6,10 +6,10 @@ import styles from "./icons.module.scss";
 const ResumeIcon = () => {
   const data = useStaticQuery(graphql`
   query {
-    placeholderImage: file(relativePath: { eq: "resume.png" }) {
+    resume: file(relativePath: { eq: "resume.png" }) {
       childImageSharp {
-        fixed(width: 150, height: 170) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
@@ -27,20 +27,26 @@ const ResumeIcon = () => {
     setLabel(false);
   };
 
-  if (!data?.placeholderImage?.childImageSharp?.fixed) {
+  if (!data?.resume?.childImageSharp?.fluid) {
     return <div>Picture not found</div>;
   }
 
   return (
-    <div className={styles.resume}>
+    <>
       <a onMouseEnter={showLabel}
-          onMouseLeave={hideLabel} target="_blank" rel="noreferrer" href='/resume/'>
+        onMouseLeave={hideLabel}
+        target="_blank"
+        rel="noreferrer"
+        href='/resume/'
+      >
         <Img
-          fixed={data.placeholderImage.childImageSharp.fixed}
+          className={styles.resume}
+          fluid={data.resume.childImageSharp.fluid}
+          id='resume'
         />
       </a>
-      <div className={labelClass}>RESUME</div>
-    </div>
+      <label htmlFor='resume' className={labelClass}>RESUME</label>
+    </>
   );
 };
 

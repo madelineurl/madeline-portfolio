@@ -6,7 +6,7 @@ import styles from './modal.module.css';
 const About = () => (
   <div className={styles.about}  id='about' >
     <div className={styles.headshotContainer}>
-      <Image />
+      <Image className={styles.headshot} />
       <ResumeIcon />
     </div>
     <div>
