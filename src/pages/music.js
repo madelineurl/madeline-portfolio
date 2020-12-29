@@ -1,5 +1,5 @@
-import React from "react"
-import { MusicPage, Layout, SEO } from '../components'
+import React from "react";
+import { MusicPage, Layout, SEO } from '../components';
 
 const Music = () => {
   return (

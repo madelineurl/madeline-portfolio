@@ -1,6 +1,6 @@
-import React from "react"
-import { Layout, SEO, ProjectLink } from "../components"
-import styles from "../components/projects/project.module.css"
+import React from "react";
+import { Layout, SEO, ProjectLink } from "../components";
+import styles from "../components/projects/project.module.css";
 
 const Northwestern = () => (
   <Layout>
@@ -21,6 +21,6 @@ const Northwestern = () => (
       </div>
     </div>
   </Layout>
-)
+);
 
 export default Northwestern;

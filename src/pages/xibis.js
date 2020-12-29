@@ -1,6 +1,6 @@
-import React from "react"
-import { Layout, SEO, Project } from "../components"
-import styles from "../components/projects/project.module.css"
+import React from "react";
+import { Layout, SEO, Project } from "../components";
+import styles from "../components/projects/project.module.css";
 
 const Xibis = () => (
   <Layout>
@@ -28,6 +28,6 @@ const Xibis = () => (
       </div>
     </div>
   </Layout>
-)
+);
 
-export default Xibis
+export default Xibis;

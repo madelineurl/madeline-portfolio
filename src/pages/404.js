@@ -1,5 +1,5 @@
-import React from "react"
-import { SEO, Layout, HomeLink } from "../components"
+import React from "react";
+import { SEO, Layout, HomeLink } from "../components";
 
 const NotFoundPage = () => (
   <Layout>
@@ -14,6 +14,6 @@ const NotFoundPage = () => (
       <HomeLink />
     </div>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;
