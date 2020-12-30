@@ -11,14 +11,16 @@
 
 .container a {
   position: relative;
-  bottom: 0px;
+  height: 100%;
 }
 
 .footer-icon {
+  position: relative;
+  height: 52px;
+  width: 52px;
   margin: .5em;
   color: rgb(65, 65, 65);
-  width: 55px;
-  height: 55px;
+  transition: transform 0.2s ease-in-out;
 }
 
 .footer-icon:hover {

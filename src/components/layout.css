@@ -14,7 +14,7 @@
   text-align: center;
   font-family: var(--primary-font);
   overscroll-behavior: none;
-  margin-bottom: 7.5rem;
+  margin-bottom: 10rem;
 }
 
 .footer {
@@ -24,8 +24,8 @@
   position: fixed;
   bottom: 0px;
   width: 100%;
+  height: 8%;
   background: white;
-  margin-top: 1rem;
 }
 
 .show {
@@ -35,6 +35,41 @@
 .hide {
   display: none;
 }
+
+.link {
+  text-decoration: none;
+  font-family: var(--primary-font);
+  color: rgb(62, 62, 62);
+  background: rgb(209, 209, 210);
+  width: 5rem;
+  height: 2rem;
+  margin: .5rem;
+  padding: 4px;
+  border: none;
+  border-radius: 5px;
+}
+
+.link:hover {
+  background: rgb(130, 130, 143);
+}
+
+.video-link {
+  font-family: var(--primary-font);
+  text-decoration: none;
+  color: rgb(62, 62, 62);
+  margin-right: .75rem;
+  border-radius: 5px;
+  background: rgb(209, 209, 210);
+  padding: 4px;
+  border: none;
+  width: 5rem;
+  height: 2rem;
+}
+
+.video-link:hover {
+  background-color: rgb(162, 163, 163);
+}
+
 
 /* NAVBAR */
 
@@ -204,7 +239,7 @@
     right: 0px;
     top: 5rem;
     text-align: center;
-    background: #29335c;
+    background-color: rgba(65, 73, 94, 1.0);
     border-radius: 5px;
     z-index: 9;
     opacity: 1.0;
@@ -213,8 +248,13 @@
   .navbar a {
     font-size: 2.5rem;
     padding: 2.5rem;
-    color:#e1e5f2;
+    color:#fff;
     margin-top: 1.75rem;
+    background-color: rgba(65, 73, 94, 1.0);
+  }
+
+  .navbar a:hover {
+    background-color: rgba(65, 73, 94, 0.8);
   }
 }
 

@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import styles from "./link.module.css";
 
 const TemplateLink = ({ link, children }) => (
   <Link
-    className={styles.link}
+    className='link'
     to={link}>
       {children}
   </Link>
