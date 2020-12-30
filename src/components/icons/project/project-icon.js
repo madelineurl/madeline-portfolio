@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-// import Img from "gatsby-image";
 import { Link } from "gatsby";
 import styles from "../icons.module.css";
-import ProjectLabel from "./project-label";
 
 const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, iconStyle }) => {
   const [showLabel, setShowLabel] = useState(false);
@@ -31,10 +29,8 @@ const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, iconStyle }) => {
         />
       </Link>
       <div className={labelClass}>
-      <ProjectLabel
-        title={labelTitle}
-        subtitle={labelSubtitle}
-      />
+        <h4>{labelTitle}</h4>
+        <span>{labelSubtitle}</span>
       </div>
     </div>
   );

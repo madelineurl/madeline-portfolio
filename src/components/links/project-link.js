@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const ProjectLink = ({ projectUrl, text }) => (
   <a
-    className='video-link'
+    className='link'
     target="_blank"
     rel="noreferrer"
     href={projectUrl}

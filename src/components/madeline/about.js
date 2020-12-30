@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from './image';
-// import ResumeIcon from '../icons/resume';
-import resume from './resume.png';
+import resume from './images/resume.png';
 import styles from './modal.module.css';
 
 const About = () => (

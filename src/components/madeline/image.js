@@ -1,5 +1,5 @@
 import React from "react";
-import headshot from "./headshot.png";
+import headshot from "./images/headshot.png";
 
 const Image = () => {
   return <img src={headshot} alt='headshot' className='headshot' />;

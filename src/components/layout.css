@@ -53,23 +53,6 @@
   background: rgb(130, 130, 143);
 }
 
-.video-link {
-  font-family: var(--primary-font);
-  text-decoration: none;
-  color: rgb(62, 62, 62);
-  margin-right: .75rem;
-  border-radius: 5px;
-  background: rgb(209, 209, 210);
-  padding: 4px;
-  border: none;
-  width: 5rem;
-  height: 2rem;
-}
-
-.video-link:hover {
-  background-color: rgb(162, 163, 163);
-}
-
 
 /* NAVBAR */
 
@@ -108,6 +91,51 @@
   color: #fff;
 }
 
+/* ICONS */
+
+/* PROJECTS */
+
+/* MUSIC */
+
+#music-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 7vh;
+}
+
+.music-blurb {
+  position: relative;
+  width: 100%;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  text-align: left;
+  color: rgb(65, 73, 94);
+  border-radius: 8px;
+}
+
+.music-blurb div {
+  margin: .5rem;
+}
+
+.venues {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.soundcloud-player {
+  font-size: 10px;
+  color: #cccccc;
+  line-break: anywhere;
+  word-break: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--primary-font);
+  font-weight: 100;
+}
+
 /* ABOUT */
 
 .headshot {
@@ -115,6 +143,7 @@
   height: 200px;
   border-radius: 50%;
 }
+
 
 /* CONTACT */
 
@@ -256,8 +285,20 @@
   .navbar a:hover {
     background-color: rgba(65, 73, 94, 0.8);
   }
-}
 
+  #music-container {
+    flex-direction: column;
+    top: 2vh;
+  }
+
+  .music-blurb {
+    font-size: 1.5rem;
+  }
+
+  .music-blurb div {
+    margin-bottom: 1.25rem;
+  }
+}
 
 /* GATSBY DEFAULTS */
 
