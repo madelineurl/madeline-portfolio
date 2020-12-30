@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { SoundcloudPlayer, Modal } from '..';
-import modalStyles from "../madeline/modal.module.css";
 
 const MusicPage = () => {
   const [showModal, setShowModal] = useState(false);
@@ -15,7 +14,7 @@ const MusicPage = () => {
 
 
   return (
-    <>
+    <div className='music-page flex'>
       <div id='music-container'>
       <SoundcloudPlayer
         url="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1138010866&color=%238cbc84&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
@@ -36,11 +35,11 @@ const MusicPage = () => {
       />
       <button
         onClick={openMusicWindow}
-        className={modalStyles.modalButton} style={{ fontSize: `2rem`, color: `grey` }}
+        className='btn'
         >
           about my music
       </button>
-    </>
+    </div>
   );
 };
 

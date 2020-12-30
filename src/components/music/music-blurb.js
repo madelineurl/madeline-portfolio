@@ -8,7 +8,7 @@ const MusicBlurb = () => {
       </div>
       <div>I've played guitar on and off since I was twelve, and I recently committed to teaching myself music theory on piano. I've since been producing more original work in the form of ambient synth pieces, post-punk drum machine EPs, and deep vocal house projects.
       </div>
-      <div className='venues' >
+      <div className='venues flex' >
         <div><strong>Venues I've played around Chicago: </strong></div>
           <div>Smartbar</div>
           <div>Berlin</div>
