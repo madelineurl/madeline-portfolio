@@ -19,7 +19,6 @@ export { default as Soundcloud } from "./icons/social/soundcloud-icon";
 export { default as Icons } from "./icons/social/icons";
 
 export { default as AboutMe} from "./madeline/about";
-export { default as Image } from "./madeline/image";
 export { default as Modal } from "./madeline/modal";
 
 export { default as ContactForm } from "./form/form";

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ProjectLink, TemplateLink } from "..";
+import { ProjectLink } from "..";
 
 const Project = ({ siteURL, videoURL, github }) => (
   <div className='project-link-container'>
@@ -16,9 +16,9 @@ const Project = ({ siteURL, videoURL, github }) => (
         projectUrl={videoURL}
         text='youtube'
     />
-    <TemplateLink link='/projects/' >
+    {/* <TemplateLink link='/projects/' >
       back to projects
-    </TemplateLink>
+    </TemplateLink> */}
   </div>
 );
 

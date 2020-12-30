@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { SEO } from "../components";
-import styles from "../components/madeline/modal.module.css";
 
 const Resume = () => {
   const resume = useStaticQuery(graphql`
@@ -24,9 +23,9 @@ const Resume = () => {
       <a
         ref={simulateClick}
         href={resume.pdf.publicURL}
-        className={styles.loading}
+        className='loading flex'
       >
-          Loading...
+          loading...
       </a>
     </>
   );
