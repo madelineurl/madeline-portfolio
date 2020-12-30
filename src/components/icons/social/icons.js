@@ -7,25 +7,6 @@ import linkedin from "./images/LI-circle.png";
 import medium from "./images/medium-circle.webp";
 
 const Icons = () => {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     icons: allFile(filter: { relativeDirectory: {eq: "social-icons"} }) {
-  //       edges {
-  //         node {
-  //           name
-  //           relativePath
-  //           childImageSharp {
-  //             id
-  //             fluid(maxWidth: 1600) {
-  //               ...GatsbyImageSharpFluid
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }`
-  // );
-
   return (
     <div className='flex'>
        <Link to='/contact/' >

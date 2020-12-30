@@ -6,7 +6,7 @@ import northwestern from './images/northwestern.png';
 
 const ProjectIcons = () => {
   return (
-    <div className='nav-icon container'>
+    <div className='nav-icon flex'>
       <ProjectIcon
         image={shiftpitch}
         name='shiftpitch'
