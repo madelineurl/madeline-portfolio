@@ -1,6 +1,4 @@
-import React, { useReducer, useState } from "react"
-import Input from "./input"
-import styles from './form.module.css'
+import React, { useReducer, useState } from "react";
 import { navigate } from "gatsby-link";
 
 function encode(data) {
@@ -22,7 +20,7 @@ const ContactForm = () => {
   );
 
   const disabled = userInput ? false : true;
-  const warningClass = warning ? styles.warning : styles.none;
+  const warningClass = warning ? 'warning' : 'none';
 
   const handleChange = evt => {
     setWarning(false);
@@ -59,7 +57,7 @@ const ContactForm = () => {
       netlify-honeypot="bot-field"
       method="post"
       action="/success/"
-      className={styles.form}
+      className='form'
       onSubmit={handleSubmit}
     >
       <input
@@ -71,16 +69,18 @@ const ContactForm = () => {
         type="hidden"
         name="bot-field"
       />
-      <Input
+      <input
+        type='text'
         name='name'
         placeholder='name'
-        handleChange={handleChange}
+        onChange={handleChange}
         value={userInput.name}
       />
-      <Input
+      <input
+        type='text'
         name='email'
         placeholder='email'
-        handleChange={handleChange}
+        onChange={handleChange}
         value={userInput.email}
       />
       <textarea

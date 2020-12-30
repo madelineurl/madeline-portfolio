@@ -1,43 +1,65 @@
 import React from "react";
-import { graphql, useStaticQuery, Link } from "gatsby";
-import Img from "gatsby-image";
+import { Link } from "gatsby";
 import Icon from "./icon";
-import styles from "../icons.module.scss";
+import styles from "../icons.module.css";
+import contact from "./images/contact-circle.png";
+import github from "./images/github-circle.png";
+import linkedin from "./images/LI-circle.png";
+import medium from "./images/medium-circle.webp";
 
 const Icons = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      icons: allFile(filter: { relativeDirectory: {eq: "social-icons"} }) {
-        edges {
-          node {
-            name
-            relativePath
-            childImageSharp {
-              id
-              fluid(maxWidth: 1600) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }`
-  );
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     icons: allFile(filter: { relativeDirectory: {eq: "social-icons"} }) {
+  //       edges {
+  //         node {
+  //           name
+  //           relativePath
+  //           childImageSharp {
+  //             id
+  //             fluid(maxWidth: 1600) {
+  //               ...GatsbyImageSharpFluid
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }`
+  // );
 
   return (
-    <div className={styles.iconContainer}>
-      {
+    <div className={styles.container}>
+       <Link to='/contact/' >
+          <img
+            src={contact}
+            alt="contact"
+            className={styles.footerIcon}
+          />
+        </Link>
+        <Icon
+            url='https://github.com/madelineurl'
+            image={github}
+          />
+        <Icon
+        image={linkedin}
+        url='https://www.linkedin.com/in/madeline-url/'
+      />
+        <Icon
+        image={medium}
+        url='https://madeline-url.medium.com'
+      />
+      {/* {
         data.icons.edges.map(icon => {
           let { name } = icon.node;
 
-          if (name === "contact-circle") {
+          if (name === "mail-circle") {
             return (
-              <Link to='/contact/' >
+              <Link key={icon.node.childImageSharp.id} to='/contact/' >
                 <Img
-                  key={icon.node.childImageSharp.id}
                   fluid={icon.node.childImageSharp.fluid}
                   alt="contact"
                   className={styles.icon}
+
                 />
               </Link>
             );
@@ -61,7 +83,7 @@ const Icons = () => {
             );
           }
         })
-      }
+      } */}
     </div>
   );
 };

@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
+/* VARIABLES */
+
+:root {
+  --primary-font: 'Questrial', sans-serif;
+}
+
+/* MAIN */
+
 .main {
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-family: 'Questrial' sans-serif;
+  font-family: var(--primary-font);
   overscroll-behavior: none;
   margin-bottom: 7.5rem;
 }
@@ -20,6 +28,70 @@
   margin-top: 1rem;
 }
 
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* CONTACT */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Questrial', sans-serif;
+  position: relative;
+  top: 5vh;
+  animation: fade-in 1s linear;
+  width: 100%;
+}
+
+.form input {
+  margin-bottom: .5rem;
+  padding: 0.3rem;
+  border: 1px solid rgb(143, 143, 143);
+  border-radius: 5px;
+}
+
+.form textarea {
+  margin-top: .5rem;
+  height: 25vh;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid rgb(143, 143, 143);
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: 0;
+}
+
+.form button {
+  font-family: 'Questrial', sans-serif;
+  border: none;
+  margin: .5rem;
+  border-radius: 5px;
+  padding: .25rem .75rem;
+  background-color: rgba(115, 115, 115, 0.2);
+}
+
+.form button:hover {
+  background-color: rgba(115, 115, 115, 0.5);
+}
+
+.warning {
+  color: rgb(109, 109, 109);
+  animation: fade-in .5s linear;
+  margin-top: 2vh;
+}
+
+.none {
+  display: none;
+}
+
+/* ANIMATIONS */
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -29,14 +101,48 @@
   }
 }
 
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+
+  .form {
+    font-size: 1.5rem;
+  }
+
+  .form input {
+    width: 300px;
+  }
+
+
+  .form textarea {
+    width: 300px;
+  }
+}
+
+
+@media screen and (min-width: 420px) {
+  .form input {
+    width: 400px;
+  }
+
+  .form textarea {
+    width: 400px;
+  }
+}
+
+
 /* GATSBY DEFAULTS */
 
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em 'Roboto', serif, sans-serif;
+  font: 112.5%/1.45em var(--primary-font), serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  overscroll-behavior: none;
 }
 
 body {
@@ -45,7 +151,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
   background-color: white;
-  font-family: georgia, serif;
+  font-family: inherit;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -53,45 +159,9 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  overscroll-behavior: none;
 }
 
-h1 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
-  line-height: 1.1;
-}
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
 img {
   border-style: none;
   max-width: 100%;
@@ -104,26 +174,7 @@ img {
   padding-top: 0;
   margin-bottom: 1.45rem;
 }
-svg:not(:root) {
-  overflow: hidden;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace;
-  font-size: 1em;
-}
-figure {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-}
+
 hr {
   box-sizing: content-box;
   overflow: visible;
@@ -139,47 +190,23 @@ hr {
   border: none;
   height: 1px;
 }
+
 button,
 input,
-optgroup,
-select,
 textarea {
   font: inherit;
   margin: 0;
 }
-optgroup {
-  font-weight: 700;
+
+textarea {
+  overflow: auto;
 }
-button,
-input {
-  overflow: visible;
+
+* {
+  box-sizing: inherit;
 }
-button,
-select {
-  text-transform: none;
-}
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
-}
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-fieldset {
-  border: 1px solid silver;
-  padding: 0.35em 0.625em 0.75em;
+
+h1 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -188,52 +215,14 @@ fieldset {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-}
-legend {
-  box-sizing: border-box;
   color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
+  font-family: var(--primary-font), sans-serif;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  font-size: 2.25rem;
+  line-height: 1.1;
 }
-textarea {
-  overflow: auto;
-}
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-* {
-  box-sizing: inherit;
-}
-*:before {
-  box-sizing: inherit;
-}
-*:after {
-  box-sizing: inherit;
-}
+
 h2 {
   margin-left: 0;
   margin-right: 0;
@@ -251,6 +240,7 @@ h2 {
   font-size: 1.62671rem;
   line-height: 1.1;
 }
+
 h3 {
   margin-left: 0;
   margin-right: 0;
@@ -268,6 +258,7 @@ h3 {
   font-size: 1.38316rem;
   line-height: 1.1;
 }
+
 h4 {
   margin-left: 0;
   margin-right: 0;
@@ -285,6 +276,7 @@ h4 {
   font-size: 1rem;
   line-height: 1.1;
 }
+
 h5 {
   margin-left: 0;
   margin-right: 0;
@@ -302,6 +294,7 @@ h5 {
   font-size: 0.85028rem;
   line-height: 1.1;
 }
+
 h6 {
   margin-left: 0;
   margin-right: 0;
@@ -319,10 +312,3 @@ h6 {
   font-size: 0.78405rem;
   line-height: 1.1;
 }
-
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
-

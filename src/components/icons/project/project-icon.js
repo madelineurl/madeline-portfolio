@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 import { Link } from "gatsby";
-import styles from "../icons.module.scss";
+import styles from "../icons.module.css";
 import ProjectLabel from "./project-label";
 
-const ProjectIcon = ({ image, name, labelTitle, labelSubtitle }) => {
+const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, iconStyle }) => {
   const [showLabel, setShowLabel] = useState(false);
-  const labelClass = showLabel ? styles.label : styles.noneIcon;
+  const labelClass = showLabel ? styles.label : styles.hide;
 
   const revealLabel = () => {
     setShowLabel(true);
@@ -24,9 +24,9 @@ const ProjectIcon = ({ image, name, labelTitle, labelSubtitle }) => {
         onMouseLeave={hideLabel}
         to={`/${name}/`}
       >
-        <Img
-          fluid={image}
-          className={styles.projectIcon}
+        <img
+          src={image}
+          className={iconStyle}
           alt={`${name}-icon`}
         />
       </Link>
@@ -41,7 +41,7 @@ const ProjectIcon = ({ image, name, labelTitle, labelSubtitle }) => {
 };
 
 ProjectIcon.propTypes = {
-  image: PropTypes.object.isRequired,
+  image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   iconStyle: PropTypes.string.isRequired,
   labelTitle: PropTypes.string.isRequired,

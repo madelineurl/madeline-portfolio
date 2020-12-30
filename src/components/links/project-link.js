@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styles from "./link.module.css"
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./link.module.css";
 
 const ProjectLink = ({ projectUrl, text }) => (
   <a
@@ -11,11 +11,11 @@ const ProjectLink = ({ projectUrl, text }) => (
   >
     {text}
   </a>
-)
+);
 
 ProjectLink.propTypes = {
   projectUrl: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired
-}
+};
 
-export default ProjectLink
+export default ProjectLink;

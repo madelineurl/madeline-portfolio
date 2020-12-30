@@ -1,20 +1,19 @@
 import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import styles from "./icons.module.scss";
 
 const ResumeIcon = () => {
-  const data = useStaticQuery(graphql`
-  query {
-    resume: file(relativePath: { eq: "resume.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
+  const data = graphql`
+    query myResume {
+      file(relativePath: { eq: "resume.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
         }
       }
-    }
-  }
-`);
+    }`;
 
   const [label, setLabel] = useState(false);
   const labelClass = label ? `${styles.show} ${styles.resumeLabel}` : styles.resumeLabel;
@@ -27,10 +26,10 @@ const ResumeIcon = () => {
     setLabel(false);
   };
 
-  if (!data?.resume?.childImageSharp?.fluid) {
+  if (!data?.file?.childImageSharp?.fluid) {
     return <div>Picture not found</div>;
   }
-
+  console.log('data:', data);
   return (
     <>
       <a onMouseEnter={showLabel}
@@ -41,7 +40,7 @@ const ResumeIcon = () => {
       >
         <Img
           className={styles.resume}
-          fluid={data.resume.childImageSharp.fluid}
+          fluid={data.file.childImageSharp.fluid}
           id='resume'
         />
       </a>

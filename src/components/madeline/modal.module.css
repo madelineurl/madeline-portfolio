@@ -76,7 +76,13 @@
   background: none;
   cursor: pointer;
   display: inline-block;
+  text-decoration: none;
   /* position: relative; */
+  transition: color 0.5s ease;
+}
+
+.modal-button:hover {
+  color: rgb(29, 29, 29);
 }
 
 .headshot-container {
@@ -87,10 +93,6 @@
 .headshot {
   width: 200px;
   height: 250px;
-}
-
-.modal-button:hover {
-  text-decoration: underline;
 }
 
 .modal-header {

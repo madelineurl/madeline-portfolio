@@ -1,13 +1,14 @@
 import React from 'react';
 import Image from './image';
-import ResumeIcon from '../icons/resume';
+// import ResumeIcon from '../icons/resume';
+import resume from './resume.png';
 import styles from './modal.module.css';
 
 const About = () => (
   <div className={styles.about}  id='about' >
     <div className={styles.headshotContainer}>
       <Image className={styles.headshot} />
-      <ResumeIcon />
+      <img src={resume} alt='resume icon' />
     </div>
     <div>
       <div>I'm Madeline Higgins, a software engineer and radio host + DJ based in Chicago. I design accessible applications that help people connect to their creativity and to each other. </div>

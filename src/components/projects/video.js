@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styles from "./project.module.css"
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./project.module.css";
 
 const Video = ({ videoURL, videoTitle }) => (
   <>
@@ -15,11 +15,11 @@ const Video = ({ videoURL, videoTitle }) => (
       allowFullScreen
     />
   </>
-)
+);
 
 Video.propTypes = {
   videoURL: PropTypes.string.isRequired,
   videoTitle: PropTypes.string.isRequired
-}
+};
 
-export default Video
+export default Video;

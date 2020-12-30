@@ -1,5 +1,5 @@
-import React from "react"
-import Particles from "react-tsparticles"
+import React from "react";
+import Particles from "react-tsparticles";
 
 const Background = () => {
   return (

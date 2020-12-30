@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import styles from "../icons.module.scss"
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
+import styles from "../icons.module.css";
 
 const Soundcloud = () => {
   const data = useStaticQuery(graphql`
@@ -14,7 +14,7 @@ const Soundcloud = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Img
@@ -22,8 +22,8 @@ const Soundcloud = () => {
       alt="soundcloud-icon"
       className={styles.soundcloud}
     />
-  )
-}
+  );
+};
 
 
-  export default Soundcloud
+  export default Soundcloud;

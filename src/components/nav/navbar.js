@@ -29,7 +29,6 @@ const Navbar = () => {
       <div className={`${styles.navbar} ${showNav}`}>
         <NavbarLink name='about' />
         <NavbarLink name='projects' />
-        <NavbarLink name='skills' />
         <NavbarLink name='music' />
         <NavbarLink name='contact' />
       </div>

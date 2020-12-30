@@ -1,5 +1,5 @@
-import React from "react"
-import styles from "./project.module.css"
+import React from "react";
+import styles from "./project.module.css";
 
 const Skills = () => (
   <div className={styles.skills}>
@@ -34,6 +34,6 @@ const Skills = () => (
       <div>React Testing Library</div>
     </div>
   </div>
-)
+);
 
 export default Skills;
