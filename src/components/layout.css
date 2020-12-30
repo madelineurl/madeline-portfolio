@@ -59,7 +59,6 @@
   background: rgb(130, 130, 143);
 }
 
-
 /* NAVBAR */
 
 .burger {
@@ -112,7 +111,8 @@
   transform: scale(1.1);
 }
 
-.nav-icon .flex {
+.project-icons {
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
@@ -120,7 +120,7 @@
   top: 10vh;
 }
 
-.nav-icon .container div {
+.project-icons div {
   margin: .25rem;
 }
 
@@ -128,11 +128,7 @@
   position: absolute;
   top: 30vh;
   color: rgb(111, 118, 126);
-  font-family: 'Questrial', sans-serif;
-}
-
-.label .none {
-  color: white;
+  font-family: var(--primary-font);
 }
 
 #northwestern {
@@ -161,38 +157,39 @@
   cursor: pointer;
 }
 
-.resume-label {
+#resume-icon label {
   display: block;
   position: relative;
   bottom: 20px;
   left: 10px;
 }
 
-
 /* PROJECTS */
 
-.nav-icon {
+.project-page {
+  display: flex;
   flex-direction: row;
   box-sizing: border-box;
   margin-left: .5rem;
   margin-right: .5rem;
 }
 
-.container > div {
+.project-page > div {
   width: 50%;
   box-sizing: border-box;
   padding-left: .5rem;
   padding-right: .5rem;
 }
 
-.container h3 {
+.project-page h3 {
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: left;
   font-family: 'Questrial', sans-serif;
 }
 
-.project-blurb {
+.project-left div,
+.project-right div {
   /* width: 50%; */
   text-align: left;
   font-family: 'Questrial', sans-serif;
@@ -205,7 +202,6 @@
   justify-content: center;
   align-self: center;
 }
-
 
 /* SKILLS */
 
@@ -357,8 +353,12 @@
 }
 
 @keyframes spin {
-  from   { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from   {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* MEDIA QUERIES */

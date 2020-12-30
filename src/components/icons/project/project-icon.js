@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
-const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, iconStyle }) => {
+const ProjectIcon = ({ image, name, labelTitle, labelSubtitle }) => {
   const [showLabel, setShowLabel] = useState(false);
   const labelClass = showLabel ? 'label' : 'hide';
 
@@ -23,7 +23,7 @@ const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, iconStyle }) => {
       >
         <img
           src={image}
-          id={iconStyle}
+          id={name}
           alt={`${name}-icon`}
         />
       </Link>
@@ -38,7 +38,6 @@ const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, iconStyle }) => {
 ProjectIcon.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  iconStyle: PropTypes.string.isRequired,
   labelTitle: PropTypes.string.isRequired,
   labelSubtitle: PropTypes.string.isRequired
 };
