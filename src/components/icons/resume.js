@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
-import styles from "./icons.module.scss";
 
 const ResumeIcon = () => {
   const data = graphql`
@@ -16,7 +15,7 @@ const ResumeIcon = () => {
     }`;
 
   const [label, setLabel] = useState(false);
-  const labelClass = label ? `${styles.show} ${styles.resumeLabel}` : styles.resumeLabel;
+  const labelClass = label ? 'resume-label' : 'none';
 
   const showLabel = () => {
     setLabel(true);
@@ -29,23 +28,23 @@ const ResumeIcon = () => {
   if (!data?.file?.childImageSharp?.fluid) {
     return <div>Picture not found</div>;
   }
-  console.log('data:', data);
+
   return (
-    <>
-      <a onMouseEnter={showLabel}
+    <div className="resume flex">
+      <a
+        onMouseEnter={showLabel}
         onMouseLeave={hideLabel}
         target="_blank"
         rel="noreferrer"
-        href='/resume/'
+        href="/resume/"
       >
         <Img
-          className={styles.resume}
           fluid={data.file.childImageSharp.fluid}
-          id='resume'
+          id='resume-icon'
         />
       </a>
-      <label htmlFor='resume' className={labelClass}>RESUME</label>
-    </>
+      <label htmlFor='resume-icon' className={labelClass}>RESUME</label>
+    </div>
   );
 };
 

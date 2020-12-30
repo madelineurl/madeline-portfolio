@@ -28,38 +28,26 @@
   font-size: .8rem;
 }
 
-.video-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 5vh;
-  width: 100%;
-}
-
-.video {
-  width: 100%;
-  height: 80%;
-}
-
-.video-link-container {
+.project-link-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-self: center;
 }
 
-.skills {
+#skills {
   display: flex;
   justify-content: center;
   position: relative;
   top: 6vh;
 }
 
-.skills h3 {
+#skills h3 {
   margin-bottom: 2vh;
   font-family: 'Questrial', sans-serif;
 }
 
-.skills > div {
+#skills > div {
   border: 2px solid grey;
   border-radius: 5px;
   box-sizing: border-box;
@@ -68,9 +56,6 @@
   width: 33%;
 }
 
-.skills div {
-  font-family: 'Questrial', sans-serif;
-}
 
 @media screen and (max-width: 880px) {
   .container {

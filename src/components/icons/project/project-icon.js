@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import styles from "../icons.module.css";
 
 const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, iconStyle }) => {
   const [showLabel, setShowLabel] = useState(false);
-  const labelClass = showLabel ? styles.label : styles.hide;
+  const labelClass = showLabel ? 'label' : 'hide';
 
   const revealLabel = () => {
     setShowLabel(true);
@@ -16,7 +15,7 @@ const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, iconStyle }) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className='flex'>
       <Link
         onMouseOver={revealLabel}
         onMouseLeave={hideLabel}
@@ -24,7 +23,7 @@ const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, iconStyle }) => {
       >
         <img
           src={image}
-          className={iconStyle}
+          id={iconStyle}
           alt={`${name}-icon`}
         />
       </Link>

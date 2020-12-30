@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import Icon from "./icon";
-import styles from "../icons.module.css";
 import contact from "./images/contact-circle.png";
 import github from "./images/github-circle.png";
 import linkedin from "./images/LI-circle.png";
@@ -28,12 +27,12 @@ const Icons = () => {
   // );
 
   return (
-    <div className={styles.container}>
+    <div className='flex'>
        <Link to='/contact/' >
           <img
             src={contact}
             alt="contact"
-            className={styles.footerIcon}
+            className='footer-icon'
           />
         </Link>
         <Icon
@@ -48,42 +47,6 @@ const Icons = () => {
         image={medium}
         url='https://madeline-url.medium.com'
       />
-      {/* {
-        data.icons.edges.map(icon => {
-          let { name } = icon.node;
-
-          if (name === "mail-circle") {
-            return (
-              <Link key={icon.node.childImageSharp.id} to='/contact/' >
-                <Img
-                  fluid={icon.node.childImageSharp.fluid}
-                  alt="contact"
-                  className={styles.icon}
-
-                />
-              </Link>
-            );
-          } else {
-            let url;
-            if (name === 'github-circle') {
-              url = 'https://github.com/madelineurl';
-            } else if (name === 'LI-circle') {
-              url = 'https://www.linkedin.com/in/madeline-url/';
-            } else if (name === 'medium-circle') {
-              url = 'https://madeline-url.medium.com/';
-            }
-
-            return (
-              <Icon
-                key={icon.node.childImageSharp.id}
-                name={icon}
-                url={url}
-                image={icon.node.childImageSharp.fluid}
-              />
-            );
-          }
-        })
-      } */}
     </div>
   );
 };

@@ -1,33 +1,25 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ProjectLink } from "..";
-import styles from "./project.module.css";
+import { ProjectLink, TemplateLink } from "..";
 
 const Project = ({ siteURL, videoURL, github }) => (
-  <>
-    <div className={styles.videoContainer}>
-        {/* <Video
-          title={videoTitle}
-          videoURL={videoURL}/> */}
-        <div className={styles.videoLinkContainer}>
-          <ProjectLink
-            projectUrl={siteURL}
-            text='play'
-          />
-          <ProjectLink
-             projectUrl={github}
-             text='github'
-          />
-          <ProjectLink
-             projectUrl={videoURL}
-             text='youtube'
-          />
-          {/* <TemplateLink link='/projects/' >
-            back to projects
-          </TemplateLink> */}
-        </div>
-    </div>
-  </>
+  <div className='project-link-container'>
+    <ProjectLink
+      projectUrl={siteURL}
+      text='play'
+    />
+    <ProjectLink
+        projectUrl={github}
+        text='github'
+    />
+    <ProjectLink
+        projectUrl={videoURL}
+        text='youtube'
+    />
+    <TemplateLink link='/projects/' >
+      back to projects
+    </TemplateLink>
+  </div>
 );
 
 Project.propTypes = {

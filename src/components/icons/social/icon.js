@@ -1,7 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import Img from "gatsby-image";
-import styles from "../icons.module.css";
 
 const SocialIcon = ({ url, image}) => (
   <a
@@ -12,7 +10,7 @@ const SocialIcon = ({ url, image}) => (
     <img
       src={image}
       alt='social icon'
-      className={styles.footerIcon}
+      className='footer-icon'
     />
   </a>
 );

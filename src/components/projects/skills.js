@@ -1,8 +1,7 @@
 import React from "react";
-import styles from "./project.module.css";
 
 const Skills = () => (
-  <div className={styles.skills}>
+  <div id='skills'>
     <div>
       <h3>frontend</h3>
       <div>SASS</div>

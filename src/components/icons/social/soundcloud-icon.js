@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
-import styles from "../icons.module.css";
 
 const Soundcloud = () => {
   const data = useStaticQuery(graphql`
@@ -20,7 +19,7 @@ const Soundcloud = () => {
     <Img
       fixed={data.file.childImageSharp.fixed}
       alt="soundcloud-icon"
-      className={styles.soundcloud}
+      className='soundcloud'
     />
   );
 };

@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./project.module.css";
 
 const Video = ({ videoURL, videoTitle }) => (
   <>
     <iframe
-      className={styles.video}
+      className='video'
       src={videoURL}
       title={videoTitle}
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
