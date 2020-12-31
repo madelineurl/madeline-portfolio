@@ -1,15 +1,14 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
-import styles from "./link.module.css"
+import React from "react";
+import PropTypes from "prop-types";
+import { Link } from "gatsby";
 
 const TemplateLink = ({ link, children }) => (
   <Link
-    className={styles.link}
+    className='link'
     to={link}>
       {children}
   </Link>
-)
+);
 
 TemplateLink.propTypes = {
   link: PropTypes.string.isRequired,
@@ -17,6 +16,6 @@ TemplateLink.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired
-}
+};
 
-export default TemplateLink
+export default TemplateLink;

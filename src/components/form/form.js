@@ -1,6 +1,4 @@
-import React, { useReducer, useState } from "react"
-import Input from "./input"
-import styles from './form.module.css'
+import React, { useReducer, useState } from "react";
 import { navigate } from "gatsby-link";
 
 function encode(data) {
@@ -19,15 +17,15 @@ const ContactForm = () => {
       email: '',
       message: ''
     }
-  )
+  );
 
   const disabled = userInput ? false : true;
-  const warningClass = warning ? styles.warning : styles.none;
+  const warningClass = warning ? 'warning' : 'none';
 
   const handleChange = evt => {
     setWarning(false);
-    setUserInput({ [evt.target.name]: evt.target.value })
-  }
+    setUserInput({ [evt.target.name]: evt.target.value });
+  };
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
@@ -44,13 +42,13 @@ const ContactForm = () => {
             "form-name": form.getAttribute("name"),
             ...userInput
           })
-        })
-        navigate(form.getAttribute("action"))
+        });
+        navigate(form.getAttribute("action"));
       } catch (err) {
         console.error(err);
       }
     }
-  }
+  };
 
   return (
   <form
@@ -59,7 +57,7 @@ const ContactForm = () => {
       netlify-honeypot="bot-field"
       method="post"
       action="/success/"
-      className={styles.form}
+      className='form'
       onSubmit={handleSubmit}
     >
       <input
@@ -71,25 +69,24 @@ const ContactForm = () => {
         type="hidden"
         name="bot-field"
       />
-      <Input
+      <input
+        type='text'
         name='name'
         placeholder='name'
-        className={styles.input}
-        handleChange={handleChange}
+        onChange={handleChange}
         value={userInput.name}
       />
-      <Input
+      <input
+        type='text'
         name='email'
         placeholder='email'
-        className={styles.input}
-        handleChange={handleChange}
+        onChange={handleChange}
         value={userInput.email}
       />
       <textarea
         type='text'
         name='message'
         placeholder='message'
-        className={styles.message}
         onChange={handleChange}
         value={userInput.message}
         >
@@ -98,7 +95,6 @@ const ContactForm = () => {
         <button
           type='submit'
           name='submit-button'
-          className={styles.send}
           disabled={disabled}
         >
           send
@@ -106,7 +102,7 @@ const ContactForm = () => {
       </div>
       <div className={warningClass}>please fill out all the fields!</div>
   </form>
-)
-}
+);
+};
 
 export default ContactForm;

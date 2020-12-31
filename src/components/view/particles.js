@@ -1,5 +1,5 @@
-import React from "react"
-import Particles from "react-tsparticles"
+import React from "react";
+import Particles from "react-tsparticles";
 
 const Background = () => {
   return (
@@ -15,7 +15,7 @@ const Background = () => {
               value: "#ffffff",
             },
           },
-          fpsLimit: 70,
+          fpsLimit: 30,
           interactivity: {
             detectsOn: "canvas",
             events: {
@@ -51,7 +51,7 @@ const Background = () => {
             },
             links: {
               color: "#E4E5E5",
-              distance: 150,
+              distance: 120,
               enable: true,
               opacity: 0.5,
               width: 1,
@@ -70,9 +70,9 @@ const Background = () => {
             number: {
               density: {
                 enable: true,
-                value_area: 800,
+                value_area: 900,
               },
-              value: 80,
+              value: 60,
             },
             opacity: {
               value: 0.3,
@@ -88,7 +88,7 @@ const Background = () => {
           detectRetina: true,
         }}
       />
-  )
-}
+  );
+};
 
 export default Background;

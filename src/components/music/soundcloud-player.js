@@ -1,9 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styles from "./music.module.css"
+import React from "react";
+import PropTypes from "prop-types";
 
 const SoundcloudPlayer = ({ url, title }) => (
-  <div className={styles.soundcloudPlayer}>
+  <div className='soundcloud-player'>
     <iframe
       width="100%"
       height="300"
@@ -15,11 +14,11 @@ const SoundcloudPlayer = ({ url, title }) => (
       >
     </iframe>
   </div>
-)
+);
 
 SoundcloudPlayer.propTypes = {
   url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired
-}
+};
 
 export default SoundcloudPlayer;

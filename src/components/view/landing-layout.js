@@ -6,7 +6,6 @@ const LandingLayout = ({ children }) => {
   return (
     <>
       <Particles />
-      {/* <Navbar /> */}
       <div className='main'>
         <main>{children}</main>
         <footer style={{ backgroundColor: `transparent` }} className='footer'>

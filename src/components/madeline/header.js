@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import styles from "./modal.module.css";
 
 const Header = () => {
   return (
     <header>
-      <div className={`${styles.container} ${styles.mainHeader}`}>
-        <Link to='/' className={styles.headerLink} >
+      <div className='main-header'>
+        <Link to='/' className='header-link' >
           <h1>madeline</h1>
         </Link>
       </div>
@@ -21,6 +20,6 @@ Header.propTypes = {
 
 Header.defaultProps = {
   siteTitle: ``,
-}
+};
 
-export default Header
+export default Header;

@@ -1,11 +1,10 @@
 import React, { useState} from "react";
-import NavbarLink from "./navbar-link";
-import styles from "./navbar.module.css";
+import { Link } from "gatsby";
 import HamburgerMenu from "react-hamburger-menu";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const showNav = open ? styles.show : styles.hide;
+  const showNav = open ? 'show' : 'hide';
 
   const handleClick = () => {
     setOpen(!open);
@@ -13,7 +12,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={styles.burger}>
+      <div className='burger'>
         <HamburgerMenu
           isOpen={open}
           menuClicked={handleClick}
@@ -26,11 +25,11 @@ const Navbar = () => {
           animationDuration={0.5}
         />
       </div>
-      <div className={`${styles.navbar} ${showNav}`}>
-        <NavbarLink name='ABOUT' />
-        <NavbarLink name='PROJECTS' />
-        <NavbarLink name='SKILLS' />
-        <NavbarLink name='MUSIC' />
+      <div className={`navbar ${showNav}`}>
+        <Link to='/about/' >about</Link>
+        <Link to='/projects/' >projects</Link>
+        <Link to='/music/' >music</Link>
+        <Link to='/contact/' >contact</Link>
       </div>
     </>
   );

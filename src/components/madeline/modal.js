@@ -1,28 +1,27 @@
-import React from "react"
-import PropTypes from "prop-types"
-import MusicBlurb from "../music/music-blurb"
-import styles from "./modal.module.css"
+import React from "react";
+import PropTypes from "prop-types";
+import MusicBlurb from "../music/music-blurb";
 
 const Modal = ({ handleClose, show }) => {
-  const showHideModal = show ? styles.displayBlock : styles.displayNone;
+  const showHideModal = show ? 'show-modal' : 'none';
 
   return (
-    <div className={`${styles.modal} ${showHideModal}`}>
-      <section className={styles.modalMain}>
+    <div className={`modal ${showHideModal}`}>
+      <section className='modal-main'>
         <button
           onClick={handleClose}
-          className={styles.closeModal}>
+          className='close-modal'>
             x
         </button>
         <MusicBlurb />
       </section>
     </div>
-  )
-}
+  );
+};
 
 Modal.propTypes = {
   handleClose: PropTypes.func.isRequired,
   show: PropTypes.bool.isRequired
-}
+};
 
-export default Modal
+export default Modal;

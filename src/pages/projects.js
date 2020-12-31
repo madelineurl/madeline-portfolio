@@ -5,8 +5,6 @@ const Projects = () => (
   <Layout>
     <SEO title='projects' />
     <ProjectIcons />
-    {/* <Skills/>
-    <AboutMe/> */}
   </Layout>
 );
 
