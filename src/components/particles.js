@@ -1,8 +1,7 @@
 import React from "react";
 import Particles from "react-tsparticles";
 
-const Background = () => {
-  return (
+const Background = () => (
     <Particles
         style={{
           position: `absolute`,
@@ -88,7 +87,6 @@ const Background = () => {
           detectRetina: true,
         }}
       />
-  );
-};
+);
 
 export default Background;

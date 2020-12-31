@@ -1,24 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ProjectLink } from "..";
 
 const Project = ({ siteURL, videoURL, github }) => (
   <div className='project-link-container'>
-    <ProjectLink
-      projectUrl={siteURL}
-      text='play'
-    />
-    <ProjectLink
-        projectUrl={github}
-        text='github'
-    />
-    <ProjectLink
-        projectUrl={videoURL}
-        text='youtube'
-    />
-    {/* <TemplateLink link='/projects/' >
-      back to projects
-    </TemplateLink> */}
+     <a
+      className='link'
+      target="_blank"
+      rel="noreferrer"
+      href={siteURL}
+    >
+      play
+    </a>
+    <a
+      className='link'
+      target="_blank"
+      rel="noreferrer"
+      href={github}
+    >
+      github
+    </a>
+    <a
+      className='link'
+      target="_blank"
+      rel="noreferrer"
+      href={videoURL}
+    >
+      youtube
+    </a>
   </div>
 );
 
