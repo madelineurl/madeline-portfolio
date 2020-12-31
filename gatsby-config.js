@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `madeline higgins' portfolio`,
+        name: `madeline higgins portfolio`,
         short_name: `madelineurl`,
         start_url: `/`,
         background_color: `#663399`,
