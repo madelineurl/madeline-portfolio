@@ -1,13 +1,11 @@
-import React from "react"
-import { Layout, SEO, ContactForm } from "../components"
+import React from "react";
+import { Layout, SEO, ContactForm } from "../components";
 
-const Contact = () => {
-  return (
+const Contact = () => (
     <Layout>
       <SEO title="contact" />
       <ContactForm />
     </Layout>
-  )
-}
+);
 
-export default Contact
+export default Contact;

@@ -15,6 +15,7 @@ const ResumeIcon = () => {
 
   return (
     <div className="resume flex">
+      <label htmlFor='resume-icon' className={labelClass}>RESUME</label>
       <a
         onMouseEnter={showLabel}
         onMouseLeave={hideLabel}
@@ -28,7 +29,6 @@ const ResumeIcon = () => {
           alt='link to my resume'
         />
       </a>
-      <label htmlFor='resume-icon' className={labelClass}>RESUME</label>
     </div>
   );
 };

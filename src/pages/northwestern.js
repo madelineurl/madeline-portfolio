@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, SEO, ProjectLink } from "../components";
+import { Layout, SEO } from "../components";
 
 const Northwestern = () => (
   <Layout>
@@ -8,7 +8,14 @@ const Northwestern = () => (
       <div className='project-left'>
         <h3>NU: school of communication</h3>
         <div>I moved from California to Chicago for undergrad at Northwestern University. I got my first taste of web development when I overhauled the Northwestern radio <a href='wnur.org' className='link'>website</a> as the station's General Manager. This experience got me a job as a Web Assistant for the School of Communication website shortly after graduating, where I learned HTML and CSS on the fly and first discovered Javascript.</div>
-        <ProjectLink text='visit site' projectUrl='https://communication.northwestern.edu/' />
+        <a
+          className='link'
+          target="_blank"
+          rel="noreferrer"
+          href='https://communication.northwestern.edu/'
+        >
+          visit site
+        </a>
       </div>
       <div className='project-right'>
         <h3>technology</h3>

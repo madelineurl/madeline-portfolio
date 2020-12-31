@@ -1,33 +1,25 @@
 import React from "react";
+import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
-import { Icons, Header, Navbar } from '.';
+import { FooterIcons, Navbar } from '.';
 import "./layout.css";
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+const Layout = ({ children }) => (
+  <>
+    <div className='header-main'>
+      <header>
+        <Link to='/' className='header-link' >
+          <h1>madeline</h1>
+        </Link>
+      </header>
       <Navbar />
-      <div>
-        <main className='main'>{children}</main>
-        <footer className='footer'>
-          <Icons />
-        </footer>
-      </div>
-    </>
-  );
-};
+    </div>
+    <main className='main'>{children}</main>
+    <footer className='footer'>
+      <FooterIcons />
+    </footer>
+  </>
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

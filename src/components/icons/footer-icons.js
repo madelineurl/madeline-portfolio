@@ -6,7 +6,7 @@ import github from "./images/github-circle.png";
 import linkedin from "./images/LI-circle.png";
 import medium from "./images/medium-circle.webp";
 
-const Icons = () => {
+const FooterIcons = () => {
   return (
     <div className='flex'>
        <Link to='/contact/' >
@@ -33,4 +33,4 @@ const Icons = () => {
 };
 
 
-  export default Icons;
+  export default FooterIcons;

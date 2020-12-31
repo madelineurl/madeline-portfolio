@@ -12,10 +12,10 @@
 .main {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  justify-content: center;
   font-family: var(--primary-font);
   overscroll-behavior: none;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .footer {
@@ -23,9 +23,9 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
-  height: 8%;
+  height: 10vh;
   background: white;
 }
 
@@ -62,27 +62,6 @@
   background-color: rgba(209, 209, 209, 1.0);
 }
 
-/* LAYOUT */
-
-.main-header {
-  padding: .8rem 1.0875rem;
-}
-
-.header-link {
-  text-decoration: none;
-  color: rgb(65, 65, 65);
-}
-
-.header-link h1 {
-  font-family: var(--primary-font);
-  font-size: 3.5rem;
-  color: var(--primary-grey);
-}
-
-.header-link:hover {
-  text-decoration: underline;
-}
-
 /* LANDING */
 
 .landing-container {
@@ -101,15 +80,13 @@
 .landing-container h1 {
   font-family: var(--primary-font);
   font-weight: bold;
-  font-size: 4.25rem;
-  line-height: 1.5;
+  font-size: 5rem;
   display: inline-block;
 }
 
 #landing-link {
   text-decoration: none;
   margin-top: 2.5rem;
-  padding: 0;
   border: none;
   cursor: pointer;
   color: var(--primary-grey);
@@ -125,21 +102,46 @@
   cursor: auto;
 }
 
+/* LAYOUT */
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-link {
+  text-decoration: none;
+  color: rgb(65, 65, 65);
+}
+
+.header-link h1 {
+  font-family: var(--primary-font);
+  font-size: 3.5rem;
+  color: var(--primary-grey);
+  margin-bottom: 0;
+  padding: 0.5rem 0.9rem;
+}
+
+.header-link:hover {
+  text-decoration: underline;
+}
+
 /* NAVBAR */
 
 .burger {
   position: absolute;
-  right: 1rem;
-  top: 2.5vh;
-  padding: 1rem;
+  right: 0;
+  top: 0;
+  padding-top: 5.5vh;
+  padding-right: 1.2rem;
   cursor: pointer;
   z-index: 9;
 }
 
 .navbar {
   position: absolute;
-  right: 5rem;
-  top: 2.5vh;
+  right: 3.5rem;
+  top: 1rem;
   z-index: 6;
   animation: fade-in .5s ease-in;
 }
@@ -147,7 +149,7 @@
 .navbar a {
   font-family: var(--primary-font);
   text-transform: uppercase;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   text-decoration: none;
   padding: 1rem;
   height: 5%;
@@ -168,7 +170,9 @@
   position: relative;
   height: 52px;
   width: 52px;
-  margin: .5em;
+  margin: .5rem;
+  bottom: .75rem;
+  top: .25rem;
   color: rgb(65, 65, 65);
   transition: transform 0.2s ease-in-out;
 }
@@ -183,7 +187,7 @@
   justify-content: space-around;
   width: 100%;
   position: relative;
-  top: 10vh;
+  top: 7vh;
 }
 
 .project-icons div {
@@ -192,7 +196,7 @@
 
 .label {
   position: absolute;
-  top: 30vh;
+  bottom: 0;
   color: rgb(111, 118, 126);
   font-family: var(--primary-font);
 }
@@ -216,7 +220,6 @@
   width: 11em;
   height: 11em;
 }
-
 
 /* PROJECTS */
 
@@ -376,8 +379,6 @@
   color: rgb(70, 66, 66);
   background: none;
   border: none;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   cursor: pointer;
   position: absolute;
@@ -403,7 +404,6 @@
 
 .resume {
   flex-direction: column;
-  align-items: center;
 }
 
 #resume-icon {
@@ -412,11 +412,9 @@
   cursor: pointer;
 }
 
-#resume-icon label {
-  display: flex;
+.resume label {
   position: absolute;
-  bottom: 20px;
-  left: 10px;
+  bottom: -10%;
 }
 
 .loading {
@@ -436,7 +434,6 @@
   align-items: center;
   text-align: left;
   width: 100%;
-  background-color: rgba(210, 210, 210, 0.5);
   border-radius: 5px;
 }
 
@@ -451,26 +448,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Questrial', sans-serif;
+  font-family: var(--primary-font);
   position: relative;
   top: 5vh;
-  animation: fade-in 1s linear;
+  animation: slide-in .5s ease;
   width: 100%;
 }
 
-.form input {
-  margin-bottom: .5rem;
-  padding: 0.3rem;
-  border: 1px solid rgb(143, 143, 143);
-  border-radius: 5px;
+.form textarea {
+  height: 25vh;
 }
 
+.form input,
 .form textarea {
-  margin-top: .5rem;
-  height: 25vh;
-  padding: 0.3rem;
+  border: 2px solid rgba(209, 209, 209, 0.5);
+  padding: 0.5rem 0.7rem;
+  background-color: #fff;
   border-radius: 5px;
-  border: 1px solid rgb(143, 143, 143);
+  margin-bottom: .5rem;
 }
 
 .form input:focus,
@@ -479,7 +474,7 @@
 }
 
 .form button {
-  font-family: 'Questrial', sans-serif;
+  font-family: var(--primary-font);
   border: none;
   margin: .5rem;
   border-radius: 5px;
@@ -521,6 +516,25 @@
   }
 }
 
+@keyframes slide-in {
+  0% {
+    transform: translateY(-120%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
 @keyframes spin {
   from   {
     transform: rotate(0deg);
@@ -556,9 +570,13 @@
     width: 100%;
   }
 
+  .landing-container h1 {
+    font-size: 3.25rem;
+  }
+
   .project-icons {
     flex-direction: column;
-    top: 0.5rem;
+    /* top: 0.5rem; */
   }
 
   .icon-container {
@@ -568,10 +586,6 @@
 
   .icon {
     margin: .5em;
-  }
-
-  .label {
-    display: none;
   }
 
   #northwestern {
@@ -589,15 +603,13 @@
   #about div {
     font-size: 1.5rem;
   }
-
-
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 840px) {
   .burger {
-    right: .1rem;
-    top: 2.5vh;
+    padding-right: 1rem;
+    padding-top: 2.25rem;
   }
 
   .navbar {
@@ -612,6 +624,7 @@
     border-radius: 5px;
     z-index: 9;
     opacity: 1.0;
+    animation: slide-in-right .3s ease-in;
   }
 
   .navbar a {
@@ -729,7 +742,7 @@ textarea {
   box-sizing: inherit;
 }
 
-h1 {
+h1, h3, h4 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -743,25 +756,7 @@ h1 {
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
-  line-height: 1.1;
-}
-
-h2 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 h3 {
@@ -774,8 +769,7 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -792,46 +786,10 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: inherit;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.1;
 }
 
-h5 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
-  line-height: 1.1;
-}
-
-h6 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 0.78405rem;
-  line-height: 1.1;
-}

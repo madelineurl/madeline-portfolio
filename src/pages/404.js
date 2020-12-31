@@ -1,5 +1,6 @@
 import React from "react";
-import { SEO, Layout, TemplateLink } from "../components";
+import { Link } from "gatsby";
+import { SEO, Layout } from "../components";
 
 const NotFoundPage = () => (
   <Layout>
@@ -12,9 +13,9 @@ const NotFoundPage = () => (
     }}>
       <h1>Oops!</h1>
       <p style={{ fontFamily: `inherit` }}>My portfolio hasn't reached this corner of the Internet yet</p>
-      <TemplateLink link='home'>
+      <Link to='home' className='link'>
         Home
-      </TemplateLink >
+      </Link >
     </div>
   </Layout>
 );
