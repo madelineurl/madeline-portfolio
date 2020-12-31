@@ -608,8 +608,8 @@
 
 @media screen and (max-width: 840px) {
   .burger {
-    padding-right: 0;
-    right: 0;
+    padding-right: 1rem;
+    padding-top: 2.25rem;
   }
 
   .navbar {
