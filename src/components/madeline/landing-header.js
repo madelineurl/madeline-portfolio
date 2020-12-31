@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 
 const LandingHeader = () => {
   return (
-    <div className='landing-container'>
+    <div className='landing-container flex'>
       <div>
         <Link to="/projects/">
           <h1 id='landing-link'>

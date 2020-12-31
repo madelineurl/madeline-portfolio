@@ -14,9 +14,9 @@ export { default as MusicPage } from "./music/music";
 export { default as MusicBlurb } from "./music/music-blurb";
 export { default as Skills } from "./projects/skills";
 
-export { default as ProjectIcons } from "./icons/project/project-icons";
-export { default as Soundcloud } from "./icons/social/soundcloud-icon";
-export { default as Icons } from "./icons/social/icons";
+export { default as ProjectIcons } from "./projects/icons/project-icons";
+export { default as Soundcloud } from "./icons/soundcloud-icon";
+export { default as Icons } from "./icons/icons";
 
 export { default as AboutMe} from "./madeline/about";
 export { default as Modal } from "./madeline/modal";
