@@ -100,7 +100,7 @@ const ContactForm = () => {
           send
         </button>
       </div>
-      <div className={warningClass}>please fill out all the fields!</div>
+      <div className={warningClass}>please fill out all of the fields</div>
   </form>
 );
 };

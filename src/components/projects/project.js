@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Project = ({ siteURL, videoURL, github }) => (
   <div className='project-link-container'>
      <a
-      className='link'
+      className='project-link'
       target="_blank"
       rel="noreferrer"
       href={siteURL}
