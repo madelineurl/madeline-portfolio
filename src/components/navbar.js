@@ -4,7 +4,7 @@ import HamburgerMenu from "react-hamburger-menu";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const showNav = open ? 'show' : 'hide';
+  const showNav = open ? 'show' : '';
 
   const handleClick = () => {
     setOpen(!open);

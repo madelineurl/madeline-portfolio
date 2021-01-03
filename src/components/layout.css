@@ -25,7 +25,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 10vh;
+  height: 4rem;
   background: white;
 }
 
@@ -144,11 +144,15 @@
 }
 
 .navbar {
+  display: none;
+}
+
+.navbar.show {
+  display: flex;
   position: absolute;
   right: 3.5rem;
   top: 1rem;
   z-index: 6;
-  animation: fade-in .5s ease-in;
 }
 
 .navbar a {
@@ -173,8 +177,8 @@
 
 img.footer-icon {
   position: relative;
-  height: 52px;
-  width: 52px;
+  height: 53px;
+  width: 53px;
   margin: .5rem;
   bottom: .75rem;
   top: .25rem;
@@ -397,14 +401,28 @@ img.footer-icon:hover {
 
 .headshot-container {
   display: flex;
+  justify-content: space-evenly;
   height: 11rem;
+  width: 100%;
   position: relative;
 }
 
+.headshot-container h3,
+.headshot-container h4 {
+  margin: .5rem;
+}
+
 #headshot {
-  width: 200px;
-  height: 200px;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .resume {
@@ -412,8 +430,8 @@ img.footer-icon:hover {
 }
 
 #resume-icon {
-  width: 180px;
-  height: 200px;
+  width: 65px;
+  height: 65px;
   cursor: pointer;
 }
 
@@ -437,13 +455,13 @@ img.footer-icon:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
   width: 100%;
   border-radius: 5px;
 }
 
-#about div {
-  margin: .5rem;
+#about div > div {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 1.1rem;
 }
 
@@ -562,9 +580,9 @@ img.footer-icon:hover {
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 480px) {
-  html {
+  /* html {
     font-size: 100%;
-  }
+  } */
 
   .form {
     font-size: 1.5rem;
@@ -578,17 +596,25 @@ img.footer-icon:hover {
     width: 100%;
     resize: none;
   }
-}
-
-
-@media screen and (max-width: 600px) {
-  .landing-container {
-    width: 100%;
-  }
 
   .landing-container h1 {
     font-size: 3.25rem;
   }
+}
+
+
+@media screen and (max-width: 660px) {
+  .footer {
+    border-top: 2px solid rgb(209, 209, 209);
+  }
+
+  .landing-container {
+    width: 100%;
+  }
+
+  /* .landing-container h1 {
+    font-size: 3.25rem;
+  } */
 
   .project-icons {
     flex-direction: column;
@@ -604,18 +630,6 @@ img.footer-icon:hover {
     margin: .5em;
   }
 
-  #northwestern {
-    top: 0px;
-  }
-
-  #shiftpitch {
-    top: .5rem;
-  }
-
-  #xibis {
-    top: 1.25rem;
-  }
-
   #about div {
     font-size: 1.5rem;
   }
@@ -623,25 +637,34 @@ img.footer-icon:hover {
 
 
 @media screen and (max-width: 840px) {
+  .footer {
+    z-index: 10;
+  }
+
   .burger {
     padding-left: 1rem;
-    padding-top: 2.25rem;
+    padding-top: 2.3rem;
   }
 
   .navbar {
+    transform: translateX(150%);
+  }
+
+  .navbar.show {
     position: fixed;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 77vh;
+    height: 100vh;
     right: 0px;
     top: 5rem;
     text-align: center;
     background-color: rgba(65, 73, 94, 1.0);
     border-radius: 5px;
     z-index: 9;
-    opacity: 1.0;
-    animation: slide-in-right .3s ease-in;
+    opacity: 0.9;
+    transform: translateX(0%);
+    transition: transform .3s ease-in;
   }
 
   .navbar a {
@@ -682,12 +705,6 @@ img.footer-icon:hover {
 
 
 @media screen and (min-width: 580px) {
-  .landing-text {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   #about {
     width: 580px;
     margin-left: auto;
