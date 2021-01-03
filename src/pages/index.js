@@ -16,7 +16,7 @@ const IndexPage = () => (
           <h1 id='landing-header'>url</h1>
         </div>
       </div>
-    <footer style={{ backgroundColor: `transparent` }} className='footer'>
+    <footer style={{ background: `transparent` }} className='footer'>
       <FooterIcons />
     </footer>
   </>

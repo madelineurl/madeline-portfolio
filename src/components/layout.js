@@ -8,8 +8,8 @@ const Layout = ({ children }) => (
   <>
     <div className='header-main'>
       <header>
-        <Link to='/' className='header-link' >
-          <h1>madeline</h1>
+        <Link to='/' >
+          <h1 className='header-link'>madeline</h1>
         </Link>
       </header>
       <Navbar />
