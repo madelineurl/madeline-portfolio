@@ -444,9 +444,7 @@ h4.flex {
 .headshot-container {
   display: flex;
   justify-content: space-evenly;
-  height: 11rem;
   width: 100%;
-  position: relative;
 }
 
 .headshot-container h3,
@@ -506,8 +504,8 @@ h4.flex {
 #about-text button {
   margin-top: 1.25rem;
   border-radius: 50%;
-  height: 75px;
-  width: 75px;
+  height: 78px;
+  width: 78px;
   text-transform: uppercase;
   font-size: .75rem;
   cursor: pointer;
@@ -658,7 +656,6 @@ h4.flex {
   .headshot-container {
     flex-direction: column;
     align-items: center;
-    margin: 2rem;
   }
 
   #headshot {
@@ -775,7 +772,8 @@ h4.flex {
   } */
 
   .navbar a {
-    height: 20%;
+    position: relative;
+    height: 18%;
     width: 100%;
     color: #fff;
     font-size: 2.5rem;
@@ -826,7 +824,6 @@ h4.flex {
     width: 565px;
     margin-left: auto;
     margin-right: auto;
-    overscroll-behavior: none;
   }
 
   .modal > section {
@@ -870,7 +867,7 @@ body {
   background-color: white;
   font-family: inherit;
   font-weight: normal;
-  word-wrap: break-word;
+  /* word-wrap: break-word; */
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
