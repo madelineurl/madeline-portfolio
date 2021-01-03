@@ -20,7 +20,7 @@ const ContactForm = () => {
   );
 
   const disabled = userInput ? false : true;
-  const warningClass = warning ? 'warning' : 'none';
+  const warningClass = warning ? 'warning show' : 'warning';
 
   const handleChange = evt => {
     setWarning(false);
