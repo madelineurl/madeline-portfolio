@@ -117,7 +117,6 @@
   padding: 0.5rem 0.9rem;
   font-family: var(--primary-font);
   font-size: 3.5rem;
-  /* color: var(--primary-grey); */
   transition: color .3s linear;
 }
 
@@ -125,10 +124,8 @@
 
 .burger {
   position: relative;
-  right: 0;
-  top: 0;
-  padding-top: 5.5vh;
-  padding-right: 1.2rem;
+  right: 20px;
+  top: 40px;
   cursor: pointer;
   z-index: 9;
 }
@@ -138,25 +135,27 @@
 }
 
 .navbar {
-  display: none;
-}
-
-.navbar.show {
   display: flex;
   position: absolute;
   right: 3.5rem;
-  top: 1rem;
+  top: 1.2rem;
   z-index: 6;
+  opacity: 0;
+  transition: opacity .3s linear;
+}
+
+.navbar.show {
+  opacity: 1.0;
 }
 
 .navbar a {
-  font-family: var(--primary-font);
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  text-decoration: none;
   padding: 1rem;
   height: 5%;
   border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--primary-font);
+  font-size: 1.4rem;
   color: rgba(65, 65, 65, 0.9);
   transition: background-color 0.3s linear;
   transition: color 0.3s linear;
@@ -287,7 +286,6 @@ img.footer-icon:hover {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 6vh;
 }
 
 #skills h3 {
@@ -299,7 +297,7 @@ img.footer-icon:hover {
   border: 2px solid grey;
   border-radius: 5px;
   box-sizing: border-box;
-  margin: 2rem;
+  margin: 1rem;
   padding: 1rem;
   width: 33%;
 }
@@ -331,8 +329,34 @@ img.footer-icon:hover {
   margin: .5rem;
 }
 
+h4.flex {
+  margin: 1.5rem 0;
+}
+
 .venues {
-  flex-direction: column;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.venues a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  margin: .25rem;
+  width: 30%;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--my-periwinkle);
+  color: var(--primary-grey);
+  transition: opacity .2s linear;
+}
+
+.venues a:hover {
+  opacity: 0.8;
 }
 
 .soundcloud-player {
@@ -368,10 +392,6 @@ img.footer-icon:hover {
 
 /* MODAL */
 
-.show-modal {
-  display: block;
-}
-
 .modal {
   position: fixed;
   top: 0;
@@ -380,34 +400,42 @@ img.footer-icon:hover {
   height: 100%;
   z-index: 10;
   background: rgba(0, 0, 0, 0.3);
+  transform: translateY(-100%);
+  transition: transform .3s ease;
 }
 
-.modal-main {
+.modal.show {
+  transform: translateY(0%);
+  overscroll-behavior: none;
+}
+
+.modal > section {
   position: fixed;
   left: 50%;
   top: 45%;
   background: white repeat scroll;
   width: 100%;
   height: 80%;
+  padding: .25rem .5rem;
   transform: translate(-50%,-50%);
   border-radius: 10px;
   border-style: outset;
   overflow: scroll;
-  padding: 1em;
   overscroll-behavior: none;
 }
 
-.modal-main button {
-  color: rgb(70, 66, 66);
-  background: none;
+.modal-btn {
   border: none;
-  font-weight: bold;
-  cursor: pointer;
+  background: none;
   position: absolute;
-  font-size: 3rem;
-  right: 2%;
-  top: 2%;
+  right: .5rem;
+  top: 1.25rem;
   z-index: 10;
+  cursor: pointer;
+}
+
+.modal-btn:focus {
+  outline: none;
 }
 
 /* ABOUT */
@@ -460,17 +488,18 @@ img.footer-icon:hover {
   border-radius: 5px;
 }
 
+#about div > div {
+  margin: .5rem 0rem;
+  font-size: 1.1rem;
+}
+
+
 #about-text {
-  margin-top: 1rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   line-height: 1.1;
-}
-
-#about div > div {
-  margin: .5rem 0rem;
-  font-size: 1.1rem;
 }
 
 #about-text button {
@@ -485,7 +514,6 @@ img.footer-icon:hover {
   box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.3);
   transition: background-color 1s ease;
   background: radial-gradient( rgb(255, 255, 255), rgb(221, 223, 230));
-  /* background: radial-gradient(rgb(255, 255, 255), rgb(200, 200, 200)); */
 }
 
 #about-text button:hover {
@@ -507,6 +535,7 @@ img.footer-icon:hover {
   top: 5vh;
   animation: slide-in .5s ease;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .form textarea {
@@ -542,32 +571,35 @@ img.footer-icon:hover {
 
 .warning {
   color: rgb(117, 66, 66);
-  animation: fade-in .5s linear;
   margin-top: 2vh;
   font-size: 1.2rem;
+  opacity: 0.0;
+  transition: opacity .3s linear;
 }
 
-.none {
-  display: none;
+.warning.show {
+  opacity: 1.0;
 }
 
 /* ANIMATIONS */
 
-@keyframes fade-in {
+@keyframes enter-abt-image-vertical {
   0% {
-    opacity: 0;
+    transform: translateY(40%);
   }
+
   100% {
-    opacity: 1;
+    transform: translateY(0%);
   }
 }
 
-@keyframes fade-out {
+@keyframes enter-abt-title-vertical {
   0% {
-    opacity: 0.5;
+    transform: translateY(-50px);
   }
+
   100% {
-    opacity: 0;
+    transform: translateY(0%);
   }
 }
 
@@ -583,7 +615,7 @@ img.footer-icon:hover {
 
 @keyframes enter-abt-title {
   0% {
-    transform: translateX(-55%);
+    transform: translateX(-100px);
   }
 
   100% {
@@ -609,21 +641,22 @@ img.footer-icon:hover {
   }
 }
 
-@keyframes spin {
-  from   {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* MEDIA QUERIES */
+/* MEDIA QUERIES FOR SMALLER SCREENS / MOBILE */
 
 @media only screen and (max-width: 480px) {
-  /* html {
-    font-size: 100%;
-  } */
+  .headshot-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+  }
+
+  #headshot {
+    animation: enter-abt-image-vertical .5s ease;
+  }
+
+  .info {
+    animation: enter-abt-title-vertical .5s ease;
+  }
 
   .form {
     font-size: 1.5rem;
@@ -639,32 +672,34 @@ img.footer-icon:hover {
   }
 
   .landing-container h1 {
-    font-size: 3.25rem;
+    font-size: 3.3rem;
   }
 }
 
-
 @media screen and (max-width: 660px) {
-  /* .footer {
-    background-color: rgb(205, 207, 214);
-  } */
+  .main {
+    margin-bottom: 6.5rem;
+  }
 
   .landing-container {
     width: 100%;
   }
 
-  /* .landing-container h1 {
-    font-size: 3.25rem;
-  } */
+  .footer {
+    height: 4rem;
+  }
+
+  img.footer-icon {
+    height: 55px;
+    width: 55px;
+  }
+
+  .header-main {
+    margin-bottom: 1.5rem;
+  }
 
   .project-icons {
     flex-direction: column;
-    /* top: 0.5rem; */
-  }
-
-  .icon-container {
-    left: 3%;
-    top: 25vh;
   }
 
   .icon {
@@ -674,6 +709,26 @@ img.footer-icon:hover {
   #about div {
     font-size: 1.5rem;
   }
+
+  #skills {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  #skills > div {
+    width: 100%;
+    text-align: center;
+    font-size: 1.45rem;
+  }
+
+  .music-blurb h4 {
+    font-size: 1.5rem;
+  }
+
+  .venues a {
+    height: 70px;
+    width: 50%;
+  }
 }
 
 
@@ -682,37 +737,40 @@ img.footer-icon:hover {
     z-index: 10;
   }
 
-  .burger {
-    padding-left: 1rem;
-    padding-top: 2.3rem;
-  }
-
   .navbar {
-    transform: translateX(150%);
-  }
-
-  .navbar.show {
     position: fixed;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     width: 100%;
     height: 100vh;
     right: 0px;
     top: 5rem;
-    text-align: center;
-    background-color: rgba(65, 73, 94, 1.0);
     border-radius: 5px;
     z-index: 9;
+    background-color: rgba(65, 73, 94, 1.0);
     opacity: 0.9;
-    transform: translateX(0%);
-    transition: transform .3s ease-in;
+    transform: translateX(150%);
+    transition: transform .3s ease;
   }
 
+  .navbar.show {
+    transform: translateX(0%);
+    opacity: 0.9;
+  }
+
+  /* body:has(div:matches(.navbar.show)) {
+    overflow-y: hidden;
+  } */
+
   .navbar a {
-    font-size: 2.5rem;
-    padding: 2.5rem;
+    height: 20%;
+    width: 100%;
     color: #fff;
-    margin-top: 1.5rem;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(65, 73, 94, 1.0);
   }
 
@@ -732,7 +790,14 @@ img.footer-icon:hover {
   .music-blurb div {
     margin-bottom: 1.25rem;
   }
+
+  #skills {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
+
+/* MEDIA QUERIES FOR LARGER SCREENS */
 
 @media screen and (min-width: 420px) {
   .form input {
@@ -745,16 +810,16 @@ img.footer-icon:hover {
 }
 
 
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 540px) {
   #about {
-    width: 580px;
+    width: 540px;
     margin-left: auto;
     margin-right: auto;
     overscroll-behavior: none;
   }
 
-  .modal-main {
-    width: 550px;
+  .modal > section {
+    width: 540px;
     height: 80%;
     margin-top: auto;
     margin-bottom: auto;
@@ -787,6 +852,7 @@ html {
 
 body {
   margin: 0;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
