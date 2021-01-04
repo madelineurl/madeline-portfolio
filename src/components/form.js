@@ -95,6 +95,7 @@ const ContactForm = () => {
         <button
           type='submit'
           name='submit-button'
+          className='btn'
           disabled={disabled}
         >
           send

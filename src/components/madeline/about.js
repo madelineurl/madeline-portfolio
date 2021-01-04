@@ -7,7 +7,7 @@ const About = () => (
       <img src={headshot} id='headshot' alt='headshot' />
       <div className='info'>
         <h3>Madeline Higgins</h3>
-        <h4>Web developer</h4>
+        <h4>Fullstack Engineer</h4>
       </div>
     </div>
     <div id='about-text'>
@@ -17,8 +17,8 @@ const About = () => (
       </div>
       <div>I'm currently a Senior Teaching Fellow at the Grace Hopper program at Fullstack Academy. When I'm not writing code, you can find me selling vinyl at <a href='https://www.gramaphonerecords.com/' className='link'>Gramaphone Records</a>, microsoldering analog synths, talking progressive politics, or boxing in the park.
       </div>
-      <a href='/resume/' target="_blank" rel="noreferrer" >
-        <button>
+      <a href='/resume/' target="_blank" rel="noreferrer">
+        <button className='btn'>
           Resume
         </button>
       </a>

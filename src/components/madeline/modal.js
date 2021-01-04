@@ -9,19 +9,19 @@ const Modal = ({ handleClose, show }) => {
   return (
     <div className={showHideModal}>
       <section>
-        <button className='modal-btn'>
-          <HamburgerMenu
-              isOpen={true}
-              menuClicked={handleClose}
-              width={30}
-              height={10}
-              strokeWidth={4}
-              rotate={0}
-              color='rgb(65, 65, 65)'
-              borderRadius={8}
-              animationDuration={0.5}
-            />
-        </button>
+        <button>
+            <HamburgerMenu
+                isOpen={true}
+                menuClicked={handleClose}
+                width={30}
+                height={10}
+                strokeWidth={4}
+                rotate={0}
+                color='rgb(65, 65, 65)'
+                borderRadius={8}
+                animationDuration={0.5}
+              />
+          </button>
         <MusicBlurb />
       </section>
     </div>
