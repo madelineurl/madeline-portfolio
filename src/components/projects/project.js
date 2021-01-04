@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Project = ({ siteURL, videoURL, github }) => (
   <div className='project-link-container'>
      <a
-      className='project-link'
+      className='project-link flex'
       target="_blank"
       rel="noreferrer"
       href={siteURL}
@@ -12,7 +12,7 @@ const Project = ({ siteURL, videoURL, github }) => (
       play
     </a>
     <a
-      className='link'
+      className='project-link flex'
       target="_blank"
       rel="noreferrer"
       href={github}
@@ -20,7 +20,7 @@ const Project = ({ siteURL, videoURL, github }) => (
       github
     </a>
     <a
-      className='link'
+      className='project-link flex'
       target="_blank"
       rel="noreferrer"
       href={videoURL}

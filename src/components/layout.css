@@ -5,6 +5,7 @@
 :root {
   --primary-font: 'Questrial', sans-serif;
   --primary-grey: rgb(65, 65, 65);
+  --true-periwinkle: #c3cde6;
   --my-periwinkle: #9da6bb;
 }
 
@@ -17,6 +18,8 @@
   font-family: var(--primary-font);
   overscroll-behavior: none;
   margin-bottom: 5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .footer {
@@ -241,15 +244,21 @@ img.footer-icon:hover {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  margin-left: .5rem;
-  margin-right: .5rem;
 }
 
 .project-page > div {
   width: 50%;
   box-sizing: border-box;
-  padding-left: .5rem;
-  padding-right: .5rem;
+  /* padding-left: .5rem;
+  padding-right: .5rem; */
+}
+
+.project-page > div:nth-of-type(1) {
+  padding-right: .75rem;
+}
+
+.project-page > div:nth-of-type(2) {
+  padding-left: .75rem;
 }
 
 .project-page h3 {
@@ -280,16 +289,16 @@ img.footer-icon:hover {
   font-size: 1rem;
   color: var(--primary-grey);
   background-color: rgba(209, 209, 209, 0.7);
-  width: 5rem;
-  height: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
   margin: .5rem;
   padding: 4px;
   border: none;
-  border-radius: 5px;
+  border-radius: 50%;
 }
 
 .project-link:hover {
-  background-color: rgba(209, 209, 209, 1.0);
+  background-color: var(--true-periwinkle);
 }
 
 /* SKILLS */
@@ -309,22 +318,23 @@ img.footer-icon:hover {
   border: 2px solid grey;
   border-radius: 5px;
   box-sizing: border-box;
-  margin: 1rem;
+  /* margin: 1rem; */
   padding: 1rem;
   width: 33%;
+  margin-top: 1rem;
+}
+
+#skills > div:nth-of-type(2) {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 /* MUSIC */
 
 .music-page {
   position: relative;
-  top: 7vh;
+  top: 2vh;
   flex-direction: column;
-}
-
-#music-container {
-  display: flex;
-  justify-content: center;
 }
 
 .music-blurb {
@@ -335,14 +345,20 @@ img.footer-icon:hover {
   text-align: left;
   color: rgb(65, 73, 94);
   border-radius: 8px;
+  flex-direction: column;
 }
 
 .music-blurb div {
   margin: .5rem;
 }
 
+.music-blurb > h3 {
+  margin-top: .75rem;
+  margin-bottom: .5rem;
+}
+
 h4.flex {
-  margin: 1.5rem 0;
+  margin-bottom: 1.75rem;
 }
 
 .venues {
@@ -359,16 +375,16 @@ h4.flex {
   text-decoration: none;
   text-align: center;
   margin: .25rem;
-  width: 30%;
-  height: 40px;
+  width: 105px;
+  height: 90px;
   border-radius: 50%;
-  background-color: var(--my-periwinkle);
   color: var(--primary-grey);
-  transition: opacity .2s linear;
+  background: radial-gradient( rgb(255, 255, 255), rgb(221, 223, 230));
+  transition: background-color .4s linear;
 }
 
 .venues a:hover {
-  opacity: 0.8;
+  background: var(--true-periwinkle);
 }
 
 .soundcloud-player {
@@ -383,22 +399,28 @@ h4.flex {
   font-weight: 100;
 }
 
-.btn {
+.music-btn {
   border: none;
   padding: 1rem 2rem;
   position: relative;
-  font-size: 2.5rem;
-  border-radius: 5px;
+  font-size: 1.25rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
   margin-top: 1rem;
-  color:rgba(69, 69, 69, 1.0);
-  background-color: rgba(230, 230, 230, 0.6);
+  cursor: pointer;
+  color: rgba(69, 69, 69, 1.0);
+  text-transform: uppercase;
+  box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 1s ease;
+  background: radial-gradient( rgb(255, 255, 255), rgb(221, 223, 230));
 }
 
-.btn:hover {
-  background-color: rgba(230, 230, 230, 1.0);
+.music-btn:hover {
+  background: var(--true-perwinkle);
 }
 
-.btn:focus {
+.music-btn:focus {
   outline: none;
 }
 
@@ -531,7 +553,7 @@ h4.flex {
 }
 
 #about-text button:hover {
-  background: #c3cde6;
+  background: var(--true-perwinkle);
 }
 
 #about-text button:focus {
@@ -744,6 +766,11 @@ h4.flex {
     font-size: 1.45rem;
   }
 
+  #skills > div:nth-of-type(2) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .music-blurb h4 {
     font-size: 1.5rem;
   }
@@ -802,9 +829,8 @@ h4.flex {
     background-color: rgba(65, 73, 94, 0.8);
   }
 
-  #music-container {
+  .music-page > div {
     flex-direction: column;
-    top: 2vh;
   }
 
   .music-blurb {
