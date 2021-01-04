@@ -57,6 +57,28 @@
   color: rebeccapurple;
 }
 
+.btn {
+    margin-top: 1.25rem;
+    height: 78px;
+    width: 78px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: .75rem;
+    box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 1s ease;
+    background: radial-gradient( rgb(255, 255, 255), rgb(221, 223, 230))
+}
+
+.btn:hover {
+  background: var(--true-periwinkle);
+}
+
+.btn:focus {
+  outline: none;
+}
+
 /* LANDING */
 
 .landing-container {
@@ -249,15 +271,13 @@ img.footer-icon:hover {
 .project-page > div {
   width: 50%;
   box-sizing: border-box;
-  /* padding-left: .5rem;
-  padding-right: .5rem; */
 }
 
-.project-page > div:nth-of-type(1) {
+.project-left {
   padding-right: .75rem;
 }
 
-.project-page > div:nth-of-type(2) {
+.project-right {
   padding-left: .75rem;
 }
 
@@ -399,29 +419,10 @@ h4.flex {
   font-weight: 100;
 }
 
-.music-btn {
-  border: none;
-  padding: 1rem 2rem;
-  position: relative;
-  font-size: 1.25rem;
+.music-page button {
   width: 8rem;
   height: 8rem;
-  border-radius: 50%;
-  margin-top: 1rem;
-  cursor: pointer;
-  color: rgba(69, 69, 69, 1.0);
-  text-transform: uppercase;
-  box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color 1s ease;
-  background: radial-gradient( rgb(255, 255, 255), rgb(221, 223, 230));
-}
-
-.music-btn:hover {
-  background: var(--true-perwinkle);
-}
-
-.music-btn:focus {
-  outline: none;
+  font-size: 1.2rem;
 }
 
 /* MODAL */
@@ -527,7 +528,7 @@ h4.flex {
 
 
 #about-text {
-  margin: 1rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -536,28 +537,6 @@ h4.flex {
 
 #about-text div:nth-of-type(1) {
   margin-top: 0;
-}
-
-#about-text button {
-  margin-top: 1.25rem;
-  border-radius: 50%;
-  height: 78px;
-  width: 78px;
-  text-transform: uppercase;
-  font-size: .75rem;
-  cursor: pointer;
-  border: none;
-  box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color 1s ease;
-  background: radial-gradient( rgb(255, 255, 255), rgb(221, 223, 230));
-}
-
-#about-text button:hover {
-  background: var(--true-perwinkle);
-}
-
-#about-text button:focus {
-  outline: none;
 }
 
 /* CONTACT */
@@ -590,19 +569,6 @@ h4.flex {
 .form input:focus,
 .form textarea:focus {
   outline: 0;
-}
-
-.form button {
-  font-family: var(--primary-font);
-  border: none;
-  margin: .5rem;
-  border-radius: 5px;
-  padding: .25rem .75rem;
-  background-color: rgba(115, 115, 115, 0.2);
-}
-
-.form button:hover {
-  background-color: rgba(115, 115, 115, 0.5);
 }
 
 .warning {
@@ -743,6 +709,16 @@ h4.flex {
     margin-bottom: 1.5rem;
   }
 
+  .project-page {
+    flex-direction: column;
+  }
+
+  .project-page > div {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .project-icons {
     flex-direction: column;
   }
@@ -849,13 +825,10 @@ h4.flex {
 
 /* MEDIA QUERIES FOR LARGER SCREENS */
 
-@media screen and (min-width: 420px) {
-  .form input {
-    width: 420px;
-  }
-
+@media screen and (min-width: 440px) {
+  .form input,
   .form textarea {
-    width: 420px;
+    width: 440px;
   }
 }
 
@@ -922,10 +895,6 @@ input,
 textarea {
   font: inherit;
   margin: 0;
-}
-
-textarea {
-  overflow: auto;
 }
 
 * {

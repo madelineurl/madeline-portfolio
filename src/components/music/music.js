@@ -33,12 +33,12 @@ const MusicPage = () => {
         show={showModal}
         handleClose={closeMusicWindow}
       />
-      <button
-        onClick={openMusicWindow}
-        className='music-btn'
-        >
-          about my music
-      </button>
+    <button
+      onClick={openMusicWindow}
+      className='btn'
+      >
+        about my music
+    </button>
     </div>
   );
 };
