@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "gatsby";
 import PropTypes from "prop-types";
 
 const Project = ({ siteURL, videoURL, github }) => (
-  <div className='project-link-container'>
+  <div className='flex' style={{ flexDirection: `column` }}>
+    <div className='flex'>
      <a
       className='project-link flex'
       target="_blank"
@@ -27,6 +29,16 @@ const Project = ({ siteURL, videoURL, github }) => (
     >
       youtube
     </a>
+    </div>
+    <Link
+      className='link'
+      to='/projects/'
+      style={{
+        alignSelf: `center`
+      }}
+    >
+      back to projects
+    </Link>
   </div>
 );
 

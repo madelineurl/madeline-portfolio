@@ -7,7 +7,7 @@ const About = () => (
       <img src={headshot} id='headshot' alt='headshot' />
       <div className='info'>
         <h3>Madeline Higgins</h3>
-        <h4>Web developer</h4>
+        <h4>Fullstack Engineer</h4>
       </div>
     </div>
     <div id='about-text'>
