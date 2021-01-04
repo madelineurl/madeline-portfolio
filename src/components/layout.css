@@ -190,11 +190,22 @@ img.footer-icon:hover {
   width: 100%;
   position: relative;
   top: 7vh;
-  animation: slide-in-top .5s linear;
+  /* animation: slide-in-top .5s linear; */
 }
 
 .project-icons div {
   margin: .25rem;
+}
+
+.project-icons div:nth-of-type(1) {
+  animation: slide-in-top .4s ease;
+}
+
+.project-icons div:nth-of-type(2) {
+  animation: slide-in-top .6s ease;
+}
+.project-icons div:nth-of-type(3) {
+  animation: slide-in-top .8s ease;
 }
 
 .label {
@@ -501,6 +512,10 @@ h4.flex {
   line-height: 1.1;
 }
 
+#about-text div:nth-of-type(1) {
+  margin-top: 0;
+}
+
 #about-text button {
   margin-top: 1.25rem;
   border-radius: 50%;
@@ -686,7 +701,7 @@ h4.flex {
 
 @media screen and (max-width: 660px) {
   .main {
-    margin-bottom: 6.5rem;
+    margin-bottom: 6rem;
   }
 
   .landing-container {
