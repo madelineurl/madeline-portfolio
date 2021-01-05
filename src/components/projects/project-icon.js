@@ -14,11 +14,6 @@ const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, handleClick }) =>
   };
 
   return (
-    // <Link
-    //   to={`/${name}/`}
-      // onMouseOver={revealLabel}
-      // onMouseLeave={hideLabel}
-    // >
     <button
       onMouseOver={revealLabel}
       onMouseLeave={hideLabel}

@@ -5,12 +5,6 @@ const Projects = () => (
   <Layout>
     <SEO title='projects' />
     <ProjectsPage />
-    {/* <ProjectIcons />
-    <div className='projects'>
-      <Shiftpitch />
-      <Xibis />
-      <Northwestern />
-    </div> */}
   </Layout>
 );
 

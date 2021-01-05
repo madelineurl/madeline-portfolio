@@ -5,16 +5,17 @@ const Shiftpitch = ({ selected }) => {
   const selectedClass = selected === 'shiftpitch'? 'project-page selected' : 'project-page';
 
   return (
+    <>
+    <ProjectLinks
+      videoTitle="Shiftpitch"
+      videoURL="https://www.youtube.com/embed/AAS2sIXPpY4"
+      github="https://github.com/zelda-capstone/xibis"
+      siteURL="https://shiftpitch.herokuapp.com/"
+    />
   <div className={selectedClass}>
       <div className='project-left'>
         <h3>shiftpitch</h3>
         <div>Shiftpitch is a tool for improving rhythm by learning beatmatching. In the early days of DJing, matching tempos with your ears was the only way to blend tracks together seamlessly. Today, there are online tools, computer programs, and digital DJ equipment that teach people how to DJ, but most of them teach DJs to rely on visual cues like waveforms or BPM (beats per minute) counters. Learning to beatmatch with your ears is an invaluable skill as a DJ, and a great way to improve your rhythm more generally -- but learning is difficult without access to turntables. I built Shiftpitch in an effort to make beatmatching more accessible to everyone. </div>
-        <ProjectLinks
-          videoTitle="Shiftpitch"
-          videoURL="https://www.youtube.com/embed/AAS2sIXPpY4"
-          github="https://github.com/zelda-capstone/xibis"
-          siteURL="https://shiftpitch.herokuapp.com/"
-        />
       </div>
       <div className='project-right'>
         <h3>technology</h3>
@@ -25,6 +26,7 @@ const Shiftpitch = ({ selected }) => {
         <div>Implementing a way to measure success, and enabling players to log in and store data from various sessions in a database.</div>
         </div>
     </div>
+    </>
   );
 };
 

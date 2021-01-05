@@ -4,10 +4,11 @@ import { Shiftpitch, Xibis, Northwestern } from "..";
 import shiftpitch from "./icons/shiftpitch.png";
 import xibis from "./icons/xibis.png";
 import northwestern from './icons/northwestern.png';
-import scrollTo from 'gatsby-plugin-smoothscroll';
+// import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const ProjectsPage = () => {
   const [ selected, setSelected ] = useState('');
+  const iconsClass = selected === '' ? 'project-icons' : 'project-icons shift';
 
   useEffect(() => {
     setSelected('');
@@ -15,17 +16,21 @@ const ProjectsPage = () => {
 
   const handleSelected = (project) => {
     setSelected(project);
-    console.log(project);
-    handleScroll(project);
+
   };
 
-  const handleScroll = (id) => {
-    scrollTo(`#${id}`);
-  };
+  // const handleScroll = (id) => {
+  //   scrollTo(`#${id}`);
+  // };
 
   return (
     <>
-      <div className='project-icons'>
+     <div className='projects'>
+        <Shiftpitch selected={selected}/>
+        <Xibis selected={selected} />
+        <Northwestern selected={selected} />
+      </div>
+      <div className={iconsClass}>
         <ProjectIcon
           image={shiftpitch}
           name='shiftpitch'
@@ -47,11 +52,6 @@ const ProjectsPage = () => {
           labelSubtitle='School of Communication website'
           handleClick={handleSelected}
         />
-      </div>
-      <div className='projects'>
-        <Shiftpitch selected={selected}/>
-        <Xibis selected={selected} />
-        <Northwestern selected={selected} />
       </div>
     </>
   );

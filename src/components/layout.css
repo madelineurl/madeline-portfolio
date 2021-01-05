@@ -217,7 +217,20 @@ img.footer-icon:hover {
   width: 100%;
   position: relative;
   top: 7vh;
-  /* animation: slide-in-top .5s linear; */
+  transition: transform .3s ease;
+}
+
+.project-icons.shift {
+  transform: translateY(170%);
+}
+
+.project-icons button {
+  border: none;
+  background: transparent;
+}
+
+.project-icons button:focus {
+  outline: none;
 }
 
 .project-icons div {
@@ -275,8 +288,7 @@ img.footer-icon:hover {
   flex-direction: row;
   box-sizing: border-box;
   position: absolute;
-  top: 5rem;
-  left: 14rem;
+  left: 17vw;
 }
 
 .project-page.selected {
@@ -284,7 +296,7 @@ img.footer-icon:hover {
 }
 
 .project-page > div {
-  width: 47%;
+  width: 50%;
   box-sizing: border-box;
 }
 

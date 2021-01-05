@@ -1,8 +1,7 @@
 import React from "react";
-import { Link } from "gatsby";
 import PropTypes from "prop-types";
 
-const Project = ({ siteURL, videoURL, github }) => (
+const ProjectLinks = ({ siteURL, videoURL, github }) => (
   <div className='flex' style={{ flexDirection: `column` }}>
     <div className='flex'>
      <a
@@ -30,22 +29,13 @@ const Project = ({ siteURL, videoURL, github }) => (
       youtube
     </a>
     </div>
-    <Link
-      className='link'
-      to='/projects/'
-      style={{
-        alignSelf: `center`
-      }}
-    >
-      back to projects
-    </Link>
   </div>
 );
 
-Project.propTypes = {
+ProjectLinks.propTypes = {
   siteURL: PropTypes.string.isRequired,
   videoURL: PropTypes.string.isRequired,
   github: PropTypes.string.isRequired,
 };
 
-export default Project;
+export default ProjectLinks;
