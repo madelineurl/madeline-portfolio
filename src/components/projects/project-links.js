@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ProjectLinks = ({ siteURL, videoURL, github }) => (
-  <div className='flex' style={{ flexDirection: `column` }}>
     <div className='flex'>
      <a
       className='project-link flex'
@@ -29,7 +28,6 @@ const ProjectLinks = ({ siteURL, videoURL, github }) => (
       youtube
     </a>
     </div>
-  </div>
 );
 
 ProjectLinks.propTypes = {

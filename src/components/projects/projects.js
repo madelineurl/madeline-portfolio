@@ -4,11 +4,10 @@ import { Shiftpitch, Xibis, Northwestern } from "..";
 import shiftpitch from "./icons/shiftpitch.png";
 import xibis from "./icons/xibis.png";
 import northwestern from './icons/northwestern.png';
-// import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const ProjectsPage = () => {
   const [ selected, setSelected ] = useState('');
-  const iconsClass = selected === '' ? 'project-icons' : 'project-icons shift';
+  const iconsClass = selected === '' ? 'project-icons' : 'project-icons';
 
   useEffect(() => {
     setSelected('');
@@ -19,39 +18,35 @@ const ProjectsPage = () => {
 
   };
 
-  // const handleScroll = (id) => {
-  //   scrollTo(`#${id}`);
-  // };
-
   return (
     <>
-     <div className='projects'>
+     <div className='projects flex'>
+        <div className={iconsClass}>
+          <ProjectIcon
+            image={shiftpitch}
+            name='shiftpitch'
+            labelTitle='Shiftpitch'
+            labelSubtitle='Beatmatching ear-training tool'
+            handleClick={handleSelected}
+          />
+          <ProjectIcon
+            image={xibis}
+            name='xibis'
+            labelTitle='Xibis: A Galactic Voyage'
+            labelSubtitle='2D single-player escapade'
+            handleClick={handleSelected}
+          />
+          <ProjectIcon
+            image={northwestern}
+            name='northwestern'
+            labelTitle='Northwestern University'
+            labelSubtitle='School of Communication website'
+            handleClick={handleSelected}
+          />
+        </div>
         <Shiftpitch selected={selected}/>
         <Xibis selected={selected} />
         <Northwestern selected={selected} />
-      </div>
-      <div className={iconsClass}>
-        <ProjectIcon
-          image={shiftpitch}
-          name='shiftpitch'
-          labelTitle='Shiftpitch'
-          labelSubtitle='Beatmatching ear-training tool'
-          handleClick={handleSelected}
-        />
-        <ProjectIcon
-          image={xibis}
-          name='xibis'
-          labelTitle='Xibis: A Galactic Voyage'
-          labelSubtitle='2D single-player escapade'
-          handleClick={handleSelected}
-        />
-        <ProjectIcon
-          image={northwestern}
-          name='northwestern'
-          labelTitle='Northwestern University'
-          labelSubtitle='School of Communication website'
-          handleClick={handleSelected}
-        />
       </div>
     </>
   );
