@@ -253,6 +253,8 @@ img.footer-icon:hover {
 #xibis {
   width: 15.5em;
   height: 15.5em;
+  position: relative;
+  top: .5rem;
 }
 
 #shiftpitch {
@@ -521,7 +523,6 @@ h4.flex {
   font-size: 1.1rem;
 }
 
-
 #about-text {
   margin-top: 1rem;
   display: flex;
@@ -542,7 +543,6 @@ h4.flex {
   align-items: center;
   font-family: var(--primary-font);
   position: relative;
-  top: 5vh;
   animation: slide-in-top .5s ease;
   width: 100%;
   box-sizing: border-box;
@@ -568,7 +568,7 @@ h4.flex {
 
 .warning {
   color: rgb(117, 66, 66);
-  margin-top: 2vh;
+  margin-bottom: 2vh;
   font-size: 1.2rem;
   opacity: 0.0;
   transition: opacity .3s linear;
@@ -778,7 +778,7 @@ h4.flex {
 
   .navbar a {
     position: relative;
-    height: 18%;
+    height: 7rem;
     width: 100%;
     color: #fff;
     font-size: 2.5rem;
