@@ -1,10 +1,18 @@
-import React, { useState} from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import HamburgerMenu from "react-hamburger-menu";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const showNav = open ? 'show' : '';
+
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [open]);
 
   const handleClick = () => {
     setOpen(!open);
