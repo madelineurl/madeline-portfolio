@@ -266,14 +266,25 @@ img.footer-icon:hover {
 
 /* PROJECTS */
 
+.projects {
+  position: relative;
+}
+
 .project-page {
-  display: flex;
+  display: none;
   flex-direction: row;
   box-sizing: border-box;
+  position: absolute;
+  top: 5rem;
+  left: 9rem;
+}
+
+.project-page.selected {
+  display: flex;
 }
 
 .project-page > div {
-  width: 50%;
+  width: 47%;
   box-sizing: border-box;
 }
 

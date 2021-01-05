@@ -1,11 +1,16 @@
 import React from "react";
-import { SEO, Layout, ProjectIcons, Shiftpitch } from "../components";
+import { SEO, Layout, ProjectsPage } from "../components";
 
 const Projects = () => (
   <Layout>
     <SEO title='projects' />
-    <ProjectIcons />
-    <Shiftpitch />
+    <ProjectsPage />
+    {/* <ProjectIcons />
+    <div className='projects'>
+      <Shiftpitch />
+      <Xibis />
+      <Northwestern />
+    </div> */}
   </Layout>
 );
 

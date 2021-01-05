@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import scrollTo from 'gatsby-plugin-smoothscroll';
 import PropTypes from "prop-types";
 // import { Link } from "gatsby";
 
-const ProjectIcon = ({ image, name, labelTitle, labelSubtitle }) => {
+const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, handleClick }) => {
   const [showLabel, setShowLabel] = useState(false);
   const labelClass = showLabel ? 'label' : 'hide';
 
@@ -22,7 +21,7 @@ const ProjectIcon = ({ image, name, labelTitle, labelSubtitle }) => {
       // onMouseLeave={hideLabel}
     // >
     <button onMouseOver={revealLabel}
-    onMouseLeave={hideLabel} onFocus={revealLabel} onClick={() => scrollTo(`#${name}`)}>
+    onMouseLeave={hideLabel} onFocus={revealLabel} onClick={() => handleClick(name)} >
       <div className='flex'>
         <img
           src={image}

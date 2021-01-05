@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectIcon from "./project-icon";
+import ProjectIcon from "../project-icon";
 import shiftpitch from "./images/shiftpitch.png";
 import xibis from "./images/xibis.png";
 import northwestern from './images/northwestern.png';
