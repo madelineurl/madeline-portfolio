@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import MusicBlurb from "../music/music-blurb";
 import HamburgerMenu from "react-hamburger-menu";
 
 const Modal = ({ handleClose, show }) => {
   const showHideModal = show ? 'modal show' : 'modal';
+
+
+  useEffect(() => {
+    if (show) {
+      document.body.classList.add('no-scroll-modal');
+    } else {
+      document.body.classList.remove('no-scroll-modal');
+    }
+  }, [show]);
 
   return (
     <div className={showHideModal}>
