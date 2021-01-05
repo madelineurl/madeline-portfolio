@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-// import { Link } from "gatsby";
 
 const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, handleClick }) => {
   const [showLabel, setShowLabel] = useState(false);
@@ -20,8 +19,12 @@ const ProjectIcon = ({ image, name, labelTitle, labelSubtitle, handleClick }) =>
       // onMouseOver={revealLabel}
       // onMouseLeave={hideLabel}
     // >
-    <button onMouseOver={revealLabel}
-    onMouseLeave={hideLabel} onFocus={revealLabel} onClick={() => handleClick(name)} >
+    <button
+      onMouseOver={revealLabel}
+      onMouseLeave={hideLabel}
+      onFocus={revealLabel}
+      onClick={() => handleClick(name)}
+    >
       <div className='flex'>
         <img
           src={image}

@@ -1,8 +1,11 @@
 import React from "react";
 import { ProjectLinks } from "..";
 
-const Xibis = () => (
-  <div className='project-page'>
+const Xibis = ({ selected }) => {
+  const selectedClass = selected === 'xibis'? 'project-page selected' : 'project-page';
+
+  return (
+  <div className={selectedClass}>
     <div className='project-left'>
       <h3>xibis: a galactic voyage</h3>
       <div>In this 2D, single-player escapade inspired by the 90s computer game Zoombinis, users guide space creatures through a series of puzzles on a journey to find a new home planet. This is a group project that I built with two other software engineers, Tori Weaver and Simone Pinscak. Our goal was to reinforce emotional intelligence and community accountability through the design of various mini puzzles. We hoped to provide users with some COVID-19 escapism while challenging ourselves build a game, which was a first for everyone on the team.</div>
@@ -24,6 +27,7 @@ const Xibis = () => (
       <div>One of our key discussions when picking technologies was how much to challenge ourselves. Since we were diving into Firestore on the backend, we opted to stick with React rather than learning a new game framework on the frontend. We quickly realized we'd need Redux to help us manage our ever-growing game state and keep the user experience free of state-mutation bugs.</div>
     </div>
   </div>
-);
+  );
+};
 
 export default Xibis;

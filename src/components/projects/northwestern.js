@@ -1,7 +1,9 @@
 import React from "react";
 
-const Northwestern = () => (
-  <div className='project-page'>
+const Northwestern = ({ selected }) => {
+  const selectedClass = selected === 'northwestern'? 'project-page selected' : 'project-page';
+  return (
+  <div className={selectedClass}>
     <div className='project-left'>
       <h3>NU: school of communication</h3>
       <div>I moved from California to Chicago for undergrad at Northwestern University. I got my first taste of web development when I overhauled the Northwestern radio <a href='wnur.org' className='link'>website</a> as the station's General Manager. This experience got me a job as a Web Assistant for the School of Communication website shortly after graduating, where I learned HTML and CSS on the fly and first discovered Javascript.</div>
@@ -23,6 +25,7 @@ const Northwestern = () => (
       <div>This was my first real introduction to web development, and it was a whirlwind. I discovered the excitement of infinite learning that comes with coding, and the satisfaction of aligning elements carefully on a page using CSS.</div>
     </div>
   </div>
-);
+)
+};
 
 export default Northwestern;
