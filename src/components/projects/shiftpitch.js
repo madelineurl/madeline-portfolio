@@ -1,10 +1,8 @@
 import React from "react";
-import { Layout, SEO, Project } from "../components";
+import { Project } from "..";
 
 const Shiftpitch = () => (
-  <Layout>
-    <SEO title='shiftpitch' />
-    <div className='project-page'>
+  <div className='project-page'>
       <div className='project-left'>
         <h3>shiftpitch</h3>
         <div>Shiftpitch is a tool for improving rhythm by learning beatmatching. In the early days of DJing, matching tempos with your ears was the only way to blend tracks together seamlessly. Today, there are online tools, computer programs, and digital DJ equipment that teach people how to DJ, but most of them teach DJs to rely on visual cues like waveforms or BPM (beats per minute) counters. Learning to beatmatch with your ears is an invaluable skill as a DJ, and a great way to improve your rhythm more generally -- but learning is difficult without access to turntables. I built Shiftpitch in an effort to make beatmatching more accessible to everyone. </div>
@@ -24,7 +22,6 @@ const Shiftpitch = () => (
         <div>Implementing a way to measure success, and enabling players to log in and store data from various sessions in a database.</div>
         </div>
     </div>
-  </Layout>
 );
 
 export default Shiftpitch;
