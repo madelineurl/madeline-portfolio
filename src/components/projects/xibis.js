@@ -6,8 +6,8 @@ const Xibis = ({ selected }) => {
 
   return (
   <div className={selectedClass}>
+    <div className='flex'>
       <h3>xibis: a galactic voyage</h3>
-      <div>In this 2D, single-player escapade inspired by the 90s computer game Zoombinis, users guide space creatures through a series of puzzles on a journey to find a new home planet. This is a group project that I built with two other software engineers, Tori Weaver and Simone Pinscak. Our goal was to reinforce emotional intelligence and community accountability through the design of various mini puzzles. We hoped to provide users with some COVID-19 escapism while challenging ourselves build a game, which was a first for everyone on the team.</div>
       <ProjectLinks
         seoTitle='xibis'
         videoTitle="Xibis: A Galactic Voyage"
@@ -16,6 +16,8 @@ const Xibis = ({ selected }) => {
         siteURL="https://zapstone-bc2fe.web.app/"
         link="/xibis/"
       />
+    </div>
+      <div><h4>In this 2D, single-player escapade inspired by the 90s computer game Zoombinis, users guide space creatures through a series of puzzles on a journey to find a new home planet.</h4> This is a group project that I built with two other software engineers, Tori Weaver and Simone Pinscak. Our goal was to reinforce emotional intelligence and community accountability through the design of various mini puzzles. We challenged ourselves build a game, which was a first for everyone on the team.</div>
     {/* <div className='project-left'>
     <h3>technology</h3>
       <div>My teammates and I employed the NERD stack, along with Redux for state management, Firestore's noSQL database, pixel art SVGs for nostalgic graphics, and Howler.js for game audio.</div>

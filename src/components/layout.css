@@ -231,6 +231,7 @@ img.footer-icon:hover {
   background: transparent;
   width: 18rem;
   height: 15rem;
+  cursor: pointer;
 }
 
 .project-icons button:focus {
@@ -287,28 +288,40 @@ img.footer-icon:hover {
 .projects {
   position: relative;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .project-page {
   display: none;
   flex-direction: row;
+  /* align-items: flex-start; */
   box-sizing: border-box;
-  position: relative;
 }
 
 .project-page.selected {
   display: flex;
+  margin-top: 2rem;
 }
 
 .project-page > div {
   box-sizing: border-box;
-  text-align: left;
-  display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.project-page > div:nth-of-type(1) {
+  padding-right: 5rem;
+  width: 35%;
+  height: 10rem;
+  text-align: center;
+}
+
+.project-page > div:nth-of-type(2) {
+  text-align: left;
+  width: 60%;
 }
 
 .project-page h3 {
-  margin: 1rem 0;
   font-family: var(--primary-font);
 }
 
@@ -321,7 +334,7 @@ img.footer-icon:hover {
   background-color: rgba(209, 209, 209, 0.7);
   width: 4.5rem;
   height: 4.5rem;
-  margin: .5rem;
+  margin: .25rem;
   padding: 4px;
   border: none;
   border-radius: 50%;
@@ -731,10 +744,6 @@ body.no-scroll-modal {
     padding-right: 0;
   }
 
-  .project-icons {
-    flex-direction: column;
-  }
-
   #about div {
     font-size: 1.5rem;
   }
@@ -762,6 +771,22 @@ body.no-scroll-modal {
   .venues a {
     height: 70px;
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .project-icons, .project-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-page.selected > div {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  .project-page h4 {
+    margin-top: 1rem;
   }
 }
 
@@ -865,7 +890,7 @@ body.no-scroll-modal {
 
   .project-page {
     margin: 0 auto;
-    width: 1000px;
+    width: 940px;
   }
 }
 
