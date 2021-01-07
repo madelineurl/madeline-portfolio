@@ -12,9 +12,8 @@
 /* GENERAL */
 
 .main {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 100%;
   font-family: var(--primary-font);
   overscroll-behavior: none;
   margin-bottom: 5rem;
@@ -203,19 +202,19 @@ img.footer-icon:hover {
 }
 
 .project-icons {
-  display: flex;
-  flex-direction: row;
   justify-content: space-around;
   width: 100%;
   position: relative;
+  opacity: 1.0;
+  animation: fade-in .5s linear;
 }
 
 .project-icons > button {
   position: relative;
   border: none;
-  border-radius: 15px;
+  border-radius: 20px;
   background: transparent;
-  width: 18rem;
+  width: 24%;
   height: 15rem;
   cursor: pointer;
 }
@@ -223,21 +222,6 @@ img.footer-icon:hover {
 .project-icons > button:focus {
   outline: none;
   background: var(--true-periwinkle);
-}
-
-.project-icons div {
-  margin: .25rem;
-}
-
-.project-icons div:nth-of-type(1) {
-  animation: slide-in-top .4s ease;
-}
-
-.project-icons div:nth-of-type(2) {
-  animation: slide-in-top .6s ease;
-}
-.project-icons div:nth-of-type(3) {
-  animation: slide-in-top .8s ease;
 }
 
 .label {
@@ -267,8 +251,6 @@ img.footer-icon:hover {
 #shiftpitch {
   width: 11em;
   height: 11em;
-  /* transform: rotate(360deg);
-  transition: transform infinite linear; */
 }
 
 /* PROJECTS */
@@ -277,6 +259,7 @@ img.footer-icon:hover {
   position: relative;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: 5%;
 }
 
 .project-page {
@@ -286,7 +269,8 @@ img.footer-icon:hover {
 
 .project-page.selected {
   display: flex;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  height: 100%;
 }
 
 .project-page > div {
@@ -302,7 +286,7 @@ img.footer-icon:hover {
 }
 
 .project-page > div:nth-of-type(2) {
-  width: 66%;
+  width: 56%;
   text-align: left;
   line-height: 1.1;
 }
@@ -334,7 +318,10 @@ img.footer-icon:hover {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  height: 7rem;
+  margin: 0 5%;
+  /* height: 7rem;
+  width: 100%;
+  margin: 2% 5%; */
 }
 
 #info-btns {
@@ -350,7 +337,7 @@ img.footer-icon:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  padding: .25em .75em;
+  padding: .25rem 1.25rem;
   background: transparent;
   text-transform: uppercase;
 }
@@ -390,7 +377,8 @@ img.footer-icon:hover {
 }
 
 #skills > div:nth-of-type(2) {
-  margin: 0 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 /* MUSIC */
@@ -410,6 +398,7 @@ img.footer-icon:hover {
   color: rgb(65, 73, 94);
   border-radius: 8px;
   flex-direction: column;
+  line-height: 1.1;
 }
 
 .music-blurb div {
@@ -635,6 +624,15 @@ body.no-scroll-modal {
 
 /* ANIMATIONS */
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes enter-abt-image-vertical {
   0% {
     transform: translateY(40%);
@@ -739,7 +737,7 @@ body.no-scroll-modal {
 
 @media screen and (max-width: 660px) {
   .main {
-    margin-bottom: 6rem;
+    margin-bottom: 7rem;
   }
 
   .landing-container {
@@ -880,6 +878,17 @@ body.no-scroll-modal {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .project-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-page > div {
+    width: 100%;
+  }
+}
+
 /* MEDIA QUERIES FOR LARGER SCREENS */
 
 @media screen and (min-width: 440px) {
@@ -906,14 +915,14 @@ body.no-scroll-modal {
 
 @media screen and (min-width: 1150px) {
   .project-icons {
-    width: 1150px;
+    width: 1100px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .project-page {
     margin: 0 auto;
-    width: 1150px;
+    width: 1100px;
   }
 }
 

@@ -20,7 +20,7 @@ const ProjectsPage = () => {
   return (
     <>
      <div className='projects flex'>
-        <div className='project-icons'>
+        <div className='project-icons flex'>
           <ProjectIcon
             image={shiftpitch}
             name='shiftpitch'
