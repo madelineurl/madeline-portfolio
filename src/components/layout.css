@@ -216,18 +216,12 @@ img.footer-icon:hover {
   justify-content: space-around;
   width: 100%;
   position: relative;
-  /* top: 7vh; */
-  /* transition: transform .3s ease; */
 }
-
-/* .project-icons.shift {
-  transform: translateY(100%);
-} */
 
 .project-icons button {
   position: relative;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   background: transparent;
   width: 18rem;
   height: 15rem;
@@ -281,6 +275,8 @@ img.footer-icon:hover {
 #shiftpitch {
   width: 11em;
   height: 11em;
+  transform: rotate(360deg);
+  transition: transform infinite linear;
 }
 
 /* PROJECTS */
@@ -293,8 +289,7 @@ img.footer-icon:hover {
 
 .project-page {
   display: none;
-  flex-direction: row;
-  /* align-items: flex-start; */
+  flex-direction: column;
   box-sizing: border-box;
 }
 
@@ -303,22 +298,21 @@ img.footer-icon:hover {
   margin-top: 2rem;
 }
 
-.project-page > div {
-  box-sizing: border-box;
+.project-info > div {
   flex-direction: column;
-  align-items: center;
 }
 
-.project-page > div:nth-of-type(1) {
-  padding-right: 5rem;
-  width: 35%;
+.project-info > div:nth-of-type(1) {
+  width: 33%;
   height: 10rem;
   text-align: center;
+  align-self: flex-start;
 }
 
-.project-page > div:nth-of-type(2) {
+.project-info > div:nth-of-type(2) {
   text-align: left;
-  width: 60%;
+  width: 66%;
+  line-height: 1.1;
 }
 
 .project-page h3 {
@@ -342,6 +336,31 @@ img.footer-icon:hover {
 
 .project-link:hover {
   background-color: var(--true-periwinkle);
+}
+
+.more-info {
+  flex-direction: column;
+  width: 100%;
+}
+
+.more-info.hide {
+  display: none;
+}
+
+.more-info > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: .5rem 0;
+  line-height: 1.1;
+}
+
+.more-info > div > div:nth-of-type(1) {
+  width: 33%;
+}
+
+.more-info > div > div:nth-of-type(2) {
+  width: 66%;
 }
 
 /* SKILLS */
@@ -368,8 +387,7 @@ img.footer-icon:hover {
 }
 
 #skills > div:nth-of-type(2) {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 0 1rem;
 }
 
 /* MUSIC */
@@ -738,10 +756,13 @@ body.no-scroll-modal {
     margin-bottom: 1.5rem;
   }
 
+  .project-page {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .project-page > div {
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   #about div {
@@ -775,7 +796,7 @@ body.no-scroll-modal {
 }
 
 @media screen and (max-width: 760px) {
-  .project-icons, .project-page {
+  .project-icons {
     flex-direction: column;
     align-items: center;
   }
@@ -802,7 +823,7 @@ body.no-scroll-modal {
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     right: 0px;
     top: 5rem;
     z-index: 9;
@@ -881,16 +902,16 @@ body.no-scroll-modal {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1150px) {
   .project-icons {
-    width: 1000px;
+    width: 1150px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .project-page {
+  .project-page, .more-info {
     margin: 0 auto;
-    width: 940px;
+    width: 1150px;
   }
 }
 

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ProjectIcon from "./project-icon";
-import { Shiftpitch, Xibis, Northwestern } from "..";
+import ProjectTemplate from "./project-template";
 import shiftpitch from "./icons/shiftpitch.png";
 import xibis from "./icons/xibis.png";
 import northwestern from './icons/northwestern.png';
+import projectData from "./data/data";
 
 const ProjectsPage = () => {
   const [ selected, setSelected ] = useState('');
-  const iconsClass = selected === '' ? 'project-icons' : 'project-icons';
 
   useEffect(() => {
     setSelected('');
@@ -15,13 +15,12 @@ const ProjectsPage = () => {
 
   const handleSelected = (project) => {
     setSelected(project);
-
   };
 
   return (
     <>
      <div className='projects flex'>
-        <div className={iconsClass}>
+        <div className='project-icons'>
           <ProjectIcon
             image={shiftpitch}
             name='shiftpitch'
@@ -44,9 +43,9 @@ const ProjectsPage = () => {
             handleClick={handleSelected}
           />
         </div>
-        <Shiftpitch selected={selected}/>
-        <Xibis selected={selected} />
-        <Northwestern selected={selected} />
+        <ProjectTemplate projectData={projectData.shiftpitch} selected={selected}/>
+        <ProjectTemplate projectData={projectData.xibis} selected={selected}/>
+        <ProjectTemplate projectData={projectData.northwestern} selected={selected}/>
       </div>
     </>
   );

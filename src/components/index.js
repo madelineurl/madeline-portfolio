@@ -10,12 +10,8 @@ export { default as ContactForm } from "./form";
 
 export { default as ProjectsPage } from "./projects/projects";
 export { default as ProjectLinks } from "./projects/project-links";
-export { default as Shiftpitch } from "./projects/shiftpitch";
-export { default as Northwestern } from "./projects/northwestern";
-export { default as Xibis } from "./projects/xibis";
 
-export { default as Skills } from "./projects/skills";
-export { default as Video } from "./projects/video";
+export { default as Skills } from "./skills";
 export { default as SoundcloudPlayer } from "./music/soundcloud-player";
 export { default as MusicPage } from "./music/music";
 export { default as MusicBlurb } from "./music/music-blurb";
