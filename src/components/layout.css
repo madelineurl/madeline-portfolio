@@ -281,17 +281,17 @@ img.footer-icon:hover {
 
 .project-page {
   display: none;
-  flex-direction: row;
   box-sizing: border-box;
 }
 
 .project-page.selected {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .project-page > div {
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .project-page > div:nth-of-type(1) {
@@ -332,12 +332,18 @@ img.footer-icon:hover {
 
 .project-info {
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   position: relative;
+  height: 7rem;
 }
 
 #info-btns {
+  width: 100%;
   justify-content: space-between;
+  position: absolute;
+  top: -30px;
+  background-color: rgb(231, 231, 231);
+  border-radius: 5px;
 }
 
 #info-btns > button {
@@ -345,7 +351,8 @@ img.footer-icon:hover {
   border-radius: 5px;
   cursor: pointer;
   padding: .25em .75em;
-  /* text-transform: uppercase; */
+  background: transparent;
+  text-transform: uppercase;
 }
 
 #info-btns > button:focus {
@@ -354,14 +361,9 @@ img.footer-icon:hover {
 }
 
 .info-section {
-  /* position: absolute; */
   flex-direction: column;
   align-items: flex-start;
-  visibility: visible;
-}
-
-.info-section.hide {
-  visibility: hidden;
+  margin-top: 1rem;
 }
 
 /* SKILLS */
@@ -759,7 +761,7 @@ body.no-scroll-modal {
 
   .project-page {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .project-page > div {

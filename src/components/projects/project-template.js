@@ -83,6 +83,7 @@ const ProjectTemplate = ({ selected, projectData }) => {
             }
             {selectedText}
           </div>
+          {/* <InfoTabs handleInfo={handleInfo} buttonText={buttonText}/> */}
         </div>
       </div>
   );
