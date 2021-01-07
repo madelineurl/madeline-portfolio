@@ -10,7 +10,7 @@ const InfoTabs = ({ handleInfo, buttonText }) => {
   }
 
   return (
-    <div className='info-btns flex'>
+    <div id='info-btns' className='flex'>
       {
         values.map(value => (
           <button key={value} onClick={() => handleInfo(value)}>
