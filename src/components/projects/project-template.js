@@ -78,7 +78,9 @@ const ProjectTemplate = ({ selected, projectData }) => {
         <div className='project-info flex'>
           <InfoTabs handleInfo={handleInfo} buttonText={buttonText}/>
           <div className='info-section flex'>
-            <h4>{headerSentence}</h4>
+            {
+              selectedInfoSection === 'overview' && <h4>{headerSentence}</h4>
+            }
             {selectedText}
           </div>
         </div>

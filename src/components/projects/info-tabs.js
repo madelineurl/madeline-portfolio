@@ -4,27 +4,20 @@ const InfoTabs = ({ handleInfo, buttonText }) => {
   let values = [];
 
   for (let text in buttonText) {
-    if (text !== '') {
+    if (buttonText[text]) {
       values.push(text);
     }
   }
 
-  console.log(values);
-
   return (
-    <div className='info-btns'>
+    <div className='info-btns flex'>
       {
         values.map(value => (
           <button key={value} onClick={() => handleInfo(value)}>
-            {value}
-            {/* {value.split(/(?=[A-Z])/).toLowerCase()} */}
+            {value.split(/(?=[A-Z])/).join(' ').toLowerCase()}
           </button>
         ))
       }
-      {/* <button onClick={() => handleInfo('overview')}>overview</button>
-      <button onClick={() => handleInfo('technology')}>technology</button>
-      <button onClick={() => handleInfo('myRole')}>my role</button>
-      <button onClick={() => handleInfo('keyTakeaways')}>key takeaways</button> */}
     </div>
   );
 };
