@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { ProjectLinks } from "..";
 
 const ProjectTemplate = ({ selected, projectData }) => {
-  const [ moreInfo, toggleMoreInfo ] = useState(false);
-  const selectedClass = selected === projectData.name ? 'project-page selected flex' : 'project-page flex';
-  const expandClass = moreInfo ? 'more-info flex' : 'more-info hide flex';
   const {
     name,
     headerSentence,
@@ -16,6 +13,10 @@ const ProjectTemplate = ({ selected, projectData }) => {
     roleTitle,
     URLs
   } = projectData;
+
+  const [ moreInfo, toggleMoreInfo ] = useState(false);
+  const selectedClass = selected === name ? 'project-page selected flex' : 'project-page flex';
+  const expandClass = moreInfo ? 'more-info flex' : 'more-info hide flex';
 
   const openMoreInfo = () => {
     toggleMoreInfo(true);

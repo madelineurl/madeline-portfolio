@@ -39,14 +39,6 @@
   align-items: center;
 }
 
-.show {
-  display: flex;
-}
-
-.hide {
-  display: none;
-}
-
 .link {
   text-decoration: none;
   color: rgba(65, 65, 65, 0.8);
@@ -341,10 +333,12 @@ img.footer-icon:hover {
 .more-info {
   flex-direction: column;
   width: 100%;
+  height: 100%;
+  display: flex;
 }
 
 .more-info.hide {
-  display: none;
+  visibility: hidden;
 }
 
 .more-info > div {
