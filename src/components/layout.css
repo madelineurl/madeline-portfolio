@@ -325,13 +325,14 @@ img.footer-icon:hover {
 
 #info-btns {
   width: 100%;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   background-color: rgb(231, 231, 231);
   border-radius: 10px;
 }
 
 #info-btns > button {
   height: 100%;
+  width: 25%;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -342,7 +343,11 @@ img.footer-icon:hover {
 
 #info-btns > button:focus {
   outline: none;
+}
+
+#info-btns > button.selected {
   background-color: var(--true-periwinkle);
+  width: 25%;
 }
 
 .info-section {
