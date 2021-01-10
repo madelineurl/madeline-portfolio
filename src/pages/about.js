@@ -7,16 +7,16 @@ export const query = graphql`
   query {
     headshot: file(relativePath: { eq: "headshot-2021.png" }) {
       childImageSharp {
-        fixed(width: 200, height: 200) {
+        fixed(width: 200, height: 200, quality: 100) {
           ...GatsbyImageSharpFixed
         }
       }
     }
   }
 `;
-const About = ({ data }) => {
-  console.log(data)
-  return  (
+
+console.log(query);
+const About = ({ data }) => (
   <Layout>
     <SEO title='about me' />
     <div id='about' >
@@ -42,7 +42,6 @@ const About = ({ data }) => {
     </div>
   </div>
   </Layout>
-)
-  };
+);
 
 export default About;

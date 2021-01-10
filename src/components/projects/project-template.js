@@ -11,7 +11,7 @@ const ProjectTemplate = ({ selected, projectData }) => {
     technology,
     takeaways,
     upNext,
-    roleDescription,
+    myRole,
     roleTitle,
     URLs
   } = projectData;
@@ -31,8 +31,8 @@ const ProjectTemplate = ({ selected, projectData }) => {
     case 'technology':
       selectedText = technology;
       break;
-    case 'roleDescription':
-      selectedText = roleDescription;
+    case 'myRole':
+      selectedText = myRole;
       break;
     case 'takeaways':
       selectedText = takeaways;
@@ -58,7 +58,7 @@ const ProjectTemplate = ({ selected, projectData }) => {
         <div className='flex'>
           <h3>{ URLs.videoTitle ? URLs.videoTitle : name }</h3>
           {
-            URLs.youTube ? (
+            URLs.github ? (
               <ProjectLinks
                 videoTitle={URLs.videoTitle}
                 videoURL={URLs.youTube}
@@ -88,7 +88,6 @@ const ProjectTemplate = ({ selected, projectData }) => {
             }
             {selectedText}
           </div>
-          {/* <InfoTabs handleInfo={handleInfo} buttonText={buttonText}/> */}
         </div>
       </div>
   );

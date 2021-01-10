@@ -23,12 +23,26 @@ const ProjectData = {
     technology: 'My teammates and I employed the NERD stack, along with Redux for state management, Firestore\'s noSQL database, pixel art SVGs for nostalgic graphics, and Howler.js for game audio.',
     takeaways: 'One of our key discussions when picking technologies was how much to challenge ourselves. Since we were diving into Firestore on the backend, we opted to stick with React rather than learning a new game framework on the frontend. We quickly realized we\'d need Redux to help us manage our ever-growing game state and keep the user experience free of state-mutation bugs.',
     roleTitle: 'fullstack engineer',
-    roleDescription: 'I spearheaded the integration of Redux for state management, designed and implemented the puzzle on Planet Aguilera, and composed and implemented all the game sound effects. Additionally, I had a hand in much of the overall styling, user interface, and animations.',
+    myRole: 'I spearheaded the integration of Redux for state management, designed and implemented the puzzle on Planet Aguilera, and composed and implemented all the game sound effects. Additionally, I had a hand in much of the overall styling, user interface, and animations.',
     URLs: {
       videoTitle: 'xibis: a galactic voyage',
       youTube: 'https://www.youtube.com/embed/8HAfJqLG-sg',
       github: 'https://github.com/zelda-capstone/xibis',
       site: 'https://zapstone-bc2fe.web.app/'
+    }
+  },
+  bread: {
+    id: 'upper-crust',
+    name: 'upper-crust',
+    headerSentence: 'A classic NERD stack e-commerce site built in a week by team of four.',
+    overview: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.',
+    technology: 'We stored user and order data in a postgreSQL relational database via the Sequelize ORM, displayed data in React components with Redux for state management, integrated Stripe for payment processing, and featured breads baked by our own team member Johnny O\'Mara.',
+    takeaways: 'This project cemented my proficiency in the NERD stack and authentication + ecommerce fundamentals. It was a great exercise in navigating group dynamics while collaborating on a shared codebase and delivering an MVP on schedule.',
+    roleTitle: 'fullstack engineer',
+    myRole: 'We divided our work into vertical slices so each team member would have a chance to work across the stack.I handled the user story for users viewing a single bread option and contributed significantly to the styling and design.',
+    URLs: {
+      github: 'https://github.com/fsa-michaelangelo/grace-shopper',
+      site: 'https://bread-shopper.herokuapp.com/'
     }
   },
   northwestern: {
@@ -39,7 +53,7 @@ const ProjectData = {
     technology: 'The School of Communication website and all of its affiliated sites are built with a combination of Wordpress and raw HTML on the frontend and Drupal/PHP in the backend.',
     takeaways: 'This was my first real introduction to web development, and it was a whirlwind. I discovered the excitement of infinite learning that comes with coding, and the satisfaction of aligning elements carefully on a page using CSS.',
     roleTitle: 'frontend assistant',
-    roleDescription: 'I helped modernize the site\'s frontend, working in Wordpress and writing raw HTML and CSS in Adobe Dreamweaver. I didn\'t get the chance to learn the backend, but the seeds of interest were planted.',
+    myRole: 'I helped modernize the site\'s frontend, working in Wordpress and writing raw HTML and CSS in Adobe Dreamweaver. I didn\'t get the chance to learn the backend, but the seeds of interest were planted.',
     URLs: {
       site: 'https://communication.northwestern.edu'
     }
