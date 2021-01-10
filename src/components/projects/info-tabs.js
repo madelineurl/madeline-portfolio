@@ -1,7 +1,7 @@
 import React from "react";
 
-const InfoTabs = ({ handleInfo, buttonText }) => {
-  let values = [];
+const InfoTabs = ({ handleInfo, buttonText, selected }) => {
+  const values = [];
 
   for (let text in buttonText) {
     if (buttonText[text]) {
@@ -9,12 +9,19 @@ const InfoTabs = ({ handleInfo, buttonText }) => {
     }
   }
 
+  function splitJoinLowerCase(camelCaseWord) {
+    return camelCaseWord.split(/(?=[A-Z])/).join(' ').toLowerCase();
+  }
+
   return (
     <div id='info-btns' className='flex'>
       {
         values.map(value => (
-          <button key={value} onClick={() => handleInfo(value)}>
-            {value.split(/(?=[A-Z])/).join(' ').toLowerCase()}
+          <button
+            className={selected === value ? 'selected' : ''}
+            key={value}
+            onClick={() => handleInfo(value)}>
+              {splitJoinLowerCase(value)}
           </button>
         ))
       }

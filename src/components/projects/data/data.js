@@ -1,6 +1,7 @@
 
 const ProjectData = {
   shiftpitch: {
+    id: 'shiftpitch',
     name: 'shiftpitch',
     headerSentence: 'Shiftpitch is a tool for improving rhythm by learning to beatmatch.',
     overview: 'Many online tools, computer programs, and digital DJ equipment teach people how to DJ, but most of them teach DJs to rely on visual cues like waveforms or BPM (beats per minute) counters. Learning to beatmatch with your ears is an invaluable skill, and a great way to improve your rhythm--but learning is difficult without access to turntables. I built Shiftpitch in an effort to make beatmatching more accessible to everyone.',
@@ -15,7 +16,8 @@ const ProjectData = {
     }
   },
   xibis: {
-    name: 'xibis',
+    id: 'xibis',
+    name: 'xibis: a galactic voyage',
     headerSentence: 'In this 2D, single-player escapade inspired by the 90s computer game Zoombinis, users guide space creatures through a series of puzzles on a journey to find a new home planet.',
     overview: 'This is a group project that I built with two other software engineers, Tori Weaver and Simone Pinscak. Our goal was to reinforce emotional intelligence and community accountability through the design of various mini puzzles. We challenged ourselves build a game, which was a first for everyone on the team.',
     technology: 'My teammates and I employed the NERD stack, along with Redux for state management, Firestore\'s noSQL database, pixel art SVGs for nostalgic graphics, and Howler.js for game audio.',
@@ -30,7 +32,8 @@ const ProjectData = {
     }
   },
   northwestern: {
-    name: 'northwestern',
+    id: 'northwestern',
+    name: 'northwestern school of communication',
     headerSentence: 'I had my first professional experience working on a website in 2016.',
     overview: `I got a taste of web development when I overhauled the Northwestern radio website (wnur.org) as the station's General Manager. This experience led to a position as a Web Assistant for the School of Communication website shortly after graduating, where I learned HTML and CSS on the fly and became interested in Javascript.`,
     technology: 'The School of Communication website and all of its affiliated sites are built with a combination of Wordpress and raw HTML on the frontend and Drupal/PHP in the backend.',

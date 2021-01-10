@@ -27,6 +27,7 @@ const ProjectsPage = () => {
             labelTitle='Shiftpitch'
             labelSubtitle='Beatmatching ear-training tool'
             handleClick={handleSelected}
+            selected={selected}
           />
           <ProjectIcon
             image={xibis}
@@ -34,6 +35,7 @@ const ProjectsPage = () => {
             labelTitle='Xibis: A Galactic Voyage'
             labelSubtitle='2D single-player escapade'
             handleClick={handleSelected}
+            selected={selected}
           />
           <ProjectIcon
             image={northwestern}
@@ -41,6 +43,7 @@ const ProjectsPage = () => {
             labelTitle='Northwestern University'
             labelSubtitle='School of Communication website'
             handleClick={handleSelected}
+            selected={selected}
           />
         </div>
         <ProjectTemplate projectData={projectData.shiftpitch} selected={selected}/>

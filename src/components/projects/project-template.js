@@ -4,6 +4,7 @@ import InfoTabs from "./info-tabs";
 
 const ProjectTemplate = ({ selected, projectData }) => {
   const {
+    id,
     name,
     headerSentence,
     overview,
@@ -15,7 +16,7 @@ const ProjectTemplate = ({ selected, projectData }) => {
     URLs
   } = projectData;
 
-  const selectedProject = selected === name ? 'project-page selected flex' : 'project-page flex';
+  const selectedProject = selected === id ? 'project-page selected flex' : 'project-page flex';
   const [ selectedInfoSection, setselectedInfoSection ] = useState('overview');
 
   const handleInfo = (id) => {
@@ -76,7 +77,11 @@ const ProjectTemplate = ({ selected, projectData }) => {
           }
         </div>
         <div className='project-info flex'>
-          <InfoTabs handleInfo={handleInfo} buttonText={buttonText}/>
+          <InfoTabs
+            handleInfo={handleInfo}
+            buttonText={buttonText}
+            selected={selectedInfoSection}
+          />
           <div className='info-section flex'>
             {
               selectedInfoSection === 'overview' && <h4>{headerSentence}</h4>

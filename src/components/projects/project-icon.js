@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ProjectIcon = ({ image, name, handleClick }) => {
+const ProjectIcon = ({ image, name, handleClick, selected }) => {
   // const [showLabel, setShowLabel] = useState(false);
   // const labelClass = showLabel ? 'label' : 'hide';
 
@@ -12,6 +12,7 @@ const ProjectIcon = ({ image, name, handleClick }) => {
   // const hideLabel = () => {
   //   setShowLabel(false);
   // };
+  const selectedIcon = selected === name ? 'selected-icon flex' : 'flex';
 
   return (
     <button
@@ -19,7 +20,7 @@ const ProjectIcon = ({ image, name, handleClick }) => {
       // onMouseLeave={hideLabel}
       // onFocus={revealLabel}
       onClick={() => handleClick(name)}
-      className='flex'
+      className={selectedIcon}
     >
       <div>
         <img
