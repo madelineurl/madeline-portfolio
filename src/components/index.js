@@ -4,7 +4,6 @@ export { default as Layout } from "./layout";
 export { default as Navbar } from "./navbar.js";
 export { default as FooterIcons } from "./icons/footer-icons";
 
-export { default as AboutMe} from "./madeline/about";
 export { default as Modal } from "./madeline/modal";
 export { default as ContactForm } from "./form";
 

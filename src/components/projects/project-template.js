@@ -9,7 +9,7 @@ const ProjectTemplate = ({ selected, projectData }) => {
     headerSentence,
     overview,
     technology,
-    keyTakeaways,
+    takeaways,
     upNext,
     roleDescription,
     roleTitle,
@@ -34,8 +34,8 @@ const ProjectTemplate = ({ selected, projectData }) => {
     case 'roleDescription':
       selectedText = roleDescription;
       break;
-    case 'keyTakeaways':
-      selectedText = keyTakeaways;
+    case 'takeaways':
+      selectedText = takeaways;
       break;
     case 'upNext':
       selectedText = upNext;
@@ -47,7 +47,7 @@ const ProjectTemplate = ({ selected, projectData }) => {
   const buttonText = {
     overview: 'overview',
     technology: 'technology',
-    keyTakeaways: 'key-takeaways'
+    takeaways: 'takeaways'
   };
 
   if (upNext) buttonText.upNext = 'up next';
