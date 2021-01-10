@@ -522,12 +522,12 @@ body.no-scroll-modal {
 }
 
 /* ABOUT */
-
+/*
 .headshot-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 100%;
-}
+} */
 
 .headshot-container h3,
 .headshot-container h4 {
