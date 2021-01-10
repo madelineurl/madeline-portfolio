@@ -40,8 +40,7 @@ const ProjectIcon = ({ image, name, handleClick, selected }) => {
 ProjectIcon.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  labelTitle: PropTypes.string.isRequired,
-  labelSubtitle: PropTypes.string.isRequired
+  labelTitle: PropTypes.string.isRequired
 };
 
 export default ProjectIcon;
