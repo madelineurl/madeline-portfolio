@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SocialIcon = ({ image }) => (
+const SocialIcon = ({ url, image }) => (
   <a
-    href={image.url}
+    href={url}
     target="_blank"
     rel="noreferrer"
     className="flex"
