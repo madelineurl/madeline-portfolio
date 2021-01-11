@@ -161,14 +161,13 @@
   right: 3.75rem;
   top: 1.2rem;
   z-index: 6;
-  opacity: 0;
-  transform: translateY(-100%);
+  opacity: 1.0;
   transition: opacity .3s linear;
 }
 
-.navbar.show {
-  transform: translateY(-0%);
-  opacity: 1.0;
+.navbar.hide {
+  transform: translateY(-100%);
+  opacity: 0.0;
 }
 
 .navbar a {
@@ -826,13 +825,12 @@ body.no-scroll-modal {
     top: 5rem;
     z-index: 9;
     background-color: rgba(157, 166, 187, 0.9);
-    /* background-color: var(--my-periwinkle); */
-    transform: translateX(150%);
     transition: transform .3s ease;
   }
 
-  .navbar.show {
-    transform: translateX(0%);
+  .navbar.hide {
+    transform: translateX(150%);
+    opacity: 1;
   }
 
   body.no-scroll {
