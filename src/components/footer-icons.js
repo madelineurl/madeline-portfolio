@@ -32,17 +32,20 @@ const FooterIcons = () => {
             switch(image.node.base) {
               case "GitHub-Mark.png":
                 image.url = "https://github.com/madelineurl/";
+                image.id = "github";
                 break;
               case 'linkedin.png':
                 image.url = "https://linkedin.com/madeline-url";
+                image.id = "linkedin";
                 break;
               case 'medium.png':
                 image.url = "https://madeline-url.medium.com/";
+                image.id = "medium";
                 break;
               default:
                 image.url = "https://madelineurl.online";
             }
-            if (image.node.base === "mail.png") {
+            if (image.node.base === "1-mail.png") {
               return (
                 <Link to='/contact/' >
                   <Img
@@ -65,6 +68,7 @@ const FooterIcons = () => {
                     fluid={image.node.childImageSharp.fluid}
                     alt='social icon'
                     className='footer-icon'
+                    id={image.id}
                   />
                 </a>
               );

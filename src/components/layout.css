@@ -199,6 +199,10 @@
   transform: scale(1.1);
 }
 
+#github {
+  width: 60px;
+}
+
 .project-icons {
   display: flex;
   justify-content: space-around;
