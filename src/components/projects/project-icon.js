@@ -39,7 +39,7 @@ const ProjectIcon = ({ image, name, handleClick, selected }) => {
 };
 
 ProjectIcon.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   labelTitle: PropTypes.string.isRequired
 };

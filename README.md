@@ -1,5 +1,5 @@
-# PORTFOLIO
-Welcome to my portfolio site! I'm Madeline Higgins (aka madelineurl), a fullstack software developer and DJ/producer based in Chicago. I'm a Javascript enthusiast with a background in Cognitive Science - so it follows that I have a special interest in frontend development and UI/UX Design. I build accessible applications that help people connect to their creativity and each other.
+# Portfolio
+I'm Madeline Higgins (aka madelineurl), a fullstack software developer and DJ/producer based in Chicago. I'm a Javascript enthusiast with a background in Cognitive Science - so it follows that I have a special interest in frontend development and UI/UX Design. I build accessible applications that help people connect to their creativity and each other.
 
 ## Technologies
 This site was built with Javascript React components in Gatsby, styled with raw CSS, and deployed via Netlify.
