@@ -8,21 +8,21 @@ export const query = graphql`
     xibis: file(relativePath: { eq: "xibis-icon.png" }) {
       childImageSharp {
         fixed(width: 280, height: 220, quality: 100) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }
     shiftpitch: file(relativePath: { eq: "shiftpitch-logo.png" }) {
       childImageSharp {
         fixed(width: 220, height: 220, quality: 100) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }
     upperCrust: file(relativePath: { eq: "uppercrust-logo.png" }) {
       childImageSharp {
         fixed(width: 220, height: 220, quality: 100) {
-          ...GatsbyImageSharpFixed
+          ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }
