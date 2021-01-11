@@ -4,7 +4,7 @@ import HamburgerMenu from "react-hamburger-menu";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const showNav = open ? 'show' : '';
+  const showNav = open ? 'navbar' : 'navbar hide';
 
   useEffect(() => {
     if (open) {
@@ -33,7 +33,7 @@ const Navbar = () => {
           animationDuration={0.5}
         />
       </div>
-      <div className={`navbar ${showNav}`}>
+      <div className={showNav}>
         <Link to='/about/' >about</Link>
         <Link to='/projects/' >projects</Link>
         <Link to='/music/' >music</Link>
