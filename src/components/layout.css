@@ -188,18 +188,14 @@
 
 /* ICONS */
 
-img.footer-icon {
-  position: relative;
-  height: 50px;
+.footer-icon {
   width: 50px;
-  margin: .4rem;
-  bottom: .75rem;
-  top: .25rem;
-  color: rgb(65, 65, 65);
+  height: 50px;
+  margin: 0 .3rem;
   transition: transform 0.2s ease-in-out;
 }
 
-img.footer-icon:hover {
+.footer-icon:hover {
   transform: scale(1.1);
 }
 
@@ -220,11 +216,16 @@ img.footer-icon:hover {
   width: 27%;
   height: 15rem;
   cursor: pointer;
+  /* transition: transform .2s ease; */
 }
 
 .project-icons > button:focus {
   outline: none;
 }
+
+/* .project-icons > button:hover {
+  transform: scale(1.1);
+} */
 
 .selected-icon.flex {
   background-color: var(--true-periwinkle);
