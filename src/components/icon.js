@@ -1,22 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SocialIcon = ({ url, image }) => (
+const SocialIcon = ({ image }) => (
   <a
-    href={url}
+    href={image.url}
     target="_blank"
     rel="noreferrer"
+    className="flex"
   >
     <img
       src={image}
-      alt='social icon'
+      alt='social media icon'
       className='footer-icon'
     />
   </a>
 );
 
 SocialIcon.propTypes = {
-  url: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired
 };
 

@@ -9,7 +9,7 @@ import medium from "./icons/medium.webp";
 const FooterIcons = () => {
   return (
     <div className='flex'>
-       <Link to='/contact/' >
+       <Link to='/contact/' className="flex">
           <img
             src={contact}
             alt="contact"
@@ -21,13 +21,13 @@ const FooterIcons = () => {
             image={github}
           />
         <Icon
-          image={linkedin}
-          url='https://www.linkedin.com/in/madeline-url/'
-        />
+        image={linkedin}
+        url='https://www.linkedin.com/in/madeline-url/'
+      />
         <Icon
-          image={medium}
-          url='https://madeline-url.medium.com'
-        />
+        image={medium}
+        url='https://madeline-url.medium.com'
+      />
     </div>
   );
 };

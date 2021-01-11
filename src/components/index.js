@@ -2,7 +2,7 @@ export { default as Particles } from "./particles";
 export { default as SEO } from "./seo";
 export { default as Layout } from "./layout";
 export { default as Navbar } from "./navbar.js";
-export { default as FooterIcons } from "./icons/footer-icons";
+export { default as FooterIcons } from "./footer-icons";
 
 export { default as Modal } from "./modal";
 export { default as ContactForm } from "./form";
