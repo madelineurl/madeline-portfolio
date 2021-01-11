@@ -322,7 +322,6 @@ img.footer-icon:hover {
 
 #info-btns {
   width: 100%;
-  /* justify-content: space-between; */
   background-color: rgb(231, 231, 231);
   border-radius: 10px;
 }
@@ -539,7 +538,6 @@ body.no-scroll-modal {
 }
 
 .info {
-  /* width: 50%; */
   flex-direction: column;
   animation: enter-abt-title .8s ease-in;
   z-index: -1;
@@ -548,7 +546,6 @@ body.no-scroll-modal {
 #about {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   width: 100%;
   border-radius: 5px;
 }
@@ -556,7 +553,6 @@ body.no-scroll-modal {
 #about div > div {
   margin: .5rem 0rem;
   font-size: 1.1rem;
-  /* width: 100%; */
 }
 
 #about-text {
@@ -744,6 +740,10 @@ body.no-scroll-modal {
     margin: 1rem 0;
   }
 
+  #info-btns > button {
+    width: 100%;
+  }
+
   #info-btns > button.selected {
     width: 100%;
   }
@@ -853,7 +853,6 @@ body.no-scroll-modal {
   }
 
   .navbar a:hover {
-    /* background-color: var(--primary-grey); */
     background-color: rgba(65, 73, 94, 0.8);
   }
 
