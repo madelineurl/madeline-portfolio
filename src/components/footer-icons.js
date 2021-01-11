@@ -21,13 +21,13 @@ const FooterIcons = () => {
             image={github}
           />
         <Icon
-        image={linkedin}
-        url='https://www.linkedin.com/in/madeline-url/'
-      />
+          image={linkedin}
+          url='https://www.linkedin.com/in/madeline-url/'
+        />
         <Icon
-        image={medium}
-        url='https://madeline-url.medium.com'
-      />
+          image={medium}
+          url='https://madeline-url.medium.com'
+        />
     </div>
   );
 };

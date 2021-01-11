@@ -1,26 +1,28 @@
 import React from "react";
-import Img from "gatsby-image";
+// import Img from "gatsby-image";
 import { Layout, SEO } from "../components";
-import { graphql } from "gatsby";
+import headshot from "../images/headshot-2021.webp";
+// import { graphql } from "gatsby";
 
-export const query = graphql`
-  query {
-    headshot: file(relativePath: { eq: "headshot-2021.png" }) {
-      childImageSharp {
-        fixed(width: 200, height: 200, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query {
+//     headshot: file(relativePath: { eq: "headshot-2021.png" }) {
+//       childImageSharp {
+//         fixed(width: 200, height: 200, quality: 100) {
+//           ...GatsbyImageSharpFixed_withWebp_noBase64
+//         }
+//       }
+//     }
+//   }
+// `;
 
-const About = ({ data }) => (
+const About = () => (
   <Layout>
     <SEO title='about me' />
     <div id='about' >
     <div className='headshot-container'>
-      <Img fixed={data.headshot.childImageSharp.fixed} id="headshot" />
+      <img src={headshot} id="headshot" alt="Madeline smiling in a maroon mockneck shirt against a periwinkle wall"/>
+      {/* <Img fixed={data.headshot.childImageSharp.fixed} id="headshot" /> */}
       <div className='info flex'>
         <h3>Madeline Higgins</h3>
         <h4>Fullstack Engineer</h4>

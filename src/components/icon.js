@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SocialIcon = ({ url, image}) => (
+const SocialIcon = ({ url, image }) => (
   <a
     href={url}
     target="_blank"
