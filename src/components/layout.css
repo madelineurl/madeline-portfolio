@@ -17,7 +17,7 @@
   justify-content: center;
   font-family: var(--primary-font);
   overscroll-behavior: none;
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -689,6 +689,17 @@ body.no-scroll-modal {
   }
 }
 
+@media screen and (max-width: 580px) {
+  #info-btns {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+
+  #info-btns > button.selected {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 660px) {
   .main {
     margin-bottom: 6rem;
@@ -821,6 +832,46 @@ body.no-scroll-modal {
   }
 }
 
+<<<<<<< Updated upstream
+=======
+@media screen and (max-width: 970px) {
+  .project-page.selected {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+  }
+
+  .project-page > div {
+    width: 100vw;
+  }
+
+  .project-page > div:nth-of-type(1) {
+    align-self: center;
+    width: 100%;
+    margin-bottom: .5rem;
+  }
+
+  .project-page > div:nth-of-type(2) {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .project-icons > button {
+    width: 100%;
+  }
+
+  .project-info{
+    height: 100%;
+  }
+
+  #info-btns {
+    /* flex-direction: column; */
+    width: 100%;
+  }
+}
+
+>>>>>>> Stashed changes
 /* MEDIA QUERIES FOR LARGER SCREENS */
 
 @media screen and (min-width: 440px) {
@@ -830,16 +881,20 @@ body.no-scroll-modal {
   }
 }
 
+<<<<<<< Updated upstream
 
 @media screen and (min-width: 565px) {
+=======
+@media screen and (min-width: 580px) {
+>>>>>>> Stashed changes
   #about {
-    width: 565px;
+    width: 580px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .modal > section {
-    width: 565px;
+    width: 100%;
     height: 80%;
     margin-top: auto;
     margin-bottom: auto;
