@@ -12,9 +12,10 @@
 /* GENERAL */
 
 .main {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
+  box-sizing: border-box;
+  height: 100%;
+  /* width: 100%; */
   font-family: var(--primary-font);
   overscroll-behavior: none;
   margin-bottom: 6rem;
@@ -30,21 +31,13 @@
   bottom: 0;
   width: 100%;
   height: 3.5rem;
-  background: linear-gradient(rgb(205, 207, 214), rgb(255, 255, 255), rgb(168, 169, 175));
+  background: linear-gradient(rgb(211, 213, 220), rgb(255, 255, 255), rgb(201, 203, 210));
 }
 
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.show {
-  display: flex;
-}
-
-.hide {
-  display: none;
 }
 
 .link {
@@ -212,34 +205,41 @@ img.footer-icon:hover {
 
 .project-icons {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   width: 100%;
   position: relative;
-  top: 7vh;
-  /* animation: slide-in-top .5s linear; */
+  opacity: 1.0;
+  animation: fade-in .5s linear;
 }
 
-.project-icons div {
-  margin: .25rem;
+.project-icons > button {
+  position: relative;
+  border: none;
+  border-radius: 20px;
+  background: transparent;
+  width: 27%;
+  height: 15rem;
+  cursor: pointer;
 }
 
-.project-icons div:nth-of-type(1) {
-  animation: slide-in-top .4s ease;
+.project-icons > button:focus {
+  outline: none;
 }
 
-.project-icons div:nth-of-type(2) {
-  animation: slide-in-top .6s ease;
-}
-.project-icons div:nth-of-type(3) {
-  animation: slide-in-top .8s ease;
+.selected-icon.flex {
+  background-color: var(--true-periwinkle);
+  transition: background-color 0.3s ease-out;
 }
 
 .label {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  text-align: center;
   color: rgb(111, 118, 126);
   font-family: var(--primary-font);
+}
+
+.label.hide {
+  visibility: hidden;
 }
 
 .label h4 {
@@ -247,55 +247,47 @@ img.footer-icon:hover {
   margin: 0;
 }
 
-#northwestern {
-  width: 12em;
-  height: 12em;
-}
-
-#xibis {
-  width: 15.5em;
-  height: 15.5em;
-  position: relative;
-  top: .5rem;
-}
-
-#shiftpitch {
-  width: 11em;
-  height: 11em;
-}
-
 /* PROJECTS */
 
-.project-page {
+.projects {
   display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+.project-page {
+  display: none;
+  height: 10rem;
+}
+
+.project-page.selected {
+  display: flex;
+  margin-top: 1.5rem;
 }
 
 .project-page > div {
-  width: 50%;
-  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.project-page > div:nth-of-type(1) {
+  align-self: center;
+  width: 33%;
+  text-align: center;
+}
+
+.project-page > div:nth-of-type(2) {
+  width: 56%;
+  text-align: left;
+  line-height: 1.1;
 }
 
 .project-page h3 {
-  margin-bottom: 1rem;
-  text-align: left;
   font-family: var(--primary-font);
-}
-
-.project-left {
-  padding-right: .75rem;
-}
-
-.project-right {
-  padding-left: .75rem;
-}
-
-.project-left div,
-.project-right div {
-  text-align: left;
-  font-family: inherit;
-  font-size: 1rem;
 }
 
 .project-link {
@@ -307,14 +299,60 @@ img.footer-icon:hover {
   background-color: rgba(209, 209, 209, 0.7);
   width: 4.5rem;
   height: 4.5rem;
-  margin: .5rem;
+  margin: .25rem;
   padding: 4px;
   border: none;
   border-radius: 50%;
+  transition: background-color .3s linear;
 }
 
 .project-link:hover {
   background-color: var(--true-periwinkle);
+}
+
+.project-info {
+  flex-direction: column;
+  align-items: space-between;
+  margin: 0 5%;
+  width: 100%;
+}
+
+#info-btns {
+  width: 100%;
+  /* justify-content: space-between; */
+  background-color: rgb(231, 231, 231);
+  border-radius: 10px;
+}
+
+#info-btns > button {
+  text-align: center;
+  height: 100%;
+  width: 25%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: .25rem;
+  background: transparent;
+  text-transform: uppercase;
+}
+
+#info-btns > button:focus {
+  outline: none;
+}
+
+#info-btns > button.selected {
+  background-color: var(--true-periwinkle);
+  width: 25%;
+}
+
+.info-section {
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.info-section h4 {
+  margin-top: 1rem;
 }
 
 /* SKILLS */
@@ -323,6 +361,7 @@ img.footer-icon:hover {
   display: flex;
   justify-content: center;
   position: relative;
+  width: 100%;
 }
 
 #skills h3 {
@@ -333,7 +372,6 @@ img.footer-icon:hover {
 #skills > div {
   border: 2px solid grey;
   border-radius: 5px;
-  box-sizing: border-box;
   /* margin: 1rem; */
   padding: 1rem;
   width: 33%;
@@ -362,6 +400,7 @@ img.footer-icon:hover {
   color: rgb(65, 73, 94);
   border-radius: 8px;
   flex-direction: column;
+  line-height: 1.1;
 }
 
 .music-blurb div {
@@ -491,19 +530,41 @@ body.no-scroll-modal {
 }
 
 #headshot {
-  width: 11rem;
-  height: 11rem;
-  border-radius: 50%;
   animation: enter-abt-image .8s ease-in;
 }
 
 .info {
+  /* width: 50%; */
+  flex-direction: column;
+  animation: enter-abt-title .8s ease-in;
+  z-index: -1;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 100%;
+  border-radius: 5px;
+}
+
+#about div > div {
+  margin: .5rem 0rem;
+  font-size: 1.1rem;
+  /* width: 100%; */
+}
+
+#about-text {
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  animation: enter-abt-title .8s ease-in;
-  z-index: -1;
+  line-height: 1.1;
+  width: 100%;
+}
+
+#about-text div:nth-of-type(1) {
+  margin-top: 0;
 }
 
 .loading {
@@ -517,31 +578,6 @@ body.no-scroll-modal {
   color: rgb(52, 52, 52);
 }
 
-#about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  border-radius: 5px;
-}
-
-#about div > div {
-  margin: .5rem 0rem;
-  font-size: 1.1rem;
-}
-
-#about-text {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.1;
-}
-
-#about-text div:nth-of-type(1) {
-  margin-top: 0;
-}
-
 /* CONTACT */
 
 .form {
@@ -552,7 +588,6 @@ body.no-scroll-modal {
   position: relative;
   animation: slide-in-top .5s ease;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .form textarea {
@@ -586,6 +621,15 @@ body.no-scroll-modal {
 }
 
 /* ANIMATIONS */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 @keyframes enter-abt-image-vertical {
   0% {
@@ -702,7 +746,7 @@ body.no-scroll-modal {
 
 @media screen and (max-width: 660px) {
   .main {
-    margin-bottom: 6rem;
+    margin-bottom: 7rem;
   }
 
   .landing-container {
@@ -724,16 +768,11 @@ body.no-scroll-modal {
 
   .project-page {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .project-page > div {
     width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .project-icons {
-    flex-direction: column;
   }
 
   #about div {
@@ -766,7 +805,6 @@ body.no-scroll-modal {
   }
 }
 
-
 @media screen and (max-width: 840px) {
   .footer {
     z-index: 10;
@@ -778,7 +816,7 @@ body.no-scroll-modal {
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     right: 0px;
     top: 5rem;
     z-index: 9;
@@ -814,6 +852,10 @@ body.no-scroll-modal {
     background-color: rgba(65, 73, 94, 0.8);
   }
 
+  .project-icons {
+    flex-direction: column;
+  }
+
   .music-page > div {
     flex-direction: column;
   }
@@ -832,8 +874,11 @@ body.no-scroll-modal {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> 2814ba3d5c0deaf0cc9c65c96fc155d14968eb8d
 @media screen and (max-width: 970px) {
   .project-page.selected {
     flex-direction: column;
@@ -871,7 +916,6 @@ body.no-scroll-modal {
   }
 }
 
->>>>>>> Stashed changes
 /* MEDIA QUERIES FOR LARGER SCREENS */
 
 @media screen and (min-width: 440px) {
@@ -881,12 +925,7 @@ body.no-scroll-modal {
   }
 }
 
-<<<<<<< Updated upstream
-
-@media screen and (min-width: 565px) {
-=======
 @media screen and (min-width: 580px) {
->>>>>>> Stashed changes
   #about {
     width: 580px;
     margin-left: auto;
@@ -901,16 +940,16 @@ body.no-scroll-modal {
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .project-icons {
-    width: 1000px;
+@media screen and (min-width: 1100px) {
+  .projects {
+    width: 1100px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .project-page {
+    width: 1100px;
     margin: 0 auto;
-    width: 1000px;
   }
 }
 
@@ -951,7 +990,7 @@ textarea {
 }
 
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 h1, h3, h4 {
@@ -1004,4 +1043,3 @@ h4 {
   font-size: 1rem;
   line-height: 1.1;
 }
-
