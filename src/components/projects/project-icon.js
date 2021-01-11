@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Img from "gatsby-image";
 
 const ProjectIcon = ({ image, name, handleClick, selected }) => {
   // const [showLabel, setShowLabel] = useState(false);
@@ -23,8 +24,8 @@ const ProjectIcon = ({ image, name, handleClick, selected }) => {
       className={selectedIcon}
     >
       <div>
-        <img
-          src={image}
+        <Img
+          fixed={image}
           id={name}
           alt={`${name}-icon`}
         />

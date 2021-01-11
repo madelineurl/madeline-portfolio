@@ -7,7 +7,8 @@ export { default as FooterIcons } from "./icons/footer-icons";
 export { default as Modal } from "./modal";
 export { default as ContactForm } from "./form";
 
-export { default as ProjectsPage } from "./projects/projects";
+export { default as ProjectTemplate } from "./projects/project-template";
+export { default as ProjectIcon } from "./projects/project-icon";
 export { default as ProjectLinks } from "./projects/project-links";
 
 export { default as Skills } from "./skills";
