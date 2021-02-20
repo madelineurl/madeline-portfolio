@@ -17,7 +17,6 @@ export const query = graphql`
 `;
 
 const About = ({ data }) => {
-  console.log(data)
   return (
  <Layout>
     <SEO title='about me' />
