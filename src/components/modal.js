@@ -6,7 +6,6 @@ import HamburgerMenu from "react-hamburger-menu";
 const Modal = ({ handleClose, show }) => {
   const showHideModal = show ? 'modal show' : 'modal';
 
-
   useEffect(() => {
     if (show) {
       document.body.classList.add('no-scroll-modal');
