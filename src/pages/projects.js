@@ -40,39 +40,41 @@ const Projects = ({ data }) => {
     setSelected(project);
   };
 
-return (
-  <Layout>
-    <SEO title='projects' />
-    <div className='projects'>
-        <div className='project-icons'>
-        <ProjectIcon
-            image={data.xibis.childImageSharp.fixed}
-            name='xibis'
-            labelTitle='Xibis: A Galactic Voyage'
-            handleClick={handleSelected}
-            selected={selected}
-          />
-          <ProjectIcon
-            image={data.shiftpitch.childImageSharp.fixed}
-            name='shiftpitch'
-            labelTitle='Shiftpitch'
-            handleClick={handleSelected}
-            selected={selected}
-          />
-          <ProjectIcon
-            image={data.upperCrust.childImageSharp.fixed}
-            name='upper-crust'
-            labelTitle='Upper-Crust (ecommerce site)'
-            handleClick={handleSelected}
-            selected={selected}
-          />
+  const { xibis, shiftpitch, bread } = projectData;
+
+  return (
+    <Layout>
+      <SEO title='projects' />
+      <div className='projects'>
+          <div className='project-icons'>
+            <ProjectIcon
+              image={data.shiftpitch.childImageSharp.fixed}
+              name='shiftpitch'
+              labelTitle='Shiftpitch'
+              handleClick={handleSelected}
+              selected={selected}
+            />
+            <ProjectIcon
+              image={data.xibis.childImageSharp.fixed}
+              name='xibis'
+              labelTitle='Xibis: A Galactic Voyage'
+              handleClick={handleSelected}
+              selected={selected}
+            />
+            <ProjectIcon
+              image={data.upperCrust.childImageSharp.fixed}
+              name='upper-crust'
+              labelTitle='Upper-Crust (ecommerce site)'
+              handleClick={handleSelected}
+              selected={selected}
+            />
+          </div>
+          <ProjectTemplate projectData={shiftpitch} selected={selected}/>
+          <ProjectTemplate projectData={xibis} selected={selected}/>
+          <ProjectTemplate projectData={bread} selected={selected}/>
         </div>
-        <ProjectTemplate projectData={projectData.shiftpitch} selected={selected}/>
-        <ProjectTemplate projectData={projectData.xibis} selected={selected}/>
-        <ProjectTemplate projectData={projectData.bread} selected={selected}/>
-      </div>
-  </Layout>
-)
+    </Layout>
+  )
 };
 
 export default Projects;

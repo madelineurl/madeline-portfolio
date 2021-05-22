@@ -4,11 +4,11 @@ const Skills = () => (
   <div id='skills'>
     <div>
       <h3>frontend</h3>
-      <div>SASS</div>
       <div>React</div>
       <div>Redux</div>
       <div>Webpack</div>
       <div>CSS3 + HTML5</div>
+      <div>SASS</div>
       <div>responsive design</div>
       <div>Javascript / ES2020</div>
     </div>

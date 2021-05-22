@@ -152,21 +152,17 @@
 
 .burger > div {
   position: absolute;
+  opacity: 0.0;
 }
 
 .navbar {
   display: flex;
   position: absolute;
-  right: 3.75rem;
+  right: 0;
   top: 1.2rem;
   z-index: 6;
   opacity: 1.0;
   transition: opacity .3s linear;
-}
-
-.navbar.hide {
-  transform: translateY(-100%);
-  opacity: 0.0;
 }
 
 .navbar a {
@@ -531,7 +527,7 @@ body.no-scroll-modal {
   margin: .3rem;
 }
 
-#headshot {
+.headshot-container img, #headshot {
   width: 200px;
   height: 200px;
   animation: enter-abt-image .8s ease-in;
@@ -824,6 +820,10 @@ body.no-scroll-modal {
     z-index: 10;
   }
 
+  .burger > div {
+    opacity: 1.0;
+  }
+
   .navbar {
     position: fixed;
     flex-direction: column;
@@ -934,7 +934,7 @@ body.no-scroll-modal {
 }
 
 @media screen and (min-width: 580px) {
-  .modal > section {
+  .modal > section, #about {
     width: 580px;
     margin-left: auto;
     margin-right: auto;
