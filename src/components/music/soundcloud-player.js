@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SoundcloudPlayer = ({ url, title }) => (
+export const SoundcloudPlayer = ({ url, title }) => (
   <div className='soundcloud-player'>
     <iframe
       width="100%"

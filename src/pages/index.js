@@ -8,7 +8,7 @@ const IndexPage = () => (
     <Particles />
       <div className='landing-container flex'>
         <div>
-          <Link to="/projects/">
+          <Link to="/music/">
             <h1 id='landing-link'>
               madeline
             </h1>

@@ -54,7 +54,7 @@ const Projects = ({ data }) => {
               handleClick={handleSelected}
               selected={selected}
             />
-            <ProjectIcon
+            {/* <ProjectIcon
               image={data.xibis.childImageSharp.fixed}
               name='xibis'
               labelTitle='Xibis: A Galactic Voyage'
@@ -67,7 +67,7 @@ const Projects = ({ data }) => {
               labelTitle='Upper-Crust (ecommerce site)'
               handleClick={handleSelected}
               selected={selected}
-            />
+            /> */}
           </div>
           <ProjectTemplate projectData={shiftpitch} selected={selected}/>
           <ProjectTemplate projectData={xibis} selected={selected}/>

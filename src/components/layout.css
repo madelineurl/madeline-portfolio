@@ -530,7 +530,7 @@ body.no-scroll-modal {
 .headshot-container img, #headshot {
   width: 200px;
   height: 200px;
-  animation: enter-abt-image .8s ease-in;
+  animation: enter-abt-image-vertical .8s ease-in;
 }
 
 .info {

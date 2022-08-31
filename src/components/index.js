@@ -11,7 +11,8 @@ export { default as ProjectTemplate } from "./projects/project-template";
 export { default as ProjectIcon } from "./projects/project-icon";
 export { default as ProjectLinks } from "./projects/project-links";
 
-export { default as Skills } from "./skills";
 export { default as SoundcloudPlayer } from "./music/soundcloud-player";
 export { default as MusicPage } from "./music/music";
+export { default as MixesPage } from "./mixes";
+
 export { default as MusicBlurb } from "./music/music-blurb";
