@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import { FooterIcons, Navbar } from '.';
+import { Navbar } from '.';
+import contact from "./icons/mail.webp";
 import "./layout.css";
 
 const Layout = ({ children }) => (
@@ -15,9 +16,13 @@ const Layout = ({ children }) => (
       <Navbar />
     </div>
     <main className='main flex'>{children}</main>
-    <footer className='footer'>
-      <FooterIcons />
-    </footer>
+    <Link to='/contact/' className="flex">
+      <img
+        src={contact}
+        alt="contact"
+        id='mail-icon'
+      />
+    </Link>
   </>
 );
 

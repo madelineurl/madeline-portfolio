@@ -564,6 +564,18 @@ body.no-scroll-modal {
   margin-top: 0;
 }
 
+#mail-icon {
+  position: fixed;
+  bottom: 5vh;
+  right: 3vh;
+  height: 55px;
+  width: 55px;
+}
+
+#mail-icon:hover {
+  transform: scale(1.1);
+}
+
 .loading {
   flex-direction: column;
   position: relative;

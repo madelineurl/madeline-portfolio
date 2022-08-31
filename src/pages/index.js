@@ -2,13 +2,16 @@ import React from "react";
 import { Link } from "gatsby";
 import { SEO, FooterIcons, Particles } from "../components";
 
+// TO-DO: Add links to bandcamp, soundcloud, resident advisor
+// Upcoming gigs?
+
 const IndexPage = () => (
   <>
     <SEO title="home" />
     <Particles />
       <div className='landing-container flex'>
         <div>
-          <Link to="/music/">
+          <Link to="/mixes/">
             <h1 id='landing-link'>
               madeline
             </h1>

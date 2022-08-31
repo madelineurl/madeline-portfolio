@@ -1,9 +1,9 @@
 {
   "name": "madeline-portfolio",
   "private": true,
-  "description": "A simple portfolio website for Chicago-based software engineer madeline (url)",
+  "description": "Portfolio website for Chicago-based DJ, radio host, and software engineer madeline",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Madeline Higgins <url.madeline@gmail.com>",
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "animejs": "^3.2.1",
