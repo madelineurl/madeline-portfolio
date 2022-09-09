@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SocialIcon = ({ url, image }) => (
+const SocialIcon = ({ url, image, id }) => (
   <a
     href={url}
     target="_blank"
@@ -10,6 +10,7 @@ const SocialIcon = ({ url, image }) => (
   >
     <img
       src={image}
+      id={id ?? null}
       alt='social media icon'
       className='footer-icon'
     />

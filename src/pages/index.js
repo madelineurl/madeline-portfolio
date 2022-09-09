@@ -4,6 +4,7 @@ import { SEO, FooterIcons, Particles } from "../components";
 
 // TO-DO: Add links to bandcamp, soundcloud, resident advisor
 // Upcoming gigs?
+// Add Synth Hack, shiftpitch to site?
 
 const IndexPage = () => (
   <>
