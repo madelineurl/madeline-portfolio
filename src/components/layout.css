@@ -159,7 +159,7 @@
 .navbar a {
   padding: 1rem;
   height: 5%;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px;
   text-decoration: none;
   text-transform: uppercase;
   font-family: var(--header-font);
@@ -848,7 +848,8 @@ body.no-scroll-modal {
     top: 5rem;
     z-index: 9;
     background-color: rgba(157, 166, 187, 0.9);
-    transition: transform .3s ease;
+    /* transition: transform .3s ease; */
+    animation: enter-vertical .3s ease;
   }
 
   .navbar.hide {

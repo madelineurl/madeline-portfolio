@@ -35,5 +35,11 @@ module.exports = {
         icon: `src/images/periwinkle.jpg`,
       },
     },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -100
+      }
+    }
   ],
 };

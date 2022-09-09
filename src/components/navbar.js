@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "gatsby";
-// import HamburgerMenu from "react-hamburger-menu";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -14,19 +13,15 @@ const Navbar = () => {
     }
   }, [open]);
 
-  const handleHover = () => {
-    setOpen(!open);
-  };
-
   return (
     <div className="header-container">
-      <h1 id='madeline' onMouseOver={handleHover}>madeline</h1>
-      <div className={showNav}>
-        <Link to='/mixes/' >mixes</Link>
-        <Link to='/music/' >production</Link>
-        <Link to='/about/' >about</Link>
-        {/* <Link to='/music/' >production</Link> */}
-        {/* <Link to='/skills/' >skills</Link> */}
+      <h1 id='madeline' onClick={() => setOpen(!open)} onMouseOver={() => setOpen(true)}>madeline</h1>
+      <div className={showNav} onMouseLeave={() => setOpen(false)}>
+        <AnchorLink to='/mixes/' title="DJ Mixes">mixes</AnchorLink>
+        <AnchorLink to='/music/' title="Produced Music">production</AnchorLink>
+        <AnchorLink to='/about/' title="about">about</AnchorLink>
+        {/* <AnchorLink to='/music/' >production</AnchorLink> */}
+        {/* <AnchorLink to='/skills/' >skills</AnchorLink> */}
       </div>
     </div>
   );
