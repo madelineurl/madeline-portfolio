@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "../components";
 import { LandingNav } from '../components';
-import { IKImage, IKContext } from 'imagekitio-react'
+// import { IKImage, IKContext } from 'imagekitio-react'
 
 const IndexPage = () => {
   return (
