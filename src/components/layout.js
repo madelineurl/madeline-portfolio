@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import { Navbar } from '.';
 import SocialIcons from "./footer-icons";
 import "./layout.css";
 
@@ -18,7 +16,7 @@ const Layout = ({ children }) => (
     } */}
     {children}
     </main>
-    <Link to='/contact/' className="flex"></Link>
+    {/* <Link to='/contact/' className="flex"></Link> */}
   </>
 );
 
