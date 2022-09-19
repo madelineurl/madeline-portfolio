@@ -1,29 +1,21 @@
 import React from "react";
-import { Link } from "gatsby";
-import { SEO, FooterIcons, Particles } from "../components";
+import { Layout } from "../components";
+import { LandingNav } from '../components';
+import { IKImage, IKContext } from 'imagekitio-react'
 
-// TO-DO: Add links to bandcamp, soundcloud, resident advisor
-// Upcoming gigs?
-// Add Synth Hack, shiftpitch to site?
-
-const IndexPage = () => (
-  <>
-    <SEO title="home" />
-    <Particles />
-      <div className='landing-container flex'>
-        <div>
-          <Link to="/mixes/">
-            <h1 id='landing-link'>
-              madeline
-            </h1>
-          </Link>
-          <h1 id='landing-header'>url</h1>
+const IndexPage = () => {
+  return (
+   <Layout>
+      {/* <IKContext urlEndpoint="https://ik.imagekit.io/https://ik.imagekit.io/vpvecpntw">
+        <IKImage path="/default-image.jpg" />
+      </IKContext> */}
+      <div id="landing">
+        <div className='header-main'>
+          <LandingNav />
         </div>
       </div>
-    <footer style={{ background: `transparent` }} className='footer'>
-      <FooterIcons />
-    </footer>
-  </>
-);
+   </Layout>
+  )
+};
 
 export default IndexPage;

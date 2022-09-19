@@ -2,26 +2,22 @@ import React from "react";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import { Navbar } from '.';
-import contact from "./icons/mail.webp";
-import FooterIcons from "./footer-icons";
+import SocialIcons from "./footer-icons";
 import "./layout.css";
 
 const Layout = ({ children }) => (
   <>
-    <div className='header-main'>
-      <header>
-      </header>
-      <Navbar />
-    </div>
-    <main className='main flex'>{children}</main>
-    <Link to='/contact/' className="flex">
-      <FooterIcons />
-      {/* <img
-        src={contact}
-        alt="contact"
-        id='mail-icon'
-      /> */}
-    </Link>
+    <header>
+      <SocialIcons />
+      { window.location.pathname !== '/' && <Navbar /> }
+    </header>
+    <main id="main">
+    {
+      window.location.pathname === '/' ?
+        children : <div className="container flex">{children}</div>
+    }
+    </main>
+    <Link to='/contact/' className="flex"></Link>
   </>
 );
 
