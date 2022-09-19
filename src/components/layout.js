@@ -9,13 +9,14 @@ const Layout = ({ children }) => (
   <>
     <header>
       <SocialIcons />
-      { window.location.pathname !== '/' && <Navbar /> }
+      {/* { window.location.pathname !== '/' && <Navbar /> } */}
     </header>
     <main id="main">
-    {
+    {/* {
       window.location.pathname === '/' ?
         children : <div className="container flex">{children}</div>
-    }
+    } */}
+    {children}
     </main>
     <Link to='/contact/' className="flex"></Link>
   </>
