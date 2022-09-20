@@ -4,7 +4,7 @@ import { LandingNav } from '../components';
 
 const IndexPage = () => {
   return (
-   <Layout pageTitle="landing">
+   <Layout pageTitle="home">
       <div id="landing">
         <div className='header-main'>
           <LandingNav />

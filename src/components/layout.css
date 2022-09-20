@@ -87,15 +87,16 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  text-transform: uppercase;
-  font-size: .75rem;
-  box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.3);
+  color: black;
   background: radial-gradient( rgb(255, 255, 255), rgb(221, 223, 230));
+}
+
+.enlarge {
+  transition: transform 0.3s ease-in-out;
 }
 
 .enlarge:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
 }
 
 #back-home {
@@ -542,14 +543,14 @@ h4.flex {
 
 }
 
-@media screen and (min-width: 670px) {
+@media screen and (min-width: 640px) {
   #icons-container {
     left: 1rem;
     justify-content: flex-start;
   }
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 640px) {
   .header-main {
     width: 100%;
     left: 0;
@@ -657,6 +658,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
   background: linear-gradient(rgb(12, 11, 21), rgb(20, 18, 43));
+  background-size: cover;
   font-family: inherit;
   font-weight: normal;
   /* word-wrap: break-word; */
