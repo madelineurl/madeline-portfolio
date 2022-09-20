@@ -64,6 +64,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `theme-color`,
           content: `#000000`
+        },
+        {
+          name: `viewport`,
+          content: `width=device-width, initial-scale=1.0, viewport-fit=cover`
         }
       ].concat(meta)}
     />
