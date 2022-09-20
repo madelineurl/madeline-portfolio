@@ -1,10 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SocialIcons from "./footer-icons";
+import { SEO } from '../components';
 import "./layout.css";
 
-const Layout = ({ children }) => (
+const seoMetadata = {
+  contact: {
+    description: ''
+  },
+  landing: {
+    description: ''
+  },
+  success: {
+    description: ''
+  },
+  404: {
+    description: ''
+  }
+}
+
+const Layout = ({ children, pageTitle }) => (
   <>
+    <SEO
+      title={pageTitle}
+      description={seoMetadata[pageTitle].description} />
     <header>
       <SocialIcons />
       {/* { window.location.pathname !== '/' && <Navbar /> } */}

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
 
 // const NavbarLink = ({name}) => (
 //   <Link
@@ -10,12 +10,12 @@ import { Link } from "gatsby";
 //   </Link>
 // )
 
-const Navbar = ({ navbarClass = 'navbar top', onMouseLeave = null }) => (
-    <area className={navbarClass} onMouseLeave={onMouseLeave}>
+const Navbar = ({ navbarClass = 'navbar top' }) => (
+    <div className={navbarClass}>
         {/* <NavbarLink name="mixes"/>
         <NavbarLink name="music"/>
         <NavbarLink name="gigs"/> */}
-    </area>
+    </div>
 );
 
 export default Navbar;

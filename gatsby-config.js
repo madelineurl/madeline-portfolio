@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `madeline higgins`,
-    description: `Portfolio site for Chicago-based software engineer, DJ, and producer Madeline Higgins.`,
+    title: `Madeline`,
+    description: `Portfolio site for Chicago-based DJ / producer Madeline`,
     author: `madeline higgins`,
   },
   plugins: [
@@ -34,12 +34,6 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/assets/images/periwinkle.png`,
       },
-    },
-    {
-      resolve: "gatsby-plugin-anchor-links",
-      options: {
-        offset: -100
-      }
     }
   ],
 };

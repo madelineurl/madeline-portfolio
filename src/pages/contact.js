@@ -1,9 +1,8 @@
 import React from "react";
-import { Layout, SEO, ContactForm } from "../components";
+import { Layout, ContactForm } from "../components";
 
 const Contact = () => (
-    <Layout>
-      <SEO title="contact" />
+    <Layout pageTitle="contact" >
       <ContactForm />
     </Layout>
 );
