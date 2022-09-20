@@ -53,7 +53,7 @@
 }
 
 .container {
-  padding-top: 12%;
+  padding-top: 12vh;
   height: 100%;
   width: 100%;
   flex-direction: column;
@@ -79,13 +79,17 @@
   text-transform: uppercase;
   font-size: .75rem;
   box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s ease;
   background: radial-gradient( rgb(255, 255, 255), rgb(221, 223, 230));
 }
 
-.btn:hover {
-  /* background: var(--true-periwinkle); */
-  transform: scale(1.1)
+.enlarge:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#lost {
+  color: rgb(123, 109, 250);
+  text-decoration: underline;
 }
 
 .btn:focus {
@@ -203,10 +207,6 @@
   height: 40px;
   margin: 0 .3rem;
   transition: transform 0.2s ease-in-out;
-}
-
-.footer-icon:hover {
-  transform: scale(1.1);
 }
 
 #github {
@@ -365,7 +365,7 @@ h4.flex {
   border-radius: 5px;
 }
 
-#mail-icon {
+/* #mail-icon {
   position: fixed;
   bottom: 5vh;
   right: 3vh;
@@ -375,7 +375,7 @@ h4.flex {
 
 #mail-icon:hover {
   transform: scale(1.1);
-}
+} */
 
 .loading {
   flex-direction: column;
