@@ -15,7 +15,7 @@ const SocialIcons = () => {
           <img
             src={contact}
             alt="contact"
-            className='footer-icon'
+            className='footer-icon enlarge'
           />
         </Link>
         <Icon

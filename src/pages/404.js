@@ -1,21 +1,12 @@
 import React from "react";
-import { Link } from "gatsby";
-import { Layout } from "../components";
+import { Layout, BackToHomeLink } from "../components";
 
 const NotFoundPage = () => (
   <Layout pageTitle="404">
-    <div style={{
-      display: `flex`,
-      flexDirection: 'column',
-      justifyContent: `center`,
-      fontFamily: `Questrial`
-    }}>
-      <h1>Oops!</h1>
-      <p style={{ fontFamily: `inherit` }}>My portfolio hasn't reached this corner of the Internet yet</p>
-      <Link to='home' className='link'>
-        Home
-      </Link >
-    </div>
+    <p id="not-found" className="flex">
+     You've lost your way
+    </p>
+   <BackToHomeLink />
   </Layout>
 );
 
