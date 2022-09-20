@@ -61,6 +61,10 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `theme-color`,
+          content: `#243b55`
+        }
       ].concat(meta)}
     />
   );
