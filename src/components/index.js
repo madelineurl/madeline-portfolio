@@ -5,3 +5,4 @@ export { default as LandingNav } from './landing-nav';
 export { default as SocialIcons } from "./footer-icons";
 export { default as ContactForm } from "./form";
 export { default as SoundcloudPlayer } from "./soundcloud-player";
+export { default as BackToHomeLink } from "./back-home";

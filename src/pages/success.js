@@ -1,12 +1,11 @@
 import React from "react";
-import { Layout } from "../components";
-import { Link } from 'gatsby';
+import { Layout, BackToHomeLink } from "../components";
 
 const Success = () => (
   <Layout pageTitle="success">
     <div id="success">
-      <span>Thanks for the message.</span>
-      <Link to="/">Back to home</Link>
+      <p>Thanks for the message</p>
+      <BackToHomeLink />
     </div>
   </Layout>
 );

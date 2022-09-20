@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import SocialIcons from "./footer-icons";
-import { SEO } from '../components';
+import { SEO, Navbar } from '../components';
+import { useLocation } from '@reach/router';
 import "./layout.css";
 
 const seoMetadata = {
@@ -19,25 +20,28 @@ const seoMetadata = {
   }
 }
 
-const Layout = ({ children, pageTitle }) => (
-  <>
-    <SEO
-      title={pageTitle}
-      description={seoMetadata[pageTitle].description} />
-    <header>
-      <SocialIcons />
-      {/* { window.location.pathname !== '/' && <Navbar /> } */}
-    </header>
-    <main id="main">
-    {/* {
-      window.location.pathname === '/' ?
-        children : <div className="container flex">{children}</div>
-    } */}
-    {children}
-    </main>
-    {/* <Link to='/contact/' className="flex"></Link> */}
-  </>
-);
+const Layout = ({ children, pageTitle }) => {
+  const { pathname } = useLocation();
+  const isLandingPage = pathname === '/';
+
+  return (
+    <>
+      <SEO
+        title={pageTitle}
+        description={seoMetadata[pageTitle].description} />
+      <header>
+        <SocialIcons />
+        { !isLandingPage && <Navbar /> }
+      </header>
+      <main id="main">
+      {
+        isLandingPage ? children : <div className="container flex">{children}</div>
+      }
+      </main>
+      {/* <Link to='/contact/' className="flex"></Link> */}
+    </>
+  )
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

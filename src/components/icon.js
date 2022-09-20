@@ -12,7 +12,7 @@ const SocialIcon = ({ url, image, id }) => (
       src={image}
       id={id ?? null}
       alt='social media icon'
-      className='footer-icon'
+      className='footer-icon enlarge'
     />
   </a>
 );
