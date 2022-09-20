@@ -9,7 +9,7 @@ const seoMetadata = {
   contact: {
     description: ''
   },
-  landing: {
+  home: {
     description: ''
   },
   success: {
@@ -28,7 +28,7 @@ const Layout = ({ children, pageTitle }) => {
     <>
       <SEO
         title={pageTitle}
-        description={seoMetadata[pageTitle].description} />
+        description={seoMetadata[pageTitle].description ?? ''} />
       <header>
         <SocialIcons />
         { !isLandingPage && <Navbar /> }
