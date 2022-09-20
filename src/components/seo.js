@@ -63,7 +63,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `theme-color`,
-          content: `#243b55`
+          content: `#000000`
         }
       ].concat(meta)}
     />
