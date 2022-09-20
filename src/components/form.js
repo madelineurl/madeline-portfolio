@@ -97,7 +97,7 @@ const ContactForm = () => {
           <button
             type='submit'
             name='submit-button'
-            className='btn enlarge'
+            className='btn enlarge flex'
             disabled={disabled}
           >
             send
