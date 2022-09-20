@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import { SEO, Layout } from "../components";
+import { Layout } from "../components";
 
 const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404"/>
+  <Layout pageTitle="404">
     <div style={{
       display: `flex`,
       flexDirection: 'column',

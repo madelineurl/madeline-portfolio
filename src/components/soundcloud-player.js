@@ -1,16 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ReactAudioPlayer from 'react-audio-player';
 
 export const SoundcloudPlayer = ({ url, title }) => {
-  return (
-    <ReactAudioPlayer
-      src={url}
-      controls
-      className="audio-player"
-      id="audio"
-    />
-  )
+  return null
+    // <ReactAudioPlayer
+    //   src={url}
+    //   controls
+    //   className="audio-player"
+    //   id="audio"
+    // />
+  //)
 };
 
 SoundcloudPlayer.propTypes = {
