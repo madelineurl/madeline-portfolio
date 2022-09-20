@@ -18,11 +18,6 @@ const SocialIcons = () => {
             className='footer-icon enlarge'
           />
         </Link>
-        <Icon
-            url='https://www.instagram.com/soft.content'
-            image={instagram}
-            id="instagram"
-          />
          <Icon
             url='https://open.spotify.com/artist/2eMwoPf6uvrCLcKEmrfmel'
             image={spotify}
@@ -40,6 +35,11 @@ const SocialIcons = () => {
             url='https://ra.co/madelinechi'
             image={ra}
             id="ra"
+          />
+          <Icon
+            url='https://www.instagram.com/soft.content'
+            image={instagram}
+            id="instagram"
           />
     </div>
   );
