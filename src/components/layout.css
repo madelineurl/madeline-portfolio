@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?JetBrains+Mono=Oswald&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?JetBrains+Mono=Oswald&display=swap'); */
 
 /* VARIABLES */
 
@@ -215,7 +215,7 @@
   width: 100%;
 }
 
-.footer-icon {
+.icon {
   width: 40px;
   height: 40px;
   margin: 0 .3rem;
@@ -274,27 +274,6 @@
   height: 100%;
   width: 100%;
   flex-direction: column;
-}
-
-.music-blurb {
-  position: relative;
-  width: 100%;
-  font-family: var(--primary-font);
-  font-size: 1rem;
-  text-align: left;
-  color: rgb(65, 73, 94);
-  border-radius: 8px;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.music-blurb div {
-  margin: .5rem;
-}
-
-.music-blurb > h3 {
-  margin-top: .75rem;
-  margin-bottom: .5rem;
 }
 
 h4.flex {
@@ -377,18 +356,6 @@ h4.flex {
   width: 100%;
   border-radius: 5px;
 }
-
-/* #mail-icon {
-  position: fixed;
-  bottom: 5vh;
-  right: 3vh;
-  height: 55px;
-  width: 55px;
-}
-
-#mail-icon:hover {
-  transform: scale(1.1);
-} */
 
 .loading {
   flex-direction: column;
@@ -515,15 +482,6 @@ h4.flex {
 /* MEDIA QUERIES FOR SMALLER SCREENS / MOBILE */
 
 @media only screen and (max-width: 480px) {
-  .headshot-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #headshot {
-    animation: enter-vertical .5s ease;
-  }
-
   .info {
     animation: enter-abt-title-vertical .5s ease;
   }
@@ -557,14 +515,13 @@ h4.flex {
     left: 0;
   }
 
-  img.footer-icon {
+  img.icon {
     height: 50px;
     width: 50px;
   }
 }
 
 @media screen and (max-width: 660px) {
-
   .footer {
     height: 4rem;
   }
@@ -572,20 +529,11 @@ h4.flex {
   .header-main {
     margin-bottom: 1.5rem;
   }
-
-  .venues a {
-    height: 70px;
-    width: 50%;
-  }
 }
 
 @media screen and (max-width: 840px) {
   .footer {
     z-index: 10;
-  }
-
-  .burger > div {
-    opacity: 1.0;
   }
 
   .navbar {

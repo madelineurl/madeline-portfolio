@@ -12,7 +12,7 @@ export const Icon = ({ url, image, id }) => (
       src={image}
       id={id ?? null}
       alt='social media icon'
-      className='footer-icon enlarge'
+      className='icon enlarge'
     />
   </a>
 );
