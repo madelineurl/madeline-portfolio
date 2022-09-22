@@ -1,5 +1,5 @@
-import React from "react";
-// import { Link } from "gatsby";
+import React from 'react';
+// import { Link } from 'gatsby';
 
 // const NavbarLink = ({name}) => (
 //   <Link
@@ -12,9 +12,9 @@ import React from "react";
 
 const Navbar = ({ navbarClass = 'navbar top' }) => (
     <div className={navbarClass}>
-        {/* <NavbarLink name="mixes"/>
-        <NavbarLink name="music"/>
-        <NavbarLink name="gigs"/> */}
+        {/* <NavbarLink name='mixes'/>
+        <NavbarLink name='music'/>
+        <NavbarLink name='gigs'/> */}
     </div>
 );
 

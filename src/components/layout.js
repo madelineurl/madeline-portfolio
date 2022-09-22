@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import SocialIcons from "./footer-icons";
+import React from 'react';
+import PropTypes from 'prop-types';
+import SocialIcons from './social-media-icons';
 import { SEO, Navbar } from '../components';
 import { useLocation } from '@reach/router';
-import "./layout.css";
+import './layout.css';
 
 const seoMetadata = {
   contact: {
@@ -33,12 +33,12 @@ const Layout = ({ children, pageTitle }) => {
         <SocialIcons />
         { !isLandingPage && <Navbar /> }
       </header>
-      <main id="main">
+      <main id='main'>
       {
-        isLandingPage ? children : <div className="container flex">{children}</div>
+        isLandingPage ? children : <div className='container flex'>{children}</div>
       }
       </main>
-      {/* <Link to='/contact/' className="flex"></Link> */}
+      {/* <Link to='/contact/' className='flex'></Link> */}
     </>
   )
 };
