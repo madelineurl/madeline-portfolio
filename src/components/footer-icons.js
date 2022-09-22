@@ -32,7 +32,7 @@ const SocialIcons = () => {
           image={soundcloud}
         />
          <Icon
-            url='https://ra.co/madelinechi'
+            url='https://ra.co/dj/madelinechi'
             image={ra}
             id="ra"
           />
