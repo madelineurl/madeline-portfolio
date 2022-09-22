@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Madeline Higgins <url.madeline@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.32.13",
+    "gatsby": "^3.0.0",
     "gatsby-background-image": "^1.6.0",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-manifest": "^2.12.1",
@@ -13,7 +13,7 @@
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-plugin-smoothscroll": "^1.2.0",
-    "gatsby-remark-embed-video": "^3.0.10",
+    "gatsby-remark-embed-video": "^3.2.1",
     "gatsby-source-filesystem": "^2.11.1",
     "gatsby-transformer-sharp": "^2.12.1",
     "prop-types": "^15.8.1",
