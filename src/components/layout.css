@@ -39,11 +39,22 @@
   /* padding-top: 5rem; */
 }
 
+a {
+  text-decoration: none;
+}
+
 #bio {
   position: relative;
   top: 100vh;
   color:white;
-  height: 100vh
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  /* text-indent: 10px; */
 }
 
 .footer {
