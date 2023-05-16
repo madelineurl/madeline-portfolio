@@ -147,7 +147,12 @@
   font-size: 3.5rem;
   font-weight: 400;
   color: var(--primary-text-color);
+  cursor: pointer;
 }
+
+ #madeline:hover {
+  text-decoration: underline;
+ }
 
 /* NAVBAR */
 
