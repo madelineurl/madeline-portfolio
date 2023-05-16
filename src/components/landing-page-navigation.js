@@ -5,7 +5,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 const LandingPageNavigation = () => {
   return (
     <div id="landing-image">
-      <AnchorLink to="/#bio">
+      <AnchorLink to="/#bio" title="Read Madeline's Bio">
       <div>
         <h1
           id='madeline'>
