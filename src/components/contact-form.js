@@ -51,7 +51,7 @@ const ContactForm = () => {
         className='form'
         onSubmit={handleSubmit}
       >
-        <div className={warningClass}>please fill out all fields</div>
+        <div className={warningClass}>Please fill out all fields</div>
         <input
           type='hidden'
           name='form-name'
@@ -90,7 +90,7 @@ const ContactForm = () => {
             className='btn enlarge flex'
             disabled={disabled}
           >
-            send
+            Send
           </button>
         </div>
     </form>
