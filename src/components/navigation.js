@@ -5,19 +5,16 @@ const Navigation = () => {
   return (
       <div id="navigation">
         <AnchorLink to='/#press'>
-          <h3 class=".navlink">Press</h3>
+          <h3>Press</h3>
         </AnchorLink>
         <AnchorLink to='/#music'>
           <h3>Music</h3>
         </AnchorLink>
-        <AnchorLink to='/#mixes'>
-          <h3>Mixes</h3>
-        </AnchorLink>
         <AnchorLink to='/#about'>
-        <h3>About</h3>    
+          <h3>About</h3>    
         </AnchorLink>
         <AnchorLink to='/#contact'>
-        <h3>Contact</h3>    
+          <h3>Contact</h3>    
         </AnchorLink>
       </div>
   );

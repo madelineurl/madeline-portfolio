@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layout } from '../components';
 
-const Success = () => (
+const Press = () => (
   <Layout pageTitle='press'>
     <div id='press'>
       <a href="">Eight emerging artists you need to know: DJ Mag December 2023</a>
@@ -11,4 +11,4 @@ const Success = () => (
   </Layout>
 );
 
-export default Success;
+export default Press;
