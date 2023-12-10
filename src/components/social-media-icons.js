@@ -7,17 +7,18 @@ import soundcloud from '../assets/icons/svg/soundcloud.svg'
 import ra from '../assets/icons/svg/ra.svg';
 import spotify from '../assets/icons/svg/spotify.svg';
 import instagram from '../assets/icons/svg/instagram.svg';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const SocialMediaIcons = () => {
   return (
     <div id='icons-container' className='flex'>
-       <Link to='/contact/' className='flex'>
+       <AnchorLink to='/#contact' className='flex'>
           <img
             src={contact}
             alt='contact'
             className='icon enlarge'
           />
-        </Link>
+        </AnchorLink>
          <Icon
             url='https://open.spotify.com/artist/2eMwoPf6uvrCLcKEmrfmel'
             image={spotify}
