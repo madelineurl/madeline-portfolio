@@ -1,21 +1,26 @@
 import React from 'react';
-import caretDown from '../assets/icons/svg/caret_down.svg'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
-const LandingPageNavigation = () => {
+const Navigation = () => {
   return (
-    <div id="landing-image">
-      <AnchorLink to="/#bio" title="Read Madeline's Bio">
-      <div>
-        <h1
-          id='madeline'>
-            madeline
-        </h1>
-        <img id="caret" src={caretDown} alt="down arrow to view the bio below the fold"/>
+      <div id="navigation">
+        <AnchorLink to='/#press'>
+          <h3 class=".navlink">Press</h3>
+        </AnchorLink>
+        <AnchorLink to='/#music'>
+          <h3>Music</h3>
+        </AnchorLink>
+        <AnchorLink to='/#mixes'>
+          <h3>Mixes</h3>
+        </AnchorLink>
+        <AnchorLink to='/#about'>
+        <h3>About</h3>    
+        </AnchorLink>
+        <AnchorLink to='/#contact'>
+        <h3>Contact</h3>    
+        </AnchorLink>
       </div>
-      </AnchorLink>
-    </div>
   );
 };
 
-export default LandingPageNavigation;
+export default Navigation;
