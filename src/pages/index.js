@@ -15,3 +15,12 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export function Head() {
+  return (
+    <>
+      <html lang="en" />
+      <title>Madeline</title>
+    </>
+  )
+}

@@ -1,11 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `Madeline`,
-    description: `Portfolio site for Chicago-based DJ / producer Madeline`,
-    author: `madeline higgins`,
+    title: 'Madeline',
+    description: 'Portfolio site for Chicago-based DJ / producer Madeline',
+    author: 'madeline higgins',
+    siteUrl: 'https://madelineurl.online'
   },
   plugins: [
-    'react-helmet',
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

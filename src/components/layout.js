@@ -1,24 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SocialIcons from './social-media-icons';
-import { SEO, Navbar } from '../components';
+import { Navbar } from '../components';
 import { useLocation } from '@reach/router';
 import './layout.css';
 
-const seoMetadata = {
-  contact: {
-    description: ''
-  },
-  home: {
-    description: ''
-  },
-  success: {
-    description: ''
-  },
-  404: {
-    description: ''
-  }
-}
 
 const Layout = ({ children, pageTitle }) => {
   const { pathname } = useLocation();
@@ -26,9 +12,6 @@ const Layout = ({ children, pageTitle }) => {
 
   return (
     <>
-      <SEO
-        title={pageTitle}
-        description={seoMetadata[pageTitle].description ?? ''} />
       <header>
         <SocialIcons />
         { !isLandingPage && <Navbar /> }
