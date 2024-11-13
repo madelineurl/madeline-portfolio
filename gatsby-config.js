@@ -5,10 +5,7 @@ module.exports = {
     author: `madeline higgins`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-smoothscroll`,
+    'react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
