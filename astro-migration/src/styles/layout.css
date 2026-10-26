@@ -125,24 +125,18 @@ a:visited {
 
 /* ICONS */
 
-#icons-container {
+/* #icons-container {
   position: fixed;
   top: 1rem;
   display: flex;
   align-items: center;
   width: 100%;
-}
+} */
 
-.icon {
-  width: 40px;
-  height: 40px;
-  margin: 0 .3rem;
-  transition: transform 0.2s ease-in-out;
-}
 
-#github {
+/* #github {
   width: 60px;
-}
+} */
 
 .selected-icon.flex {
   background-color: var(--true-periwinkle);

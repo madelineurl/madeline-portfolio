@@ -1,0 +1,54 @@
+---
+
+import ExternalLink  from './ExternalLink.astro';
+import Contact from './icons/mail-backup.svg';
+import Bandcamp from '../components/icons/bandcamp.svg';
+import Soundcloud from '../components/icons/soundcloud.svg'
+import ResidentAdvisor from '../components/icons/ra.svg';
+import Spotify from '../components/icons/spotify.svg';
+import Instagram from '../components/icons/instagram.svg';
+
+---
+
+    <div id='icons-container' class='flex'>
+          <Contact class='icon enlarge' />
+          <ExternalLink url="https://open.spotify.com/artist/2eMwoPf6uvrCLcKEmrfmel"> 
+              <Spotify />
+          </ExternalLink>
+           <ExternalLink url="https://madelineurl.bandcamp.com/releases"> 
+              <Bandcamp />
+          </ExternalLink>
+           <ExternalLink url="https://soundcloud.com/madeline-url"> 
+              <Soundcloud />
+          </ExternalLink>
+           <ExternalLink url="https://ra.co/dj/madelinechi"> 
+              <ResidentAdvisor />
+          </ExternalLink>
+          <ExternalLink url="https://www.instagram.com/soft.content"> 
+              <Instagram />
+          </ExternalLink>
+
+    </div>
+<div>
+
+<style>
+  #icons-container {
+  position: fixed;
+  top: 1rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 .3rem;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  #github {
+  width: 60px;
+}
+
+  </style>
