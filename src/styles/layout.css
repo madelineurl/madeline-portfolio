@@ -60,16 +60,7 @@ textarea {
   box-sizing: border-box;
 }
 
-#main {
-  box-sizing: border-box;
-  font-family: var(--primary-font);
-  overscroll-behavior: none;
-  height: 100vh;
-  background: url('https://ik.imagekit.io/vpvecpntw/artist-photo.jpg');
-  background-size: cover;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-  /* padding-top: 5rem; */
-}
+
 
 a {
   text-decoration: none;
@@ -125,18 +116,7 @@ a:visited {
 
 /* ICONS */
 
-/* #icons-container {
-  position: fixed;
-  top: 1rem;
-  display: flex;
-  align-items: center;
-  width: 100%;
-} */
 
-
-/* #github {
-  width: 60px;
-} */
 
 .selected-icon.flex {
   background-color: var(--true-periwinkle);
@@ -333,13 +313,6 @@ a:visited {
   background: radial-gradient( rgb(255, 255, 255), rgb(221, 223, 230));
 }
 
-.enlarge {
-  transition: transform 0.3s ease-in-out;
-}
-
-.enlarge:hover {
-  transform: scale(1.1);
-}
 
 #back-home {
   color: rgb(123, 109, 250);

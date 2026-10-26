@@ -5,11 +5,23 @@ import background from '../assets/background.svg';
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
-		<span>MADELINE</span>
+		<h1 id='madeline'>
+          madeline
+      </h1>
 	</main>
 </div>
 
 <style>
+	main {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  overscroll-behavior: none;
+  height: 100vh;
+  background: url('https://ik.imagekit.io/vpvecpntw/artist-photo.jpg');
+  background-size: cover;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  /* padding-top: 5rem; */
+}
 	#background {
 		position: fixed;
 		top: 0;
