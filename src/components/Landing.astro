@@ -1,9 +1,10 @@
 ---
-import background from '../assets/background.svg';
+
+import artistPhoto from '../assets/images/madeline_artist_2026.jpg';
 ---
 
 <div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
+	<img id="background" src={artistPhoto.src} alt="" fetchpriority="high" />
 	<main>
 		<h1 id='madeline'>
           madeline
@@ -17,12 +18,14 @@ import background from '../assets/background.svg';
   font-family: var(--primary-font);
   overscroll-behavior: none;
   height: 100vh;
-  background: url('https://ik.imagekit.io/vpvecpntw/artist-photo.jpg');
-  background-size: cover;
+  /* background: url('https://ik.imagekit.io/vpvecpntw/artist-photo.jpg'); */
+  /* background-size: cover; */
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-  /* padding-top: 5rem; */
-}
+ padding-top: 5rem;
+	}
+ 
 	#background {
+		background-size: cover;
 		position: fixed;
 		top: 0;
 		left: 0;
