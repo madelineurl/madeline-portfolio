@@ -60,7 +60,16 @@ textarea {
   box-sizing: border-box;
 }
 
-
+#main {
+  box-sizing: border-box;
+  font-family: var(--primary-font);
+  overscroll-behavior: none;
+  height: 100vh;
+  background: url('https://ik.imagekit.io/vpvecpntw/artist-photo.jpg');
+  background-size: cover;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  /* padding-top: 5rem; */
+}
 
 a {
   text-decoration: none;
@@ -163,73 +172,7 @@ a:visited {
 
 /* CONTACT */
 
-#contact {
-  position: relative;
-  top: 400vh;
-  height: 100vh;
-}
 
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: var(--primary-font);
-  position: relative;
-  animation: slide-in-top .5s ease;
-  width: 100%;
-  padding: 0 .5rem;
-  position: relative;
-  top: 10vh;
-}
-
-.form textarea {
-  height: 25vh;
-}
-
-.form input,
-.form textarea {
-  border: 2px solid rgba(209, 209, 209, 0.5);
-  padding: 0.5rem 0.7rem;
-  background-color: var(--primary-white);
-  border-radius: 5px;
-  margin-bottom: .5rem;
-  font-family: var(--header-font);
-}
-
-.form input:focus,
-.form textarea:focus {
-  outline: 0;
-}
-
-#success {
-  color: var(--primary-white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: var(--header-font);
-}
-
-#success * {
-  padding: 5px 0;
-}
-
-#success p {
-  font-size: 1.5rem;
-  /* margin-bottom: 7vh; */
-}
-
-.warning {
-  color: rgb(243 51 51);
-  margin-bottom: 2vh;
-  font-size: 1.2rem;
-  opacity: 0.0;
-  transition: opacity .3s linear;
-  font-family: var(--header-font);
-}
-
-.warning.show {
-  opacity: 1.0;
-}
 
 /* ABOUT */
 
