@@ -1,0 +1,153 @@
+--- 
+
+import ClientRouter from 'astro/components/ClientRouter.astro';
+
+---
+
+<ClientRouter />
+
+    <form
+        name='contact'
+        method='POST'
+        action='/success/'
+        class='form'
+      >
+        <div class="warning">Please fill out all fields</div>
+        {/* <input
+          type='hidden'
+          name='form-name'
+          value='contact'
+        /> */}
+        {/* <input
+          type='hidden'
+          name='bot-field'
+        /> */}
+        <input
+          type='text'
+          name='name'
+          id="name"
+          placeholder='name'
+          required
+        />
+          <label for="name" class="visually-hidden">Name</label>
+        <input
+          type='text'
+          name='email'
+          id="email"
+          placeholder='email'
+          required
+        />
+                  <label for="email" class="visually-hidden">Email</label>
+
+        <textarea
+          name='message'
+          id="message"
+          placeholder='message'
+          required
+          >
+            
+        </textarea>
+                  <label for="message" class="visually-hidden">Message</label>
+
+        <div>
+          <button
+            type='submit'
+            id="submit-btn"
+            name='submit-btn'
+            class='btn enlarge flex'
+            disabled={false}
+          >
+            Send
+          </button>
+        </div>
+    </form>
+
+<script>
+  import { actions } from 'astro:actions';
+  import { navigate } from 'astro:transitions/client';
+
+    const name = document.getElementById('name')?.textContent;
+    const email = document.getElementById('email')?.textContent;
+    const message = document.getElementById('message')?.textContent;
+
+
+  const submit = document.getElementById('submit-btn');
+  submit?.addEventListener('click', async () => {
+
+     const { data, error } = await actions.sendEmail({ name, email, message });
+  if (!error) { alert(data)
+  } else {
+navigate('/success');
+}
+  });
+</script>
+
+<style>
+  #contact {
+  position: relative;
+  top: 400vh;
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--primary-font);
+  position: relative;
+  animation: slide-in-top .5s ease;
+  width: 100%;
+  padding: 0 .5rem;
+  position: relative;
+  top: 10vh;
+}
+
+.form textarea {
+  height: 25vh;
+}
+
+.form input,
+.form textarea {
+  border: 2px solid rgba(209, 209, 209, 0.5);
+  padding: 0.5rem 0.7rem;
+  background-color: var(--primary-white);
+  border-radius: 5px;
+  margin-bottom: .5rem;
+  font-family: var(--header-font);
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: 0;
+}
+
+#success {
+  color: var(--primary-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--header-font);
+}
+
+#success * {
+  padding: 5px 0;
+}
+
+#success p {
+  font-size: 1.5rem;
+  /* margin-bottom: 7vh; */
+}
+
+.warning {
+  color: rgb(243 51 51);
+  margin-bottom: 2vh;
+  font-size: 1.2rem;
+  opacity: 0.0;
+  transition: opacity .3s linear;
+  font-family: var(--header-font);
+}
+
+.warning.show {
+  opacity: 1.0;
+}
+</style>
