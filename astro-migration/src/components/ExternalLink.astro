@@ -1,0 +1,15 @@
+---
+
+const { url } = Astro.props;
+
+---
+
+  <a
+    href={url}
+    target='_blank'
+    rel='noreferrer noopener'
+    class='flex'
+  >
+    <slot />
+  </a>
+
