@@ -5,12 +5,30 @@ import Layout from '../layouts/Layout.astro';
 
 ---
 
-  <Layout pageTitle='success'>
+<Layout>
+  <main>
     <div id='success'>
       <p>Thanks for the message</p>
       <BackToHomeLink />
     </div>
-  </Layout>
+</main>
+</Layout>
 
+<style>
+  #success {
+  color: var(--primary-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--header-font);
+}
 
+#success * {
+  padding: 5px 0;
+}
 
+#success p {
+  font-size: 1.5rem;
+  /* margin-bottom: 7vh; */
+}
+</style>

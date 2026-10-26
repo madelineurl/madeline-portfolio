@@ -13,6 +13,18 @@
   --my-periwinkle: #9da6bb;
 }
 
+.visually-hidden {
+  visibility: hidden;
+}
+
+   .enlarge {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .enlarge:hover {
+    transform: scale(1.1);
+  }
+  
 /* GATSBY DEFAULTS */
 
 html {
@@ -93,60 +105,12 @@ a:visited {
   color: #fff;
 }
 
-/* NAVIGATION */
-
-#navigation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  top: 30vh;
-  animation: slide-in-left 1000ms ease;
-}
-
-#navigation a {
-  padding: 1rem 1rem 1rem 3rem;
-  width: 200px;
-  border-radius: 0 8px 8px 0;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: var(--header-font);
-  font-size: 1.8rem;
-  font-weight: normal;
-  transition: background-color 0.4s ease;
-  color: #fff;
-}
-
-#navigation a:hover {
-  background-color: black;
-  color: rgb(116, 9, 255);
-}
-
 
 /* ICONS */
 
 
 
-.selected-icon.flex {
-  background-color: var(--true-periwinkle);
-  transition: background-color 0.3s ease-out;
-}
 
-.label {
-  /* position: absolute; */
-  text-align: center;
-  color: rgb(111, 118, 126);
-  font-family: var(--primary-font);
-}
-
-.label.hide {
-  visibility: hidden;
-}
-
-.label h4 {
-  font-family: inherit;
-  margin: 0;
-}
 
 /* PRESS */
 
@@ -161,7 +125,6 @@ a:visited {
   text-align: center;
 }
 
-
 /* MUSIC */
 
 #music {
@@ -169,9 +132,6 @@ a:visited {
   height: 100%;
   position: relative;
 }
-
-/* CONTACT */
-
 
 
 /* ABOUT */
