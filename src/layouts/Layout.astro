@@ -1,9 +1,75 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+---
+import SocialMediaIcons  from "../components/SocialMediaIcons.astro";
+import "../styles/layout.css";
 
-function SEO({ description, lang, meta, title }) {
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Madeline</title>
+		<!-- TODO: SEO -->
+	</head>
+	<body>
+		<header>
+			<SocialMediaIcons />
+		</header>
+		<slot />
+	</body>
+</html>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Oswald:wght@300');
+
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	:root {
+	--header-font: 'Bebas Neue', sans-serif;
+	--primary-font: 'JetBrains Mono', sans-serif;
+	--primary-grey: #rgb(183, 183, 188);
+	--primary-white: #fff;
+	/* --primary-white: #d8d8fa; */
+	--primary-text-color: var(--primary-white);
+	--true-periwinkle: #c3cde6;
+	--my-periwinkle: #9da6bb;
+	}
+</style>
+
+<!--  LAYOUT  -->
+
+
+<!-- 
+  const { pathname } = useLocation();
+  const isLandingPage = pathname === '/';
+
+  return (
+    <>
+      <SEO
+        title={pageTitle}
+        description={seoMetadata[pageTitle].description ?? ''} />
+      <header>
+        <SocialIcons />
+      </header>
+      <main id='main'>
+      {
+        isLandingPage ? children : <div className='container flex'>{children}</div>
+      }
+      </main>
+    </>
+  ) -->
+
+  <!-- SEO -->
+
+  <!-- function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -87,4 +153,4 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default SEO;
+export default SEO; -->
