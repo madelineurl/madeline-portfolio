@@ -1,13 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SocialIcons from './social-media-icons';
-<<<<<<< HEAD
+
 import { Navbar } from '../components';
-=======
-import { SEO } from '../components';
->>>>>>> 6973ea4 (lots of progress)
-import { useLocation } from '@reach/router';
-import './layout.css';
+
+import SocialIcons from '../../astro-migration/src/components/social-media-icons';
 
 
 const Layout = ({ children, pageTitle }) => {
