@@ -11,8 +11,8 @@ import Instagram from './icons/instagram.svg';
 ---
 
 <div id='icons-container' class='flex'>
-    <a href="/contact" >
-      <Contact class='icon enlarge' />
+    <a href="/contact" class='icon enlarge'  >
+      <Contact />
     </a>
     <ExternalLink url="https://open.spotify.com/artist/2eMwoPf6uvrCLcKEmrfmel"> 
         <Spotify class="icon enlarge" />
@@ -47,12 +47,26 @@ import Instagram from './icons/instagram.svg';
     transition: transform 0.2s ease-in-out;
   }
 
-   .enlarge {
-    transition: transform 0.3s ease-in-out;
-  }
 
-  .enlarge:hover {
-    transform: scale(1.1);
-  }
+  /* .selected-icon.flex {
+  background-color: var(--true-periwinkle);
+  transition: background-color 0.3s ease-out;
+}
+
+.label {
+  position: absolute; 
+  text-align: center;
+  color: rgb(111, 118, 126);
+  font-family: var(--primary-font);
+}
+
+.label.hide {
+  visibility: hidden;
+}
+
+.label h4 {
+  font-family: inherit;
+  margin: 0;
+} */
 
 </style>
