@@ -1,0 +1,56 @@
+---
+
+import ExternalLink  from './ExternalLink.astro';
+import Contact from './icons/mail-backup.svg';
+import Bandcamp from './icons/bandcamp.svg';
+import Soundcloud from './icons/soundcloud.svg'
+import ResidentAdvisor from './icons/ra.svg';
+import Spotify from './icons/spotify.svg';
+import Instagram from './icons/instagram.svg';
+
+---
+
+<div id='icons-container' class='flex'>
+    <Contact class='icon enlarge' />
+    <ExternalLink url="https://open.spotify.com/artist/2eMwoPf6uvrCLcKEmrfmel"> 
+        <Spotify class="icon enlarge" />
+    </ExternalLink>
+      <ExternalLink url="https://madelineurl.bandcamp.com/releases"> 
+        <Bandcamp  class="icon enlarge" />
+    </ExternalLink>
+      <ExternalLink url="https://soundcloud.com/madeline-url"> 
+        <Soundcloud  class="icon enlarge" />
+    </ExternalLink>
+      <ExternalLink url="https://ra.co/dj/madelinechi"> 
+        <ResidentAdvisor class="icon enlarge"  />
+    </ExternalLink>
+    <ExternalLink url="https://www.instagram.com/soft.content"> 
+        <Instagram  class="icon enlarge" />
+    </ExternalLink>
+</div>
+
+<style>
+  #icons-container {
+    position: fixed;
+    top: 1rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 .3rem;
+    transition: transform 0.2s ease-in-out;
+  }
+
+   .enlarge {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .enlarge:hover {
+    transform: scale(1.1);
+  }
+
+</style>
