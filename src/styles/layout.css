@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Oswald:wght@300');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Oswald:wght@300");
 /* @import url('https://fonts.googleapis.com/css2?JetBrains+Mono=Oswald&display=swap'); */
 /* VARIABLES */
 
 :root {
-  --header-font: 'Bebas Neue', sans-serif;
-  --primary-font: 'JetBrains Mono', sans-serif;
+  --header-font: "Bebas Neue", sans-serif;
+  --primary-font: "JetBrains Mono", sans-serif;
   --primary-grey: #rgb(183, 183, 188);
   --primary-white: #fff;
   /* --primary-white: #d8d8fa; */
@@ -17,20 +17,23 @@
   visibility: hidden;
 }
 
-   .enlarge {
-    transition: transform 0.3s ease-in-out;
-  }
+.enlarge {
+  transition: transform 0.3s ease-in-out;
+}
 
-  .enlarge:hover {
-    transform: scale(1.1);
-  }
-  
+.enlarge:hover {
+  transform: scale(1.1);
+}
+
 /* GATSBY DEFAULTS */
 
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em var(--primary-font), serif, sans-serif;
+  font:
+    112.5%/1.45em var(--primary-font),
+    serif,
+    sans-serif;
   box-sizing: border-box;
   overscroll-behavior: none;
   width: 100vw;
@@ -72,17 +75,6 @@ textarea {
   box-sizing: border-box;
 }
 
-#main {
-  box-sizing: border-box;
-  font-family: var(--primary-font);
-  overscroll-behavior: none;
-  height: 100vh;
-  background: url('https://ik.imagekit.io/vpvecpntw/artist-photo.jpg');
-  background-size: cover;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-  /* padding-top: 5rem; */
-}
-
 a {
   text-decoration: none;
 }
@@ -91,56 +83,13 @@ a:visited {
   color: #fff;
 }
 
-.container {
-  position: relative;
-  max-width: 70%;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.container *, div {
-  font-family: Bebas Neue;
-  color: #fff;
-}
-
-
-/* ICONS */
-
-
-
-
-
-/* PRESS */
-
-#press {
-  position: relative;
-  top: 100vh;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* MUSIC */
-
-#music {
-  top: 200vh;
-  height: 100%;
-  position: relative;
-}
-
-
 /* ABOUT */
 
 #about {
   position: relative;
   top: 300vh;
   height: 100vh;
-  color:white;
+  color: white;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -156,7 +105,6 @@ a:visited {
   font-size: larger;
   margin: 10px 0;
 }
-
 
 /* MUSIC PLAYER STYLES (SAVING) */
 
@@ -179,28 +127,12 @@ a:visited {
   background-color: darkgrey !important;
 }
 
-
-/* ETC */ 
-
-#not-found {
-  color: #fff;
-  font-size: 1.5rem;
-}
+/* ETC */
 
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.link {
-  text-decoration: none;
-  color: rgba(65, 65, 65, 0.8);
-  font-weight: 400;
-}
-
-.link:hover {
-  color: rebeccapurple;
 }
 
 .btn {
@@ -213,13 +145,7 @@ a:visited {
   color: black;
   font-family: inherit;
   text-transform: uppercase;
-  background: radial-gradient( rgb(255, 255, 255), rgb(221, 223, 230));
-}
-
-
-#back-home {
-  color: rgb(123, 109, 250);
-  text-decoration: underline;
+  background: radial-gradient(rgb(255, 255, 255), rgb(221, 223, 230));
 }
 
 .btn:focus {
@@ -228,7 +154,9 @@ a:visited {
 
 /* LAYOUT */
 
-h1, h3, h4 {
+h1,
+h3,
+h4 {
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -275,7 +203,6 @@ h1, h3, h4 {
   }
 }
 
-
 @keyframes slide-in-left {
   0% {
     transform: translateX(-120%);
@@ -298,7 +225,7 @@ h1, h3, h4 {
 
 @media only screen and (max-width: 480px) {
   .info {
-    animation: enter-abt-title-vertical .5s ease;
+    animation: enter-abt-title-vertical 0.5s ease;
   }
 
   .form {
@@ -314,7 +241,6 @@ h1, h3, h4 {
     width: 100%;
     resize: none;
   }
-
 }
 
 @media screen and (min-width: 640px) {
@@ -346,7 +272,7 @@ h1, h3, h4 {
     z-index: 10;
   }
 
- #navigation {
+  #navigation {
     position: fixed;
     flex-direction: column;
     align-items: center;
@@ -358,7 +284,7 @@ h1, h3, h4 {
     z-index: 9;
     background-color: rgba(157, 166, 187, 0.9);
     /* transition: transform .3s ease; */
-    animation: enter-vertical .3s ease;
+    animation: enter-vertical 0.3s ease;
   }
 
   #navigation.hide {
@@ -371,7 +297,7 @@ h1, h3, h4 {
     -webkit-overflow-scrolling: touch;
   } */
 
- #navigation a {
+  #navigation a {
     border-radius: none;
     display: flex;
     align-items: center;
@@ -383,7 +309,7 @@ h1, h3, h4 {
     font-size: 2.5rem;
   }
 
- #navigation a:hover {
+  #navigation a:hover {
     background-color: rgba(65, 73, 94, 0.8);
   }
 }
@@ -396,4 +322,3 @@ h1, h3, h4 {
     width: 440px;
   }
 }
-

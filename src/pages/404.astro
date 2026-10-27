@@ -1,9 +1,13 @@
 ---
-
-import BackToHomeLink  from '../components/BackToHomeLink.astro';
-
+import BackToHomeLink from "../components/BackToHomeLink.astro";
 ---
-    <p id='not-found' class='flex'>
-     You've lost your way
-    </p>
-   <BackToHomeLink />
+
+<p id="not-found" class="flex">You've lost your way</p>
+<BackToHomeLink />
+
+<style>
+  #not-found {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+</style>

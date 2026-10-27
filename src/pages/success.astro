@@ -1,34 +1,32 @@
 ---
-
-import BackToHomeLink from '../components/BackToHomeLink.astro';
-import Layout from '../layouts/Layout.astro';
-
+import BackToHomeLink from "../components/BackToHomeLink.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
   <main>
-    <div id='success'>
+    <div id="success">
       <p>Thanks for the message</p>
       <BackToHomeLink />
     </div>
-</main>
+  </main>
 </Layout>
 
 <style>
   #success {
-  color: var(--primary-white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: var(--header-font);
-}
+    color: var(--primary-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--header-font);
+  }
 
-#success * {
-  padding: 5px 0;
-}
+  #success * {
+    padding: 5px 0;
+  }
 
-#success p {
-  font-size: 1.5rem;
-  /* margin-bottom: 7vh; */
-}
+  #success p {
+    font-size: 1.5rem;
+    /* margin-bottom: 7vh; */
+  }
 </style>
