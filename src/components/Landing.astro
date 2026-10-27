@@ -5,8 +5,8 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
 <img id="background" src={artistPhoto.src} alt="" fetchpriority="high" />
 <main class="main">
   <p>
-    Madeline is a Chicago-based artist and engineer exploring the sensual
-    corners of electronic music.
+    Madeline is a Chicago-based artist exploring the sensual corners of
+    electronic music.
   </p>
 </main>
 
@@ -19,6 +19,7 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
       env(safe-area-inset-bottom) env(safe-area-inset-left);
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: var(--header-font);
     color: #fff;
     font-size: 24px;
@@ -28,17 +29,24 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     overflow-y: auto;
     width: auto;
     max-width: 60%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 
     p {
+      margin: 0;
+      font-size: 48px;
       position: relative;
-      top: 30%;
+      height: 100%;
+      line-height: 1.1;
+      /* top: 20%; */
+    }
+    /*
       margin-left: 1rem;
       margin-right: 2rem;
-      background-color: black;
-      padding: 1rem;
-      border-radius: 8px;
-    }
+      font-size: 32px;
+      /* background-color: black; */
+    /* padding: 1rem;
+      border-radius: 8px; */
+    /* } */
   }
 
   #background {
@@ -48,9 +56,32 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     right: 0;
     height: 100%;
     z-index: -1;
-    filter: blur(20px);
+    filter: blur(30px);
     transition: filter 0.4s ease-in;
   }
+  @media screen and (min-width: 490px) {
+    #background {
+      filter: blur(20px);
+    }
+
+    p {
+      position: relative;
+      top: 30%;
+      margin-left: 1rem;
+      margin-right: 2rem;
+      font-size: 32px;
+      /* background-color: black; */
+      /* padding: 1rem;
+      border-radius: 8px; */
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    #background {
+      filter: blur(10px);
+    }
+  }
+
   @media screen and (min-width: 992px) {
     #background {
       filter: blur(0px);
