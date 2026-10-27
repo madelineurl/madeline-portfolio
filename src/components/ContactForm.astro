@@ -51,21 +51,17 @@ import ClientRouter from "astro/components/ClientRouter.astro";
 </script>
 
 <style>
-  #contact {
-    position: relative;
-    height: 100vh;
-  }
-
   .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     width: 100%;
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
     position: relative;
-    margin-top: 4rem;
     height: 100%;
+    font-size: 1.2rem;
+    top: 7vh;
   }
 
   .form textarea {
@@ -80,6 +76,7 @@ import ClientRouter from "astro/components/ClientRouter.astro";
     border-radius: 5px;
     margin-bottom: 0.5rem;
     font-family: var(--header-font);
+    width: 100%;
   }
 
   .form input:focus,
@@ -90,9 +87,9 @@ import ClientRouter from "astro/components/ClientRouter.astro";
   #submit {
     margin-top: 1rem;
     font-family: var(--header-font);
-    font-size: 16px;
     background-color: #fff;
     border: none;
+    font-size: 1.2rem;
     &:hover:not(:disabled) {
       background-color: rgb(186, 186, 186);
       cursor: pointer;
@@ -114,5 +111,12 @@ import ClientRouter from "astro/components/ClientRouter.astro";
 
   label {
     display: inline;
+  }
+
+  @media screen and (min-width: 440px) {
+    .form {
+      width: 440px;
+      margin: 0 auto;
+    }
   }
 </style>
