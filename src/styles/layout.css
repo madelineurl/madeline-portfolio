@@ -237,20 +237,6 @@ a:visited {
   .info {
     animation: enter-abt-title-vertical 0.5s ease;
   }
-
-  .form {
-    font-size: 1.5rem;
-    top: 5vh;
-  }
-
-  .form input {
-    width: 100%;
-  }
-
-  .form textarea {
-    width: 100%;
-    resize: none;
-  }
 }
 
 @media screen and (min-width: 640px) {
@@ -321,14 +307,5 @@ a:visited {
 
   #navigation a:hover {
     background-color: rgba(65, 73, 94, 0.8);
-  }
-}
-
-/* MEDIA QUERIES FOR LARGER SCREENS */
-
-@media screen and (min-width: 440px) {
-  .form input,
-  .form textarea {
-    width: 440px;
   }
 }
