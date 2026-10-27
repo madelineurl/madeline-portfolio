@@ -20,33 +20,24 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     font-family: var(--header-font);
     color: #fff;
     font-size: 24px;
-    height: 100%;
     flex: 1;
-    min-height: 0;
     overflow-y: auto;
-    width: auto;
-    max-width: 60%;
-    /* margin: 0 auto; */
+
+    max-width: 70%;
+    margin: 0 auto;
+    transition: margin-left 3s ease-in-out;
+    transition: max-width 3s linear;
 
     p {
       margin: 0;
-      font-size: 48px;
+      font-size: 52px;
       position: relative;
-      height: 100%;
       line-height: 1.1;
-      /* top: 20%; */
     }
-    /*
-      margin-left: 1rem;
-      margin-right: 2rem;
-      font-size: 32px;
-      /* background-color: black; */
-    /* padding: 1rem;
-      border-radius: 8px; */
-    /* } */
   }
 
   #background {
@@ -59,26 +50,29 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     filter: blur(30px);
     transition: filter 0.4s ease-in;
   }
-  @media screen and (min-width: 490px) {
+  @media screen and (min-width: 500px) {
     #background {
       filter: blur(20px);
     }
 
     p {
-      position: relative;
-      top: 30%;
-      margin-left: 1rem;
-      margin-right: 2rem;
-      font-size: 32px;
-      /* background-color: black; */
-      /* padding: 1rem;
-      border-radius: 8px; */
+      font-size: 48px;
     }
   }
 
   @media screen and (min-width: 768px) {
     #background {
       filter: blur(10px);
+    }
+
+    main {
+      width: auto;
+      max-width: 40%;
+      margin-left: 2rem;
+
+      p {
+        font-size: 44px;
+      }
     }
   }
 
@@ -87,10 +81,9 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
       filter: blur(0px);
     }
 
-    main {
-      width: auto;
-      max-width: 40%;
-      margin-left: 2rem;
+    main p {
+      font-size: 36px;
+      text-align: center;
     }
   }
 </style>
