@@ -25,8 +25,6 @@
   transform: scale(1.1);
 }
 
-/* GATSBY DEFAULTS */
-
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -42,13 +40,11 @@ html {
 
 body {
   margin: 0;
-  height: 100vh;
-  width: 100vw;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  background: rgb(12, 11, 21);
-  /* background: linear-gradient(rgb(12, 11, 21), rgb(20, 18, 43)); */
+  /* background: rgb(12, 11, 2 1); */
+  background-color: #2b5b80;
   background-size: cover;
   font-family: inherit;
   font-weight: normal;

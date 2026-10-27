@@ -1,51 +1,81 @@
 ---
-import SocialMediaIcons  from "../components/SocialMediaIcons.astro";
+import SocialMediaIcons from "../components/SocialMediaIcons.astro";
+import Logo from "../assets/images/MADELINE_LOGO_3D.png";
 import "../styles/layout.css";
-
 ---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Madeline</title>
-		<!-- TODO: SEO -->
-	</head>
-	<body>
-		<header>
-			<SocialMediaIcons />
-		</header>
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Madeline | Music Artist</title>
+    <!-- TODO: SEO -->
+  </head>
+  <body>
+    <header>
+      <div class="logo"><img src={Logo.src} /></div>
+    </header>
+    <slot />
+    <footer><SocialMediaIcons /></footer>
+  </body>
 </html>
 
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Oswald:wght@300');
+  @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Oswald:wght@300");
 
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-	:root {
-	--header-font: 'Bebas Neue', sans-serif;
-	--primary-font: 'JetBrains Mono', sans-serif;
-	--primary-grey: #rgb(183, 183, 188);
-	--primary-white: #fff;
-	/* --primary-white: #d8d8fa; */
-	--primary-text-color: var(--primary-white);
-	--true-periwinkle: #c3cde6;
-	--my-periwinkle: #9da6bb;
-	}
+  :root {
+    --header-font: "Bebas Neue", sans-serif;
+    --primary-font: "JetBrains Mono", sans-serif;
+    --primary-grey: #rgb(183, 183, 188);
+    --primary-white: #fff;
+    /* --primary-white: #d8d8fa; */
+    --primary-text-color: var(--primary-white);
+    --true-periwinkle: #c3cde6;
+    --my-periwinkle: #9da6bb;
+  }
+
+  .logo {
+    position: relative;
+    left: 1rem;
+    height: 150px;
+    width: 150px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+
+    img {
+      /* height: 100%; */
+      display: inline;
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+
+  header {
+    width: 100%;
+    height: 7rem;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
 </style>
 
 <!--  LAYOUT  -->
-
 
 <!-- 
   const { pathname } = useLocation();
@@ -67,9 +97,9 @@ import "../styles/layout.css";
     </>
   ) -->
 
-  <!-- SEO -->
+<!-- SEO -->
 
-  <!-- function SEO({ description, lang, meta, title }) {
+<!-- function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
