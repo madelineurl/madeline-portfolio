@@ -20,20 +20,24 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     display: flex;
     flex-direction: column;
     font-family: var(--header-font);
-    max-width: 40%;
-    margin-left: 2rem;
     color: #fff;
     font-size: 24px;
     height: 100%;
     flex: 1;
     min-height: 0;
     overflow-y: auto;
+    width: auto;
+    max-width: 60%;
+    margin: 0 auto;
 
     p {
       position: relative;
       top: 30%;
-      padding-left: 1rem;
-      padding-right: 2rem;
+      margin-left: 1rem;
+      margin-right: 2rem;
+      background-color: black;
+      padding: 1rem;
+      border-radius: 8px;
     }
   }
 
@@ -44,15 +48,18 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     right: 0;
     height: 100%;
     z-index: -1;
-    /* filter: blur(100px); */
+    filter: blur(20px);
+    transition: filter 0.4s ease-in;
   }
+  @media screen and (min-width: 992px) {
+    #background {
+      filter: blur(0px);
+    }
 
-  /* #madeline {
-    color: var(--primary-text-color);
-    font-family: var(--header-font);
-    font-size: 3.5rem;
-    font-weight: 400;
-    margin-bottom: 0;
-    padding: 0.5rem 0.9rem;
-  } */
+    main {
+      width: auto;
+      max-width: 40%;
+      margin-left: 2rem;
+    }
+  }
 </style>
