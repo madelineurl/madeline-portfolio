@@ -1,9 +1,11 @@
 ---
 import ClientRouter from "astro/components/ClientRouter.astro";
+import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
 ---
 
 <ClientRouter />
 
+<img id="background" src={artistPhoto.src} />
 <main>
   <form
     name="contact"
@@ -51,6 +53,16 @@ import ClientRouter from "astro/components/ClientRouter.astro";
 </script>
 
 <style>
+  #background {
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: -1;
+    filter: blur(30px);
+    /* transition: filter 0.4s ease-in; */
+  }
   .form {
     display: flex;
     flex-direction: column;
