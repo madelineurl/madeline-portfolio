@@ -67,6 +67,11 @@ body {
   min-height: 100vh;
 }
 
+main {
+  height: 100%;
+  flex: 1;
+}
+
 button,
 input,
 textarea {
