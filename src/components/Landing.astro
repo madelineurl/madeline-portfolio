@@ -3,122 +3,122 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
 ---
 
 <div class="split-screen-container">
-	<main>
-		<p>
-			Madeline is a Chicago-based artist exploring the sensual corners of
-			electronic music.
-		</p>
-	</main>
-	<div class="image-wrapper">
-		<img
-			id="background"
-			src={artistPhoto.src}
-			alt="TODO"
-			fetchpriority="high"
-		/>
-	</div>
+  <main>
+    <p>
+      Madeline is a Chicago-based artist exploring the sensual corners of
+      electronic music.
+    </p>
+  </main>
+  <div class="image-wrapper">
+    <img
+      id="background"
+      src={artistPhoto.src}
+      alt="TODO"
+      fetchpriority="high"
+    />
+  </div>
 </div>
 
 <style lang="scss">
-	@use "../styles/layout.scss" as *;
+  @use "../styles/layout.scss" as *;
 
-	.split-screen-container {
-		display: grid;
-		grid-template-columns: 1fr;
-		width: 100%;
-	}
+  .split-screen-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 
-	.image-wrapper {
-		grid-column: 2;
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: auto;
-		height: 100vh;
-		z-index: -1;
-		overflow: hidden;
-		filter: blur(30px);
-		transition: filter 0.4s ease-in;
+  .image-wrapper {
+    grid-column: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    filter: blur(30px);
+    transition: filter 0.4s ease-in;
 
-		img {
-			background-size: cover;
-			object-fit: cover;
-			height: 100%;
-			width: 100%;
-		}
-	}
+    img {
+      background-size: cover;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
 
-	main {
-		grid-column: 1;
-		font-family: var(--primary-font);
-		overscroll-behavior: none;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		font-family: var(--header-font);
-		color: #fff;
-		font-size: 24px;
-		/* flex: 1; */
-		overflow-y: auto;
-		margin: 0 auto;
-		min-height: auto;
-		width: 100%;
-		padding: 2.5rem;
+  main {
+    grid-column: 1;
+    font-family: var(--primary-font);
+    overscroll-behavior: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--header-font);
+    color: var(--primary-white);
+    font-size: 24px;
+    /* flex: 1; */
+    overflow-y: auto;
+    margin: 0 auto;
+    min-height: auto;
+    width: 100%;
+    padding: 2.5rem;
 
-		p {
-			margin: 0;
-			font-size: 52px;
-			position: relative;
-			line-height: 1.1;
-		}
-	}
+    p {
+      margin: 0;
+      font-size: 52px;
+      position: relative;
+      line-height: 1.1;
+    }
+  }
 
-	@media screen and (min-width: $breakpoint-xs) {
-		main {
-			text-align: center;
-		}
+  @media screen and (min-width: $breakpoint-xs) {
+    main {
+      text-align: center;
+    }
 
-		.image-wrapper {
-			filter: blur(20px);
-		}
-	}
+    .image-wrapper {
+      filter: blur(20px);
+    }
+  }
 
-	@media screen and (min-width: $breakpoint-sm) {
-		.split-screen-container {
-			grid-template-columns: 1fr 1fr;
-		}
+  @media screen and (min-width: $breakpoint-sm) {
+    .split-screen-container {
+      grid-template-columns: 1fr 1fr;
+    }
 
-		main {
-			text-align: left;
-			p {
-				font-size: 48px;
-			}
-		}
+    main {
+      text-align: left;
+      p {
+        font-size: 48px;
+      }
+    }
 
-		.image-wrapper {
-			filter: blur(10px);
-		}
-	}
+    .image-wrapper {
+      filter: blur(10px);
+    }
+  }
 
-	@media screen and (min-width: $breakpoint-md) {
-		.image-wrapper {
-			filter: blur(0px);
-		}
+  @media screen and (min-width: $breakpoint-md) {
+    .image-wrapper {
+      filter: blur(0px);
+    }
 
-		main {
-			max-width: 70%;
-			padding: 0;
+    main {
+      max-width: 70%;
+      padding: 0;
 
-			p {
-				font-size: 44px;
-			}
-		}
-	}
+      p {
+        font-size: 44px;
+      }
+    }
+  }
 
-	@media screen and (min-width: $breakpoint-lg) {
-		.image-wrapper {
-			width: 50vw;
-		}
-	}
+  @media screen and (min-width: $breakpoint-lg) {
+    .image-wrapper {
+      width: 50vw;
+    }
+  }
 </style>
