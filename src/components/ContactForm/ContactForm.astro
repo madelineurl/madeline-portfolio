@@ -34,11 +34,10 @@ import artistPhoto from "../../assets/images/madeline_artist_keyboard.jpg";
     type FormFields,
     updateDisabledState,
     updateInputValidity,
-    updateWarningVisibility,
+    toggleWarningMessage,
     writeValue
   } from "./contact-form";
 
-  // TODO: extract and refactor to use functional programming techniques
   const nameInput = document.getElementById("name") as HTMLInputElement;
   const emailInput = document.getElementById("email") as HTMLInputElement;
   const messageInput = document.getElementById(
@@ -63,7 +62,7 @@ import artistPhoto from "../../assets/images/madeline_artist_keyboard.jpg";
 
         // can we move these to react to changes in form fields instead?
         updateInputValidity(event.target, value);
-        updateWarningVisibility(formFields, warning);
+        toggleWarningMessage(formFields, warning);
         updateDisabledState(formFields, sendBtn);
       }
     })
@@ -129,18 +128,17 @@ import artistPhoto from "../../assets/images/madeline_artist_keyboard.jpg";
   }
 
   #warning {
+    visibility: hidden;
     position: absolute;
     top: -2rem;
-    visibility: hidden;
     color: rgb(243 51 51);
     margin-bottom: 2vh;
     font-size: 1.2rem;
-    transition: opacity 0.3s linear;
     font-family: var(--header-font);
-  }
 
-  #warning.show {
-    visibility: visible;
+    &.visible {
+      visibility: visible;
+    }
   }
 
   @media screen and (min-width: $breakpoint-xs) {

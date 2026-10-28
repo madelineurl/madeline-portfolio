@@ -20,18 +20,31 @@ export function writeValue(
   return copy;
 }
 
-export function missingFormFields(trackingObject: FormFields) {
+function formValues(trackingObject: FormFields) {
+  return Object.values(trackingObject);
+}
+
+function allInputsPopulated(trackingObject: FormFields) {
+  return formValues(trackingObject).every(isPopulated);
+}
+
+function allTouchedInputsPopulated(trackingObject: FormFields) {
+  return formValues(trackingObject).filter(isTouched).every(isPopulated);
+}
+
+function missingFormFields(trackingObject: FormFields) {
   return Object.entries(trackingObject)
-    .filter(([field, value]) => value !== null && !value) // we know a field has been "touched" if its value is an empty string instead of null
+    .filter(([field, value]) => touchedInputIsEmpty(value))
     .map(([field]) => field);
 }
 
-export function allInputsPopulated(trackingObject: FormFields) {
-  return formValues(trackingObject).every((value) => !!value);
+function touchedInputIsEmpty(value: string) {
+  return isTouched(value) && !isPopulated(value);
 }
 
-export function formValues(trackingObject: FormFields) {
-  return Object.values(trackingObject);
+function isTouched(value: string) {
+  // we know a field has been "touched" if its value is an empty string instead of null
+  return value !== null;
 }
 
 function isPopulated(value: string) {
@@ -53,30 +66,30 @@ function warningText(missingFields: string[]) {
 // DOM Utilities
 
 export function updateInputValidity(element: HTMLElement, value: string) {
-  if (!isPopulated(value)) {
+  if (touchedInputIsEmpty(value)) {
     element.style.outline = "1px solid red";
   } else {
     element.style.outline = "0";
   }
 }
 
-export function updateWarningVisibility(
+export function toggleWarningMessage(
   formFields: FormFields,
   warning: HTMLElement
 ) {
-  // console.log("populated?", allInputsPopulated(formFields));
-  if (allInputsPopulated(formFields)) {
+  if (allTouchedInputsPopulated(formFields)) {
     warning.textContent = "";
-    warning.classList.remove("show");
+    warning.classList.remove("visible");
   } else {
     const missingFields = missingFormFields(formFields);
 
+    // we should never arrive here, in theory
     if (!missingFields.length) {
-      // we should never arrive here
+      // warning.classList.remove("visible");
       return;
     }
 
-    warning.classList.add("show");
+    warning.classList.add("visible");
     warning.textContent = warningText(missingFields);
   }
 }
