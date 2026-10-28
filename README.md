@@ -1,52 +1,53 @@
 # Portfolio
 
-I'm Madeline Higgins (aka madelineurl), a fullstack software developer and
-DJ/producer based in Chicago. I'm a Javascript enthusiast with a background in
-Cognitive Science - so it follows that I have a special interest in frontend
-development and UI/UX Design. I build accessible applications that help people
-connect to their creativity and each other.
+A portfolio site to serve as a central resource for my music career, plus a
+sandbox to experiment with new UI/UX techniques.
+
+## About Me
+
+I'm a DJ/producer based in Chicago (and a senior frontend software developer by
+day). I've been DJing since 2014 and have held residency at Smartbar since 2022.
+
+As an engineer, I get excited about building accessible, high-quality
+applications that help people connect to their creativity and each other. I
+spent the last four years doing so professionally at Splice, and have since
+ideated on some tools of my own while I look for new employment opportunities.
 
 ## Technologies
 
-This site was built with Javascript React components in Gatsby, styled with raw
-CSS, and deployed via Netlify.
+This static site was built with Astro deployed via Netlify.
 
-## Experience
+## Background
 
-I had my first taste of web dev when I redesigned the Northwestern radio station
-website while working as the General Manager there (a collaborative effort with
-then-webmaster Lauren Harris). This sparked a stint as an assistant frontend
-developer for Northwestern's School of Communication site, where I learned HTML
-and CSS on the fly while modernizing page layouts and CSS syntax.
+I've been working professionally in software development for over almost a
+decade. I had my first taste of web dev when I helped redesign the Northwestern
+radio station website while working as the General Manager there. That led to
+stint as an assistant frontend developer for Northwestern's School of
+Communication, where I learned HTML and CSS on the fly while modernizing page
+layouts and CSS syntax. I spent the next few years repairing electronics
+full-time and DJing professionally on the side. I fell down a Javascript
+rabbithole one day, on the other side of which I quit my job and went through
+bootcamp at the Grace Hopper Program at Fullstack Academy.
 
-I spent the next few years building technical communication skills repairing
-electronics full-time and DJing professionally on the side. I fell down a
-Javascript rabbithole one day - and when I came out I quit my job and went
-through bootcamp at the Grace Hopper Program at Fullstack Academy. I've since
-built a variety of fullstack applications, from games and DJ tools to ecommerce
-sites, trivia apps, and more.
-
-I currently work as a Senior Teaching Fellow (Superfellow) at Fullstack Academy
-on an extended Teaching Fellow contract. My present work involves managing
-senior student projects, working on internal tooling tickets, conducting
-fellowship interviews, and more.
+In the 6 years since, I've built a variety of fullstack applications, mentored
+extensively as a Teaching Fellow at Fullstack and at subsequent jobs, worked on
+a DevOps team as a Test Infrastructure Engineer, and modernized production
+applications at scale as a Senior Frontend Engineer at Splice.
 
 ## Contact
 
-Please get in touch if you'd like to work together or get to know me. You can
-reach me via the contact form on the site (https://madelineurl.online/contact/),
-or email me directly at contact@madelineurl.online. I'm also on LinkedIn at
-https://linkedin.com/in/madeline-url/.
+If you'd like to work together or get to know me, you can reach me via the
+contact form on the site (https://madelineurl.online/contact/), or email me
+directly at url.madeline@gmail.com.
 
-## 🧞 Commands
+I'm also on LinkedIn at https://linkedin.com/in/madeline-url/. |
 
-All commands are run from the root of the project, from a terminal:
+## TODOs (upcoming work)
 
-| Command                               | Action                                       |
-| :------------------------------------ | :------------------------------------------- |
-| `npm install`                         | Installs dependencies                        |
-| `npm run dev`                         | Starts local dev server at `localhost:4321`  |
-| `npm run build`                       | Build your production site to `./dist/`      |
-| `npm run preview`                     | Preview your build locally, before deploying |
-|                                       |
-| `astro preferences disable devToolba` | Disable the toolbar                          |
+- fix / update SEO
+- add navigation bar & additional content
+- use CSS variables
+- improve form validation (use react?)
+- debug production chrome experience on mobile
+- new font / color palette (branding)
+- integrations - calendar, bandcamp, etc
