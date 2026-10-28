@@ -1,12 +1,21 @@
 ---
 import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
+import Caret from "./icons/caret_down.svg";
 ---
 
 <div class="split-screen-container">
-  <main>
-    <p>
+  <main class="flex">
+    <p class="flex">
+      <!-- <span>
+        Madeline is a Chicago-based artist exploring the sensual corners of
+        electronic music.
+      </span> -->
+
       Madeline is a Chicago-based artist exploring the sensual corners of
       electronic music.
+
+      <!-- TODO: add latest release feature; Will become an <a> tag eventually -->
+      <!-- <span class="cta flex">Latest release <Caret class="enlarge icon" /></span> -->
     </p>
   </main>
   <div class="image-wrapper">
@@ -53,31 +62,50 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     grid-column: 1;
     font-family: var(--primary-font);
     overscroll-behavior: none;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     font-family: var(--header-font);
     color: var(--primary-white);
     font-size: 24px;
-    /* flex: 1; */
     overflow-y: auto;
     margin: 0 auto;
+    padding: 2.5rem;
     min-height: 100%;
     width: 100%;
-    padding: 2.5rem;
 
     p {
       margin: 0;
       font-size: 52px;
-      position: relative;
       line-height: 1.1;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1rem;
     }
+
+    span {
+      width: 100%;
+    }
+  }
+
+  .cta {
+    justify-content: flex-start;
+    gap: 0.5rem;
+    font-size: 20px;
+    font-weight: normal;
+    //   TODO: fade in, blink caret
+  }
+
+  .icon {
+    height: 24px;
+    width: 24px;
   }
 
   @media screen and (min-width: $breakpoint-xs) {
     main {
       text-align: center;
+    }
+
+    .cta {
+      justify-content: center;
     }
 
     .image-wrapper {
@@ -95,6 +123,10 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
       p {
         font-size: 48px;
       }
+    }
+
+    .cta {
+      justify-content: flex-start;
     }
 
     .image-wrapper {
