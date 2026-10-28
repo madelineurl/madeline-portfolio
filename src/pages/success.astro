@@ -3,53 +3,53 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<main id="success">
-		<!-- TODO: a little gift? -->
-		<div>
-			<p><em>Thanks for the message</em></p>
-			<div class="links">
-				<a href="/">Home</a>
-				<a href="/contact">Send another message</a>
-			</div>
-		</div>
-	</main>
+  <main id="success">
+    <!-- TODO: a little gift? -->
+    <div>
+      <p><em>Thanks for the message</em></p>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/contact">Send another message</a>
+      </div>
+    </div>
+  </main>
 </Layout>
 
 <style lang="scss">
-	#success {
-		color: var(--primary-white);
-		font-family: var(--header-font);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
+  #success {
+    color: var(--primary-white);
+    font-family: var(--header-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-	#success > div {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 1rem;
-	}
+  #success > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
 
-	#success p {
-		font-size: 44px;
-		margin: 0;
-		width: 100%;
-		text-align: center;
-	}
+  #success p {
+    font-size: 44px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
 
-	.links {
-		display: flex;
-		/* font-family: var(--primary-font); */
+  .links {
+    display: flex;
+    /* font-family: var(--primary-font); */
 
-		a {
-			margin: 0.5rem;
-			font-size: 28px;
+    a {
+      margin: 0.5rem;
+      font-size: 28px;
 
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 </style>
