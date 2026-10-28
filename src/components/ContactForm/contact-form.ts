@@ -24,6 +24,20 @@ function formValues(trackingObject: FormFields) {
   return Object.values(trackingObject);
 }
 
+function isTouched(value: string) {
+  // we know a field has been "touched" if its value is an empty string instead of null
+  return value !== null;
+}
+
+function isPopulated(value: string) {
+  // being populated is only validation rule at the moment
+  return !!value;
+}
+
+function touchedInputIsEmpty(value: string) {
+  return isTouched(value) && !isPopulated(value);
+}
+
 function allInputsPopulated(trackingObject: FormFields) {
   return formValues(trackingObject).every(isPopulated);
 }
@@ -36,20 +50,6 @@ function missingFormFields(trackingObject: FormFields) {
   return Object.entries(trackingObject)
     .filter(([field, value]) => touchedInputIsEmpty(value))
     .map(([field]) => field);
-}
-
-function touchedInputIsEmpty(value: string) {
-  return isTouched(value) && !isPopulated(value);
-}
-
-function isTouched(value: string) {
-  // we know a field has been "touched" if its value is an empty string instead of null
-  return value !== null;
-}
-
-function isPopulated(value: string) {
-  // being populated is only validation rule at the moment
-  return !!value;
 }
 
 function warningText(missingFields: string[]) {
@@ -83,9 +83,8 @@ export function toggleWarningMessage(
   } else {
     const missingFields = missingFormFields(formFields);
 
-    // we should never arrive here, in theory
     if (!missingFields.length) {
-      // warning.classList.remove("visible");
+      // warning.classList.remove("visible"); // fallback - we should never arrive here, in theory
       return;
     }
 
