@@ -9,6 +9,22 @@ import "../styles/layout.scss";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="apple-mobile-web-app-title" content="Madeline" />
+    <meta
+      name="description"
+      content="Artist website for Chicago-based DJ, producer, and vocalist Madeline. Listen to mixes, join the mailing list, and preview new music."
+    />
+    <meta property="og:title" content="Madeline: Chicago-based music artist" />
+    <meta
+      name="og:description"
+      content="Artist website for Chicago-based DJ, producer, and vocalist Madeline. Listen to mixes, join the mailing list, and preview new music."
+    />
+    <meta property="og:url" content="https://madelineurl.online" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://madelineurl.online/_astro/madeline_artist_keyboard.D3H1BMbW.jpg"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -22,17 +38,14 @@ import "../styles/layout.scss";
       sizes="180x180"
       href="/apple-touch-icon.png?v=20261027"
     />
-    <meta name="apple-mobile-web-app-title" content="Madeline" />
     <link rel="manifest" href="/site.webmanifest?v=20261027" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Madeline | Music Artist</title>
-    <!-- TODO: SEO -->
+    <title>Madeline</title>
   </head>
   <body>
     <header>
       <a href="/">
         <span class="visually-hidden">Home</span>
-        <img src={Logo.src} alt="" />
+        <img src={Logo.src} alt="" height="60px" width="100px" />
       </a>
     </header>
     <slot />
