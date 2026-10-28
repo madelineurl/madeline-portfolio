@@ -9,11 +9,12 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
 <main>
   <form
     name="contact"
+    id="contact-forn"
     method="POST"
     data-netlify="true"
     netlify-honeypot="bot-field"
-    action="/success/"
     class="form"
+    action="/success"
   >
     <!-- <div class="warning">Please fill out all fields</div> -->
     <input type="hidden" name="form-name" value="contact" />
@@ -27,40 +28,81 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     <label for="message" class="visually-hidden">Message</label>
     <button type="submit" id="submit" disabled> Send </button>
   </form>
+  <div id="success">
+    <p>Thanks for the message</p>
+    <a href="/">Home</a>
+    <a href="/contact">Send another message</a>
+  </div>
 </main>
 
 <script>
-  let formPopulated = false;
-  const name = document.getElementById("name") as HTMLInputElement;
-  const email = document.getElementById("email") as HTMLInputElement;
-  const message = document.getElementById("message") as HTMLTextAreaElement;
-  const send = document.getElementById("submit") as HTMLButtonElement;
+  const nameInput = document.getElementById("name") as HTMLInputElement;
+  const emailInput = document.getElementById("email") as HTMLInputElement;
+  const messageInput = document.getElementById(
+    "message"
+  ) as HTMLTextAreaElement;
+  const sendBtn = document.getElementById("submit") as HTMLButtonElement;
+  const contactForm = document.getElementById(
+    "contact-form"
+  ) as HTMLFormElement;
+  const successMsg = document.getElementById("success") as HTMLInputElement;
 
-  [name, email, message].forEach((input) => {
+  interface FormFields {
+    name: string;
+    email: string;
+    message: string;
+  }
+
+  let formFields: FormFields = {
+    name: nameInput.value ?? "",
+    email: emailInput.value ?? "",
+    message: messageInput.value ?? ""
+  };
+
+  [nameInput, emailInput, messageInput].forEach((input) => {
     input?.addEventListener("keyup", (event) => {
       if (
         event.target instanceof HTMLInputElement ||
         event.target instanceof HTMLTextAreaElement
       ) {
-        setDisabled(send, !event.target.value);
+        const { value } = event.target;
+
+        writeValue(input.name, value);
+        setButtonDisabled();
       }
     });
   });
 
-  function setDisabled(element: HTMLButtonElement, disabled: boolean) {
-    element.disabled = disabled;
+  contactForm.addEventListener("submit", () => {
+    document.body.removeChild(contactForm);
+    successMsg.style.display = "block";
+  });
+
+  function writeValue(inputName: string, value: string) {
+    if (inputName in formFields) {
+      formFields[inputName as keyof FormFields] = value;
+    }
+  }
+
+  function setButtonDisabled() {
+    if (Object.values(formFields).every((value) => !!value)) {
+      sendBtn.disabled = false;
+    } else {
+      sendBtn.disabled = true;
+    }
   }
 </script>
 
 <style>
   #background {
     background-size: cover;
+    object-fit: cover;
     position: fixed;
     top: 0;
     right: 0;
     height: 100%;
     z-index: -1;
-    filter: blur(30px);
+    filter: blur(20px);
     /* transition: filter 0.4s ease-in; */
   }
   .form {
@@ -71,9 +113,9 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     width: 100%;
     padding: 0 0.75rem;
     position: relative;
-    height: 100%;
+    /* height: 100%; */
     font-size: 1.2rem;
-    top: 7vh;
+    top: 20vh;
   }
 
   .form textarea {
@@ -125,9 +167,20 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     display: inline;
   }
 
-  @media screen and (min-width: 440px) {
+  #success {
+    color: var(--primary-white);
+    font-family: var(--header-font);
+    height: 100%;
+    display: none;
+  }
+
+  #success p {
+    font-size: 40px;
+  }
+
+  @media screen and (min-width: 500px) {
     .form {
-      width: 440px;
+      width: 500px;
       margin: 0 auto;
     }
   }
