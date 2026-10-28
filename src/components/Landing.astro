@@ -34,7 +34,8 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     top: 0;
     right: 0;
     width: auto;
-    height: 100vh;
+    height: 100vh; // fallback to standard viewheight
+    height: 100dvh; // use dynamic viewport height when available (i.e. mobile)
     z-index: -1;
     overflow: hidden;
     filter: blur(30px);
@@ -62,7 +63,7 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     /* flex: 1; */
     overflow-y: auto;
     margin: 0 auto;
-    min-height: auto;
+    min-height: 100%;
     width: 100%;
     padding: 2.5rem;
 
