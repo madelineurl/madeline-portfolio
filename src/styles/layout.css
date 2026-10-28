@@ -56,14 +56,12 @@ body {
   background-size: cover;
   font-family: inherit;
   font-weight: normal;
-  /* word-wrap: break-word; */
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  display: flex;
-  flex-direction: column;
+  display: grid;
   min-height: 100vh;
 }
 
@@ -239,13 +237,6 @@ a:visited {
   }
 }
 
-@media screen and (min-width: 640px) {
-  #icons-container {
-    left: 1rem;
-    justify-content: flex-start;
-  }
-}
-
 @media screen and (max-width: 640px) {
   img.icon {
     height: 50px;
@@ -254,20 +245,12 @@ a:visited {
 }
 
 @media screen and (max-width: 660px) {
-  .footer {
-    height: 4rem;
-  }
-
   .header-main {
     margin-bottom: 1.5rem;
   }
 }
 
 @media screen and (max-width: 840px) {
-  .footer {
-    z-index: 10;
-  }
-
   #navigation {
     position: fixed;
     flex-direction: column;

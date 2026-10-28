@@ -9,8 +9,8 @@ import Instagram from "./icons/instagram.svg";
 ---
 
 <div class="icons-container">
-  <a href="/contact" class="icon enlarge">
-    <Contact />
+  <a href="/contact" class="flex" '>
+    <Contact class="icon enlarge" />
   </a>
   <ExternalLink url="https://open.spotify.com/artist/2eMwoPf6uvrCLcKEmrfmel">
     <Spotify class="icon enlarge" />
@@ -31,26 +31,32 @@ import Instagram from "./icons/instagram.svg";
 
 <style>
   .icons-container {
-    margin: 0.7rem 0;
+    margin-bottom: 1.3rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
   }
 
   .icon {
-    width: 40px;
-    height: 40px;
-    margin: 0 0.3rem;
+    width: 50px;
+    height: 50px;
+    margin: 0.35rem;
     transition: transform 0.2s ease-in-out;
-    fill: linear-gradient(
-      135deg,
-      #919497 0%,
-      #ebeced 25%,
-      #bdbec0 50%,
-      #e6e7e8 75%,
-      #83868a 100%
-    );
+  }
+
+  @media screen and (min-width: 560px) {
+    .icons-container {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .icon {
+      width: 44px;
+      height: 44px;
+    }
   }
 
   /* .selected-icon.flex { 
