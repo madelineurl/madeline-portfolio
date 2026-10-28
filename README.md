@@ -46,7 +46,6 @@ I'm also on LinkedIn at https://linkedin.com/in/madeline-url/. |
 
 - fix / update SEO
 - add navigation bar & additional content
-- improve form validation (use react?)
 - debug production chrome experience on mobile
 - new font / color palette (branding)
 - integrations - calendar, bandcamp, etc
