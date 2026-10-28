@@ -44,7 +44,6 @@ I'm also on LinkedIn at https://linkedin.com/in/madeline-url/. |
 
 ## TODOs (upcoming work)
 
-- fix / update SEO
 - add navigation bar & additional content
 - debug production chrome experience on mobile
 - new font / color palette (branding)
