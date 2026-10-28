@@ -48,3 +48,5 @@ I'm also on LinkedIn at https://linkedin.com/in/madeline-url/. |
 - debug production chrome experience on mobile
 - new font / color palette (branding)
 - integrations - calendar, bandcamp, etc
+- perf updates - fix font imports, requset proper image sizes, remove unused
+  imagery
