@@ -2,16 +2,52 @@
 import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
 ---
 
-<img id="background" src={artistPhoto.src} alt="" fetchpriority="high" />
-<main class="main">
-  <p>
-    Madeline is a Chicago-based artist exploring the sensual corners of
-    electronic music.
-  </p>
-</main>
+<div class="split-screen-container">
+  <main>
+    <p>
+      Madeline is a Chicago-based artist exploring the sensual corners of
+      electronic music.
+    </p>
+  </main>
+  <div class="image-wrapper">
+    <img
+      id="background"
+      src={artistPhoto.src}
+      alt="TODO"
+      fetchpriority="high"
+    />
+  </div>
+</div>
 
 <style>
+  .split-screen-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .image-wrapper {
+    grid-column: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    filter: blur(30px);
+    transition: filter 0.3s ease-in;
+
+    img {
+      background-size: cover;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
   main {
+    grid-column: 1;
     font-family: var(--primary-font);
     overscroll-behavior: none;
     padding: env(safe-area-inset-top) env(safe-area-inset-right)
@@ -25,11 +61,10 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     font-size: 24px;
     flex: 1;
     overflow-y: auto;
-
-    max-width: 70%;
     margin: 0 auto;
-    /* transition: margin-left 3s ease-in-out;
-    transition: max-width 3s linear; */
+    min-height: auto;
+    width: 100%;
+    padding: 2rem;
 
     p {
       margin: 0;
@@ -39,35 +74,36 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     }
   }
 
-  #background {
-    background-size: cover;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    z-index: -1;
-    filter: blur(30px);
-    transition: filter 0.4s ease-in;
-  }
   @media screen and (min-width: 500px) {
-    #background {
+    .image-wrapper {
       filter: blur(20px);
-    }
-
-    p {
-      font-size: 48px;
     }
   }
 
   @media screen and (min-width: 768px) {
-    #background {
-      filter: blur(10px);
+    .split-screen-container {
+      grid-template-columns: 1fr 1fr;
     }
 
     main {
-      width: auto;
-      max-width: 40%;
-      margin-left: 2rem;
+      p {
+        font-size: 48px;
+      }
+    }
+
+    .image-wrapper {
+      filter: blur(10px);
+    }
+  }
+
+  @media screen and (min-width: 999px) {
+    .image-wrapper {
+      filter: blur(0px);
+    }
+
+    main {
+      max-width: 70%;
+      padding: 0;
 
       p {
         font-size: 44px;
@@ -75,14 +111,9 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     }
   }
 
-  @media screen and (min-width: 992px) {
-    #background {
-      filter: blur(0px);
-    }
-
-    main p {
-      font-size: 36px;
-      text-align: center;
+  @media screen and (min-width: 1100px) {
+    .image-wrapper {
+      width: 50vw;
     }
   }
 </style>
