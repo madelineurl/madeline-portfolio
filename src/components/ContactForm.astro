@@ -28,11 +28,6 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     <label for="message" class="visually-hidden">Message</label>
     <button type="submit" id="submit" disabled> Send </button>
   </form>
-  <div id="success">
-    <p>Thanks for the message</p>
-    <a href="/">Home</a>
-    <a href="/contact">Send another message</a>
-  </div>
 </main>
 
 <script>
@@ -42,10 +37,6 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
     "message"
   ) as HTMLTextAreaElement;
   const sendBtn = document.getElementById("submit") as HTMLButtonElement;
-  const contactForm = document.getElementById(
-    "contact-form"
-  ) as HTMLFormElement;
-  const successMsg = document.getElementById("success") as HTMLInputElement;
 
   interface FormFields {
     name: string;
@@ -71,11 +62,6 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
         setButtonDisabled();
       }
     });
-  });
-
-  contactForm.addEventListener("submit", () => {
-    document.body.removeChild(contactForm);
-    successMsg.style.display = "block";
   });
 
   function writeValue(inputName: string, value: string) {
@@ -165,17 +151,6 @@ import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
 
   label {
     display: inline;
-  }
-
-  #success {
-    color: var(--primary-white);
-    font-family: var(--header-font);
-    height: 100%;
-    display: none;
-  }
-
-  #success p {
-    font-size: 40px;
   }
 
   @media screen and (min-width: 500px) {

@@ -3,27 +3,53 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <main>
-    <div id="success">
-      <p>Thanks for the message</p>
-      <!-- <BackToHomeLink /> -->
+  <main id="success">
+    <!-- TODO: a little gift? -->
+    <div>
+      <p><em>Thanks for the message</em></p>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/contact">Send another message</a>
+      </div>
     </div>
   </main>
 </Layout>
 
 <style>
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   #success {
     color: var(--primary-white);
     font-family: var(--header-font);
-    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #success > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
 
   #success p {
-    font-size: 40px;
+    font-size: 44px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .links {
+    display: flex;
+    /* font-family: var(--primary-font); */
+
+    a {
+      margin: 0.5rem;
+      font-size: 28px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 </style>
