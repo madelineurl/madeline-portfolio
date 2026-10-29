@@ -1,5 +1,4 @@
 ---
-// import Caret from "./icons/caret_down.svg";
 import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
 import { getImage } from "astro:assets";
 
@@ -27,13 +26,20 @@ const alt =
     <p class="flex">
       Madeline is a Chicago-based artist exploring the sensual corners of
       electronic music.
-
       <!-- TODO: add latest release feature; Will become an <a> tag eventually -->
-      <!-- <span class="cta flex">Latest release <Caret class="enlarge icon" /></span> -->
+      <!-- <span class="cta flex">Latest release <Caret class="global-enlarge icon" /></span> -->
     </p>
   </main>
-  <div class="image-wrapper">
-    <img id="background" fetchpriority="high" {alt} {sizes} {src} {srcset} />
+  <div class="image-wrapper blur">
+    <img
+      id="background"
+      class="half-screen-image"
+      fetchpriority="high"
+      {alt}
+      {sizes}
+      {src}
+      {srcset}
+    />
   </div>
 
   <style lang="scss">
@@ -47,23 +53,10 @@ const alt =
 
     .image-wrapper {
       grid-column: 2;
-      position: fixed;
-      top: 0;
-      right: 0;
       width: auto;
       height: 100vh; // fallback to standard viewheight
       height: 100dvh; // use dynamic viewport height when available (i.e. mobile)
-      z-index: -1;
       overflow: hidden;
-      filter: blur(30px);
-      transition: filter 0.4s ease-in;
-
-      img {
-        background-size: cover;
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-      }
     }
 
     main {
@@ -94,13 +87,12 @@ const alt =
       }
     }
 
-    .cta {
-      justify-content: flex-start;
-      gap: 0.5rem;
-      font-size: 20px;
-      font-weight: normal;
-      //   TODO: fade in, blink caret
-    }
+    // .cta {
+    //   justify-content: flex-start;
+    //   gap: 0.5rem;
+    //   font-size: 20px;
+    //   font-weight: normal;
+    // }
 
     .icon {
       height: 24px;
