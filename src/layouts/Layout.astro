@@ -1,7 +1,12 @@
 ---
 import SocialMediaIcons from "../components/SocialMediaIcons.astro";
-import Logo from "../assets/images/MADELINE_LOGO_WHITE.png";
+import logo from "../assets/images/MADELINE_LOGO_WHITE.png";
+import { getImage } from "astro:assets";
+
 import "../styles/layout.scss";
+
+const optimizedLogo = await getImage({ src: logo, width: 100 });
+const srcset = `${optimizedLogo.src} ${optimizedLogo.attributes.width}w`;
 ---
 
 <!doctype html>
@@ -45,7 +50,13 @@ import "../styles/layout.scss";
     <header>
       <a href="/">
         <span class="visually-hidden">Home</span>
-        <img src={Logo.src} alt="" height="60px" width="100px" />
+        <img
+          src={logo.src}
+          srcset={srcset}
+          alt=""
+          height="60px"
+          width="100px"
+        />
       </a>
     </header>
     <slot />
