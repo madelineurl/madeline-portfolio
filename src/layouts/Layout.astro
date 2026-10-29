@@ -2,11 +2,12 @@
 import SocialMediaIcons from "../components/SocialMediaIcons.astro";
 import logo from "../assets/images/MADELINE_LOGO_WHITE.png";
 import { getImage } from "astro:assets";
-
 import "../styles/layout.scss";
 
-let importWidths = [100, 200, 300, 400, 600];
+// TODO: SVG instead?
+let importWidths = [100, 200, 300];
 
+const { src } = logo;
 const optimizedLogos = await Promise.all(
   importWidths.map(async (width) => getImage({ src: logo, width }))
 );
@@ -58,7 +59,7 @@ const srcset = optimizedLogos
       <a href="/">
         <span class="visually-hidden">Home</span>
         <img
-          src={logo.src}
+          {src}
           {srcset}
           sizes="100px"
           alt="Madeline\'s logo"
