@@ -108,7 +108,7 @@ import artistPhoto from "../../assets/images/madeline_artist_keyboard.jpg";
     font-family: var(--header-font);
     background-color: var(--primary-white);
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     &:hover:not(:disabled) {
       background-color: rgb(186, 186, 186);
       cursor: pointer;
@@ -133,6 +133,12 @@ import artistPhoto from "../../assets/images/madeline_artist_keyboard.jpg";
     form {
       width: $breakpoint-xs;
       margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    button[type="submit"] {
+      font-size: 1.3rem;
     }
   }
 </style>
