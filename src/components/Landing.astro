@@ -29,6 +29,8 @@ const fallback = optimizedImages[1].src;
   <div class="image-wrapper">
     <img
       id="background"
+      alt="Madeline holds a digital keyboard vertically at an angle and rests their cheek against it, wearing a white beater tank with moving boxes in the background"
+      fetchpriority="high"
       src={fallback}
       srcset={srcset}
       sizes="(max-width: 450px) 450px, (max-width: 768px) 600px, (max-width: 1200px) 800px, 1200px"
@@ -159,7 +161,6 @@ const fallback = optimizedImages[1].src;
     @media screen and (min-width: $breakpoint-lg) {
       .image-wrapper {
         width: 50vw;
-        // height: auto;
       }
     }
   </style>
