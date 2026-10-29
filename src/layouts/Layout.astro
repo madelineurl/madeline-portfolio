@@ -74,6 +74,7 @@ const srcset = optimizedLogos
 </html>
 
 <style lang="scss">
+  @use "../styles/layout.scss" as *;
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Oswald:wght@300");
 
   header {
@@ -87,8 +88,8 @@ const srcset = optimizedLogos
   a {
     display: flex;
     align-items: center;
-    margin-left: 0.5rem;
-    padding: 0 0.5rem;
+    margin-left: $space-xs;
+    padding: 0 $space-xs;
     height: 100%;
   }
 
