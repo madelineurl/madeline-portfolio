@@ -1,6 +1,20 @@
 ---
+// import LandingImage from "./LandingImage.astro";
+// import Caret from "./icons/caret_down.svg";
 import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
-import Caret from "./icons/caret_down.svg";
+import { getImage } from "astro:assets";
+
+let importWidths = [450, 600, 800, 1200, 1400];
+
+const optimizedImages = await Promise.all(
+  importWidths.map(async (width) => getImage({ src: artistPhoto, width }))
+);
+
+const srcset = optimizedImages
+  .map((img) => `${img.src} ${img.attributes.width}w`)
+  .join(", ");
+
+const fallback = optimizedImages[1].src;
 ---
 
 <div class="split-screen-container">
@@ -21,137 +35,138 @@ import Caret from "./icons/caret_down.svg";
   <div class="image-wrapper">
     <img
       id="background"
-      src={artistPhoto.src}
-      alt="Madeline holds a digital keyboard vertically at an angle and rests their cheek against it, wearing a white beater tank with moving boxes in the background"
-      fetchpriority="high"
+      src={fallback}
+      srcset={srcset}
+      sizes="(max-width: 450px) 450px, (max-width: 768px) 600px, (max-width: 1200px) 800px, 1200px"
     />
   </div>
-</div>
 
-<style lang="scss">
-  @use "../styles/layout.scss" as *;
+  <style lang="scss">
+    @use "../styles/layout.scss" as *;
 
-  .split-screen-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-
-  .image-wrapper {
-    grid-column: 2;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: auto;
-    height: 100vh; // fallback to standard viewheight
-    height: 100dvh; // use dynamic viewport height when available (i.e. mobile)
-    z-index: -1;
-    overflow: hidden;
-    filter: blur(30px);
-    transition: filter 0.4s ease-in;
-
-    img {
-      background-size: cover;
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  main {
-    grid-column: 1;
-    font-family: var(--primary-font);
-    overscroll-behavior: none;
-    flex-direction: column;
-    font-family: var(--header-font);
-    color: var(--primary-white);
-    font-size: 24px;
-    overflow-y: auto;
-    margin: 0 auto;
-    padding: 2.5rem;
-    min-height: 100%;
-    width: 100%;
-
-    p {
-      margin: 0;
-      font-size: 52px;
-      line-height: 1.1;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 1rem;
-    }
-
-    span {
-      width: 100%;
-    }
-  }
-
-  .cta {
-    justify-content: flex-start;
-    gap: 0.5rem;
-    font-size: 20px;
-    font-weight: normal;
-    //   TODO: fade in, blink caret
-  }
-
-  .icon {
-    height: 24px;
-    width: 24px;
-  }
-
-  @media screen and (min-width: $breakpoint-xs) {
-    main {
-      text-align: center;
-    }
-
-    .cta {
-      justify-content: center;
-    }
-
-    .image-wrapper {
-      filter: blur(20px);
-    }
-  }
-
-  @media screen and (min-width: $breakpoint-sm) {
     .split-screen-container {
-      grid-template-columns: 1fr 1fr;
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+
+    .image-wrapper {
+      grid-column: 2;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: auto;
+      height: 100vh; // fallback to standard viewheight
+      height: 100dvh; // use dynamic viewport height when available (i.e. mobile)
+      z-index: -1;
+      overflow: hidden;
+      filter: blur(30px);
+      transition: filter 0.4s ease-in;
+
+      img {
+        background-size: cover;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
     }
 
     main {
-      text-align: left;
+      grid-column: 1;
+      font-family: var(--primary-font);
+      overscroll-behavior: none;
+      flex-direction: column;
+      font-family: var(--header-font);
+      color: var(--primary-white);
+      font-size: 24px;
+      overflow-y: auto;
+      margin: 0 auto;
+      padding: 2.5rem;
+      min-height: 100%;
+      width: 100%;
+
       p {
-        font-size: 48px;
+        margin: 0;
+        font-size: 52px;
+        line-height: 1.1;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1rem;
+      }
+
+      span {
+        width: 100%;
       }
     }
 
     .cta {
       justify-content: flex-start;
+      gap: 0.5rem;
+      font-size: 20px;
+      font-weight: normal;
+      //   TODO: fade in, blink caret
     }
 
-    .image-wrapper {
-      filter: blur(10px);
-    }
-  }
-
-  @media screen and (min-width: $breakpoint-md) {
-    .image-wrapper {
-      filter: blur(0px);
+    .icon {
+      height: 24px;
+      width: 24px;
     }
 
-    main {
-      max-width: 70%;
-      padding: 0;
+    @media screen and (min-width: $breakpoint-xs) {
+      main {
+        text-align: center;
+      }
 
-      p {
-        font-size: 44px;
+      .cta {
+        justify-content: center;
+      }
+
+      .image-wrapper {
+        filter: blur(20px);
       }
     }
-  }
 
-  @media screen and (min-width: $breakpoint-lg) {
-    .image-wrapper {
-      width: 50vw;
+    @media screen and (min-width: $breakpoint-sm) {
+      .split-screen-container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      main {
+        text-align: left;
+        p {
+          font-size: 48px;
+        }
+      }
+
+      .cta {
+        justify-content: flex-start;
+      }
+
+      .image-wrapper {
+        filter: blur(10px);
+      }
     }
-  }
-</style>
+
+    @media screen and (min-width: $breakpoint-md) {
+      .image-wrapper {
+        filter: blur(0px);
+      }
+
+      main {
+        max-width: 70%;
+        padding: 0;
+
+        p {
+          font-size: 44px;
+        }
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      .image-wrapper {
+        width: 50vw;
+        // height: auto;
+      }
+    }
+  </style>
+</div>

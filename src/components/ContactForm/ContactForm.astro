@@ -5,6 +5,7 @@ import artistPhoto from "../../assets/images/madeline_artist_keyboard.jpg";
 
 <ClientRouter />
 
+<!-- TODO: replace with optimized image -->
 <img id="background" src={artistPhoto.src} />
 <main>
   <form
@@ -37,7 +38,6 @@ import artistPhoto from "../../assets/images/madeline_artist_keyboard.jpg";
     toggleWarningMessage,
     writeValue
   } from "./contact-form";
-
   const nameInput = document.getElementById("name") as HTMLInputElement;
   const emailInput = document.getElementById("email") as HTMLInputElement;
   const messageInput = document.getElementById(
