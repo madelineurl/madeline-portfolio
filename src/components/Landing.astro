@@ -3,17 +3,23 @@
 import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
 import { getImage } from "astro:assets";
 
-let importWidths = [450, 600, 800, 1200, 1400];
-
+const { src } = artistPhoto;
+// above the 1100px breakpoint, the image resizes to fit 50% of the viewport width
+// below the 1100px breakpoint, the image is fixed at 600px (needs 600, 1200, 1800)
+// below 600px, the image resizes to fit the viewport width
+// image is increasingly blurred below 990px breakpoint, so the quality doesn't matter - tell the browser to fetch a lower width image than the actual image width
+// largest size accounts for a 2400px screen where the image width is 1200px, largest size needed is 3600 to account for 3:1 DPRs
+const sizes =
+  "(max-width: 990px) 400px, (max-width: 1200px) 600px, (max-width: 1600px) 800px, 1200px";
+const importWidths = [400, 600, 800, 1200, 1400, 1600, 1800, 2400, 3600];
 const optimizedImages = await Promise.all(
-  importWidths.map(async (width) => getImage({ src: artistPhoto, width }))
+  importWidths.map((width) => getImage({ src: artistPhoto, width }))
 );
-
 const srcset = optimizedImages
   .map((img) => `${img.src} ${img.attributes.width}w`)
   .join(", ");
-
-const fallback = optimizedImages[1].src;
+const alt =
+  "Madeline holds a digital keyboard vertically at an angle and rests their cheek against it, wearing a white ribbed tank in a woodshop surrounded by moving boxes";
 ---
 
 <div class="split-screen-container">
@@ -27,14 +33,7 @@ const fallback = optimizedImages[1].src;
     </p>
   </main>
   <div class="image-wrapper">
-    <img
-      id="background"
-      alt="Madeline holds a digital keyboard vertically at an angle and rests their cheek against it, wearing a white beater tank with moving boxes in the background"
-      fetchpriority="high"
-      src={fallback}
-      srcset={srcset}
-      sizes="(max-width: 450px) 450px, (max-width: 768px) 600px, (max-width: 1200px) 800px, 1200px"
-    />
+    <img id="background" fetchpriority="high" {alt} {sizes} {src} {srcset} />
   </div>
 
   <style lang="scss">
