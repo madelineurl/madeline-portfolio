@@ -3,7 +3,7 @@
 
 /* VARIABLES */
 
-// color and font variables
+// Color and Font
 :root {
   --header-font: "Bebas Neue", sans-serif;
   --primary-font: "JetBrains Mono", sans-serif;
@@ -13,13 +13,23 @@
   --primary-text-color: var(--primary-white);
 }
 
-// media query variables
+// Media Query Breakpoints
 $breakpoint-xs: 500px;
 $breakpoint-sm: 768px;
 $breakpoint-md: 990px;
 $breakpoint-lg: 1100px;
 
-// TODO: spacing variables
+// Spacing
+$space-xxs: 0.25rem;
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
 
 /* GENERAL */
 
@@ -102,7 +112,7 @@ button {
   -webkit-appearance: none;
   appearance: none;
   font-family: inherit;
-  padding: 0.25rem 0.75rem;
+  padding: $space-xxs $space-sm;
   font-size: 14px;
   border-radius: 8px;
 }
