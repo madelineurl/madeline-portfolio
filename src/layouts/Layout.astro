@@ -5,8 +5,15 @@ import { getImage } from "astro:assets";
 
 import "../styles/layout.scss";
 
-const optimizedLogo = await getImage({ src: logo, width: 100 });
-const srcset = `${optimizedLogo.src} ${optimizedLogo.attributes.width}w`;
+let importWidths = [100, 200, 300, 400, 600];
+
+const optimizedLogos = await Promise.all(
+  importWidths.map(async (width) => getImage({ src: logo, width }))
+);
+
+const srcset = optimizedLogos
+  .map((img) => `${img.src} ${img.attributes.width}w`)
+  .join(", ");
 ---
 
 <!doctype html>
@@ -52,8 +59,9 @@ const srcset = `${optimizedLogo.src} ${optimizedLogo.attributes.width}w`;
         <span class="visually-hidden">Home</span>
         <img
           src={logo.src}
-          srcset={srcset}
-          alt=""
+          {srcset}
+          sizes="100px"
+          alt="Madeline\'s logo"
           height="60px"
           width="100px"
         />
