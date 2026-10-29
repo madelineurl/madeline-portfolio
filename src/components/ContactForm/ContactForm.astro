@@ -6,7 +6,7 @@ import artistPhoto from "../../assets/images/madeline_artist_keyboard.jpg";
 <ClientRouter />
 
 <!-- TODO: replace with optimized image -->
-<img id="background" src={artistPhoto.src} />
+<img id="background" class="half-screen-image blur" src={artistPhoto.src} />
 <main>
   <form
     name="contact"
@@ -72,17 +72,6 @@ import artistPhoto from "../../assets/images/madeline_artist_keyboard.jpg";
 <style lang="scss">
   @use "../../styles/layout.scss" as *;
 
-  img#background {
-    background-size: cover;
-    object-fit: cover;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    z-index: -1;
-    filter: blur(20px);
-    /* transition: filter 0.4s ease-in; */
-  }
   form {
     display: flex;
     flex-direction: column;
