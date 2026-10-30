@@ -1,12 +1,11 @@
 ---
 import ClientRouter from "astro/components/ClientRouter.astro";
-import artistPhoto from "../../assets/images/madeline_artist_keyboard.jpg";
+import LandingPageImage from "../LandingPageImage.astro";
 ---
 
 <ClientRouter />
 
-<!-- TODO: replace with optimized image -->
-<img id="background" class="half-screen-image blur" src={artistPhoto.src} />
+<LandingPageImage />
 <main>
   <form
     name="contact"

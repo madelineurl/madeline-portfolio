@@ -1,24 +1,5 @@
 ---
-import artistPhoto from "../assets/images/madeline_artist_keyboard.jpg";
-import { getImage } from "astro:assets";
-
-const { src } = artistPhoto;
-// above the 1100px breakpoint, the image resizes to fit 50% of the viewport width
-// below the 1100px breakpoint, the image is fixed at 600px (needs 600, 1200, 1800)
-// below 600px, the image resizes to fit the viewport width
-// image is increasingly blurred below 990px breakpoint, so the quality doesn't matter - tell the browser to fetch a lower width image than the actual image width
-// largest size accounts for a 2400px screen where the image width is 1200px, largest size needed is 3600 to account for 3:1 DPRs
-const sizes =
-  "(max-width: 990px) 400px, (max-width: 1200px) 600px, (max-width: 1600px) 800px, 1200px";
-const importWidths = [400, 600, 800, 1200, 1400, 1600, 1800, 2400, 3600];
-const optimizedImages = await Promise.all(
-  importWidths.map((width) => getImage({ src: artistPhoto, width }))
-);
-const srcset = optimizedImages
-  .map((img) => `${img.src} ${img.attributes.width}w`)
-  .join(", ");
-const alt =
-  "Madeline holds a digital keyboard vertically at an angle and rests their cheek against it, wearing a white ribbed tank in a woodshop surrounded by moving boxes";
+import LandingPageImage from "./LandingPageImage.astro";
 ---
 
 <div class="split-screen-container">
@@ -30,17 +11,7 @@ const alt =
       <!-- <span class="cta flex">Latest release <Caret class="global-enlarge icon" /></span> -->
     </p>
   </main>
-  <div class="image-wrapper blur">
-    <img
-      id="background"
-      class="half-screen-image"
-      fetchpriority="high"
-      {alt}
-      {sizes}
-      {src}
-      {srcset}
-    />
-  </div>
+  <LandingPageImage progressiveBlur={true} />
 
   <style lang="scss">
     @use "../styles/layout.scss" as *;
@@ -49,14 +20,6 @@ const alt =
       display: grid;
       grid-template-columns: 1fr;
       width: 100%;
-    }
-
-    .image-wrapper {
-      grid-column: 2;
-      width: auto;
-      height: 100vh; // fallback to standard viewheight
-      height: 100dvh; // use dynamic viewport height when available (i.e. mobile)
-      overflow: hidden;
     }
 
     main {
@@ -107,10 +70,6 @@ const alt =
       .cta {
         justify-content: center;
       }
-
-      .image-wrapper {
-        filter: blur(20px);
-      }
     }
 
     @media screen and (min-width: $breakpoint-sm) {
@@ -128,17 +87,9 @@ const alt =
       .cta {
         justify-content: flex-start;
       }
-
-      .image-wrapper {
-        filter: blur(10px);
-      }
     }
 
     @media screen and (min-width: $breakpoint-md) {
-      .image-wrapper {
-        filter: blur(0px);
-      }
-
       main {
         max-width: 70%;
         padding: 0;
@@ -146,12 +97,6 @@ const alt =
         p {
           font-size: 44px;
         }
-      }
-    }
-
-    @media screen and (min-width: $breakpoint-lg) {
-      .image-wrapper {
-        width: 50vw;
       }
     }
   </style>
