@@ -4,7 +4,6 @@ import LandingPageImage from "../LandingPageImage.astro";
 ---
 
 <ClientRouter />
-
 <LandingPageImage />
 <main>
   <form
@@ -33,7 +32,7 @@ import LandingPageImage from "../LandingPageImage.astro";
   import {
     type FormFields,
     toggleButtonDisabled,
-    updateInputValidity,
+    toggleInputValidity,
     toggleWarningMessage,
     writeValue
   } from "./contact-form";
@@ -60,7 +59,7 @@ import LandingPageImage from "../LandingPageImage.astro";
         formFields = writeValue(formFields, name, value);
 
         // can we move these to react to changes in form fields instead?
-        updateInputValidity(event.target, value);
+        toggleInputValidity(event.target, value);
         toggleWarningMessage(formFields, warning);
         toggleButtonDisabled(formFields, sendBtn);
       }
