@@ -24,7 +24,7 @@ function formValues(trackingObject: FormFields) {
   return Object.values(trackingObject);
 }
 
-function isTouched(value: string) {
+function isTouched(value: string | null) {
   // we know a field has been "touched" if its value is an empty string instead of null
   return value !== null;
 }
@@ -34,7 +34,7 @@ function isPopulated(value: string) {
   return !!value;
 }
 
-function touchedInputIsEmpty(value: string) {
+function touchedInputIsEmpty(value: string | null) {
   return isTouched(value) && !isPopulated(value);
 }
 
@@ -48,7 +48,7 @@ function allTouchedInputsPopulated(trackingObject: FormFields) {
 
 function missingFormFields(trackingObject: FormFields) {
   return Object.entries(trackingObject)
-    .filter(([field, value]) => touchedInputIsEmpty(value))
+    .filter(([_, value]) => touchedInputIsEmpty(value))
     .map(([field]) => field);
 }
 
@@ -63,9 +63,12 @@ function warningText(missingFields: string[]) {
   }
 }
 
-// DOM Utilities
+// DOM Utilities (mutating actions)
 
-export function updateInputValidity(element: HTMLElement, value: string) {
+export function toggleInputValidity(
+  element: HTMLInputElement | HTMLTextAreaElement,
+  value: string | null
+) {
   if (touchedInputIsEmpty(value)) {
     element.style.outline = "1px solid red";
   } else {
@@ -93,7 +96,7 @@ export function toggleWarningMessage(
   }
 }
 
-export function updateDisabledState(
+export function toggleButtonDisabled(
   formFields: FormFields,
   sendBtn: HTMLButtonElement
 ) {
