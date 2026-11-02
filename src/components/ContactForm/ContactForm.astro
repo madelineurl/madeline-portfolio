@@ -32,7 +32,7 @@ import LandingPageImage from "../LandingPageImage.astro";
 <script>
   import {
     type FormFields,
-    updateDisabledState,
+    toggleButtonDisabled,
     updateInputValidity,
     toggleWarningMessage,
     writeValue
@@ -62,7 +62,7 @@ import LandingPageImage from "../LandingPageImage.astro";
         // can we move these to react to changes in form fields instead?
         updateInputValidity(event.target, value);
         toggleWarningMessage(formFields, warning);
-        updateDisabledState(formFields, sendBtn);
+        toggleButtonDisabled(formFields, sendBtn);
       }
     })
   );
