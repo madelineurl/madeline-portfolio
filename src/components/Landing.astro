@@ -4,12 +4,15 @@ import LandingPageImage from "./LandingPageImage.astro";
 
 <div class="split-screen-container">
   <main class="flex">
-    <p class="flex">
-      <h1>Madeline</h1> is a Chicago-based artist exploring the sensual corners of
-      electronic music.
-      <!-- TODO: add latest release feature; Will become an <a> tag eventually -->
-      <!-- <span class="cta flex">Latest release <Caret class="global-enlarge icon" /></span> -->
-    </p>
+    <div>
+      <h1>Madeline</h1>
+      <p>
+        is a Chicago-based artist exploring the sensual corners of electronic
+        music.
+        <!-- TODO: add latest release feature; Will become an <a> tag eventually -->
+        <!-- <span class="cta flex">Latest release <Caret class="global-enlarge icon" /></span> -->
+      </p>
+    </div>
   </main>
   <LandingPageImage progressiveBlur={true} />
 </div>
@@ -38,12 +41,10 @@ import LandingPageImage from "./LandingPageImage.astro";
     width: 100%;
 
     p {
+      display: inline;
       margin: 0;
       font-size: 52px;
       line-height: 1.1;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: $space-sm;
     }
 
     span {
@@ -53,6 +54,9 @@ import LandingPageImage from "./LandingPageImage.astro";
 
   h1 {
     display: inline-block;
+    font-size: 52px;
+    margin-right: $space-xs;
+    font-weight: 500;
   }
 
   // .cta {
@@ -84,7 +88,8 @@ import LandingPageImage from "./LandingPageImage.astro";
 
     main {
       text-align: left;
-      p {
+      p,
+      h1 {
         font-size: 48px;
       }
     }
@@ -99,7 +104,8 @@ import LandingPageImage from "./LandingPageImage.astro";
       max-width: 70%;
       padding: 0;
 
-      p {
+      p,
+      h1 {
         font-size: 44px;
       }
     }
