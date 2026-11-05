@@ -1,7 +1,7 @@
 ---
 const currentPath = Astro.url.pathname;
 
-const routes = ["about", "music", "press", "upcoming"].map((page) => {
+const routes = ["about", "music", "press", "dates"].map((page) => {
   const path = "/" + page;
   return { label: page, path, active: currentPath === path };
 });
