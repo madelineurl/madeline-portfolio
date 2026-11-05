@@ -46,7 +46,6 @@ body {
   width: 100%;
   height: 100vh;
   height: 100dvh;
-  overflow: hidden;
 }
 
 html {
@@ -151,18 +150,25 @@ button {
   width: 100%;
 }
 
-@media screen and (min-width: $breakpoint-sm) {
-  .split-screen-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 a {
   text-decoration: none;
 }
 
 a:visited {
   color: var(--primary-white);
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .split-screen-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  html,
+  body {
+    overflow: hidden;
+  }
 }
 
 /* MUSIC PLAYER STYLES (SAVING) */
