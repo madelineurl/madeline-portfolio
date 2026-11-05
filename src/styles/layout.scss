@@ -145,35 +145,24 @@ button {
   transform: scale(1.1);
 }
 
+.split-screen-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+  .split-screen-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 a {
   text-decoration: none;
 }
 
 a:visited {
   color: var(--primary-white);
-}
-
-/* ABOUT */
-
-#about {
-  position: relative;
-  top: 300vh;
-  height: 100vh;
-  color: white;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  /* max-width: 800px; */
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  font-family: Oswald;
-  /* text-indent: 10px; */
-}
-
-#about div {
-  font-size: larger;
-  margin: 10px 0;
 }
 
 /* MUSIC PLAYER STYLES (SAVING) */
