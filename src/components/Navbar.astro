@@ -1,4 +1,6 @@
 ---
+import Hamburger from "./icons/hamburger.svg";
+
 const currentPath = Astro.url.pathname;
 
 const routes = ["about", "music", "press", "dates"].map((page) => {
@@ -24,8 +26,9 @@ let mobileNavOpen = false;
 </nav>
 
 <nav id="mobile-nav" class="flex" aria-expanded={mobileNavOpen}>
-  <!-- TODO: add icon -->
-  <button id="toggle-mobile-nav">open</button>
+  <button id="toggle-mobile-nav">
+    <Hamburger />
+  </button>
   <ul id="mobile-nav-list">
     {
       routes.map(({ label, path, active }) => (
@@ -65,9 +68,12 @@ let mobileNavOpen = false;
 <style lang="scss">
   @use "../styles/layout.scss" as *;
 
+  nav {
+    font-family: Oswald;
+  }
+
   #desktop-nav {
     display: none;
-    font-family: Oswald;
 
     ul {
       display: flex;
@@ -80,14 +86,16 @@ let mobileNavOpen = false;
   #mobile-nav {
     position: fixed;
     flex-direction: column;
-    align-items: flex-end;
+    // align-items: flex-end;
     justify-content: center;
     right: 0;
     top: 0;
+    min-width: 50%;
 
     button {
-      margin-right: $space-sm;
-      margin-top: $space-sm;
+      margin-right: $space-xs;
+      margin-top: $space-xs;
+      padding: $space-xs;
     }
 
     ul {
@@ -98,7 +106,7 @@ let mobileNavOpen = false;
     }
 
     li {
-      min-height: 3rem;
+      height: 4rem;
     }
 
     &.open {
@@ -132,7 +140,13 @@ let mobileNavOpen = false;
     }
 
     &:hover {
-      background-color: rgba(65, 73, 94, 0.8);
+      color: rgb(212, 224, 255);
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-xs) {
+    #mobile-nav {
+      min-width: 30%;
     }
   }
 
