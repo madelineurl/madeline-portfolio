@@ -5,38 +5,118 @@ const routes = ["about", "music", "press", "dates"].map((page) => {
   const path = "/" + page;
   return { label: page, path, active: currentPath === path };
 });
+
+let mobileNavOpen = false;
 ---
 
-<nav>
-  {
-    routes.map(({ label, path, active }) => (
-      <a href={path} class:list={{ active }}>
-        {label}
-      </a>
-    ))
-  }
+<nav id="desktop-nav">
+  <ul>
+    {
+      routes.map(({ label, path, active }) => (
+        <li>
+          <a href={path} class:list={{ active }}>
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </nav>
+
+<nav id="mobile-nav" class="flex" aria-expanded={mobileNavOpen}>
+  <!-- TODO: add icon -->
+  <button id="toggle-mobile-nav">open</button>
+  <ul id="mobile-nav-list">
+    {
+      routes.map(({ label, path, active }) => (
+        <li>
+          <a href={path} class:list={{ active }}>
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<script>
+  const mobileNav = document.getElementById("mobile-nav");
+  const mobileNavBtn = document.getElementById("toggle-mobile-nav");
+  //   const mobileNavList = document.getElementById("mobile-nav-list");
+
+  let mobileNavOpen = false;
+
+  mobileNavBtn?.addEventListener("click", toggleMobileNav);
+
+  //   TODO: close nav when changing screen sizes
+  function toggleMobileNav() {
+    if (!mobileNavOpen) {
+      mobileNavOpen = true;
+      mobileNav?.classList.add("open", "true");
+      mobileNav?.setAttribute("aria-expanded", "true");
+    } else {
+      mobileNavOpen = false;
+      mobileNav?.classList.remove("open");
+      mobileNav?.setAttribute("aria-expanded", "false");
+    }
+  }
+</script>
 
 <style lang="scss">
   @use "../styles/layout.scss" as *;
 
-  nav {
-    // position: fixed;
-    font-family: Oswald;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    text-transform: lowercase;
+  #desktop-nav {
     display: none;
+    font-family: Oswald;
 
-    &.open {
+    ul {
       display: flex;
+      align-items: center;
+      text-align: center;
+      text-transform: lowercase;
     }
   }
 
-  nav.hide {
-    transform: translateX(150%);
-    opacity: 1;
+  #mobile-nav {
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    right: 0;
+    top: 0;
+
+    button {
+      margin-right: $space-sm;
+      margin-top: $space-sm;
+    }
+
+    ul {
+      display: none;
+      flex-direction: column;
+      height: 100%;
+      margin-top: $space-md;
+    }
+
+    li {
+      min-height: 3rem;
+    }
+
+    &.open {
+      height: 100%;
+      z-index: 9;
+      background-color: black;
+
+      ul {
+        display: flex;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
   }
 
   a {
@@ -57,18 +137,21 @@ const routes = ["about", "music", "press", "dates"].map((page) => {
   }
 
   @media screen and (min-width: $breakpoint-sm) {
-    nav {
+    #mobile-nav {
+      display: none;
+    }
+
+    #desktop-nav {
       display: flex;
       position: relative;
       flex-direction: row;
       justify-content: flex-end;
       height: 100%;
       width: 100%;
-    }
-
-    a {
-      font-size: 20px;
-      margin-right: $space-lg;
+      a {
+        font-size: 20px;
+        margin-right: $space-lg;
+      }
     }
   }
 </style>
