@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main>
+    <div id="music" class="flex">
+      <p>
+        "From the super sexy ‘fantasy daddy’, through the off-kilter ‘hurt it’,
+        to slo-mo cut ‘doubtful baby’, [unlearning is] a lush and varied release
+        and has us eagerly awaiting what’s next." - DJ Mag
+      </p>
+      <div>LISTEN</div>
+      <div>BOILER ROOM CHICAGO</div>
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  @use "../styles/layout.scss" as *;
+
+  #music {
+    height: 100%;
+    color: var(--primary-white);
+    flex-direction: column;
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+</style>
+
+<!-- /* MUSIC PLAYER STYLES (SAVING) */ -->
+
+<!-- /*
+.soundcloud-player {
+  font-size: 10px;
+  color: #cccccc;
+  line-break: anywhere;
+  word-break: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--primary-font);
+  font-weight: 100;
+  width: 100%;
+  margin: .3rem 0;
+} */
+
+/* .g-background-default {
+  background-color: darkgrey !important;
+} */ -->
