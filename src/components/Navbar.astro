@@ -1,41 +1,63 @@
-<!-- <style lang="scss">
- 	@use "../styles/layout.scss" as *;
-	
-	@media screen and (max-width: $breakpoint-md) {
-		#navigation {
-			position: fixed;
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-			width: 100%;
-			height: 90vh;
-			right: 0px;
-			top: 5rem;
-			z-index: 9;
-			background-color: rgba(157, 166, 187, 0.9);
-			/* transition: transform .3s ease; */
-			animation: enter-vertical 0.3s ease;
-		}
+<nav>
+  <a href="/about">About</a>
+  <a href="/music">Music</a>
+  <a href="/press">Press</a>
+  <a href="/dates">Upcoming</a>
+</nav>
 
-		#navigation.hide {
-			transform: translateX(150%);
-			opacity: 1;
-		}
+<style lang="scss">
+  @use "../styles/layout.scss" as *;
 
-		#navigation a {
-			border-radius: none;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			position: relative;
-			height: 18%;
-			width: 100%;
-			color: var(--primary-white);
-			font-size: 2.5rem;
-		}
+  nav {
+    // position: fixed;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-transform: lowercase;
+    display: none;
 
-		#navigation a:hover {
-			background-color: rgba(65, 73, 94, 0.8);
-		}
-	}
-</style> -->
+    &.open {
+      display: flex;
+    }
+  }
+
+  nav.hide {
+    transform: translateX(150%);
+    opacity: 1;
+  }
+
+  a {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // position: relative;
+    height: auto;
+    // width: 100%;
+    color: var(--primary-white);
+    font-size: 2.5rem;
+
+    &.active {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      background-color: rgba(65, 73, 94, 0.8);
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    nav {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      justify-content: flex-end;
+      height: 100%;
+      width: 100%;
+    }
+
+    a {
+      font-size: 20px;
+      margin-right: $space-lg;
+    }
+  }
+</style>
