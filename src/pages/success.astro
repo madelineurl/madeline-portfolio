@@ -5,9 +5,9 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <LandingPageImage />
-  <main id="success">
+  <main>
     <!-- TODO: a little gift? -->
-    <div>
+    <div id="success" class="flex">
       <p><em>Thanks for the message</em></p>
       <div class="links">
         <a href="/">Home</a>
@@ -19,23 +19,16 @@ import Layout from "../layouts/Layout.astro";
 
 <style lang="scss">
   @use "../styles/layout.scss" as *;
+
   #success {
-    color: var(--primary-white);
     font-family: var(--header-font);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #success > div {
-    display: flex;
+    color: var(--primary-white);
+    height: 100%;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: $space-sm;
+    gap: $space-md;
   }
 
-  #success p {
+  p {
     font-size: 44px;
     margin: 0;
     width: 100%;
