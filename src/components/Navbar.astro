@@ -1,8 +1,20 @@
+---
+const currentPath = Astro.url.pathname;
+
+const routes = ["about", "music", "press", "upcoming"].map((page) => {
+  const path = "/" + page;
+  return { label: page, path, active: currentPath === path };
+});
+---
+
 <nav>
-  <a href="/about">About</a>
-  <a href="/music">Music</a>
-  <a href="/press">Press</a>
-  <a href="/dates">Upcoming</a>
+  {
+    routes.map(({ label, path, active }) => (
+      <a href={path} class:list={{ active }}>
+        {label}
+      </a>
+    ))
+  }
 </nav>
 
 <style lang="scss">
