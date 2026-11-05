@@ -1,0 +1,50 @@
+---
+import LandingPageImage from "../components/LandingPageImage.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <LandingPageImage progressiveBlur={true} />
+  <main>
+    <div id="about" class="flex split-screen-container">
+      <p class="flex">
+        <span
+          >Madeline is a Chicago-based DJ, curator, and producer whose work sits
+          at the heart of the city’s house and techno underground. Their sets
+          are atmospheric and sensual, centered around vocal-forward selections
+          and jacking acid basslines that channel the spirit of Midwest dance
+          floors while venturing into ambient, bass music, industrial, and 90s
+          gay anthems. With a deep respect for the lineage of house and techno,
+          Madeline crafts journeys that balance emotional depth with driving,
+          hypnotic rhythm.</span
+        >
+        <span>
+          Originally from the Bay Area, Madeline has become a defining presence
+          within the city’s queer and electronic music communities over the last
+          15 years. Their deep musical knowledge is rooted in years of community
+          engagement and crate-digging, cultivated over a decade of hosting
+          radio on WNUR 89.3 FM and a stint at the historic Gramaphone Records.
+          Madeline is a long-standing resident at the legendary Smartbar, where
+          they invite selectors who share their reverence for both classic
+          genres and risk-taking versatility at their quarterly party Statement
+          Piece.
+        </span>
+      </p>
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  @use "../styles/layout.scss" as *;
+
+  #about {
+    height: 100%;
+    color: white;
+    font-family: Oswald;
+
+    p {
+      flex-direction: column;
+      gap: $space-xs;
+    }
+  }
+</style>

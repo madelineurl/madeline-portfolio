@@ -20,12 +20,6 @@ import LandingPageImage from "./LandingPageImage.astro";
 <style lang="scss">
   @use "../styles/layout.scss" as *;
 
-  .split-screen-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-
   main {
     grid-column: 1;
     font-family: var(--primary-font);
@@ -59,13 +53,6 @@ import LandingPageImage from "./LandingPageImage.astro";
     font-weight: 500;
   }
 
-  // .cta {
-  //   justify-content: flex-start;
-  //   gap: $space-xs;
-  //   font-size: 20px;
-  //   font-weight: normal;
-  // }
-
   .icon {
     height: 24px;
     width: 24px;
@@ -82,10 +69,6 @@ import LandingPageImage from "./LandingPageImage.astro";
   }
 
   @media screen and (min-width: $breakpoint-sm) {
-    .split-screen-container {
-      grid-template-columns: 1fr 1fr;
-    }
-
     main {
       text-align: left;
       p,
