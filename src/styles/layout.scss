@@ -113,10 +113,9 @@ button {
   -webkit-appearance: none;
   appearance: none;
   font-family: inherit;
-  padding: $space-xxs $space-md;
-  font-size: 1rem;
-  border-radius: $border-radius-md;
-  line-height: 1;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
 }
 
 .visually-hidden {
