@@ -24,10 +24,12 @@ import Layout from "../layouts/Layout.astro";
           15 years. Their deep musical knowledge is rooted in years of community
           engagement and crate-digging, cultivated over a decade of hosting
           radio on WNUR 89.3 FM and a stint at the historic Gramaphone Records.
-          Madeline is a long-standing resident at the legendary Smartbar, where
-          they invite selectors who share their reverence for both classic
-          genres and risk-taking versatility at their quarterly party Statement
-          Piece.
+        </span>
+        <span
+          >Madeline is a long-standing resident at the legendary Smartbar, where
+          they invite selectors who share their both reverence for classic
+          genres and risk-taking versatility at their quarterly Statement Piece
+          party.
         </span>
       </p>
     </div>
@@ -43,13 +45,31 @@ import Layout from "../layouts/Layout.astro";
     color: white;
     font-size: 20px;
 
+    &::before {
+      content: "";
+      position: sticky;
+      top: 0;
+      display: block;
+      height: $headerHeight;
+      background: transparent;
+      //   background: linear-gradient(to bottom, $black 30%, transparent);
+    }
+
+    &::after {
+      content: "";
+      position: sticky;
+      bottom: 0;
+      display: block;
+      height: $headerHeight;
+      background: linear-gradient(to top, $black 30%, transparent);
+    }
+
     p {
       flex-direction: column;
       gap: $space-xs;
       width: 100%;
       margin: 0;
-      padding: $space-lg;
-      margin: $space-xl 0;
+      padding: $space-md $space-lg;
     }
 
     @media screen and (min-width: $breakpoint-sm) {
@@ -61,6 +81,12 @@ import Layout from "../layouts/Layout.astro";
 
     @media screen and (min-width: $breakpoint-md) {
       font-size: 18px;
+      &::after,
+      &::before {
+        content: none;
+        display: none;
+        background: none;
+      }
     }
   }
 </style>
