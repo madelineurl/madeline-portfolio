@@ -15,6 +15,8 @@
 $black: #050404;
 $white: var(--primary-white);
 
+$headerHeight: 11dvh;
+
 // Media Query Breakpoints
 $breakpoint-xs: 500px;
 $breakpoint-sm: 768px;
@@ -26,7 +28,7 @@ $space-xxs: 0.25rem;
 $space-xs: 0.5rem;
 $space-sm: 1rem;
 $space-md: 1.5rem;
-$space-lg: 2rem;
+$space-lg: 2.25rem;
 $space-xl: 4rem;
 $space-xxl: 7rem;
 
@@ -144,6 +146,9 @@ button {
 .split-screen-container {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: $headerHeight 1fr $headerHeight;
+  // height: 100vh;
+  // height: 100dvh;
   width: 100%;
 }
 
@@ -157,7 +162,8 @@ a:visited {
 
 @media screen and (min-width: $breakpoint-md) {
   .split-screen-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
 }
 

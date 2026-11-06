@@ -71,7 +71,9 @@ const srcset = optimizedLogos
       <Navbar />
     </header>
     <slot />
-    <footer><SocialMediaIcons /></footer>
+    <footer>
+      <SocialMediaIcons />
+    </footer>
   </body>
 </html>
 
@@ -84,7 +86,7 @@ const srcset = optimizedLogos
     display: flex;
     align-items: center;
     width: 100%;
-    height: 11dvh;
+    height: $headerHeight;
   }
 
   a {
@@ -104,5 +106,6 @@ const srcset = optimizedLogos
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 9;
   }
 </style>
