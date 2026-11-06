@@ -3,7 +3,8 @@ import Hamburger from "./icons/hamburger.svg";
 
 const currentPath = Astro.url.pathname;
 
-const routes = ["about", "music", "press", "dates"].map((page) => {
+// TODO: re-add dates when ready
+const routes = ["about", "music", "press", "contact"].map((page) => {
   const path = "/" + page;
   return { label: page, path, active: currentPath === path };
 });
@@ -85,6 +86,13 @@ let mobileNavOpen = false;
 
     a.active {
       text-decoration: underline;
+      text-decoration-color: $purple;
+      text-decoration-thickness: 2px;
+      text-underline-offset: $space-xs;
+    }
+
+    a:hover {
+      border-radius: $border-radius-sm;
     }
   }
 
@@ -96,15 +104,6 @@ let mobileNavOpen = false;
     right: 0;
     top: 0;
     min-width: 50%;
-
-    &::after {
-      content: "";
-      position: sticky;
-      //   bottom: 0;
-      display: block;
-      //   height: $headerHeight;
-      background: linear-gradient(to left, $black 30%, transparent);
-    }
 
     button {
       margin-right: $space-xs;
@@ -126,19 +125,24 @@ let mobileNavOpen = false;
     }
 
     a {
-      //   display: inline-block;
       height: 100%;
+      font-size: 36px;
 
       &.active {
-        background-color: $white;
-        color: $black;
+        text-decoration: underline;
+        text-decoration-color: $purple;
+        text-decoration-thickness: 2px;
+        text-underline-offset: $space-xs;
+        // background-color: $white;
+        // color: $black;
+        // border-radius: $border-radius-sm 0 0 $border-radius-sm;
       }
     }
 
     &.open {
       height: 100%;
       z-index: 9;
-      background-color: black;
+      background-color: $black;
 
       ul {
         display: flex;
@@ -160,18 +164,20 @@ let mobileNavOpen = false;
     color: var(--primary-white);
     font-size: 2.5rem;
     padding: $space-xs $space-md;
-    transition: color 2s linear;
+    transition: color 0.1s linear;
+    transition: text-decoration 0.1s linear;
 
     &:hover {
-      color: rgb(212, 224, 255);
-      outline: 1px solid $white;
-      border-radius: $border-radius-sm;
+      //   color: $purple;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      text-underline-offset: $space-xs;
     }
   }
 
   @media screen and (min-width: $breakpoint-xs) {
     #mobile-nav {
-      min-width: 30%;
+      min-width: 40%;
     }
   }
 
@@ -188,7 +194,7 @@ let mobileNavOpen = false;
       height: 100%;
       width: 100%;
       a {
-        font-size: 20px;
+        font-size: 24px;
         margin-right: $space-lg;
         width: auto;
       }
