@@ -77,11 +77,17 @@ import Layout from "../layouts/Layout.astro";
         max-width: $breakpoint-sm;
         margin: 0 auto;
       }
+
+      &::after {
+        content: none;
+        display: none;
+        background: none;
+      }
     }
 
     @media screen and (min-width: $breakpoint-md) {
       font-size: 18px;
-      &::after,
+
       &::before {
         content: none;
         display: none;
