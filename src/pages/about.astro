@@ -39,12 +39,28 @@ import Layout from "../layouts/Layout.astro";
 
   #about {
     height: 100%;
+    max-width: 100%;
     color: white;
+    font-size: 20px;
 
     p {
       flex-direction: column;
       gap: $space-xs;
-      margin: 11dvh $space-lg;
+      width: 100%;
+      margin: 0;
+      padding: $space-lg;
+      margin: $space-xl 0;
+    }
+
+    @media screen and (min-width: $breakpoint-sm) {
+      p {
+        max-width: $breakpoint-sm;
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 18px;
     }
   }
 </style>

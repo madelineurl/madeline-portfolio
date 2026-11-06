@@ -44,6 +44,8 @@ const alt =
 
     &.progressive-blur {
       filter: blur(30px);
+      -webkit-mask-image: linear-gradient(to left, #{$black} 30%, transparent);
+      mask-image: linear-gradient(to left, #{$black} 30%, transparent);
     }
 
     img {
@@ -63,12 +65,16 @@ const alt =
   @media screen and (min-width: $breakpoint-sm) {
     .image-wrapper.progressive-blur {
       filter: blur(10px);
+      -webkit-mask-image: linear-gradient(to left, #{$black} 50%, transparent);
+      mask-image: linear-gradient(to left, #{$black} 50%, transparent);
     }
   }
 
   @media screen and (min-width: $breakpoint-md) {
     .image-wrapper.progressive-blur {
       filter: blur(0px);
+      -webkit-mask-image: linear-gradient(to left, #{$black} 80%, transparent);
+      mask-image: linear-gradient(to left, #{$black} 80%, transparent);
     }
   }
 
