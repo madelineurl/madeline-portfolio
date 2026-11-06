@@ -93,6 +93,15 @@ let mobileNavOpen = false;
     top: 0;
     min-width: 50%;
 
+    &::after {
+      content: "";
+      position: sticky;
+      //   bottom: 0;
+      display: block;
+      //   height: $headerHeight;
+      background: linear-gradient(to left, $black 30%, transparent);
+    }
+
     button {
       margin-right: $space-xs;
       margin-top: $space-xs;

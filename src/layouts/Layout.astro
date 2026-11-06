@@ -6,7 +6,7 @@ import "../styles/layout.scss";
 import Navbar from "../components/Navbar.astro";
 
 // TODO: SVG instead?
-let importWidths = [100, 200, 300];
+let importWidths = [80, 160, 240];
 
 const { src } = logo;
 const optimizedLogos = await Promise.all(
@@ -62,10 +62,10 @@ const srcset = optimizedLogos
         <img
           {src}
           {srcset}
-          sizes="100px"
+          sizes="80px"
           alt="Madeline\'s logo"
-          height="60px"
-          width="100px"
+          width="80px"
+          height="48px"
         />
       </a>
       <Navbar />
@@ -99,7 +99,6 @@ const srcset = optimizedLogos
 
   img {
     display: inline-block;
-    width: 100px;
   }
 
   footer {
