@@ -82,6 +82,10 @@ let mobileNavOpen = false;
       text-align: center;
       text-transform: lowercase;
     }
+
+    a.active {
+      text-decoration: underline;
+    }
   }
 
   #mobile-nav {
@@ -124,6 +128,11 @@ let mobileNavOpen = false;
     a {
       //   display: inline-block;
       height: 100%;
+
+      &.active {
+        background-color: $white;
+        color: $black;
+      }
     }
 
     &.open {
@@ -151,10 +160,7 @@ let mobileNavOpen = false;
     color: var(--primary-white);
     font-size: 2.5rem;
     padding: $space-xs $space-md;
-
-    &.active {
-      text-decoration: underline;
-    }
+    transition: color 2s linear;
 
     &:hover {
       color: rgb(212, 224, 255);
