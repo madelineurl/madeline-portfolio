@@ -147,8 +147,6 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: $headerHeight 1fr $headerHeight;
-  // height: 100vh;
-  // height: 100dvh;
   width: 100%;
 }
 
@@ -161,16 +159,14 @@ a:visited {
 }
 
 @media screen and (min-width: $breakpoint-md) {
-  .split-screen-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-  }
-}
-
-@media screen and (min-width: $breakpoint-md) {
   html,
   body {
     overflow: hidden;
+  }
+
+  .split-screen-container {
+    grid-template-columns: 1.25fr 1fr;
+    grid-template-rows: 1fr;
   }
 }
 
