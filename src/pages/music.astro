@@ -1,17 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import releases from "../data/musicReleases.json";
+import MusicRelease from "../components/MusicRelease.astro";
 ---
 
 <Layout>
   <main>
     <div id="music" class="flex">
-      <p>
-        "From the super sexy ‘fantasy daddy’, through the off-kilter ‘hurt it’,
-        to slo-mo cut ‘doubtful baby’, [unlearning is] a lush and varied release
-        and has us eagerly awaiting what’s next." - DJ Mag
-      </p>
-      <div>LISTEN</div>
-      <div>BOILER ROOM CHICAGO</div>
+      <h1 class="visually-hidden">Music releases</h1>
+      {
+        releases.map(({ title, description, coverArtUrl }) => (
+          <MusicRelease {title} {description} {coverArtUrl} />
+        ))
+      }
     </div>
   </main>
 </Layout>
@@ -22,9 +23,8 @@ import Layout from "../layouts/Layout.astro";
   #music {
     height: 100%;
     color: var(--primary-white);
+    display: flex;
     flex-direction: column;
-    max-width: 70vw;
-    margin: 0 auto;
   }
 </style>
 
