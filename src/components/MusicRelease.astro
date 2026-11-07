@@ -1,0 +1,58 @@
+---
+import { getImage } from "astro:assets";
+import unlearningCover from "../assets/images/unlearning_cover.jpg";
+
+interface Props {
+  title: string;
+  description: string;
+  coverArtUrl: string;
+  // coverAltDescription
+}
+
+const { title, description, coverArtUrl }: Props = Astro.props;
+
+const sizes = "(max-width: 990px) 400px, (max-width: 1200px) 600px, 200px";
+const importWidths = [200, 400, 600];
+const optimizedImages = await Promise.all(
+  importWidths.map((width) => getImage({ src: unlearningCover, width }))
+);
+const srcset = optimizedImages
+  .map((img) => `${img.src} ${img.attributes.width}w`)
+  .join(", ");
+const alt = "TODO";
+---
+
+<div class="music-release">
+  <div class="image-wrapper">
+    <img
+      src={unlearningCover.src}
+      {sizes}
+      {srcset}
+      {alt}
+      height="200px"
+      width="200px"
+    />
+  </div>
+  <span><strong>{title}</strong></span>
+  <p>{description}</p>
+</div>
+
+<style lang="scss">
+  .music-release {
+    max-width: 800px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    max-height: 200px;
+  }
+
+  .image-wrapper {
+    position: absolute;
+    left: 0;
+  }
+
+  p {
+    max-width: 600px;
+  }
+</style>
