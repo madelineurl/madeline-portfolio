@@ -2,6 +2,23 @@
 import Layout from "../layouts/Layout.astro";
 import releases from "../data/musicReleases.json";
 import MusicRelease from "../components/MusicRelease.astro";
+// import unlearningCover from "../assets/images/unlearning_cover.jpg";
+// import loveSongCover from "../assets/images/love_song_cover.jpeg";
+// import clubSodaCover from "../assets/images/club_soda_cover.jpg";
+// import fantasyDaddyRemixesCover from "../assets/images/fantasy_daddy_remixes_cover.png";
+
+// const coverArts: Record<string, ImageMetadata> = {
+//   "../assets/images/unlearning_cover.jpg": unlearningCover,
+//   "../assets/images/love_song_cover.jpeg": loveSongCover,
+//   "../assets/images/club_soda_cover.jpg": clubSodaCover,
+//   "../assets/images/fantasy_daddy_remixes_cover.png": fantasyDaddyRemixesCover
+//   //    "../assets/images/unlearning_cover.jpg": ""
+// };
+// const images = import.meta.glob<{ default: ImageMetadata }>(
+//   "/src/assets/images/*.{jpeg,jpg,png,gif}"
+// );
+
+// const coverArt = images[coverArtUrl];
 ---
 
 <Layout>
@@ -9,8 +26,8 @@ import MusicRelease from "../components/MusicRelease.astro";
     <div id="music" class="flex">
       <h1 class="visually-hidden">Music releases</h1>
       {
-        releases.map(({ title, description, coverArtUrl }) => (
-          <MusicRelease {title} {description} {coverArtUrl} />
+        releases.map(({ title, description, coverArtUrl, releaseDate }) => (
+          <MusicRelease {title} {description} {releaseDate} {coverArtUrl} />
         ))
       }
     </div>

@@ -1,11 +1,13 @@
 ---
 import { getImage } from "astro:assets";
-import unlearningCover from "../assets/images/unlearning_cover.jpg";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
 interface Props {
   title: string;
   description: string;
   coverArtUrl: string;
+  releaseDate: string;
   // coverAltDescription
 }
 
@@ -13,24 +15,32 @@ const { title, description, coverArtUrl }: Props = Astro.props;
 
 const sizes = "(max-width: 990px) 400px, (max-width: 1200px) 600px, 200px";
 const importWidths = [200, 400, 600];
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/images/*.{jpeg,jpg,png}",
+  { eager: true }
+);
+const matchingImage = images[coverArtUrl]?.default;
+
 const optimizedImages = await Promise.all(
-  importWidths.map((width) => getImage({ src: unlearningCover, width }))
+  importWidths.map((width) => getImage({ src: matchingImage, width }))
 );
 const srcset = optimizedImages
   .map((img) => `${img.src} ${img.attributes.width}w`)
   .join(", ");
 const alt = "TODO";
+console.log("IMAGE PATH:", coverArtUrl);
+console.log("RESOLVED:", matchingImage);
 ---
 
 <div class="music-release">
   <div class="image-wrapper">
-    <img
-      src={unlearningCover.src}
+    <Image
+      src={matchingImage}
       {sizes}
       {srcset}
       {alt}
-      height="200px"
-      width="200px"
+      height="200"
+      width="200"
     />
   </div>
   <span><strong>{title}</strong></span>
