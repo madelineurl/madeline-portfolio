@@ -22,9 +22,32 @@ import MusicRelease from "../components/MusicRelease.astro";
 
   #music {
     height: 100%;
+    width: 100%;
     color: var(--primary-white);
     display: flex;
     flex-direction: column;
+    gap: $space-xs;
+    padding: $space-sm;
+
+    &::before {
+      content: "";
+      position: sticky;
+      top: 0;
+      display: block;
+      height: $headerHeight;
+      background: transparent;
+      z-index: -1;
+      //   background: linear-gradient(to bottom, $black 30%, transparent);
+    }
+
+    &::after {
+      content: "";
+      position: sticky;
+      bottom: 0;
+      display: block;
+      height: $headerHeight;
+      background: linear-gradient(to top, $black 30%, transparent);
+    }
   }
 </style>
 

@@ -38,13 +38,17 @@ const alt = "TODO";
 </div>
 
 <style lang="scss">
+  @use "../styles/layout.scss" as *;
+
   .music-release {
-    max-width: 800px;
+    width: 100%;
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: 1fr;
-    max-height: 200px;
+    min-height: 200px;
+    // outline: 1px solid $white;
+    border-radius: $border-radius-sm;
   }
 
   .image-wrapper {
@@ -52,7 +56,20 @@ const alt = "TODO";
     left: 0;
   }
 
+  img {
+    border-radius: $border-radius-sm;
+  }
+
   p {
-    max-width: 600px;
+    padding: $space-sm;
+    padding-top: 0;
+    margin: 0;
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    .music-release {
+      max-width: $breakpoint-sm;
+      margin: 0 auto;
+    }
   }
 </style>
