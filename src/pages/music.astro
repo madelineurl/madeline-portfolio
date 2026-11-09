@@ -22,8 +22,8 @@ import MusicRelease from "../components/MusicRelease.astro";
 ---
 
 <Layout>
-  <main>
-    <div id="music" class="flex scroll-margins">
+  <main class="flex scroll-margins">
+    <div>
       <h1 class="visually-hidden">Music releases</h1>
       {
         releases.map(({ title, description, coverArtUrl, releaseDate }) => (
@@ -37,7 +37,7 @@ import MusicRelease from "../components/MusicRelease.astro";
 <style lang="scss">
   @use "../styles/layout.scss" as *;
 
-  #music {
+  main > div {
     height: 100%;
     width: 100%;
     color: var(--primary-white);

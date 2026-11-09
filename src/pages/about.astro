@@ -5,8 +5,8 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <LandingPageImage progressiveBlur={true} />
-  <div id="about" class="flex split-screen-container scroll-margins">
-    <main>
+  <div id="about" class="split-screen-container">
+    <main class="flex scroll-margins">
       <p class="flex">
         <span
           >Madeline is a Chicago-based DJ, curator, and producer whose work sits
@@ -45,24 +45,9 @@ import Layout from "../layouts/Layout.astro";
     color: white;
     font-size: 20px;
 
-    // &::before {
-    //   content: "";
-    //   position: sticky;
-    //   top: 0;
-    //   display: block;
-    //   height: calc($headerHeight + $space-md);
-    //   //   z-index: -1;
-    //   background: linear-gradient(to bottom, $black 40%, transparent);
-    // }
-
-    // &::after {
-    //   content: "";
-    //   position: sticky;
-    //   bottom: 0;
-    //   display: block;
-    //   height: $headerHeight;
-    //   background: linear-gradient(to top, $black 40%, transparent);
-    // }
+    main {
+      height: 100%;
+    }
 
     p {
       flex-direction: column;
@@ -81,6 +66,11 @@ import Layout from "../layouts/Layout.astro";
 
     @media screen and (min-width: $breakpoint-md) {
       font-size: 18px;
+
+      p {
+        padding: 0;
+        padding-left: $space-md;
+      }
     }
   }
 </style>
