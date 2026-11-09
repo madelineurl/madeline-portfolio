@@ -5,8 +5,8 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <LandingPageImage progressiveBlur={true} />
-  <main>
-    <div id="about" class="flex split-screen-container">
+  <div id="about" class="flex split-screen-container scroll-margins">
+    <main>
       <p class="flex">
         <span
           >Madeline is a Chicago-based DJ, curator, and producer whose work sits
@@ -32,8 +32,8 @@ import Layout from "../layouts/Layout.astro";
           party.
         </span>
       </p>
-    </div>
-  </main>
+    </main>
+  </div>
 </Layout>
 
 <style lang="scss">
@@ -45,25 +45,24 @@ import Layout from "../layouts/Layout.astro";
     color: white;
     font-size: 20px;
 
-    &::before {
-      content: "";
-      position: sticky;
-      top: 0;
-      display: block;
-      height: $headerHeight;
-      background: transparent;
-      z-index: -1;
-      //   background: linear-gradient(to bottom, $black 30%, transparent);
-    }
+    // &::before {
+    //   content: "";
+    //   position: sticky;
+    //   top: 0;
+    //   display: block;
+    //   height: calc($headerHeight + $space-md);
+    //   //   z-index: -1;
+    //   background: linear-gradient(to bottom, $black 40%, transparent);
+    // }
 
-    &::after {
-      content: "";
-      position: sticky;
-      bottom: 0;
-      display: block;
-      height: $headerHeight;
-      background: linear-gradient(to top, $black 30%, transparent);
-    }
+    // &::after {
+    //   content: "";
+    //   position: sticky;
+    //   bottom: 0;
+    //   display: block;
+    //   height: $headerHeight;
+    //   background: linear-gradient(to top, $black 40%, transparent);
+    // }
 
     p {
       flex-direction: column;
@@ -78,22 +77,10 @@ import Layout from "../layouts/Layout.astro";
         max-width: $breakpoint-sm;
         margin: 0 auto;
       }
-
-      &::after {
-        content: none;
-        display: none;
-        background: none;
-      }
     }
 
     @media screen and (min-width: $breakpoint-md) {
       font-size: 18px;
-
-      &::before {
-        content: none;
-        display: none;
-        background: none;
-      }
     }
   }
 </style>
