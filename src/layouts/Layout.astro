@@ -82,7 +82,8 @@ const srcset = optimizedLogos
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Oswald:wght@300");
 
   header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     display: flex;
     align-items: center;
     width: 100%;
@@ -103,9 +104,10 @@ const srcset = optimizedLogos
   }
 
   footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
     z-index: 9;
+    display: flex;
   }
 </style>

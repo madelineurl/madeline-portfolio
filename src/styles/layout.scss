@@ -81,6 +81,10 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
   display: grid;
+  // grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: $headerHeight 1fr $headerHeight;
+  // width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
 }
@@ -144,53 +148,6 @@ button {
   transform: scale(1.1);
 }
 
-.split-screen-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: $headerHeight 1fr $headerHeight;
-  width: 100%;
-
-  main {
-    grid-area: 2 / 1 / 3 / 1;
-  }
-}
-
-.scroll-margins {
-  &::before {
-    content: "";
-    position: sticky;
-    top: 0;
-    display: block;
-    height: calc($headerHeight + $space-md);
-    background: linear-gradient(to bottom, $black 40%, transparent);
-  }
-
-  &::after {
-    content: "";
-    position: sticky;
-    bottom: 0;
-    display: block;
-    height: $headerHeight;
-    background: linear-gradient(to top, $black 40%, transparent);
-  }
-
-  @media screen and (min-width: $breakpoint-sm) {
-    &::after {
-      content: none;
-      display: none;
-      background: none;
-    }
-  }
-
-  @media screen and (min-width: $breakpoint-md) {
-    &::before {
-      content: none;
-      display: none;
-      background: none;
-    }
-  }
-}
-
 a {
   text-decoration: none;
 }
@@ -200,14 +157,9 @@ a:visited {
 }
 
 @media screen and (min-width: $breakpoint-md) {
-  // html,
-  // body {
-  //   overflow: hidden;
-  // }
-
   .split-screen-container {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
 
     main {
       grid-area: 1 / 1 / 2 / 1;
