@@ -23,7 +23,7 @@ import MusicRelease from "../components/MusicRelease.astro";
 
 <Layout>
   <main>
-    <div id="music" class="flex">
+    <div id="music" class="flex scroll-margins">
       <h1 class="visually-hidden">Music releases</h1>
       {
         releases.map(({ title, description, coverArtUrl, releaseDate }) => (
@@ -45,26 +45,6 @@ import MusicRelease from "../components/MusicRelease.astro";
     flex-direction: column;
     gap: $space-xs;
     padding: $space-sm;
-
-    &::before {
-      content: "";
-      position: sticky;
-      top: 0;
-      display: block;
-      height: $headerHeight;
-      background: transparent;
-      z-index: -1;
-      //   background: linear-gradient(to bottom, $black 30%, transparent);
-    }
-
-    &::after {
-      content: "";
-      position: sticky;
-      bottom: 0;
-      display: block;
-      height: $headerHeight;
-      background: linear-gradient(to top, $black 30%, transparent);
-    }
   }
 </style>
 
