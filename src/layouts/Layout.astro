@@ -5,6 +5,7 @@ import { getImage } from "astro:assets";
 import "../styles/layout.scss";
 import Navbar from "../components/Navbar.astro";
 
+const { scrollContainer = false } = Astro.props;
 // TODO: SVG instead?
 let importWidths = [80, 160, 240];
 
@@ -56,7 +57,7 @@ const srcset = optimizedLogos
     <title>Madeline</title>
   </head>
   <body>
-    <header>
+    <header class:list={{ scrollContainer }}>
       <a href="/">
         <span class="visually-hidden">Home</span>
         <img
@@ -71,7 +72,7 @@ const srcset = optimizedLogos
       <Navbar />
     </header>
     <slot />
-    <footer>
+    <footer class:list={{ scrollContainer }}>
       <SocialMediaIcons />
     </footer>
   </body>
@@ -89,6 +90,10 @@ const srcset = optimizedLogos
     width: 100%;
     height: $headerHeight;
     z-index: 9;
+
+    &.scrollContainer {
+      background: linear-gradient(to bottom, $black 65%, transparent);
+    }
   }
 
   a {
@@ -109,5 +114,8 @@ const srcset = optimizedLogos
     width: 100%;
     z-index: 9;
     display: flex;
+    &.scrollContainer {
+      background: linear-gradient(to top, $black 65%, transparent);
+    }
   }
 </style>
