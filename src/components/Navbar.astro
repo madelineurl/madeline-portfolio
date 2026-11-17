@@ -3,8 +3,8 @@ import Hamburger from "./icons/hamburger.svg";
 
 const currentPath = Astro.url.pathname;
 
-// TODO: re-add dates when ready
-const routes = ["about", "music", "press", "contact"].map((page) => {
+// TODO: re-add dates, press when ready
+const routes = ["about", "music", "contact"].map((page) => {
   const path = "/" + page;
   return { label: page, path, active: currentPath === path };
 });
