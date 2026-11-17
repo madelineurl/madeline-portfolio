@@ -1,26 +1,31 @@
 [
   {
     "title": "unlearning",
+    "releaseType": "EP",
     "description": "From the super sexy ‘fantasy daddy’, through the off-kilter ‘hurt it’,   to slo-mo cut ‘doubtful baby’, [unlearning is] a lush and varied release and has us eagerly awaiting what’s next. - DJ Mag",
     "coverArtUrl": "/src/assets/images/unlearning_cover.jpg",
-    "releaseDate": "September 14, 2022"
+    "releaseDate": "2022-09-22T00:00:00Z"
   },
   {
     "title": "Love Song",
+    "releaseType": "Single",
     "description": "",
     "coverArtUrl": "/src/assets/images/love_song_cover.jpeg",
-    "releaseDate": ""
+    "releaseDate": "2022-09-22T00:00:00Z"
   },
   {
     "title": "CLUB SODA",
+    "releaseType": "Single",
+
     "description": "",
     "coverArtUrl": "/src/assets/images/club_soda_cover.jpg",
-    "releaseDate": ""
+    "releaseDate": "2022-09-22T00:00:00Z"
   },
   {
     "title": "fantasy daddy remixes",
+    "releaseType": "EP",
     "description": "",
     "coverArtUrl": "/src/assets/images/fantasy_daddy_remixes_cover.png",
-    "releaseDate": ""
+    "releaseDate": "2022-09-22T00:00:00Z"
   }
 ]
