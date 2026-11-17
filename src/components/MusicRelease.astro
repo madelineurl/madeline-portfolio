@@ -8,13 +8,15 @@ interface Props {
   description: string;
   coverArtUrl: string;
   releaseDate: string;
+  listIndex: number;
   // coverAltDescription
 }
 
-const { title, description, coverArtUrl }: Props = Astro.props;
+const { title, description, coverArtUrl, releaseDate, listIndex }: Props =
+  Astro.props;
 
-const sizes = "(max-width: 990px) 400px, (max-width: 1200px) 600px, 200px";
-const importWidths = [200, 400, 600];
+const sizes = "(max-width: 990px) 400px, (max-width: 1200px) 800px, 1200px";
+const importWidths = [400, 800, 1200];
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/images/*.{jpeg,jpg,png}",
   { eager: true }
@@ -28,23 +30,38 @@ const srcset = optimizedImages
   .map((img) => `${img.src} ${img.attributes.width}w`)
   .join(", ");
 const alt = "TODO";
-console.log("IMAGE PATH:", coverArtUrl);
-console.log("RESOLVED:", matchingImage);
+
+function formatDate(datestring: string) {
+  return new Date(datestring).toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric"
+  });
+}
+
+function isEven(num: number) {
+  return num % 2 === 0;
+}
 ---
 
-<div class="music-release">
+<div class="music-release" class:list={{ "left-align": isEven(listIndex) }}>
   <div class="image-wrapper">
     <Image
       src={matchingImage}
       {sizes}
       {srcset}
       {alt}
-      height="200"
-      width="200"
+      height="400"
+      width="400"
     />
   </div>
-  <span><strong>{title}</strong></span>
-  <p>{description}</p>
+  <div class="release-info">
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <p>
+      {formatDate(releaseDate)}
+    </p>
+  </div>
 </div>
 
 <style lang="scss">
@@ -54,16 +71,22 @@ console.log("RESOLVED:", matchingImage);
     width: 100%;
     position: relative;
     display: grid;
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 1fr 400px;
     grid-template-rows: 1fr;
     min-height: 200px;
-    // outline: 1px solid $white;
     border-radius: $border-radius-sm;
-  }
 
-  .image-wrapper {
-    position: absolute;
-    left: 0;
+    .image-wrapper {
+      grid-area: 1 / 2 / 1 / 2;
+    }
+
+    &.left-align {
+      grid-template-columns: 400px 1fr;
+      grid-template-rows: 1fr;
+      .image-wrapper {
+        grid-area: 1 / 1 / 2 / 1;
+      }
+    }
   }
 
   img {
@@ -71,14 +94,21 @@ console.log("RESOLVED:", matchingImage);
   }
 
   p {
-    padding: $space-sm;
-    padding-top: 0;
     margin: 0;
   }
 
-  @media screen and (min-width: $breakpoint-sm) {
+  h2 {
+    margin-top: 0;
+  }
+
+  .release-info {
+    padding: $space-sm;
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
     .music-release {
-      max-width: $breakpoint-sm;
+      max-width: $breakpoint-md;
       margin: 0 auto;
     }
   }

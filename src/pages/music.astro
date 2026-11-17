@@ -26,9 +26,17 @@ import MusicRelease from "../components/MusicRelease.astro";
     <div>
       <h1 class="visually-hidden">Music releases</h1>
       {
-        releases.map(({ title, description, coverArtUrl, releaseDate }) => (
-          <MusicRelease {title} {description} {releaseDate} {coverArtUrl} />
-        ))
+        releases.map(
+          ({ title, description, coverArtUrl, releaseDate }, listIndex) => (
+            <MusicRelease
+              {title}
+              {description}
+              {releaseDate}
+              {coverArtUrl}
+              {listIndex}
+            />
+          )
+        )
       }
     </div>
   </main>
