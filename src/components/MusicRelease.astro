@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
 interface Props {
+  id: number;
   title: string;
   description: string;
   coverArtUrl: string;
@@ -14,8 +15,15 @@ interface Props {
   // coverAltDescription
 }
 
-const { title, description, coverArtUrl, releaseDate, releaseType }: Props =
-  Astro.props;
+const {
+  id,
+  title,
+  description,
+  coverArtUrl,
+  releaseDate,
+  releaseType,
+  releasedBy
+}: Props = Astro.props;
 
 const sizes = "(max-width: 990px) 400px, (max-width: 1200px) 800px, 1200px";
 const importWidths = [400, 800, 1200];
@@ -41,7 +49,10 @@ function formatDate(datestring: string) {
 }
 ---
 
-<music-release class="music-release">
+<music-release
+  class="music-release"
+  style={`view-transition-name: music-release-${id}`}
+>
   <div class="image-wrapper">
     <Image
       src={matchingImage}
@@ -52,12 +63,13 @@ function formatDate(datestring: string) {
       width="400"
     />
     <div class="preview flex">
-      <button>{title} ({releaseType})</button>
+      <button>{title}</button>
     </div>
   </div>
   <div class="release-info">
     <span><h2>{title}</h2></span>
     <p>{description}</p>
+    <span> {releaseType} &bull; {releasedBy}</span>
     <span><em>{formatDate(releaseDate)}</em></span>
   </div>
 </music-release>
@@ -68,11 +80,20 @@ function formatDate(datestring: string) {
       const titleButton = this.querySelector("button");
 
       titleButton?.addEventListener("click", () => {
-        if (this.classList.contains("expanded")) {
-          this.classList.remove("expanded");
-        } else {
-          this.classList.add("expanded");
+        const toggleExpand = () => {
+          if (this.classList.contains("expanded")) {
+            this.classList.remove("expanded");
+          } else {
+            this.classList.add("expanded");
+          }
+        };
+
+        if (!document.startViewTransition) {
+          toggleExpand();
+          return;
         }
+
+        document.startViewTransition(toggleExpand);
       });
     }
   }
@@ -88,6 +109,7 @@ function formatDate(datestring: string) {
     position: relative;
     display: grid;
     border-radius: $border-radius-sm;
+    // transition: background-color 0.2s ease; TODO
 
     .release-info {
       display: none;
@@ -114,7 +136,7 @@ function formatDate(datestring: string) {
 
       &:hover {
         img {
-          filter: brightness(70%);
+          filter: brightness(50%);
         }
         .preview {
           display: flex;
@@ -135,7 +157,7 @@ function formatDate(datestring: string) {
       }
 
       img {
-        filter: brightness(70%);
+        filter: brightness(50%);
       }
       .preview {
         display: flex;
@@ -143,7 +165,8 @@ function formatDate(datestring: string) {
     }
   }
 
-  h2 {
+  h2,
+  p {
     margin-top: 0;
   }
 

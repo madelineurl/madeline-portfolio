@@ -30,6 +30,7 @@ import MusicRelease from "../components/MusicRelease.astro";
           releases.map(
             (
               {
+                id,
                 title,
                 description,
                 coverArtUrl,
@@ -40,6 +41,7 @@ import MusicRelease from "../components/MusicRelease.astro";
               listIndex
             ) => (
               <MusicRelease
+                {id}
                 {title}
                 {description}
                 {releaseDate}
