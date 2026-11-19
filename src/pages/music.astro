@@ -59,16 +59,16 @@ import MusicRelease from "../components/MusicRelease.astro";
     grid-auto-flow: dense;
     gap: $space-sm;
     padding: $space-sm;
-
-    :global(.expanded) {
-      order: -1;
-      grid-column: 1 / -1;
-    }
   }
 
   @media screen and (min-width: $breakpoint-sm) {
     .release-grid {
       grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+
+    :global(.expanded) {
+      order: -1;
+      grid-column: 1 / -1;
     }
   }
 
