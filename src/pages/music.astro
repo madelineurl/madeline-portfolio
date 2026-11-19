@@ -70,10 +70,9 @@ import MusicRelease from "../components/MusicRelease.astro";
     width: 100%;
     color: var(--primary-white);
     display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(400px, auto);
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
     grid-auto-flow: dense;
-    gap: $space-md;
+    gap: $space-sm;
     padding: $space-sm;
 
     :global(.expanded) {
@@ -84,7 +83,7 @@ import MusicRelease from "../components/MusicRelease.astro";
 
   @media screen and (min-width: $breakpoint-sm) {
     .release-grid {
-      grid-template-columns: 400px 400px;
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
     }
   }
 
