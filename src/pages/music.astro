@@ -27,13 +27,25 @@ import MusicRelease from "../components/MusicRelease.astro";
       <h1 class="visually-hidden">Music releases</h1>
       {
         releases.map(
-          ({ title, description, coverArtUrl, releaseDate }, listIndex) => (
+          (
+            {
+              title,
+              description,
+              coverArtUrl,
+              releaseDate,
+              releasedBy,
+              releaseType
+            },
+            listIndex
+          ) => (
             <MusicRelease
               {title}
               {description}
               {releaseDate}
               {coverArtUrl}
               {listIndex}
+              {releasedBy}
+              releaseType={releaseType as "EP" | "Single" | "Album"}
             />
           )
         )
@@ -49,10 +61,18 @@ import MusicRelease from "../components/MusicRelease.astro";
     height: 100%;
     width: 100%;
     color: var(--primary-white);
-    display: flex;
-    flex-direction: column;
-    gap: $space-xs;
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-auto-rows: minmax(400px, auto);
+    gap: $space-md;
     padding: $space-sm;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    main > div {
+      max-width: $breakpoint-md;
+      margin: 0 auto;
+    }
   }
 </style>
 
