@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "unlearning",
     "releaseType": "EP",
     "releasedBy": "Self-released",
@@ -8,6 +9,7 @@
     "releaseDate": "2022-09-22T00:00:00Z"
   },
   {
+    "id": 2,
     "title": "Love Song",
     "releaseType": "Single",
     "releasedBy": "Self-released",
@@ -16,6 +18,7 @@
     "releaseDate": "2022-09-22T00:00:00Z"
   },
   {
+    "id": 3,
     "title": "CLUB SODA",
     "releaseType": "Single",
     "releasedBy": "Self-released",
@@ -24,6 +27,7 @@
     "releaseDate": "2022-09-22T00:00:00Z"
   },
   {
+    "id": 4,
     "title": "fantasy daddy remixes",
     "releaseType": "EP",
     "releasedBy": "Bottom Forty Records",
