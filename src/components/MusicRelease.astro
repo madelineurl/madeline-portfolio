@@ -8,11 +8,11 @@ interface Props {
   title: string;
   description: string;
   coverArtUrl: string;
+  coverArtDescription: string;
   releaseType: "EP" | "Single" | "Album";
   releaseDate: string;
   listIndex: number;
   releasedBy: string;
-  // coverAltDescription
 }
 
 const {
@@ -20,6 +20,7 @@ const {
   title,
   description,
   coverArtUrl,
+  coverArtDescription,
   releaseDate,
   releaseType,
   releasedBy
@@ -39,7 +40,6 @@ const optimizedImages = await Promise.all(
 const srcset = optimizedImages
   .map((img) => `${img.src} ${img.attributes.width}w`)
   .join(", ");
-const alt = "TODO";
 
 function formatDate(datestring: string) {
   return new Date(datestring).toLocaleDateString("en-US", {
@@ -58,7 +58,7 @@ function formatDate(datestring: string) {
       src={matchingImage}
       {sizes}
       {srcset}
-      {alt}
+      alt={coverArtDescription}
       height="400"
       width="400"
     />

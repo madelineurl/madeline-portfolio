@@ -34,6 +34,7 @@ import MusicRelease from "../components/MusicRelease.astro";
                 title,
                 description,
                 coverArtUrl,
+                coverArtDescription,
                 releaseDate,
                 releasedBy,
                 releaseType
@@ -46,6 +47,7 @@ import MusicRelease from "../components/MusicRelease.astro";
                 {description}
                 {releaseDate}
                 {coverArtUrl}
+                {coverArtDescription}
                 {listIndex}
                 {releasedBy}
                 releaseType={releaseType as "EP" | "Single" | "Album"}
@@ -58,6 +60,8 @@ import MusicRelease from "../components/MusicRelease.astro";
   </main>
 </Layout>
 
+<!-- Could move the view transition script up here if preferred to close all other releases when the next one is expanded -->
+
 <style lang="scss">
   @use "../styles/layout.scss" as *;
 
@@ -67,7 +71,6 @@ import MusicRelease from "../components/MusicRelease.astro";
     color: var(--primary-white);
     display: grid;
     grid-template-columns: 400px 400px;
-    // grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-auto-rows: minmax(400px, auto);
     grid-auto-flow: dense;
     gap: $space-md;

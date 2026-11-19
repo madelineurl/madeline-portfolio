@@ -6,6 +6,7 @@
     "releasedBy": "Self-released",
     "description": "From the super sexy ‘fantasy daddy’, through the off-kilter ‘hurt it’,   to slo-mo cut ‘doubtful baby’, [unlearning is] a lush and varied release and has us eagerly awaiting what’s next. - DJ Mag",
     "coverArtUrl": "/src/assets/images/unlearning_cover.jpg",
+    "coverArtDescription": "Madeline gazes at a warped mirror, one arm outstretched, with black and blue tiles behind them",
     "releaseDate": "2022-09-22T00:00:00Z"
   },
   {
@@ -15,6 +16,7 @@
     "releasedBy": "Self-released",
     "description": "My second single, a cover of folk songwriter Lesley Duncan's 1971 composition 'Love Song' (made popular by Elton John).",
     "coverArtUrl": "/src/assets/images/love_song_cover.jpeg",
+    "coverArtDescription": "An pixelated representation of Madeline's eye printed on crumpled pink paper",
     "releaseDate": "2022-09-22T00:00:00Z"
   },
   {
@@ -24,6 +26,7 @@
     "releasedBy": "Self-released",
     "description": "",
     "coverArtUrl": "/src/assets/images/club_soda_cover.jpg",
+    "coverArtDescription": "A silver can spills purple liquid onto a corregated turqoise plastic surface",
     "releaseDate": "2022-09-22T00:00:00Z"
   },
   {
@@ -33,6 +36,7 @@
     "releasedBy": "Bottom Forty Records",
     "description": "",
     "coverArtUrl": "/src/assets/images/fantasy_daddy_remixes_cover.png",
+    "coverArtDescription": "A profile image of Madeline's face dissolves into a pool of swirling orange and purple",
     "releaseDate": "2022-09-22T00:00:00Z"
   }
 ]
