@@ -56,7 +56,7 @@ const srcset = optimizedLogos
     <link rel="manifest" href="/site.webmanifest?v=20261027" />
     <title>Madeline</title>
   </head>
-  <body>
+  <body class:list={{ scrollContainer }}>
     <header class:list={{ scrollContainer }}>
       <a href="/">
         <span class="visually-hidden">Home</span>
@@ -82,6 +82,21 @@ const srcset = optimizedLogos
   @use "../styles/layout.scss" as *;
   @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap&family=Oswald:wght@300");
 
+  body {
+    overflow: hidden;
+
+    &.scrollContainer {
+      overflow: auto;
+      header {
+        background: linear-gradient(to bottom, $black 65%, transparent);
+      }
+
+      footer {
+        background: linear-gradient(to top, $black 65%, transparent);
+      }
+    }
+  }
+
   header {
     position: sticky;
     top: 0;
@@ -91,9 +106,9 @@ const srcset = optimizedLogos
     height: $headerHeight;
     z-index: 9;
 
-    &.scrollContainer {
-      background: linear-gradient(to bottom, $black 65%, transparent);
-    }
+    // &.scrollContainer {
+    //   background: linear-gradient(to bottom, $black 65%, transparent);
+    // }
   }
 
   a {
@@ -114,14 +129,14 @@ const srcset = optimizedLogos
     width: 100%;
     z-index: 9;
     display: flex;
-    &.scrollContainer {
-      background: linear-gradient(to top, $black 65%, transparent);
-    }
+    // &.scrollContainer {
+    //   background: linear-gradient(to top, $black 65%, transparent);
+    // }
   }
 
   @media screen and (min-width: 552px) {
-    header.scrollContainer,
-    footer.scrollContainer {
+    .scrollContainer header,
+    .scrollContainer footer {
       background: none;
     }
   }

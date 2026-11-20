@@ -40,7 +40,9 @@ $border-radius-lg: 12px;
 
 /* GENERAL */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
