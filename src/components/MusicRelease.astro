@@ -49,10 +49,7 @@ function formatDate(datestring: string) {
 }
 ---
 
-<music-release
-  class="music-release"
-  style={`view-transition-name: music-release-${id}`}
->
+<music-release class="music-release" transition:name={`music-release-${id}`}>
   <div class="image-wrapper">
     <Image
       src={matchingImage}
