@@ -59,7 +59,7 @@ function formatDate(datestring: string) {
       height="400"
       width="400"
     />
-    <div class="preview flex">
+    <div class="preview flex" transition:name={`preview-text-${id}`}>
       <h2><button>{title}</button></h2>
     </div>
   </div>
@@ -74,14 +74,18 @@ function formatDate(datestring: string) {
   // TODO: scrollToId
   class MusicRelease extends HTMLElement {
     connectedCallback() {
-      const titleButton = this.querySelector("button");
+      const expandButton = this.querySelector("button");
+      const preview = this.querySelector(".preview");
+      const wrapper = this.querySelector(".image-wrapper");
 
-      titleButton?.addEventListener("click", () => {
+      expandButton?.addEventListener("click", () => {
         const toggleExpand = () => {
           if (this.classList.contains("expanded")) {
             this.classList.remove("expanded");
+            // preview?.classList.remove("active");
           } else {
             this.classList.add("expanded");
+            wrapper?.classList.add("active");
           }
         };
 
@@ -91,6 +95,12 @@ function formatDate(datestring: string) {
         }
 
         document.startViewTransition(toggleExpand);
+      });
+
+      wrapper?.addEventListener("mouseleave", () => {
+        if (!this.classList.contains("expanded")) {
+          wrapper?.classList.remove("active");
+        }
       });
     }
   }
@@ -105,10 +115,10 @@ function formatDate(datestring: string) {
     width: 100%;
     position: relative;
     display: grid;
+    gap: $space-sm;
     border-radius: $border-radius-sm;
     grid-template-rows: auto minmax(0, 1fr);
     grid-template-columns: minmax(0, 1fr);
-    // transition: background-color 0.2s ease; TODO
 
     .release-info {
       display: none;
@@ -116,7 +126,7 @@ function formatDate(datestring: string) {
     }
 
     .preview {
-      display: none;
+      opacity: 0;
       height: 100%;
       width: 100%;
       max-width: 100%;
@@ -127,6 +137,7 @@ function formatDate(datestring: string) {
       text-align: center;
       font-style: italic;
       font-size: 28px;
+      transition: opacity 0.2s ease;
     }
 
     .image-wrapper {
@@ -142,12 +153,17 @@ function formatDate(datestring: string) {
         object-position: center;
       }
 
-      &:hover {
+      &:hover,
+      &.active {
         img {
           filter: brightness(50%);
         }
         .preview {
-          display: flex;
+          opacity: 1;
+
+          button:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -163,9 +179,6 @@ function formatDate(datestring: string) {
 
       img {
         filter: brightness(50%);
-      }
-      .preview {
-        display: flex;
       }
 
       @media screen and (min-width: $breakpoint-sm) {
