@@ -8,39 +8,37 @@ import MusicRelease from "../components/MusicRelease.astro";
 
 <Layout scrollContainer={true}>
   <main class="flex">
-    <div>
-      <h1 class="visually-hidden">Music releases</h1>
-      <div class="release-grid">
-        {
-          releases.map(
-            (
-              {
-                id,
-                title,
-                description,
-                coverArtUrl,
-                coverArtDescription,
-                releaseDate,
-                releasedBy,
-                releaseType
-              },
-              listIndex
-            ) => (
-              <MusicRelease
-                {id}
-                {title}
-                {description}
-                {releaseDate}
-                {coverArtUrl}
-                {coverArtDescription}
-                {listIndex}
-                {releasedBy}
-                releaseType={releaseType as "EP" | "Single" | "Album"}
-              />
-            )
+    <h1 class="visually-hidden">Music releases</h1>
+    <div class="release-grid">
+      {
+        releases.map(
+          (
+            {
+              id,
+              title,
+              description,
+              coverArtUrl,
+              coverArtDescription,
+              releaseDate,
+              releasedBy,
+              releaseType
+            },
+            listIndex
+          ) => (
+            <MusicRelease
+              {id}
+              {title}
+              {description}
+              {releaseDate}
+              {coverArtUrl}
+              {coverArtDescription}
+              {listIndex}
+              {releasedBy}
+              releaseType={releaseType as "EP" | "Single" | "Album"}
+            />
           )
-        }
-      </div>
+        )
+      }
     </div>
   </main>
 </Layout>
@@ -55,7 +53,8 @@ import MusicRelease from "../components/MusicRelease.astro";
     width: 100%;
     color: var(--primary-white);
     display: grid;
-    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: auto minmax(0, 1fr);
     grid-auto-flow: dense;
     gap: $space-sm;
     padding: $space-sm;
@@ -73,7 +72,7 @@ import MusicRelease from "../components/MusicRelease.astro";
   }
 
   @media screen and (min-width: $breakpoint-md) {
-    main > div {
+    main {
       max-width: $breakpoint-md;
       margin: 0 auto;
     }

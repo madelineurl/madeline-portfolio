@@ -108,6 +108,8 @@ function formatDate(datestring: string) {
     position: relative;
     display: grid;
     border-radius: $border-radius-sm;
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     // transition: background-color 0.2s ease; TODO
 
     .release-info {
@@ -153,33 +155,8 @@ function formatDate(datestring: string) {
     }
 
     &.expanded {
-      //   grid-template-columns: 400px;
-      //   grid-template-rows: 400px 1fr;
-
       button {
         text-decoration: underline;
-      }
-
-      @media screen and (min-width: $breakpoint-sm) {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-
-        .image-wrapper {
-          grid-area: 1 / 1 / 2 / 1;
-        }
-
-        h2 {
-          margin: 0;
-        }
-
-        p {
-          margin-top: 0;
-        }
-
-        .release-info {
-          padding: $space-sm;
-          padding-top: 0;
-        }
       }
 
       .release-info {
@@ -192,6 +169,30 @@ function formatDate(datestring: string) {
       .preview {
         display: flex;
       }
+
+      @media screen and (min-width: $breakpoint-sm) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    h2 {
+      margin: 0;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .release-info {
+      padding: $space-sm;
+      padding-top: 0;
+    }
+
+    .image-wrapper {
+      grid-area: 1 / 1 / 2 / 1;
     }
   }
 
