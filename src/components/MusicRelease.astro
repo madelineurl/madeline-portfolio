@@ -75,16 +75,15 @@ function formatDate(datestring: string) {
   class MusicRelease extends HTMLElement {
     connectedCallback() {
       const expandButton = this.querySelector("button");
-      const preview = this.querySelector(".preview");
       const wrapper = this.querySelector(".image-wrapper");
 
-      expandButton?.addEventListener("click", () => {
+      expandButton?.addEventListener("click", (e) => {
         const toggleExpand = () => {
           if (this.classList.contains("expanded")) {
             this.classList.remove("expanded");
           } else {
             this.classList.add("expanded");
-            wrapper?.classList.add("active");
+            wrapper?.classList.add("expanded");
           }
         };
 
@@ -96,9 +95,23 @@ function formatDate(datestring: string) {
         document.startViewTransition(toggleExpand);
       });
 
-      wrapper?.addEventListener("mouseleave", () => {
+      wrapper?.addEventListener("touchstart", (e: PointerEvent) => {
+        if (e.pointerType === "mouse") return;
+
         if (!this.classList.contains("expanded")) {
-          wrapper?.classList.remove("active");
+          this?.classList.add("active");
+        }
+      });
+
+      wrapper?.addEventListener("pointerleave", (e: PointerEvent) => {
+        if (e.pointerType !== "mouse") return;
+
+        if (!this.classList.contains("expanded")) {
+          wrapper?.classList.remove("expanded");
+        }
+
+        if (this.classList.contains("active")) {
+          this?.classList.remove("active");
         }
       });
     }
@@ -139,6 +152,20 @@ function formatDate(datestring: string) {
       transition: opacity 0.2s ease;
     }
 
+    &.active {
+      img {
+        filter: brightness((50%));
+      }
+
+      .preview {
+        opacity: 1;
+      }
+
+      button {
+        text-decoration: underline;
+      }
+    }
+
     .image-wrapper {
       position: relative;
       aspect-ratio: 1 / 1;
@@ -152,15 +179,14 @@ function formatDate(datestring: string) {
         object-position: center;
       }
 
-      &:hover,
-      &.active {
+      &.expanded {
         img {
           filter: brightness(50%);
         }
         .preview {
           opacity: 1;
 
-          button:hover {
+          button {
             text-decoration: underline;
           }
         }
@@ -215,9 +241,24 @@ function formatDate(datestring: string) {
     cursor: pointer;
     color: $white;
     padding: $space-md;
+  }
 
-    &:hover {
+  @media (hover: hover) {
+    button:hover {
       text-decoration: underline;
+    }
+
+    .image-wrapper:hover {
+      img {
+        filter: brightness(50%);
+      }
+      .preview {
+        opacity: 1;
+
+        button:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 </style>
